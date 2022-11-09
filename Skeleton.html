@@ -4,57 +4,192 @@
     <meta charset="UTF-8">
     <title>FervTech</title>
     <link rel="stylesheet" href="Blood.css">
+    <link rel="shortcut icon" type="image/png" href="image/favicon2.png">
+    <script src="https://kit.fontawesome.com/6ca54830c0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<!...........Homepage.............>
 
-      <!...........Header.............>
-      <header id="homepage" >
-          <section class="header">
+<!--------------------Header-Start--------------------------->
+<header id="header">
+    <section class="header-container">
 
-          <nav>
-              <a href="Skeleton.html"><img src="image/FervTech.PNG" class="logo"></a>
-              <ul>
-                  <!...........Services.............>
-                  <li><a href="Services.html">SERVICES</a>
-                  <div class="services-menu">
-                      <ul>
-                          <li><a href="#">Web Development</a> </li>
-                          <li><a href="#">Mobile App Development</a> </li>
-                          <li><a href="#">RPA</a> </li>
-                          <li><a href="#">Graphic Design</a> </li>
+        <!-----------------------Nav Section-Start----------------->
+        <nav class="nav">
+            <a href="Skeleton.html"><img src="image/FervTech.png" class="logo"> </a>
+            <ul class="nav-links">
+                <!...........Nav Links.............>
+                <li><a href="Services.html">SERVICES</a>
+                    <!-----------Services--------------------->
+                    <div class="services-menu">
+                        <ul class="services-links">
+                            <li> <a href="#">Web Development</a> </li>
+                            <li><a href="#">Mobile App Development</a> </li>
+                            <li><a href="#">RPA</a> </li>
+                            <li><a href="#">Graphic Design</a> </li>
 
-                      </ul>
-                  </div>
-                  </li>
-                  <!...........About us.............>
-                  <li><a href="About-Us.html">ABOUT US</a></li>
-                  <!...........Blog.............>
-                  <li><a href="Blog.html">BLOG</a></li>
-                  <!...........Contact.............>
-                  <li><a href="Contact.html">CONTACT</a></li>
-              </ul>
-          </nav>
-          <!...........Header-Text.............>
-          <div class="header-text">
-              <h1>FervTech is a technology company that specializes <br> technology-oriented services and solutions.
-                  </h1>
-              <div>
-                  <a href="Contact.html"><button type="button"><span></span>GET IN TOUCH</button></a>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="About-Us.html">ABOUT US</a></li>
+                <li><a href="Blog.html">BLOG</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-----------------------Nav Section-Start----------------->
+    </section>
+</header>
+<!--------------------Header-End--------------------------->
 
-              </div>
-          </div>
-          </section>
-      </header>
-      <!...........Footer.............>
-      <footer>
-          <section>
-              <p> &copy Copyright 2022 FervTech </p>
-          </section>
+<!---------Image sliders-start------------------->
+<section class="slider">
+    <div class="slides">
+        <!-------radio-button-start------------------->
+        <input type="radio" name="radio-bt" id="radio1">
+        <input type="radio" name="radio-bt" id="radio2">
+        <input type="radio" name="radio-bt" id="radio3">
+        <input type="radio" name="radio-bt" id="radio4">
+        <!-------radio-button-end------------------->
+        <!----------Slides-image------->
+        <div class="slide first">
+            <img src="image/Slide1.png" alt="">
+            <p>FervTech is a technology company that specializes <br> technology-oriented services and solutions.</p>
+        </div>
+        <div class="slide">
+            <img src="image/Slide2.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="image/Slide3.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="image/Slide4.PNG" alt="">
+        </div>
 
-      </footer>
+        <!----------Slides-image-end------>
+
+        <!--------Automatic Navigation-start------------>
+        <div class="auto-navigation">
+            <div class="auto-bt1"></div>
+            <div class="auto-bt2"></div>
+            <div class="auto-bt3"></div>
+            <div class="auto-bt4"></div>
+        </div>
+        <!--------Automatic Navigation-end------------>
+
+    </div>
+
+    <!---------Manual Navigation-start--------->
+    <div class="manual-navigation">
+        <label for="radio1" class="manual-bt"></label>
+        <label for="radio2" class="manual-bt"></label>
+        <label for="radio3" class="manual-bt"></label>
+        <label for="radio4" class="manual-bt"></label>
+    </div>
+    <!---------Manual Navigation-end--------->
+</section>
 
 
+<script type="text/javascript">
+    var counter = 1;
+    setInterval(function (){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+            counter = 1;
+        }
+    }, 5000);
+</script>
+<!---------image sliders-end------------------->
+
+<!-----------------------Main Services-------------------------->
+<section id="main">
+    <div class="container">
+        <h1 class="sub-title"> OUR SERVICES</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Web Development</h2>
+                <p>Get responsive website created for you.
+                    We design any type of website you bring to us.
+                    We provide unlimited supports and maintenance for the websites.</p>
+                <a href="#">Read more<i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile"></i>
+                <h2>Mobile App Development</h2>
+                <p>We create responsive mobile applications of any kind.
+                    Either Android or IOS apps.
+                    Just tell us what type of app you need, and we will provide it for you.</p>
+                <a href="#">Read more<i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div>
+                <i class="fa-solid fa-gear"></i>
+                <h2>RPA</h2>
+                <p>Get responsive website created for you.
+                    We design any type of website you bring to us.
+                    We provide unlimited supports and maintenance for the websites.</p>
+                <a href="#">Read more<i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div>
+                <i class="fa-solid fa-palette"></i>
+                <h2>Graphic Design</h2>
+                <p>GDesigns make your business and services stand out to the public.
+                    We design various designs like UI/UX, Logo, Posters, Business Cards,
+                    Social Media Banners etc.</p>
+                <a href="#">Read more<i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!------------------Footer-Start-------------------->
+<footer class="footer">
+    <section class=" footer-container">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4><a href="Skeleton.html"><img src="image/FervTech.png" class="footer-logo"> </a></h4>
+                <div class="Details">
+                    <ul>
+                        <li> <i class="fa-solid fa-phone-volume"></i>0302335585</li>
+                        <li><i class="fa-solid fa-envelope"></i>Fervtech@protonmail.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i>Accra, Ghana</li>
+                    </ul>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>IMPORTANT LINKS</h4>
+                <ul>
+                    <li><a href="#">Services</a> </li>
+                    <li><a href="#">About Us</a> </li>
+                    <li><a href="#">Blog</a> </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>OUR SERVICES</h4>
+                <ul>
+                    <li><a href="#">Mobile Development</a> </li>
+                    <li><a href="#">Web Development</a> </li>
+                    <li><a href="#">RPA</a> </li>
+                    <li><a href="#">Graphic Design</a> </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="copyright"><p> &copy Copyright 2022 FervTech. All Rights Reserved. </p></div>
+    </section>
+</footer>
+<!------------------End-------------------->
 </body>
-
 </html>

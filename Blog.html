@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <title>BLOG</title>
     <link rel="stylesheet" href="Blog.css">
+    <link rel="shortcut icon" type="image/png" href="image/favicon2.png">
+    <script src="https://kit.fontawesome.com/6ca54830c0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header id="blog">
-    <section class="header">
-        <nav>
-            <a href="Skeleton.html"><img src="image/FervTech.PNG" class="logo"></a>
-            <ul>
-                <li><a href="Services.html">SERVICES</a></li>
+<header id="header">
+
+    <section class="header-container">
+
+        <!-----------------------Nav Section------------------>
+        <nav class="nav">
+            <a href="Skeleton.html"><img src="image/FervTech.png" class="logo"> </a>
+            <ul class="nav-links">
+                <!...........Nav Links.............>
+                <li><a href="Services.html">SERVICES</a>
+                    <!-----------Services--------------------->
+                    <div class="services-menu">
+                        <ul class="services-links">
+                            <li> <a href="#">Web Development</a> </li>
+                            <li><a href="#">Mobile App Development</a> </li>
+                            <li><a href="#">RPA</a> </li>
+                            <li><a href="#">Graphic Design</a> </li>
+
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="About-Us.html">ABOUT US</a></li>
                 <li><a href="Blog.html">BLOG</a></li>
                 <li><a href="Contact.html">CONTACT</a></li>
@@ -20,9 +37,52 @@
     </section>
 </header>
 
-<footer>
-    <section>
-        <p> &copy Copyright 2022 FervTech </p>
+
+<!------------------Footer--------------------->
+<footer class="footer">
+    <section class=" footer-container">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>FervTech</h4>
+                <div class="Details">
+                    <ul>
+                        <li> <i class="fa-solid fa-phone-volume"></i>0302335585</li>
+                        <li><i class="fa-solid fa-envelope"></i>Fervtech@protonmail.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i>Accra, Ghana</li>
+                    </ul>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>IMPORTANT LINKS</h4>
+                <ul>
+                    <li><a href="#">Services</a> </li>
+                    <li><a href="#">About Us</a> </li>
+                    <li><a href="#">Blog</a> </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>OUR SERVICES</h4>
+                <ul>
+                    <li><a href="#">Mobile Development</a> </li>
+                    <li><a href="#">Web Development</a> </li>
+                    <li><a href="#">RPA</a> </li>
+                    <li><a href="#">Graphic Design</a> </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="copyright"><p> &copy Copyright 2022 FervTech </p></div>
     </section>
 </footer>
 </body>
