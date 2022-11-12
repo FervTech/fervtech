@@ -452,10 +452,17 @@ nav:after{
         margin-bottom: 30px;
     }
 
+    #footer-email{
+        width: 200px;
+    }
 }
 
 @media (max-width: 574px) {
     .footer-col{
         width: 100%;
+    }
+
+    #footer-email{
+        width: 200px;
     }
 }
