@@ -404,6 +404,35 @@ nav:after{
     width:100px;
 }
 
+#footer-email{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#footer-submit{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #0a3264ff;
+}
+#footer-submit:hover{
+    background-color: #ffffff;
+    color: #0a3264ff;
+}
+
+#footer-paragraph{
+    margin-top: 30px;
+    color: #bbbbbb;
+    font-size: 16px;
+}
+
+#footer-paragraph:hover{
+    color: #ffffff;
+}
+
 .copyright{
     text-align: center;
     margin-top: 50px;
