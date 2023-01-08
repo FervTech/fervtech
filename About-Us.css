@@ -11,7 +11,7 @@ body {
 }
 
 
-/*---------------Header-----------------*/
+/*---------------Header-Start----------------*/
 #header{
     background: #ffffff;
 }
@@ -105,9 +105,168 @@ nav:after{
     box-shadow: 0 0 5px #0a3264ff, 0 0 5px #262626;
 }
 
+/*----------------------Header-End------------------------*/
+
+/*----------------------Who We Are -Start----------------------*/
+.WHO-WE-ARE{
+    margin-top: 50px;
+}
+
+.WHO-WE-ARE h1{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #0a3264ff;
+
+}
+
+.WHO-WE-ARE p{
+    color: #080808;
+    margin: 30px 250px;
+    text-align: center;
+}
+
+/*----------------------Who We Are-End----------------------*/
+
+/*----------------------Our Mission-Start----------------------*/
+.Our-Mission{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width: 65%;
+    margin: 10rem auto 0 auto;
+
+}
+
+.OUR-Mission-IMG{
+    height: 300px;
+}
+.Our-Mission .Mission-Text h2{
+    margin: 0;
+    color: #0a3264ff;
+    padding-bottom: 10px;
+}
+
+.Our-Mission .Mission-Text p{
+    color: #080808;
+    margin-right: 15px;
+}
+/*----------------------Our Mission-End----------------------*/
+
+/*----------------------Our Vision--End----------------------*/
+.OUR-Vision{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width: 65%;
+    margin: 10rem auto 0 auto;
+
+}
+
+.OUR-Vision-IMG{
+    height: 300px;
+}
+
+.OUR-Vision .Vision-Text h2{
+    margin: 0;
+    color: #0a3264ff;
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+.OUR-Vision .Vision-Text p{
+    color: #080808;
+    margin-left: 15px;
+}
+
+/*----------------------Our Team-Start------------------------*/
+.Our-Team{
+    text-align: center;
+    margin: 50px 0;
+    color: #080808;
+}
+
+.Our-Team h1{
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #0a3264ff;
+    padding-bottom: 10px;
+}
+
+.Our-Team-Container{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a3264ff;
+}
+.Team-Member{
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+    margin: 0 25px;
+}
+.Team-Member:hover{
+    border-radius: 10px;
+    height: 260px;
+}
+.Team-Member .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    z-index: 99;
+}
+.Team-Member:hover .img{
+    transform: translateY(-60px);
+}
+.img img{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+}
+.Team-Member:hover img{
+    border-radius: 10px;
+}
+.caption{
+    text-align: center;
+    transform: translateY(-80px);
+    opacity: 0;
+    transition: .6s;
+}
+.Team-Member:hover .caption{
+    opacity: 1;
+}
+.caption h3{
+    font-size: 21px;
+}
+.caption p{
+    font-size: 16px;
+    color: #0c52a1;
+    margin: 2px 0 9px 0;
+}
+.caption .social-links a{
+    color: #333;
+    margin-right: 8px;
+    font-size: 21px;
+    transition: .6s;
+}
+.social-links a:hover{
+    color: #0c52a1;
+}
+
+/*----------------------Our Team-End------------------------*/
 
 
-/*----------------------Footer------------------------*/
+
+/*----------------------Footer-Start-----------------------*/
 .footer{
     font-size: 80%;
     background: #262626;

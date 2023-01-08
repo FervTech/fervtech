@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fdfdfdff;
+    color: #080808;
+}
+
+.Under-Construction{
+    width: 100%;
+    height: 100vh;
+    background-image:  url(image/UnderConstruction.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+}
+
+#Under-Construction-Text{
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 750px;
+    font-weight: bold;
+    font-size: 40px;
+
+}
+
+#Under-Construction-Text2{
+    text-align: center;
+    font-size: 25px;
+
+}
+
+
+.Under-Construction-Details ul{
+text-align: center;
+    width: 100%;
+}
+
+.Under-Construction-Details ul a{
+    display: inline-block;
+    font-size: 25px;
+    margin: 900px 30px 0;
+    cursor: pointer;
+    position: relative;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    color: #080808;
+}
+
+.Under-Construction-Details ul a:hover{
+    color: #0a3264ff;
+    background-color: #ffffff;
+    font-size: 30px;
+
+}
+
+@media (max-width: 909px) {
+
+}
+
+@media (max-width: 767px) {
+    .Under-Construction-Details ul a{
+         margin: 950px 30px 0;
+    }
+}
+
+
+

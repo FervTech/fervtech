@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>FervTech</title>
@@ -37,112 +37,141 @@
         </nav>
         <!-----------------------Nav Section-Start----------------->
     </section>
+
 </header>
 <!--------------------Header-End--------------------------->
 
 <!---------Image sliders-start------------------->
 <section class="slider">
+    <input type="radio" name="slide" id="slide-1"checked>
+    <input type="radio" name="slide" id="slide-2">
+    <input type="radio" name="slide" id="slide-3">
     <div class="slides">
-        <!-------radio-button-start------------------->
-        <input type="radio" name="radio-bt" id="radio1">
-        <input type="radio" name="radio-bt" id="radio2">
-        <input type="radio" name="radio-bt" id="radio3">
-        <input type="radio" name="radio-bt" id="radio4">
-        <!-------radio-button-end------------------->
-        <!----------Slides-image------->
-        <div class="slide first">
-            <img src="image/Slide1.png" alt="">
-            <p>FervTech is a technology company that specializes <br> technology-oriented services and solutions.</p>
+        <div class="slide slide-1">
+            <div class="slide-data">
+                <h1>THIS IS SLIDE # 1</h1>
+                <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nemo assumenda perferendis
+                    reprehenderit ex nostrum accusantium sed iste eius distinctio mollitia consectetur, nihil quis
+                    ea cupiditate ullam itaque reiciendis ratione.</P>
+                <button>SUBSCRIBE</button>
+            </div>
         </div>
-        <div class="slide">
-            <img src="image/Slide2.png" alt="">
+        <div class="slide slide-2">
+            <div class="slide-data">
+                <h1>THIS IS SLIDE # 2</h1>
+                <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nemo assumenda perferendis
+                    reprehenderit ex nostrum accusantium sed iste eius distinctio mollitia consectetur, nihil quis
+                    ea cupiditate ullam itaque reiciendis ratione.</P>
+                <button>COMMENT</button>
+            </div>
         </div>
-        <div class="slide">
-            <img src="image/Slide3.jpg" alt="">
+        <div class="slide slide-3">
+            <div class="slide-data">
+                <h1>THIS IS SLIDE # 3</h1>
+                <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nemo assumenda perferendis
+                    reprehenderit ex nostrum accusantium sed iste eius distinctio mollitia consectetur, nihil quis
+                    ea cupiditate ullam itaque reiciendis ratione.</P>
+                <button>SHARE</button>
+            </div>
         </div>
-        <div class="slide">
-            <img src="image/Slide4.PNG" alt="">
-        </div>
-
-        <!----------Slides-image-end------>
-
-        <!--------Automatic Navigation-start------------>
-        <div class="auto-navigation">
-            <div class="auto-bt1"></div>
-            <div class="auto-bt2"></div>
-            <div class="auto-bt3"></div>
-            <div class="auto-bt4"></div>
-        </div>
-        <!--------Automatic Navigation-end------------>
-
     </div>
 
-    <!---------Manual Navigation-start--------->
-    <div class="manual-navigation">
-        <label for="radio1" class="manual-bt"></label>
-        <label for="radio2" class="manual-bt"></label>
-        <label for="radio3" class="manual-bt"></label>
-        <label for="radio4" class="manual-bt"></label>
+    <div class="arrows arrow-left" onclick="plusslide(-1)">
+        <label for="slide-3">
+            <span><i class="fas fa-angle-left"></i></span>
+        </label>
+        <label for="slide-1">
+            <span><i class="fas fa-angle-left"></i></span>
+        </label>
+        <label for="slide-2">
+            <span><i class="fas fa-angle-left"></i></span>
+        </label>
     </div>
-    <!---------Manual Navigation-end--------->
-</section>
 
+    <div class="arrows arrow-right" onclick="plusslide(1)">
+        <label for="slide-2">
+            <span><i class="fas fa-angle-right"></i></span>
+        </label>
+        <label for="slide-3">
+            <span><i class="fas fa-angle-right"></i></span>
+        </label>
+        <label for="slide-1">
+            <span><i class="fas fa-angle-right"></i></span>
+        </label>
+    </div>
 
-<script type="text/javascript">
-    var counter = 1;
-    setInterval(function (){
-        document.getElementById('radio' + counter).checked = true;
-        counter++;
-        if(counter > 4){
-            counter = 1;
-        }
-    }, 5000);
-</script>
+    <div class="dots">
+        <label for="slide-1" onclick="currentslide(1)"></label>
+        <label for="slide-2" onclick="currentslide(2)"></label>
+        <label for="slide-3" onclick="currentslide(3)"></label>
+    </div>
+    </section>
+<script src="Muscle.js"></script>
 <!---------image sliders-end------------------->
 
-<!-----------------------Main Services-------------------------->
-<section id="main">
-    <div class="container">
-        <h1 class="sub-title"> OUR SERVICES</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-laptop-code"></i>
-                <h2>Web Development</h2>
-                <p>Get responsive website created for you.
-                    We design any type of website you bring to us.
-                    We provide unlimited supports and maintenance for the websites.</p>
-                <a href="#">Read more<i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-            <div>
-                <i class="fa-solid fa-mobile"></i>
-                <h2>Mobile App Development</h2>
-                <p>We create responsive mobile applications of any kind.
-                    Either Android or IOS apps.
-                    Just tell us what type of app you need, and we will provide it for you.</p>
-                <a href="#">Read more<i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-            <div>
-                <i class="fa-solid fa-gear"></i>
-                <h2>RPA</h2>
-                <p>Get responsive website created for you.
-                    We design any type of website you bring to us.
-                    We provide unlimited supports and maintenance for the websites.</p>
-                <a href="#">Read more<i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-            <div>
-                <i class="fa-solid fa-palette"></i>
-                <h2>Graphic Design</h2>
-                <p>GDesigns make your business and services stand out to the public.
-                    We design various designs like UI/UX, Logo, Posters, Business Cards,
-                    Social Media Banners etc.</p>
-                <a href="#">Read more<i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
+<!---------Who We Are-START------------------->
+<section class="WHO-WE-ARE">
+    <h1>WHO WE ARE</h1>
+    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nemo assumenda perferendis
+        reprehenderit ex nostrum accusantium sed iste eius distinctio mollitia consectetur, nihil quis
+        ea cupiditate ullam itaque reiciendis ratione.</P>
+    <button> <a href="About-Us.html">Learn More </a></button>
+
+</section>
+<!---------Who We Are -end------------------->
+
+<!---------Our Services -Start------------------->
+<section class="OUR-SERVICES">
+    <h1>OUR SERVICES</h1>
+    <div class="Web-Section">
+       <div class="Web-Section-Text">
+           <h2>Web Development</h2>
+           <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nemo assumenda perferendis
+               reprehenderit ex nostrum accusantium sed iste eius distinctio mollitia consectetur, nihil quis
+               ea cupiditate ullam itaque reiciendis ratione.</P>
+       </div>
+      <img src="image/Web-Development-Icon.png" class="OUR-SERVICES-IMG">
+    </div>
+
+    <div class="App-Section">
+        <img src="image/App-Development-Icon.png" class="OUR-SERVICES-IMG">
+        <div class="App-Section-Text">
+            <h2>App Development</h2>
+            <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nemo assumenda perferendis
+                reprehenderit ex nostrum accusantium sed iste eius distinctio mollitia consectetur, nihil quis
+                ea cupiditate ullam itaque reiciendis ratione.</P>
+        </div>
+    </div>
+
+    <div class="RPA-Section">
+        <div class="RPA-Section-Text">
+            <h2>RPA</h2>
+            <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nemo assumenda perferendis
+                reprehenderit ex nostrum accusantium sed iste eius distinctio mollitia consectetur, nihil quis
+                ea cupiditate ullam itaque reiciendis ratione.</P>
+        </div>
+        <img src="image/RPA-Icon.png" class="OUR-SERVICES-IMG">
+    </div>
+
+    <div class="Graphic-Design-Section">
+        <img src="image/Designer-Icon.png" class="OUR-SERVICES-IMG">
+        <div class="Graphic-Design-Section-Text">
+            <h2>Graphic Design</h2>
+            <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nemo assumenda perferendis
+                reprehenderit ex nostrum accusantium sed iste eius distinctio mollitia consectetur, nihil quis
+                ea cupiditate ullam itaque reiciendis ratione.</P>
         </div>
     </div>
 </section>
+<!---------Our Services -End------------------->
 
+<!---------Why Choose US -Start------------------->
+<section class="WHY-CHOOSE-US">
+    <h1>WHY CHOOSE US</h1>
 
+</section>
 
+<!---------Why Choose US -End------------------->
 <!------------------Footer-Start-------------------->
 <footer class="footer">
     <section class=" footer-container">
