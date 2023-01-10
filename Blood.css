@@ -3,12 +3,13 @@
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
+
 }
 
 /*-----------Body--------------------*/
 body {
     background: #fdfdfdff;
-    color: #fff;
+    color: #080808;
 }
 
 /*---------------Header-----------------*/
@@ -292,13 +293,15 @@ nav:after{
     text-align: center;
 }
 .WHO-WE-ARE button{
-   width: 100px;
-    height: 30px;
-}
-
-.WHO-WE-ARE button a{
     color: #0a3264ff;
     font-weight: bolder;
+
+}
+
+.WHO-WE-ARE a button{
+    width: 100px;
+    height: 30px;
+    text-align: center;
 }
 /*----------------------Who We Are -End----------------------*/
 
@@ -405,7 +408,7 @@ nav:after{
 
 /*----------------------Why Choose Us-Start----------------------*/
 .WHY-CHOOSE-US{
-
+    padding-bottom: 20px;
 }
 
 .WHY-CHOOSE-US h1{
@@ -413,11 +416,208 @@ nav:after{
     font-weight: bold;
     letter-spacing: 2px;
     color: #0a3264ff;
+    padding-bottom: 10px;
 }
+
+.WHY-CHOOSE-US-Container{
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+
+.WHY-CHOOSE-US-Row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.WHY-CHOOSE-US-Row .card{
+    width: 290px;
+    background: #fff;
+    padding: 20px 10px;
+    border: 2px solid #0a3264ff;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.WHY-CHOOSE-US-Row .card .member_img{
+    background: #e9e5fa;
+    max-width: 190px;
+    width: 100%;
+    height: 190px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.WHY-CHOOSE-US-Row .card .member_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.WHY-CHOOSE-US-Row .card h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 15px 0 0px;
+}
+
+.WHY-CHOOSE-US-Row .card p{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #707070;
+}
+
+
+.WHY-CHOOSE-US-Row .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+
 /*----------------------Why Choose Us-End----------------------*/
 
+/*----------------------Testimonial-Start----------------------*/
+.Testimonials{
+    padding-bottom: 20px;
+}
 
+.Testimonials h1{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #0a3264ff;
+    padding-bottom: 20px;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 10px 10px;
+}
+.card{
+    border-radius: 25px;
+    background-color: #FFF;
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.card-content .card-status{
+    font-size: 16px;
+    color: #4070F4;
+    margin: 2px 0 9px 0;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#0a3264ff;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color:#0a3264ff;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #0a3264ff;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+    padding-bottom: 10px ;
+}
 
+.description i{
+    font-size: 10px;
+    color: #0a3264ff;
+    margin: 0 6px;
+}
+
+.swiper-navBtn{
+    color:  #6E93f7;
+    transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+    color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 35px;
+}
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swiper-pagination-bullet{
+    background-color:  #4070F4;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: #0a3264ff;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content{
+        margin: 0 10px;
+    }
+    .swiper-navBtn{
+        display: none;
+    }
+}
+
+/*----------------------Testimonial-End----------------------*/
 
 /*----------------------Footer------------------------*/
 .footer{

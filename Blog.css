@@ -177,6 +177,8 @@ color: #0a3264ff;
     box-shadow: 0 0 5px #0a3264ff, 0 0 5px #262626;
 }
 
+/*Demo ----------*/
+
 
 /*----------------------Footer------------------------*/
 .footer{
@@ -311,6 +313,9 @@ color: #0a3264ff;
 .copyright:hover {
     color: #ffffff;
 }
+
+
+
 
 /*--------footer-responsive---------*/
 @media (max-width: 767px) {
