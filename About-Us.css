@@ -112,71 +112,166 @@ nav:after{
     margin-top: 50px;
 }
 
+.WHO-WE-ARE{
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
 .WHO-WE-ARE h1{
     text-align: center;
     font-weight: bold;
+    line-height: 1.5;
     letter-spacing: 2px;
+    font-size: 30px;
     color: #0a3264ff;
 
 }
 
 .WHO-WE-ARE p{
     color: #080808;
-    margin: 30px 250px;
+    width: 50%;
     text-align: center;
-}
+    margin: 20px 25%;
+    display: block;
 
+}
 /*----------------------Who We Are-End----------------------*/
 
 /*----------------------Our Mission-Start----------------------*/
 .Our-Mission{
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    width: 65%;
-    margin: 10rem auto 0 auto;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.Our-Mission .Our-Mission-Container{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .OUR-Mission-IMG{
-    height: 300px;
+    height: auto;
+    width: 400px;
+    max-width: 100%;
 }
+
+.Mission-Text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
 .Our-Mission .Mission-Text h2{
-    margin: 0;
     color: #0a3264ff;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 .Our-Mission .Mission-Text p{
     color: #080808;
-    margin-right: 15px;
+    font-size: 30px;
+    letter-spacing: 1px;
 }
+
 /*----------------------Our Mission-End----------------------*/
 
-/*----------------------Our Vision--End----------------------*/
-.OUR-Vision{
+/*----------------------Our Vision--Start----------------------*/
+.Our-Vision{
+    width: 100%;
+    height: 300px;
     display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    width: 65%;
-    margin: 10rem auto 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
 
+}
+
+.Our-Vision .Our-Vision-Container{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .OUR-Vision-IMG{
-    height: 300px;
+    height: auto;
+    width: 400px;
+    max-width: 100%;
 }
-.Vision-Text h2{
-    margin: 0;
+
+.Vision-Text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.Our-Vision .Vision-Text h2{
     color: #0a3264ff;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
-.OUR-Vision .Vision-Text p{
+.Our-Vision .Vision-Text p{
     color: #080808;
-    margin-left: 50px;
+    font-size: 30px;
+    letter-spacing: 1px;
+
+}
+@media screen and (max-width: 1180px) {
+    .Our-Vision {
+        width: 100%;
+        height: auto;
+        padding: 50px 0px;
+    }
+    .Our-Mission {
+        width: 100%;
+        height: auto;
+        padding: 50px 0px;
+    }
+
 }
 
+@media screen and (max-width: 999px) {
+
+    .Our-Mission-Container{
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .OUR-Mission-IMG{
+        margin-bottom: 35px;
+    }
+    .Our-Vision-IMG{
+        margin-bottom: 35px;
+    }
+
+    .Vision-Text h2{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+
+    .Mission-Text h2{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+}
 /*----------------------Our Core Values-Start------------------------*/
 .Our-Core-Values{
     text-align: center;

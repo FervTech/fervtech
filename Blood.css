@@ -274,41 +274,61 @@ nav:after{
 
 /*----------------------Who We Are -Start----------------------*/
 .WHO-WE-ARE{
-
     margin-top: 50px;
+    padding-bottom: 20px;
 }
 
 .WHO-WE-ARE h1{
     text-align: center;
     font-weight: bold;
+    line-height: 1.5;
     letter-spacing: 2px;
+    font-size: 30px;
     color: #0a3264ff;
-   color:  #0a3264ff;
 
 }
 
 .WHO-WE-ARE p{
     color: #080808;
-    margin: 30px 250px;
+   width: 50%;
     text-align: center;
+    margin: 20px 25%;
+    display: block;
+
 }
 .WHO-WE-ARE button{
-    color: #0a3264ff;
-    font-weight: bolder;
-
+    background-color: #4070F4;
+    color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    width: 170px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.WHO-WE-ARE a button{
-    width: 100px;
-    height: 30px;
-    text-align: center;
+.WHO-WE-ARE button:hover{
+    transform: scale(1.2);
+    background-color: transparent;
+    border: 2px solid #0a3264ff;
+    color: #0a3264ff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+.WHO-WE-ARE a {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    margin: 0 auto;
+    text-decoration:none;
+
 }
 /*----------------------Who We Are -End----------------------*/
 
 /*----------------------Our Services -Start----------------------*/
 .OUR-SERVICES{
-    margin-top: 50px;
-    padding-bottom: 20px;
+  margin-top: 50px;
 }
 
 .OUR-SERVICES h1{
@@ -319,91 +339,315 @@ nav:after{
 }
 
 .OUR-SERVICES-IMG{
-    height: 300px;
+    height: auto;
+    width: 400px;
+    max-width: 100%;
 }
 
 /*----------------------Web-Section----------------------*/
 .Web-Section{
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    width: 65%;
-    margin: 10rem auto 0 auto;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.Web-Section .Web-Section-Text h2{
-    margin: 0;
+.Web-Section .Web-Section-Container{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Web-Section .Web-Section-Container .Web-Section-Text {
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.Web-Section .Web-Section-Container .Web-Section-Text h2{
     color: #0a3264ff;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
-.Web-Section .Web-Section-Text p{
+.Web-Section .Web-Section-Container .Web-Section-Text p{
     color: #080808;
-    margin-right: 15px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
 }
+
+.Web-Section .Web-Section-Container .Web-Section-Text button{
+    background-color: #4070F4;
+    color: #ffffff;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.Web-Section .Web-Section-Container .Web-Section-Text button:hover{
+    transform: scale(1.2);
+    background-color: transparent;
+    border: 2px solid #0a3264ff;
+    color: #0a3264ff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
 
 /*----------------------App-Section----------------------*/
 .App-Section{
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    width: 65%;
-    margin: 10rem auto 0 auto;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.App-Section .App-Section-Text h2{
-    margin: 0;
+.App-Section .App-Section-Container{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.App-Section .App-Section-Container .App-Section-Text {
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.App-Section .App-Section-Container .App-Section-Text h2{
     color: #0a3264ff;
-    padding-bottom: 10px;
-    text-align: right;
+   margin-bottom: 20px;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
-.App-Section .App-Section-Text p{
+.App-Section .App-Section-Container .App-Section-Text p{
     color: #080808;
-    margin-left: 15px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
 }
+
+.App-Section .App-Section-Container .App-Section-Text button{
+    background-color: #4070F4;
+    color: #ffffff;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.App-Section .App-Section-Container .App-Section-Text button:hover{
+    transform: scale(1.2);
+    background-color: transparent;
+    border: 2px solid #0a3264ff;
+    color: #0a3264ff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
 
 /*----------------------RPA-Section----------------------*/
 .RPA-Section{
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    width: 65%;
-    margin: 10rem auto 0 auto;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.RPA-Section .RPA-Section-Text h2{
-    margin: 0;
+.RPA-Section .RPA-Section-Container{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.RPA-Section .RPA-Section-Container .RPA-Section-Text {
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.RPA-Section .RPA-Section-Container .RPA-Section-Text h2{
     color: #0a3264ff;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
-.RPA-Section .RPA-Section-Text p{
+.RPA-Section .RPA-Section-Container .RPA-Section-Text p{
     color: #080808;
-    margin-right: 15px;
+    font-size: 30px;
+
+    letter-spacing: 1px;
+    margin-bottom: 45px;
 }
+
+.RPA-Section .RPA-Section-Container .RPA-Section-Text button{
+    background-color: #4070F4;
+    color: #ffffff;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.RPA-Section .RPA-Section-Container .RPA-Section-Text button:hover{
+    transform: scale(1.2);
+    background-color: transparent;
+    border: 2px solid #0a3264ff;
+    color: #0a3264ff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
 /*----------------------Graphic Design-Section----------------------*/
 .Graphic-Design-Section{
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    width: 65%;
-    margin: 10rem auto 0 auto;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.Graphic-Design-Section .Graphic-Design-Section-Text h2{
-    margin: 0;
+.Graphic-Design-Section .Graphic-Section-Container{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text {
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text h2{
     color: #0a3264ff;
-    padding-bottom: 10px;
-    text-align: right;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
-.Graphic-Design-Section .Graphic-Design-Section-Text p{
+.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text p{
     color: #080808;
-    margin-left: 15px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
 }
 
+.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text button{
+    background-color: #4070F4;
+    color: #ffffff;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
 
+.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text button:hover{
+    transform: scale(1.2);
+    background-color: transparent;
+    border: 2px solid #0a3264ff;
+    color: #0a3264ff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1180px) {
+    .Web-Section{
+        width: 100%;
+        height: auto;
+        padding: 70px 0px;
+    }
+    .App-Section{
+        width: 100%;
+        height: auto;
+        padding: 70px 0px;
+
+    }
+    .RPA-Section{
+        width: 100%;
+        height: auto;
+        padding: 70px 0px;
+
+    }
+
+    .Graphic-Design-Section{
+        width: 100%;
+        height: auto;
+        padding: 70px 0px;
+
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .Web-Section-Container{
+        flex-direction: column-reverse;
+    }
+
+    .RPA-Section-Container{
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .OUR-SERVICES-IMG{
+        margin-bottom: 35px;
+    }
+
+    .Web-Section-Text h2{
+       font-size: 60px;
+        margin-bottom: 25px;
+    }
+    .App-Section-Text h2{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+
+    .RPA-Section-Text h2{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+
+    .Graphic-Section-Text h2{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+}
 /*----------------------Our Services-End----------------------*/
 
 /*----------------------Why Choose Us-Start----------------------*/
