@@ -437,7 +437,7 @@ nav:after{
     width: 290px;
     background: #fff;
     padding: 20px 10px;
-    border: 2px solid #0a3264ff;
+    border: 0.5px solid #707070;
     margin-bottom: 50px;
     transition: 0.3s;
 }
@@ -465,6 +465,7 @@ nav:after{
     line-height: 18px;
     letter-spacing: 2px;
     margin: 15px 0 0px;
+    color: #0a3264ff;
 }
 
 .WHY-CHOOSE-US-Row .card p{

@@ -166,17 +166,15 @@ nav:after{
 .OUR-Vision-IMG{
     height: 300px;
 }
-
-.OUR-Vision .Vision-Text h2{
+.Vision-Text h2{
     margin: 0;
     color: #0a3264ff;
     padding-bottom: 10px;
-    text-align: right;
 }
 
 .OUR-Vision .Vision-Text p{
     color: #080808;
-    margin-left: 15px;
+    margin-left: 50px;
 }
 
 /*----------------------Our Core Values-Start------------------------*/
