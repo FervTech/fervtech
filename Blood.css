@@ -998,8 +998,25 @@ nav:after{
     color: #ffffff;
 }
 
+
+
+
 /*--------footer-responsive---------*/
-@media (max-width: 767px) {
+@media (max-width: 1555px) {
+
+    #footer-email{
+        width: 150px;
+    }
+}
+
+@media (max-width: 1155px) {
+
+    #footer-submit{
+        width: 60px;
+    }
+}
+
+@media (max-width: 1077px) {
     .footer-col{
         width: 50%;
         margin-bottom: 30px;
@@ -1007,6 +1024,22 @@ nav:after{
 
     #footer-email{
         width: 200px;
+    }
+    #footer-submit{
+        width: 80px;
+    }
+}
+
+@media (max-width: 727px) {
+
+    #footer-submit{
+        width: 60px;
+    }
+}
+
+@media (max-width: 687px) {
+    #footer-email{
+        width: 150px;
     }
 }
 
@@ -1017,5 +1050,9 @@ nav:after{
 
     #footer-email{
         width: 200px;
+    }
+
+    #footer-submit{
+        width: 80px;
     }
 }

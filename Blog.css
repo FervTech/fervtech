@@ -124,8 +124,10 @@ color: #0a3264ff;
         font-size: 20px;
     }
 
-    nav.show .nav-links {
-        left: -0%;
+    .nav-links.active{
+        left: 0;
+        z-index: 1;
+        height: 300px;
     }
 
 
@@ -318,7 +320,21 @@ color: #0a3264ff;
 
 
 /*--------footer-responsive---------*/
-@media (max-width: 767px) {
+@media (max-width: 1555px) {
+
+    #footer-email{
+        width: 150px;
+    }
+}
+
+@media (max-width: 1155px) {
+
+    #footer-submit{
+        width: 60px;
+    }
+}
+
+@media (max-width: 1077px) {
     .footer-col{
         width: 50%;
         margin-bottom: 30px;
@@ -326,6 +342,22 @@ color: #0a3264ff;
 
     #footer-email{
         width: 200px;
+    }
+    #footer-submit{
+        width: 80px;
+    }
+}
+
+@media (max-width: 727px) {
+
+    #footer-submit{
+        width: 60px;
+    }
+}
+
+@media (max-width: 687px) {
+    #footer-email{
+        width: 150px;
     }
 }
 
@@ -336,5 +368,9 @@ color: #0a3264ff;
 
     #footer-email{
         width: 200px;
+    }
+
+    #footer-submit{
+        width: 80px;
     }
 }
