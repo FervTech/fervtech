@@ -1,5 +1,5 @@
-navBar= document.querySelector(".nav");
+navBar= document.querySelector(".nav-bar");
      navBar.onclick = function (){
-    navActive= document.querySelector(".nav-links");
-    navActive.classList.toggle("active");
+    navLinks= document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
 }

@@ -1,4 +1,11 @@
-//Slider automatic//
+//Nav---Bar//
+
+navBar= document.querySelector(".nav-bar");
+navBar.onclick = function (){
+    navLinks= document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+}
+
 //Slider automatic//
 var slideIndex = 0;
 var slider = document.querySelector(".slider");
