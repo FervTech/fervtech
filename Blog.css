@@ -5,9 +5,14 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 body {
-    background: #fdfdfdff;
-    color: #fff;
+    background-color:#d3d7da;
+    color: #080808;
 }
 
 
@@ -19,13 +24,14 @@ body {
 .header-container{
     padding: 05px;
 
-    }
+}
 
 
 .nav{
     font-weight: bold;
     font-size: 16px;
     background: #ffffff;
+
 }
 
 .nav .logo{
@@ -82,9 +88,16 @@ nav:after{
     width: 100%;
 }
 
+.nav-links li a i{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background-color: red;
+}
+
 
 .nav-bar{
-color: #0a3264ff;
+    color: #0a3264ff;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -102,6 +115,7 @@ color: #0a3264ff;
     background: #ffffff;
     border-radius: 5px;
     border-top:3px solid #0a3264ff;
+    z-index: 1;
 }
 
 .nav-links li:hover .services-menu{
@@ -202,6 +216,8 @@ color: #0a3264ff;
     }
 
 }
+/*------Header-End-----------*/
+
 
 /*Demo ----------*/
 

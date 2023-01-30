@@ -28,8 +28,6 @@ body {
 .nav{
     font-weight: bold;
     font-size: 16px;
-    background: #ffffff;
-
 }
 
 .nav .logo{
@@ -452,11 +450,10 @@ nav:after{
 /*----------------------Web-Section----------------------*/
 .Web-Section{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .Web-Section .Web-Section-Container{
@@ -513,11 +510,10 @@ nav:after{
 /*----------------------App-Section----------------------*/
 .App-Section{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .App-Section .App-Section-Container{
@@ -574,7 +570,7 @@ nav:after{
 /*----------------------RPA-Section----------------------*/
 .RPA-Section{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -635,7 +631,7 @@ nav:after{
 /*----------------------Graphic Design-Section----------------------*/
 .Graphic-Design-Section{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
