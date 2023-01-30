@@ -490,6 +490,7 @@ nav:after{
     justify-content: center;
     align-items: center;
     background-color: #0a3264ff;
+    flex-wrap: wrap;
 }
 .Team-Member{
     position: relative;
@@ -550,6 +551,18 @@ nav:after{
 }
 .social-links a:hover{
     color: #0c52a1;
+}
+
+@media (max-width: 1439px) {
+    .Our-Team-Container{
+        height: 100vh;
+    }
+}
+
+@media (max-width: 719px) {
+    .Our-Team-Container{
+        height: 200vh;
+    }
 }
 
 /*----------------------Our Team-End------------------------*/
