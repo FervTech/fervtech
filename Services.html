@@ -20,7 +20,7 @@
             <a href="Skeleton.html"><img src="image/FervTech.png" class="logo"> </a>
             <!...........Nav Links.............>
             <ul class="nav-links">
-                <li><a href="Services.html">SERVICES</a>
+                <li><div class="service-error"><a href="Services.html">SERVICES</a><label class="angleDown"><i class="fa-solid fa-angle-down"></i></label></div>
                     <!-----------Services--------------------->
                     <div class="services-menu">
                         <ul class="services-links">
@@ -44,6 +44,7 @@
     </section>
 </header>
 <!-----------------Header-End------------------->
+
     <!-----------------------Main Services-------------------------->
     <section id="main">
         <div class="container">
@@ -130,9 +131,12 @@
 
             <div class="footer-col">
                 <h4>GET OUR NEWSLETTER</h4>
-                <input type="email" placeholder="Enter your email address" id="footer-email">
-                <button type="submit" id="footer-submit">Submit</button>
-                <p id="footer-paragraph">Receive informative weekly newsletter.</p>
+                <form name="submit-to-google-sheet">
+                    <input type="email" name="Email" placeholder="Enter your email address" id="footer-email" required>
+                    <button type="submit" id="footer-submit">Submit</button>
+                    <p id="footer-paragraph">Receive informative weekly newsletter.</p>
+                </form>
+                <span class="Gratitude" id="msg"></span>
             </div>
 
         </div>

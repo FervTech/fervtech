@@ -20,7 +20,7 @@
             <a href="Skeleton.html"><img src="image/FervTech.png" class="logo"> </a>
             <!...........Nav Links.............>
             <ul class="nav-links">
-                <li><a href="Services.html">SERVICES</a>
+                <li><div class="service-error"><a href="Services.html">SERVICES</a><label class="angleDown"><i class="fa-solid fa-angle-down"></i></label></div>
                     <!-----------Services--------------------->
                     <div class="services-menu">
                         <ul class="services-links">
@@ -44,6 +44,7 @@
     </section>
 </header>
 <!-----------------Header-End------------------->
+
 
 <section class="Contact-Details">
     <h2 class="title">get in <span>touch</span></h2>
@@ -73,8 +74,9 @@
 
 
     <div class="contact_form">
-        <form action="" method="">
+        <form action="https://formspree.io/f/xeqwevar" method="POST" >
             <div class="form_group">
+
                 <select name="services" id="" class="form_control" >
                     <option value="">How can we help you ?</option>
                     <option value="mobileApp">MOBILE APP DEVELOPMENT</option>
@@ -84,18 +86,18 @@
                 </select>
             </div>
             <div class="client_details">
-                <div class="details-fill">
-                    <input type="text" class="forms-fill" placeholder="Name" required>
-                    <input type="email" class="forms-fill" placeholder="Email" required>
-                    <input type="text" class="forms-fill" placeholder="Phone" required >
-                   <input type="text" class="forms-fill" placeholder="Location" required>
+                <div  class="details-fill">
+                    <input type="text" name="name" class="forms-fill" placeholder="Name" required>
+                    <input type="email" name="email" class="forms-fill" placeholder="Email" required>
+                    <input type="text" name="phone" class="forms-fill" placeholder="Phone" required >
+                   <input type="text" name="location" class="forms-fill" placeholder="Location" required>
                 </div>
             </div>
 
             <div class="form_group">
-                <textarea class="form_control" name="Message"  cols="30" rows="10"></textarea>
+                <textarea id="message" class="form_control" name="Message" placeholder="Message"  rows="10"></textarea>
             </div>
-             <label class="submit-button">
+             <label  class="submit-button">
                  <button class="btn">Submit</button>
              </label>
 
@@ -151,9 +153,12 @@
 
             <div class="footer-col">
                 <h4>GET OUR NEWSLETTER</h4>
-                <input type="email" placeholder="Enter your email address" id="footer-email">
-                <button type="submit" id="footer-submit">Submit</button>
-                <p id="footer-paragraph">Receive informative weekly newsletter.</p>
+                <form name="submit-to-google-sheet">
+                    <input type="email" name="Email" placeholder="Enter your email address" id="footer-email" required>
+                    <button type="submit" id="footer-submit">Submit</button>
+                    <p id="footer-paragraph">Receive informative weekly newsletter.</p>
+                </form>
+                <span class="Gratitude" id="msg"></span>
             </div>
 
         </div>
@@ -170,6 +175,8 @@
 
 <!-------------Script Section------->
 <script src="Contact.js"></script>
+<!-------------<script src="https://smtpjs.com/v3/smtp.js">
+</script>---------->
 
 </body>
 </html>

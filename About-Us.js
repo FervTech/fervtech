@@ -6,6 +6,12 @@ navBar.onclick = function (){
     navLinks.classList.toggle("active");
 }
 
+angleDown= document.querySelector(".angleDown");
+angleDown.onclick = function (){
+    servicesLinks= document.querySelector(".services-links");
+    servicesLinks.classList.toggle("active");
+}
+
 //------------Scroll-Up------------//
 let calcScrollValue = () => {
     let scrollProgress = document.getElementById("Scroll-Up");
@@ -27,3 +33,22 @@ let calcScrollValue = () => {
 };
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+//------News Letter Sheet-------//
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycby8yOr11n0piAqVnIcoDcZ0cuQ3D63b0WoyW8nfG7bEj-8q4w6nKVgzQKN9dCFcjez26Q/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML= "Thank You For Subscribing"
+            setTimeout(function (){
+                msg.innerHTML= ""
+            },4000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+})

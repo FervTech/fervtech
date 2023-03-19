@@ -22,7 +22,7 @@
             <a href="Skeleton.html"><img src="image/FervTech.png" class="logo"> </a>
             <!...........Nav Links.............>
             <ul class="nav-links">
-                <li><a href="Services.html">SERVICES<i class="fa-solid fa-angle-down"></i></a>
+                <li><div class="service-error"><a href="Services.html">SERVICES</a><label class="angleDown"><i class="fa-solid fa-angle-down"></i></label></div>
                     <!-----------Services--------------------->
                     <div class="services-menu">
                         <ul class="services-links">
@@ -46,6 +46,25 @@
     </section>
 </header>
 <!-----------------Header-End------------------->
+
+
+<!------Under-Construction------------------>
+<section>
+    <div class="Under-Construction">
+        <h1 id="Under-Construction-Text">We are sorry, webpage under construction.</h1>
+        <p id="Under-Construction-Text2">Thank you for being patient. We will be back shortly. </p>
+    </div>
+
+    <div class="Under-Construction-Details">
+        <ul>
+            <a href="#"> <i class="fa-solid fa-phone-volume"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+        </ul>
+    </div>
+
+</section>
+
 
 
 <!------------------Footer-Start-------------------->
@@ -93,9 +112,12 @@
 
             <div class="footer-col">
                 <h4>GET OUR NEWSLETTER</h4>
-                <input type="email" placeholder="Enter your email address" id="footer-email">
-                <button type="submit" id="footer-submit">Submit</button>
-                <p id="footer-paragraph">Receive informative weekly newsletter.</p>
+                <form name="submit-to-google-sheet">
+                    <input type="email" name="Email" placeholder="Enter your email address" id="footer-email" required>
+                    <button type="submit" id="footer-submit">Submit</button>
+                    <p id="footer-paragraph">Receive informative weekly newsletter.</p>
+                </form>
+                <span class="Gratitude" id="msg"></span>
             </div>
 
         </div>
