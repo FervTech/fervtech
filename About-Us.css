@@ -21,7 +21,7 @@ body {
 
 }
 .header-container{
-    padding: 05px;
+    padding: 0.1px 05px;
 
 }
 
@@ -30,7 +30,10 @@ body {
     font-weight: bold;
     font-size: 16px;
     background: #ffffff;
-
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow:  0 0 5px #262626;
 }
 
 .nav .logo{
@@ -63,7 +66,7 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color:  #0a3264ff;
+    color: #492d88ff;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
@@ -89,14 +92,14 @@ nav:after{
 
 .angleDown{
     display: none;
-    color:  #0a3264ff;
+    color:  #492d88ff;
     font-size: 30px;
     cursor: pointer;
 }
 
 
 .nav-bar{
-    color: #0a3264ff;
+    color: #492d88ff;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -113,7 +116,7 @@ nav:after{
     visibility: hidden;
     background: #ffffff;
     border-radius: 5px;
-    border-top:3px solid #0a3264ff;
+    border-top:3px solid #492d88ff;
     z-index: 1;
 }
 
@@ -136,7 +139,7 @@ nav:after{
 
 .services-links li:hover{
     padding-left: 8px;
-    color: #0a3264ff;
+    color: #492d88ff;
 }
 
 .services-links li a{
@@ -150,9 +153,9 @@ nav:after{
 
 }
 .services-links li a:hover{
-    color: #0a3264ff;
+    color: #492d88ff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #0a3264ff, 0 0 5px #262626;
+    box-shadow: 0 0 5px #492d88ff, 0 0 5px #262626;
 }
 
 @media (max-width: 1090px) {
@@ -260,6 +263,19 @@ nav:after{
 
 /*------Header-End-----------*/
 
+/*------------------First-Image-------------------*/
+
+.Main-Header{
+    margin-top:  50px;
+    width: 100%;
+
+}
+
+.img-header{
+    width:300px;
+}
+
+
 
 
 
@@ -279,7 +295,7 @@ nav:after{
     line-height: 1.5;
     letter-spacing: 2px;
     font-size: 30px;
-    color: #0a3264ff;
+    color: #492d88ff;
 
 }
 
@@ -326,7 +342,7 @@ nav:after{
 }
 
 .Our-Mission .Mission-Text h2{
-    color: #0a3264ff;
+    color: #492d88ff;
     margin-bottom: 20px;
     font-size: 40px;
     text-transform: capitalize;
@@ -374,7 +390,7 @@ nav:after{
 }
 
 .Our-Vision .Vision-Text h2{
-    color: #0a3264ff;
+    color: #492d88ff;
     margin-bottom: 20px;
     font-size: 40px;
     text-transform: capitalize;
@@ -437,7 +453,7 @@ nav:after{
 .Our-Core-Values h1{
     font-weight: bold;
     letter-spacing: 2px;
-    color: #0a3264ff;
+    color: #492d88ff;
     padding-bottom: 20px;
 }
 
@@ -453,7 +469,7 @@ nav:after{
 .card {
     padding: 3.1em 1.25em;
     text-align: center;
-    background: linear-gradient(0deg, #397ef6 10px, transparent 10px);
+    background: linear-gradient(0deg, #492d88ff 10px, transparent 10px);
     background-repeat: no-repeat;
     background-position: 0 0.62em;
     box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
@@ -466,7 +482,7 @@ nav:after{
     height: 2em;
     width: 2em;
     margin: auto;
-    background-color: #397ef6;
+    background-color: #492d88ff;
     display: grid;
     place-items: center;
     border-radius: 50%;
@@ -477,7 +493,7 @@ nav:after{
     content: "";
     height: 1.5em;
     width: 1.5em;
-    border: 0.12em solid #397ef6;
+    border: 0.12em solid #492d88ff;
     border-radius: 50%;
     transition: 0.5s;
 }
@@ -486,7 +502,7 @@ nav:after{
     margin: 1em 0 1.4em 0;
     font-weight: 600;
     letter-spacing: 0.3px;
-    color: #070024;
+    color:#492d88ff;
 }
 .card p {
     line-height: 2em;
@@ -529,7 +545,7 @@ nav:after{
 .Our-Team h1{
     font-weight: bold;
     letter-spacing: 2px;
-    color: #0a3264ff;
+    color: #492d88ff;
     padding-bottom: 10px;
 }
 
@@ -539,7 +555,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0a3264ff;
+    background-color: #492d88ff;
     flex-wrap: wrap;
 }
 .Team-Member{
@@ -590,7 +606,7 @@ nav:after{
 }
 .caption p{
     font-size: 16px;
-    color: #0c52a1;
+    color:#492d88ff;
     margin: 2px 0 9px 0;
 }
 .caption .social-links a{
@@ -600,7 +616,7 @@ nav:after{
     transition: .6s;
 }
 .social-links a:hover{
-    color: #0c52a1;
+    color: #492d88ff;
 }
 
 @media (max-width: 1439px) {
@@ -703,7 +719,7 @@ nav:after{
 }
 
 .footer-col .social-icons a:hover{
-    color: #0a3264ff;
+    color: #492d88ff;
     background-color: #ffffff;
 }
 
@@ -723,11 +739,11 @@ nav:after{
     border-radius: 5px;
     color: #ffffff;
     font-weight: bold;
-    background-color: #0a3264ff;
+    background-color: #492d88ff;
 }
 #footer-submit:hover{
     background-color: #ffffff;
-    color: #0a3264ff;
+    color: #492d88ff;
 }
 
 .Gratitude{
@@ -838,7 +854,7 @@ nav:after{
     display: grid;
     place-items: center;
     font-size: 35px;
-    color: #001a2e;
+    color: #492d88ff;
 }
 
 /*-----------------Scroll-Up-End----------------*/

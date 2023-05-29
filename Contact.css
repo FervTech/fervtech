@@ -22,16 +22,18 @@ body {
 
 }
 .header-container{
-    padding: 05px;
+    padding: 0 05px;
 
 }
-
 
 .nav{
     font-weight: bold;
     font-size: 16px;
     background: #ffffff;
-
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow:  0 0 5px #262626;
 }
 
 .nav .logo{
@@ -64,7 +66,7 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color:  #0a3264ff;
+    color:  #492d88ff;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
@@ -90,14 +92,14 @@ nav:after{
 
 .angleDown{
     display: none;
-    color:  #0a3264ff;
+    color:  #492d88ff;
     font-size: 30px;
     cursor: pointer;
 }
 
 
 .nav-bar{
-    color: #0a3264ff;
+    color: #492d88ff;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -114,7 +116,7 @@ nav:after{
     visibility: hidden;
     background: #ffffff;
     border-radius: 5px;
-    border-top:3px solid #0a3264ff;
+    border-top:3px solid #492d88ff;
     z-index: 1;
 }
 
@@ -137,7 +139,7 @@ nav:after{
 
 .services-links li:hover{
     padding-left: 8px;
-    color: #0a3264ff;
+    color: #492d88ff;
 }
 
 .services-links li a{
@@ -151,9 +153,9 @@ nav:after{
 
 }
 .services-links li a:hover{
-    color: #0a3264ff;
+    color: #492d88ff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #0a3264ff, 0 0 5px #262626;
+    box-shadow: 0 0 5px #492d88ff, 0 0 5px #262626;
 }
 
 @media (max-width: 1090px) {
@@ -285,7 +287,7 @@ nav:after{
     flex-wrap: wrap;
     display: inline-block;
     padding: 2rem 2rem;
-    color: #0a3264ff;
+    color: #492d88ff;
 }
 
 
@@ -306,14 +308,14 @@ nav:after{
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    border: 2px solid #0a3264ff;
-    color: #0a3264ff;
+    border: 2px solid #492d88ff;
+    color: #492d88ff;
     margin-right: 1rem;
     cursor: pointer;
 }
 
 .Contact-Info .Contact-Icons i:hover{
-    background-color: #0a3264ff;
+    background-color: #492d88ff;
     color: #ffffff;
 }
 
@@ -354,7 +356,7 @@ nav:after{
 
 }
 .contact_form{
-    background: #003;
+    background: #492d88ff;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -501,7 +503,7 @@ nav:after{
 }
 
 .footer-col .social-icons a:hover{
-    color: #0a3264ff;
+    color: #492d88ff;
     background-color: #ffffff;
 }
 
@@ -521,16 +523,16 @@ nav:after{
     border-radius: 5px;
     color: #ffffff;
     font-weight: bold;
-    background-color: #0a3264ff;
+    background-color: #492d88ff;
 }
 #footer-submit:hover{
     background-color: #ffffff;
-    color: #0a3264ff;
+    color: #492d88ff;
 }
 
 .Gratitude{
     margin-top: 20px;
-    color: #0a3264ff;
+    color:#492d88ff;
 }
 
 #footer-paragraph{
@@ -636,7 +638,7 @@ nav:after{
     display: grid;
     place-items: center;
     font-size: 35px;
-    color: #001a2e;
+    color: #492d88ff;
 }
 
 /*-----------------Scroll-Up-End----------------*/

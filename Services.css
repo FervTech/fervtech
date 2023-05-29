@@ -21,16 +21,18 @@ body {
 
 }
 .header-container{
-    padding: 05px;
+    padding: 0 05px;
 
 }
-
 
 .nav{
     font-weight: bold;
     font-size: 16px;
     background: #ffffff;
-
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow:  0 0 5px #262626;
 }
 
 .nav .logo{
@@ -63,7 +65,7 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color:  #0a3264ff;
+    color:  #492d88ff;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
@@ -96,7 +98,7 @@ nav:after{
 
 
 .nav-bar{
-    color: #0a3264ff;
+    color: #492d88ff;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -113,7 +115,7 @@ nav:after{
     visibility: hidden;
     background: #ffffff;
     border-radius: 5px;
-    border-top:3px solid #0a3264ff;
+    border-top:3px solid #492d88ff;
     z-index: 1;
 }
 
@@ -136,7 +138,7 @@ nav:after{
 
 .services-links li:hover{
     padding-left: 8px;
-    color: #0a3264ff;
+    color: #492d88ff;
 }
 
 .services-links li a{
@@ -150,9 +152,9 @@ nav:after{
 
 }
 .services-links li a:hover{
-    color: #0a3264ff;
+    color:#492d88ff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #0a3264ff, 0 0 5px #262626;
+    box-shadow: 0 0 5px #492d88ff, 0 0 5px #262626;
 }
 
 @media (max-width: 1090px) {
@@ -263,12 +265,13 @@ nav:after{
 /*----------------Main----------------*/
 #main{
     padding: 30px 0;
+    background-color: #e3e7f0ff;
 
 }
 
 .sub-title{
     text-align: center;
-    color: #0a3264ff;
+    color: #492d88ff;
 
 }
 
@@ -280,13 +283,21 @@ nav:after{
 }
 
 .services-list div{
-    background: #262626;
+    background: #ffffff;
+    color: #492d88ff;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
 }
+
+.services-list div:hover{
+    background: #492d88ff;
+    transform: translateY(-10px);
+    color: #ffffff;
+}
+
 
 .services-list div i{
     font-size: 50px;
@@ -295,16 +306,20 @@ nav:after{
 
 .services-list div h2{
     font-size: 30px;
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 15px;
+}
+
+.services-list div p{
+    color: #080808;
 }
 
 .services-list div a{
     text-decoration: none;
-    color: #ffffff;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
+    color: #FFFFFF;
 }
 
 .services-list div a:hover{
@@ -316,10 +331,6 @@ nav:after{
     margin-left: 10px;
 }
 
-.services-list div:hover{
-    background: #0a3264ff;
-    transform: translateY(-10px);
-}
 
 
 /*----------------------Footer------------------------*/
@@ -407,7 +418,7 @@ nav:after{
 }
 
 .footer-col .social-icons a:hover{
-    color: #0a3264ff;
+    color: #492d88ff;
     background-color: #ffffff;
 }
 
@@ -427,16 +438,16 @@ nav:after{
     border-radius: 5px;
     color: #ffffff;
     font-weight: bold;
-    background-color: #0a3264ff;
+    background-color: #492d88ff;
 }
 #footer-submit:hover{
     background-color: #ffffff;
-    color: #0a3264ff;
+    color: #492d88ff;
 }
 
 .Gratitude{
     margin-top: 20px;
-    color: #0a3264ff;
+    color: #492d88ff;
 }
 
 #footer-paragraph{
@@ -542,7 +553,7 @@ nav:after{
     display: grid;
     place-items: center;
     font-size: 35px;
-    color: #001a2e;
+    color: #492d88ff;
 }
 
 /*-----------------Scroll-Up-End----------------*/

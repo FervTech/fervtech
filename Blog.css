@@ -23,16 +23,16 @@ body {
 
 }
 .header-container{
-    padding: 05px;
+    padding: 0 05px;
 
 }
-
 
 .nav{
     font-weight: bold;
     font-size: 16px;
     background: #ffffff;
-
+    position: fixed;
+    width: 100%;
 }
 
 .nav .logo{
@@ -309,14 +309,10 @@ nav:after{
 
 .Under-Construction-Details ul a:hover{
     color: #0a3264ff;
-    background-color: #ffffff;
     font-size: 30px;
 
 }
 
-@media (max-width: 909px) {
-
-}
 
 @media (max-width: 767px) {
     .Under-Construction-Details ul a{

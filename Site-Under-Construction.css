@@ -55,12 +55,7 @@ text-align: center;
 
 .Under-Construction-Details ul a:hover{
     color: #0a3264ff;
-    background-color: #ffffff;
     font-size: 30px;
-
-}
-
-@media (max-width: 909px) {
 
 }
 
