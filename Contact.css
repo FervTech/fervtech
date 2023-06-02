@@ -22,7 +22,7 @@ body {
 
 }
 .header-container{
-    padding: 0 05px;
+    padding: 0.1px 0px;
 
 }
 
@@ -66,7 +66,7 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color:  #492d88ff;
+    color:  #2B398D;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
@@ -92,14 +92,14 @@ nav:after{
 
 .angleDown{
     display: none;
-    color:  #492d88ff;
+    color:  #4644AA;
     font-size: 30px;
     cursor: pointer;
 }
 
 
 .nav-bar{
-    color: #492d88ff;
+    color: #4644AA;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -116,7 +116,7 @@ nav:after{
     visibility: hidden;
     background: #ffffff;
     border-radius: 5px;
-    border-top:3px solid #492d88ff;
+    border-top:3px solid #4644AA;
     z-index: 1;
 }
 
@@ -153,9 +153,9 @@ nav:after{
 
 }
 .services-links li a:hover{
-    color: #492d88ff;
+    color: #4644AA;
     border-radius: 5px;
-    box-shadow: 0 0 5px #492d88ff, 0 0 5px #262626;
+    box-shadow: 0 0 5px #4644AA, 0 0 5px #262626;
 }
 
 @media (max-width: 1090px) {
@@ -287,7 +287,7 @@ nav:after{
     flex-wrap: wrap;
     display: inline-block;
     padding: 2rem 2rem;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 
@@ -308,14 +308,14 @@ nav:after{
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    border: 2px solid #492d88ff;
-    color: #492d88ff;
+    border: 2px solid #4644AA;
+    color: #4644AA;
     margin-right: 1rem;
     cursor: pointer;
 }
 
 .Contact-Info .Contact-Icons i:hover{
-    background-color: #492d88ff;
+    background-color: #4644AA;
     color: #ffffff;
 }
 
@@ -356,7 +356,7 @@ nav:after{
 
 }
 .contact_form{
-    background: #492d88ff;
+    background: #4644AA;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -421,10 +421,10 @@ nav:after{
 /*----------------------Footer------------------------*/
 .footer{
     font-size: 80%;
-    background: #262626;
+    background: #2B398D;
     height: auto;
-    color: white;
     padding:03px 0 ;
+    margin-top: 50px;
     margin-bottom: 0px;
 }
 .footer-container{
@@ -452,6 +452,8 @@ nav:after{
     position: relative;
 }
 
+
+
 .footer-container ul{
     list-style: none;
     line-height: 2;
@@ -459,10 +461,9 @@ nav:after{
 
 .Details ul li {
     font-size: 16px;
-    color: #ffffff;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
+    color:  #bbbbbb;
     display: block;
     transition: all 0.1s ease;
 }
@@ -476,10 +477,9 @@ nav:after{
 }
 .footer-col ul li a{
     font-size: 16px;
-    color: #ffffff;
+    color:  #bbbbbb;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
     display: block;
     transition: all 0.3s ease;
 }
@@ -494,7 +494,7 @@ nav:after{
     height: 40px;
     width: 40px;
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
+    margin: 20px 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
@@ -503,12 +503,14 @@ nav:after{
 }
 
 .footer-col .social-icons a:hover{
-    color: #492d88ff;
+    color: #4644AA;
     background-color: #ffffff;
 }
 
 .footer-logo{
     width:100px;
+    background-color: #ffffff;
+    border-radius: 15px;
 }
 
 #footer-email{
@@ -523,16 +525,17 @@ nav:after{
     border-radius: 5px;
     color: #ffffff;
     font-weight: bold;
-    background-color: #492d88ff;
+    background-color: #4644AA;
+    cursor: pointer;
 }
 #footer-submit:hover{
     background-color: #ffffff;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 .Gratitude{
-    margin-top: 20px;
-    color:#492d88ff;
+    margin-top: 100px;
+    color: #ffffff;
 }
 
 #footer-paragraph{
@@ -550,14 +553,7 @@ nav:after{
     margin-top: 50px;
     padding: 0;
     color: #ffffff;
-    color: #bbbbbb;
 }
-
-.copyright:hover {
-    color: #ffffff;
-}
-
-
 
 
 /*--------footer-responsive---------*/
@@ -638,7 +634,7 @@ nav:after{
     display: grid;
     place-items: center;
     font-size: 35px;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 /*-----------------Scroll-Up-End----------------*/

@@ -325,9 +325,8 @@ nav:after{
 /*----------------------Footer------------------------*/
 .footer{
     font-size: 80%;
-    background: #262626;
+    background: #2B398D;
     height: auto;
-    color: white;
     padding:03px 0 ;
     margin-bottom: 0px;
 }
@@ -356,6 +355,8 @@ nav:after{
     position: relative;
 }
 
+
+
 .footer-container ul{
     list-style: none;
     line-height: 2;
@@ -363,10 +364,9 @@ nav:after{
 
 .Details ul li {
     font-size: 16px;
-    color: #ffffff;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
+    color:  #bbbbbb;
     display: block;
     transition: all 0.1s ease;
 }
@@ -380,10 +380,9 @@ nav:after{
 }
 .footer-col ul li a{
     font-size: 16px;
-    color: #ffffff;
+    color:  #bbbbbb;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
     display: block;
     transition: all 0.3s ease;
 }
@@ -398,7 +397,7 @@ nav:after{
     height: 40px;
     width: 40px;
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
+    margin: 20px 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
@@ -407,12 +406,14 @@ nav:after{
 }
 
 .footer-col .social-icons a:hover{
-    color: #0a3264ff;
+    color: #4644AA;
     background-color: #ffffff;
 }
 
 .footer-logo{
     width:100px;
+    background-color: #ffffff;
+    border-radius: 15px;
 }
 
 #footer-email{
@@ -427,16 +428,17 @@ nav:after{
     border-radius: 5px;
     color: #ffffff;
     font-weight: bold;
-    background-color: #0a3264ff;
+    background-color: #4644AA;
+    cursor: pointer;
 }
 #footer-submit:hover{
     background-color: #ffffff;
-    color: #0a3264ff;
+    color: #4644AA;
 }
 
 .Gratitude{
     margin-top: 20px;
-    color: #0a3264ff;
+    color: #ffffff;
 }
 
 #footer-paragraph{
@@ -454,14 +456,7 @@ nav:after{
     margin-top: 50px;
     padding: 0;
     color: #ffffff;
-    color: #bbbbbb;
 }
-
-.copyright:hover {
-    color: #ffffff;
-}
-
-
 
 
 /*--------footer-responsive---------*/

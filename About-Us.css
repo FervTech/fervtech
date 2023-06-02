@@ -10,7 +10,7 @@ html{
 }
 
 body {
-    background-color:#ffffff;
+    background-color:#fdfdfdff;
     color: #080808;
 }
 
@@ -21,7 +21,7 @@ body {
 
 }
 .header-container{
-    padding: 0.1px 05px;
+    padding: 0.1px 0px;
 
 }
 
@@ -32,7 +32,7 @@ body {
     background: #ffffff;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     box-shadow:  0 0 5px #262626;
 }
 
@@ -66,7 +66,7 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color: #492d88ff;
+    color: #2B398D;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
@@ -116,7 +116,7 @@ nav:after{
     visibility: hidden;
     background: #ffffff;
     border-radius: 5px;
-    border-top:3px solid #492d88ff;
+    border-top:3px solid #4644AA;
     z-index: 1;
 }
 
@@ -139,7 +139,7 @@ nav:after{
 
 .services-links li:hover{
     padding-left: 8px;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 .services-links li a{
@@ -153,9 +153,9 @@ nav:after{
 
 }
 .services-links li a:hover{
-    color: #492d88ff;
+    color: #4644AA;
     border-radius: 5px;
-    box-shadow: 0 0 5px #492d88ff, 0 0 5px #262626;
+    box-shadow: 0 0 5px #4644AA, 0 0 5px #262626;
 }
 
 @media (max-width: 1090px) {
@@ -295,7 +295,7 @@ nav:after{
     line-height: 1.5;
     letter-spacing: 2px;
     font-size: 30px;
-    color: #492d88ff;
+    color: #4644AA;
 
 }
 
@@ -342,7 +342,7 @@ nav:after{
 }
 
 .Our-Mission .Mission-Text h2{
-    color: #492d88ff;
+    color: #4644AA;
     margin-bottom: 20px;
     font-size: 40px;
     text-transform: capitalize;
@@ -390,7 +390,7 @@ nav:after{
 }
 
 .Our-Vision .Vision-Text h2{
-    color: #492d88ff;
+    color: #4644AA;
     margin-bottom: 20px;
     font-size: 40px;
     text-transform: capitalize;
@@ -453,7 +453,7 @@ nav:after{
 .Our-Core-Values h1{
     font-weight: bold;
     letter-spacing: 2px;
-    color: #492d88ff;
+    color: #4644AA;
     padding-bottom: 20px;
 }
 
@@ -469,7 +469,7 @@ nav:after{
 .card {
     padding: 3.1em 1.25em;
     text-align: center;
-    background: linear-gradient(0deg, #492d88ff 10px, transparent 10px);
+    background: linear-gradient(0deg, #4644AA 10px, transparent 10px);
     background-repeat: no-repeat;
     background-position: 0 0.62em;
     box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
@@ -482,7 +482,7 @@ nav:after{
     height: 2em;
     width: 2em;
     margin: auto;
-    background-color: #492d88ff;
+    background-color: #4644AA;
     display: grid;
     place-items: center;
     border-radius: 50%;
@@ -493,7 +493,7 @@ nav:after{
     content: "";
     height: 1.5em;
     width: 1.5em;
-    border: 0.12em solid #492d88ff;
+    border: 0.12em solid #4644AA;
     border-radius: 50%;
     transition: 0.5s;
 }
@@ -502,7 +502,7 @@ nav:after{
     margin: 1em 0 1.4em 0;
     font-weight: 600;
     letter-spacing: 0.3px;
-    color:#492d88ff;
+    color: #4644AA;
 }
 .card p {
     line-height: 2em;
@@ -545,7 +545,7 @@ nav:after{
 .Our-Team h1{
     font-weight: bold;
     letter-spacing: 2px;
-    color: #492d88ff;
+    color: #4644AA;
     padding-bottom: 10px;
 }
 
@@ -555,7 +555,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #492d88ff;
+    background-color: #4644AA;
     flex-wrap: wrap;
 }
 .Team-Member{
@@ -606,7 +606,7 @@ nav:after{
 }
 .caption p{
     font-size: 16px;
-    color:#492d88ff;
+    color: #4644AA;
     margin: 2px 0 9px 0;
 }
 .caption .social-links a{
@@ -616,7 +616,7 @@ nav:after{
     transition: .6s;
 }
 .social-links a:hover{
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 @media (max-width: 1439px) {
@@ -637,9 +637,8 @@ nav:after{
 /*----------------------Footer------------------------*/
 .footer{
     font-size: 80%;
-    background: #262626;
+    background: #2B398D;
     height: auto;
-    color: white;
     padding:03px 0 ;
     margin-bottom: 0px;
 }
@@ -668,6 +667,8 @@ nav:after{
     position: relative;
 }
 
+
+
 .footer-container ul{
     list-style: none;
     line-height: 2;
@@ -675,10 +676,9 @@ nav:after{
 
 .Details ul li {
     font-size: 16px;
-    color: #ffffff;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
+    color:  #bbbbbb;
     display: block;
     transition: all 0.1s ease;
 }
@@ -692,10 +692,9 @@ nav:after{
 }
 .footer-col ul li a{
     font-size: 16px;
-    color: #ffffff;
+    color:  #bbbbbb;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
     display: block;
     transition: all 0.3s ease;
 }
@@ -710,7 +709,7 @@ nav:after{
     height: 40px;
     width: 40px;
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
+    margin: 20px 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
@@ -719,12 +718,14 @@ nav:after{
 }
 
 .footer-col .social-icons a:hover{
-    color: #492d88ff;
+    color: #4644AA;
     background-color: #ffffff;
 }
 
 .footer-logo{
     width:100px;
+    background-color: #ffffff;
+    border-radius: 15px;
 }
 
 #footer-email{
@@ -739,16 +740,17 @@ nav:after{
     border-radius: 5px;
     color: #ffffff;
     font-weight: bold;
-    background-color: #492d88ff;
+    background-color: #4644AA;
+    cursor: pointer;
 }
 #footer-submit:hover{
     background-color: #ffffff;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 .Gratitude{
     margin-top: 20px;
-    color: #0a3264ff;
+    color: #ffffff;
 }
 
 #footer-paragraph{
@@ -766,14 +768,7 @@ nav:after{
     margin-top: 50px;
     padding: 0;
     color: #ffffff;
-    color: #bbbbbb;
 }
-
-.copyright:hover {
-    color: #ffffff;
-}
-
-
 
 
 /*--------footer-responsive---------*/
@@ -854,7 +849,7 @@ nav:after{
     display: grid;
     place-items: center;
     font-size: 35px;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 /*-----------------Scroll-Up-End----------------*/

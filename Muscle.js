@@ -18,7 +18,7 @@ var slider = document.querySelector(".slider");
 var slides = document.querySelector(".slides");
 var slide = document.querySelectorAll(".slide");
 var dots = document.querySelectorAll(".dots label")
-var time = 5000;
+var time = 7000;
 
 function plusslide(position) {
     slideIndex += position;
@@ -133,7 +133,7 @@ let calcScrollValue = () => {
     scrollProgress.addEventListener("click", () => {
         document.documentElement.scrollTop = 0;
     });
-    scrollProgress.style.background = `conic-gradient(#492d88ff ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+    scrollProgress.style.background = `conic-gradient(#4644AA ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
 };
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;

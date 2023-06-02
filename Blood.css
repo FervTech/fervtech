@@ -11,7 +11,7 @@ html{
 
 
 body {
-    background: #e3e7f0ff;
+    background: #fdfdfdff;
     color:  #080808;
 }
 
@@ -21,8 +21,7 @@ body {
     background: #ffffff;
 }
 .header-container{
-    padding: 0.1px 05px;
-
+    padding: 0.1px 0px;
 
 }
 
@@ -66,7 +65,7 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color:  #492d88ff;
+    color: #2B398D;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
@@ -92,14 +91,14 @@ nav:after{
 
 .angleDown{
     display: none;
-    color:  #492d88ff;
+    color:  #4644AA;
     font-size: 30px;
     cursor: pointer;
 }
 
 
 .nav-bar{
-    color: #492d88ff;
+    color: #4644AA;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -116,7 +115,7 @@ nav:after{
     visibility: hidden;
     background: #ffffff;
     border-radius: 5px;
-    border-top:3px solid #492d88ff;
+    border-top:3px solid #4644AA;
     z-index: 1;
 }
 
@@ -139,7 +138,7 @@ nav:after{
 
 .services-links li:hover{
     padding-left: 8px;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 .services-links li a{
@@ -153,9 +152,9 @@ nav:after{
 
 }
 .services-links li a:hover{
-    color: #492d88ff;
+    color: #4644AA;
     border-radius: 5px;
-    box-shadow: 0 0 5px #492d88ff, 0 0 5px #262626;
+    box-shadow: 0 0 5px #4644AA, 0 0 5px #262626;
 }
 
 @media (max-width: 1090px) {
@@ -343,15 +342,15 @@ nav:after{
 }
 
 .slide-1{
-    background-image: url("image/Slide1.PNG");
+    background-image: url("image/Slide1.jpg");
 }
 
 .slide-2{
-    background-image: url("image/Slide2.PNG");
+    background-image: url("image/Slide2.jpg");
 }
 
 .slide-3{
-    background-image: url("image/Slide3.jpg");
+    background-image: url("image/Slide3.png");
 }
 
 .slider .arrows {
@@ -361,7 +360,6 @@ nav:after{
     transform: translateY(-50%);
     color: #fff;
     font-size: 60px;
-
 }
 
 .slider .arrows:hover {
@@ -443,8 +441,19 @@ nav:after{
     line-height: 1.5;
     letter-spacing: 2px;
     font-size: 40px;
-    color: #492d88ff;
+    color: #2B398D;
+    position: relative;
+    padding-bottom: 10px;
+}
 
+.WHO-WE-ARE h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
 }
 
 .WHO-WE-ARE p{
@@ -456,7 +465,7 @@ nav:after{
 
 }
 .WHO-WE-ARE button{
-    background-color: #492d88ff;
+    background-color: #4644AA;
     color: #ffffff;
     border: 2px solid transparent;
     border-radius: 30px;
@@ -468,8 +477,8 @@ nav:after{
 .WHO-WE-ARE button:hover{
     transform: scale(1.2);
     background-color: transparent;
-    border: 2px solid #492d88ff;
-    color: #492d88ff;
+    border: 2px solid #4644AA;
+    color: #4644AA;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -494,8 +503,23 @@ nav:after{
     text-align: center;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #492d88ff;
+    color: #2B398D;
     font-size: 40px;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+}
+
+
+.OUR-SERVICES-h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
 }
 
 .OUR-SERVICES-IMG{
@@ -511,6 +535,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:  #fbf7ffff;
 }
 
 .Web-Section .Web-Section-Container{
@@ -527,9 +552,10 @@ nav:after{
     width: 550px;
     max-width: 100%;
     padding: 0 10px;
+
 }
 .Web-Section .Web-Section-Container .Web-Section-Text h2{
-    color: #492d88ff;
+    color: #4644AA;
     margin-bottom: 20px;
     font-size: 35px;
     text-transform: capitalize;
@@ -544,7 +570,7 @@ nav:after{
 }
 
 .Web-Section .Web-Section-Container .Web-Section-Text button{
-    background-color: #492d88ff;
+    background-color: #4644AA;
     color: #ffffff;
     border: 2px solid transparent;
     text-decoration: none;
@@ -557,8 +583,8 @@ nav:after{
 .Web-Section .Web-Section-Container .Web-Section-Text button:hover{
     transform: scale(1.2);
     background-color: transparent;
-    border: 2px solid #492d88ff;
-    color: #492d88ff;
+    border: 2px solid #4644AA;
+    color: #4644AA;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -589,7 +615,7 @@ nav:after{
     padding: 0 10px;
 }
 .App-Section .App-Section-Container .App-Section-Text h2{
-    color: #492d88ff;
+    color: #4644AA;
    margin-bottom: 20px;
     font-size: 35px;
     text-transform: capitalize;
@@ -604,7 +630,7 @@ nav:after{
 }
 
 .App-Section .App-Section-Container .App-Section-Text button{
-    background-color: #492d88ff;
+    background-color: #4644AA;
     color: #ffffff;
     border: 2px solid transparent;
     text-decoration: none;
@@ -617,8 +643,8 @@ nav:after{
 .App-Section .App-Section-Container .App-Section-Text button:hover{
     transform: scale(1.2);
     background-color: transparent;
-    border: 2px solid #492d88ff;
-    color:#492d88ff;
+    border: 2px solid #4644AA;
+    color: #4644AA;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -631,7 +657,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background-color:  #fbf7ffff;
 }
 
 .RPA-Section .RPA-Section-Container{
@@ -650,7 +676,7 @@ nav:after{
     padding: 0 10px;
 }
 .RPA-Section .RPA-Section-Container .RPA-Section-Text h2{
-    color: #492d88ff;
+    color: #4644AA;
     margin-bottom: 20px;
     font-size: 35px;
     text-transform: capitalize;
@@ -666,7 +692,7 @@ nav:after{
 }
 
 .RPA-Section .RPA-Section-Container .RPA-Section-Text button{
-    background-color: #492d88ff;
+    background-color: #4644AA;
     color: #ffffff;
     border: 2px solid transparent;
     text-decoration: none;
@@ -679,8 +705,8 @@ nav:after{
 .RPA-Section .RPA-Section-Container .RPA-Section-Text button:hover{
     transform: scale(1.2);
     background-color: transparent;
-    border: 2px solid #492d88ff;
-    color: #492d88ff;
+    border: 2px solid #4644AA;
+    color: #4644AA;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -692,7 +718,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 20px;
 }
 
 .Graphic-Design-Section .Graphic-Section-Container{
@@ -711,7 +737,7 @@ nav:after{
     padding: 0 10px;
 }
 .Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text h2{
-    color: #492d88ff;
+    color: #4644AA;
     margin-bottom: 20px;
     font-size: 35px;
     text-transform: capitalize;
@@ -726,7 +752,7 @@ nav:after{
 }
 
 .Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text button{
-    background-color: #492d88ff;
+    background-color: #4644AA;
     color: #ffffff;
     border: 2px solid transparent;
     text-decoration: none;
@@ -739,8 +765,8 @@ nav:after{
 .Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text button:hover{
     transform: scale(1.2);
     background-color: transparent;
-    border: 2px solid #492d88ff;
-    color: #492d88ff;
+    border: 2px solid #4644AA;
+    color: #4644AA;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -810,22 +836,34 @@ nav:after{
 
 /*----------------------Why Choose Us-Start----------------------*/
 .WHY-CHOOSE-US{
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .WHY-CHOOSE-US h2{
     text-align: center;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #492d88ff;
+    color: #2B398D;
     padding-bottom: 10px;
     font-size: 40px;
+    position: relative;
+}
+
+.WHY-CHOOSE-US h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
 }
 
 .WHY-CHOOSE-US-Container{
     width: 90%;
     margin: 50px auto;
     text-align: center;
+    background-color: #fbf7ffff;
 }
 
 
@@ -840,7 +878,7 @@ nav:after{
     width: 290px;
     background: #fff;
     padding: 20px 10px;
-    border: 0.5px solid #492d88ff;
+    border: 0.5px solid #4644AA;
     margin-bottom: 50px;
     transition: 0.3s;
 }
@@ -868,7 +906,7 @@ nav:after{
     line-height: 18px;
     letter-spacing: 2px;
     margin: 15px 0 0px;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 .WHY-CHOOSE-US-Row .card p{
@@ -896,10 +934,24 @@ nav:after{
     text-align: center;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #492d88ff;
+    color: #2B398D;
     padding-bottom: 20px;
+    margin-bottom: 20px;
     font-size: 40px;
+    position: relative;
 }
+
+.Testimonials h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
+}
+
+
 .slide-container{
     max-width: 1120px;
     width: 100%;
@@ -927,7 +979,7 @@ nav:after{
 }
 .card-content .card-status{
     font-size: 16px;
-    color: #492d88ff;
+    color: #4644AA;
     margin: 2px 0 9px 0;
 }
 .image-content{
@@ -941,7 +993,7 @@ nav:after{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color:#492d88ff;
+    background-color: #4644AA;
     border-radius: 25px 25px 0 25px;
 }
 .overlay::before,
@@ -952,7 +1004,7 @@ nav:after{
     bottom: -40px;
     height: 40px;
     width: 40px;
-    background-color:#492d88ff;
+    background-color: #4644AA;
 }
 .overlay::after{
     border-radius: 0 25px 0 0;
@@ -971,7 +1023,7 @@ nav:after{
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #492d88ff;
+    border: 4px solid #4644AA;
 }
 .name{
     font-size: 18px;
@@ -987,16 +1039,16 @@ nav:after{
 
 .description i{
     font-size: 10px;
-    color: #492d88ff;
+    color: #4644AA;
     margin: 0 6px;
 }
 
 .swiper-navBtn{
-    color:  #492d88ff;
+    color:  #4644AA;
     transition: color 0.3s ease;
 }
 .swiper-navBtn:hover{
-    color: #492d88ff;
+    color: #4644AA;
 }
 .swiper-navBtn::before,
 .swiper-navBtn::after{
@@ -1009,11 +1061,11 @@ nav:after{
     left: 0;
 }
 .swiper-pagination-bullet{
-    background-color:  #492d88ff;
+    background-color:  #4644AA;
     opacity: 1;
 }
 .swiper-pagination-bullet-active{
-    background-color: #492d88ff;
+    background-color: #4644AA;
 }
 
 @media screen and (max-width: 768px) {
@@ -1030,9 +1082,8 @@ nav:after{
 /*----------------------Footer------------------------*/
 .footer{
     font-size: 80%;
-    background: #262626;
+    background: #2B398D;
     height: auto;
-    color: white;
     padding:03px 0 ;
     margin-bottom: 0px;
 }
@@ -1061,6 +1112,8 @@ nav:after{
     position: relative;
 }
 
+
+
 .footer-container ul{
     list-style: none;
     line-height: 2;
@@ -1068,10 +1121,9 @@ nav:after{
 
 .Details ul li {
     font-size: 16px;
-    color: #ffffff;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
+    color:  #bbbbbb;
     display: block;
     transition: all 0.1s ease;
 }
@@ -1085,10 +1137,9 @@ nav:after{
 }
 .footer-col ul li a{
     font-size: 16px;
-    color: #ffffff;
+    color:  #bbbbbb;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
     display: block;
     transition: all 0.3s ease;
 }
@@ -1103,7 +1154,7 @@ nav:after{
     height: 40px;
     width: 40px;
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
+    margin: 20px 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
@@ -1112,12 +1163,14 @@ nav:after{
 }
 
 .footer-col .social-icons a:hover{
-    color: #492d88ff;
+    color: #4644AA;
     background-color: #ffffff;
 }
 
 .footer-logo{
     width:100px;
+    background-color: #ffffff;
+    border-radius: 15px;
 }
 
 #footer-email{
@@ -1132,16 +1185,17 @@ nav:after{
     border-radius: 5px;
     color: #ffffff;
     font-weight: bold;
-    background-color: #492d88ff;
+    background-color: #4644AA;
+    cursor: pointer;
 }
 #footer-submit:hover{
     background-color: #ffffff;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 .Gratitude{
     margin-top: 20px;
-    color: #492d88ff;
+    color: #ffffff;
 }
 
 #footer-paragraph{
@@ -1159,15 +1213,7 @@ nav:after{
     margin-top: 50px;
     padding: 0;
     color: #ffffff;
-    color: #bbbbbb;
 }
-
-.copyright:hover {
-    color: #ffffff;
-}
-
-
-
 
 /*--------footer-responsive---------*/
 @media (max-width: 1555px) {
@@ -1247,7 +1293,7 @@ nav:after{
     display: grid;
     place-items: center;
     font-size: 35px;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
 /*-----------------Scroll-Up-End----------------*/
