@@ -289,15 +289,27 @@ nav:after{
     padding-bottom: 20px;
 }
 
-.WHO-WE-ARE h1{
+.WHO-WE-ARE h2{
     text-align: center;
     font-weight: bold;
     line-height: 1.5;
     letter-spacing: 2px;
-    font-size: 30px;
+    font-size: 40px;
     color: #4644AA;
+    position: relative;
 
 }
+
+.WHO-WE-ARE h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
+}
+
 
 .WHO-WE-ARE p{
     color: #080808;
@@ -452,11 +464,25 @@ nav:after{
     color: #080808;
 }
 
-.Our-Core-Values h1{
+.Our-Core-Values h2{
     font-weight: bold;
     letter-spacing: 2px;
     color: #4644AA;
     padding-bottom: 20px;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.Our-Core-Values h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
+
 }
 
 .Our-Core-Values-Container {
@@ -544,11 +570,25 @@ nav:after{
     color: #080808;
 }
 
-.Our-Team h1{
+.Our-Team h2{
     font-weight: bold;
     letter-spacing: 2px;
     color: #4644AA;
     padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    position: relative;
+}
+
+.Our-Team h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
+
 }
 
 .Our-Team-Container{
