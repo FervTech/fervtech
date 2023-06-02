@@ -357,14 +357,14 @@ nav:after{
     display: flex;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     color: #fff;
     font-size: 60px;
+    transition: 0.4s;
 }
 
 .slider .arrows:hover {
-    color: #000;
-    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff;
+    transform: scale(1.3);
+
 }
 
 .slider .arrows label {
@@ -421,7 +421,7 @@ nav:after{
 
 }
 .dot-active {
-    background-color: #000 !important;
+    background-color: #2B398D !important;
     border: 2px solid #fff;
 
 }
@@ -535,7 +535,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #fbf7ffff;
+    background-color: #f1f1f1ff;
 }
 
 .Web-Section .Web-Section-Container{
@@ -657,7 +657,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #fbf7ffff;
+    background-color: #f1f1f1ff;
 }
 
 .RPA-Section .RPA-Section-Container{
@@ -863,7 +863,10 @@ nav:after{
     width: 90%;
     margin: 50px auto;
     text-align: center;
-    background-color: #fbf7ffff;
+    background-color: #f1f1f1ff;
+
+    padding: 50px 0px 20px;
+
 }
 
 
@@ -878,13 +881,13 @@ nav:after{
     width: 290px;
     background: #fff;
     padding: 20px 10px;
-    border: 0.5px solid #4644AA;
+    border: 0.5px solid #080808;
     margin-bottom: 50px;
     transition: 0.3s;
 }
 
 .WHY-CHOOSE-US-Row .card .member_img{
-    background: #e9e5fa;
+    background: #FFFFFF;
     max-width: 190px;
     width: 100%;
     height: 190px;
@@ -1082,7 +1085,7 @@ nav:after{
 /*----------------------Footer------------------------*/
 .footer{
     font-size: 80%;
-    background: #2B398D;
+    background: #1a1c27ff;
     height: auto;
     padding:03px 0 ;
     margin-bottom: 0px;
