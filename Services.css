@@ -264,7 +264,7 @@ nav:after{
 
 /*----------------Main----------------*/
 #main{
-    padding: 30px 0;
+    padding: 30px 20px;
     background-color: #fdfdfdff;
 
 }
@@ -282,41 +282,71 @@ nav:after{
     margin-top: 50px;
 }
 
-.services-list div{
+.services-list .card{
     background: #ffffff;
-    color: #4644AA;
+    color: #080808;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
+    border-bottom: 7px solid #4644AA;
     transition: background 0.5s, transform 0.5s;
     box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+    text-align: center;
 
 }
 
-.services-list div:hover{
+.services-list .card:hover{
     background: #4644AA;
     transform: translateY(-10px);
     color: #ffffff;
 
 }
 
-.services-list div:hover i, .services-list div:hover p, .services-list div:hover a{
+.services-list div:hover p{
     color: #ffffff;
+    margin-bottom: 15px;
+}
 
+
+.services-list div:hover .icon{
+    color: #4644AA;
+    background-color: #FFFFFF;
+}
+
+.services-list div:hover .fa-laptop-code, .services-list div:hover .fa-gear,
+.services-list div:hover .fa-mobile, .services-list div:hover .fa-palette{
+    color: #4644AA ;
+
+}
+
+.services-list div .fa-laptop-code, .services-list div .fa-gear,
+.services-list div .fa-mobile, .services-list div .fa-palette{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    background-color: #4644AA;
+    margin: auto;
+    font-size: 2.5em;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
 }
 
 
 .services-list div i{
-    color: #080808;
-    font-size: 50px;
-    margin-bottom: 30px;
+    color: #FFFFFF;
 }
 
-.services-list div h2{
-    font-size: 30px;
+.services-list div h3{
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin: 15px;
 }
 
 .services-list div p{
@@ -330,13 +360,32 @@ nav:after{
     margin-top: 20px;
     display: inline-block;
     color: #4644AA;
+
+}
+
+
+.services-list div:hover a{
+    background-color: #FFFFFF;
+    color: #4644AA;
+    border-radius: 25px;
+    height: 2em;
+    width: 8em;
+    font-size: 15px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
-.services-list div a i{
+.services-list .fa-up-right-from-square{
     font-size: 10px;
     margin-left: 10px;
+}
+
+.services-list div:hover .fa-up-right-from-square{
+    color: #4644AA;
 }
 
 
@@ -345,6 +394,7 @@ nav:after{
 .footer{
     font-size: 80%;
     background: #1a1c27ff;
+    background-image: url("image/footer.png");
     height: auto;
     padding:03px 0 ;
     margin-bottom: 0px;

@@ -683,6 +683,7 @@ nav:after{
     height: auto;
     padding:03px 0 ;
     margin-bottom: 0px;
+    background-image: url("image/footer.png");
 }
 .footer-container{
     max-width: 2000px;
