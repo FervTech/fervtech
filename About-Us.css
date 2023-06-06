@@ -501,7 +501,7 @@ nav:after{
     background-repeat: no-repeat;
     background-position: 0 0.62em;
     box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
-    border-radius: 0.5em;
+    border-radius: 1em;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -533,7 +533,7 @@ nav:after{
     color: #4644AA;
 }
 .card p {
-    line-height: 2em;
+    line-height: 1.5em;
     color: #625a71;
 }
 .card:hover {
@@ -728,6 +728,7 @@ nav:after{
 
 .Details ul li:hover{
     color: #ffffff;
+    letter-spacing: 1px;
 }
 
 .Details ul li i{
@@ -744,6 +745,7 @@ nav:after{
 
 .footer-col ul li a:hover{
     color: #ffffff;
+    letter-spacing: 1px;
 
 }
 

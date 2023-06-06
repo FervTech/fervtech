@@ -86,13 +86,25 @@ setInterval(  function showslide() {
 // Swiper
 
 
-var swiper = new Swiper(".slide-content", {
-    slidesPerView: 3,
-    spaceBetween: 25,
+var swiper = new Swiper(".mySwiper", {
     loop: true,
-    centerSlide: 'true',
     fade: 'true',
-    grabCursor: 'true',
+    autoplay:true,
+    autoplayTimeout: 50000,
+    autoplayHoverPause:true,
+
+    effect: "coverflow",
+    centeredSlides: true,
+    grabCursor: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -102,18 +114,7 @@ var swiper = new Swiper(".slide-content", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-
-    breakpoints:{
-        0: {
-            slidesPerView: 1,
-        },
-        520: {
-            slidesPerView: 2,
-        },
-        950: {
-            slidesPerView: 3,
-        },
-    },
+    
 });
 
 //------------Scroll-Up------------//

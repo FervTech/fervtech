@@ -374,6 +374,7 @@ nav:after{
 
 .Details ul li:hover{
     color: #ffffff;
+    letter-spacing: 1px;
 }
 
 .Details ul li i{
@@ -390,6 +391,7 @@ nav:after{
 
 .footer-col ul li a:hover{
     color: #ffffff;
+    letter-spacing: 1px;
 
 }
 
