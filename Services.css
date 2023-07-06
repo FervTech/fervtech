@@ -21,7 +21,7 @@ body {
 
 }
 .header-container{
-    padding: 0.1px 0px;
+    padding: 0.1px 0;
 
 }
 
@@ -58,7 +58,7 @@ nav:after{
 .nav-links li{
     float: left;
     display: inline-block;
-    margin: 0px 50px;
+    margin: 0 50px;
 
 }
 
@@ -75,7 +75,7 @@ nav:after{
 
 .nav-links li a:before{
     content: '';
-    width: 0%;
+    width: 0;
     height: 3px;
     bottom: 0;
     left: 50%;
@@ -129,7 +129,7 @@ nav:after{
 
     position: relative;
     list-style: none;
-    margin: 0px;
+    margin: 0;
     width: 300px;
     float: none;
     display: list-item;
@@ -239,7 +239,7 @@ nav:after{
 
     .services-links li{
         list-style: none;
-        margin: 0px;
+        margin: 0;
         width: 100%;
         float: none;
         transition: 0.3s ease;
@@ -314,14 +314,14 @@ nav:after{
     background-color: #FFFFFF;
 }
 
-.services-list div:hover .fa-laptop-code, .services-list div:hover .fa-gear,
+.services-list div:hover .fa-laptop-code, .services-list div:hover .fa-robot,
 .services-list div:hover .fa-mobile, .services-list div:hover .fa-palette{
     color: #4644AA ;
     transform: scale(1.5);
 
 }
 
-.services-list div .fa-laptop-code, .services-list div .fa-gear,
+.services-list div .fa-laptop-code, .services-list div .fa-robot,
 .services-list div .fa-mobile, .services-list div .fa-palette{
     display: flex;
     justify-content: center;
@@ -400,7 +400,7 @@ nav:after{
     background-image: url("image/footer.png");
     height: auto;
     padding:03px 0 ;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 50px;
 }
 .footer-container{
