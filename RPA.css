@@ -434,6 +434,28 @@ nav:after{
     font-weight: 600;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 1380px) {
+
+    .Benefits-Section {
+        width: 100%;
+        height: auto;
+
+
+    }
+
+
+
+}
+@media screen and (max-width: 1230px) {
+
+
+
+
+
+}
+
+
     /*----------------------Footer------------------------*/
     .footer {
         font-size: 80%;
