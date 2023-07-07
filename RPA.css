@@ -394,7 +394,19 @@ nav:after{
     font-size: 40px;
     text-transform: capitalize;
     font-weight: bold;
+    padding-bottom: 10px;
+    position: relative;
 
+}
+
+.Benefits-Section-Text h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
 }
 
 .Benefits-Section-Text span{
@@ -433,7 +445,9 @@ nav:after{
 .rpa_benefits h2{
     font-weight: 600;
     margin-bottom: 10px;
+
 }
+
 
 @media screen and (max-width: 1380px) {
 
