@@ -449,12 +449,15 @@ nav:after{
 
 
 .RPA-Contact-US{
+
     display: grid;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #4644AA;
+    background-image: url("image/RPA-Contact-IMG1.jpg");
     padding-bottom: 80px;
+    background: #4644AA;
+
 }
 
 .RPA-Contact-US h2{
@@ -483,6 +486,7 @@ nav:after{
     background: #FFFFFF;
     color: #4644AA;
     transition: 0.5s ease;
+    font-weight: bold;
 }
 
 .RPA-Contact-US a:hover{
