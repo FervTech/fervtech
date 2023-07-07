@@ -266,9 +266,9 @@ nav:after{
 
 
 .RPA-Section{
-    width: 90%;
+    width: 100%;
     margin: 100px 0 auto;
-    height: 70vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -376,9 +376,7 @@ nav:after{
     }
 
 .Benefits-Section{
-
-    margin: 50px 50px 0 0;
-
+    margin: 100px 50px 0 0;
     color: #080808;
     width: 100%;
     height: 100vh;
@@ -413,14 +411,16 @@ nav:after{
 .rpa_benefits{
     text-align: center;
     padding: 25px 10px;
-    box-radius: 5px;
     font-size: 14px;
     background: transparent;
     cursor: pointer;
     transition: 0.2s ease;
+
 }
 
 .rpa_benefits:hover{
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
     border-bottom: solid 10px #4644AA;
 }
 
@@ -445,16 +445,7 @@ nav:after{
     }
 
 
-
 }
-@media screen and (max-width: 1230px) {
-
-
-
-
-
-}
-
 
     /*----------------------Footer------------------------*/
     .footer {
