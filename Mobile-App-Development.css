@@ -263,9 +263,39 @@ nav:after{
 
 
 /*----------------Main----------------*/
+.Mobile-App-Section{
+    width: 100%;
+    color: #080808;
+    margin-top: 150px;
+}
 
+.Mobile-App-Section h2{
+     font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
 
+.Mobile-App-Section p{
+    padding: 0 120px 0;
+}
 
+.Platforms{
+    margin-top: 100px;
+    width: 100%;
+    color: #080808;
+}
+
+.Platforms h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Platforms span{
+    text-align: center;
+}
 
 /*----------------------Footer------------------------*/
 .footer {
