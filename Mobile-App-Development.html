@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width= device-width", initial-scale="1.0"/>
     <title>SERVICES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="Mobile-App-Development.css">
     <link rel="shortcut icon" type="image/png" href="image/favicon.png">
     <script src="https://kit.fontawesome.com/6ca54830c0.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <!--------------------Header-Start--------------------------->
@@ -47,24 +49,113 @@
 
 <!-----------------------Main -------------------------->
 
-<section class="Mobile-App-Section">
-<h2>Transforming Ideas into Powerful Mobile Applications</h2>
+<section class="Mobile-Article">
+    <div class="Mobile-Article-Container">
+<div class="Mobile-Article-text">
+    <h2>Transforming Ideas into Powerful Mobile Applications</h2>
     <p>At FervTech, we are passionate about creating cutting-edge mobile applications
+        (Native applications, Hybrid applications and Cross-Platform applications)
         that drive innovation and deliver exceptional user experiences.
         Our team of expert developers combines technical prowess with creative
         flair to bring your ideas to life. With a strong focus on quality,
         reliability, and user-centric design, we are your trusted partner for
         mobile app development.
     </p>
+</div>
 
+    <div class="Mobile-Article-Img">
+            <img src="image/App-Development-Icon.png">
+    </div>
+    </div>
 
 </section>
 
 <section class="Platforms">
-      <h2>Our Mobile Development Services</h2>
-      <span>We offer a comprehensive range of mobile development services to meet your specific requirements:
-</span>
+      <h2 class="Platform-Title">Our Mobile Development Services</h2>
+      <p>We offer a comprehensive range of mobile development services to
+          meet your specific requirements:</p>
 
+    <div class="Platform-Container">
+          <div class="Platform-Card">
+              <div class="Platform-Icon"> <i class="fa-brands fa-apple"></i></div>
+                 <h2>IOS Applications</h2>
+                  <p>We specialize in developing high-performance,
+                      feature-rich native applications for iOS and Android platforms.
+                      Leveraging the power of Swift, Kotlin, and Java,
+                      we create seamless mobile experiences that maximize user engagement.
+                  </p>
+          </div>
+
+    <div class="Platform-Card">
+        <div class="Platform-Icon"> <i class="fa-brands fa-android"></i></div>
+        <h2>Android Applications</h2>
+        <p>We specialize in developing high-performance,
+            feature-rich native applications for iOS and Android platforms.
+            Leveraging the power of Swift, Kotlin, and Java,
+            we create seamless mobile experiences that maximize user engagement.
+        </p>
+    </div>
+
+        <div class="Platform-Card">
+            <div class="Platform-Icon"> <i class="fa-solid fa-clone"></i></div>
+            <h2>Hybrid Applications</h2>
+            <p>We specialize in developing high-performance,
+                feature-rich native applications for iOS and Android platforms.
+                Leveraging the power of Swift, Kotlin, and Java,
+                we create seamless mobile experiences that maximize user engagement.
+            </p>
+        </div>
+
+        <div class="Platform-Card">
+            <div class="Platform-Icon"><i class="fa-brands fa-centos"></i></div>
+        <h2>Cross Platform Applications</h2>
+        <p>Our team excels in cross app development using frameworks like
+            React Native and Flutter. With a single codebase,
+            we deliver cross-platform applications that seamlessly run
+            on multiple devices, reducing development time and costs.
+
+        </p>
+    </div>
+
+    </div>
+</section>
+
+<section class="Mobile-Tech">
+    <div class="Mobile-Tech-Container">
+         <div class="Mobile-Tech-Text">
+             <h2>Our Technology Expertise</h2>
+             <p>At FervTech, we stay up-to-date with the latest mobile app development technologies.
+                 Our expertise includes:
+             </p>
+         </div>
+
+             <div class="Mobile-Tech-Slider slider">
+                 <div class="slide"><img src="image/Swift.png"></div>
+                 <div class="slide"><img src="image/Kotlin.png"></div>
+                 <div class="slide"><img src="image/React.png"></div>
+                 <div class="slide"><img src="image/Flutter.png"></div>
+                 <div class="slide"><img src="image/HTML-5.png"></div>
+                 <div class="slide"><img src="image/CSS-3.png"></div>
+                 <div class="slide"><img src="image/JavaScript.png"></div>
+                 <div class="slide"><img src="image/Ionic.png"></div>
+                 <div class="slide"><img src="image/Cordova.png"></div>
+
+
+         </div>
+
+    </div>
+
+</section>
+
+<section class="Mobile-Contact">
+    <div class="Mobile-Contact-Container">
+    <h2>Get in Touch</h2>
+    <p>Ready to turn your idea into a powerful mobile application?
+        Contact us today to discuss your project, request a quote, or
+        schedule a consultation. We look forward to hearing from you!
+    </p>
+    <a href="Contact.html">CONTACT US</a>
+    </div>
 </section>
 
 <!------------------Footer-Start-------------------->
@@ -146,5 +237,36 @@
     })();
 </script>
 <!--End of Tawk.to Script-->
+
+<!----Mobile-Tech-Slider-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+        $('.Mobile-Tech-Slider').slick({
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            autoplay:true,
+            autoplaySpeed: 1500,
+            arrows:false,
+            dots:false,
+            pauseOnHover:false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+
+            }]
+        });
+    })
+</script>
 </body>
 </html>

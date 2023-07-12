@@ -11,7 +11,7 @@ html{
 
 body {
     background: #fdfdfdff;
-    color: #fff;
+    color: #080808;
 }
 
 
@@ -31,7 +31,7 @@ body {
     background: #ffffff;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 99;
     box-shadow:  0 0 5px #262626;
 }
 
@@ -263,39 +263,441 @@ nav:after{
 
 
 /*----------------Main----------------*/
-.Mobile-App-Section{
+.Mobile-Article{
     width: 100%;
+    margin: 100px 0 auto;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Mobile-Article-Container{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Mobile-Article-text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.Mobile-Article-text h2{
+    color: #4644AA;
+    margin-bottom: 20px;
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.Mobile-Article-text p{
+    margin-top: 25px;
     color: #080808;
-    margin-top: 150px;
+    font-size: 23px;
+
 }
 
-.Mobile-App-Section h2{
-     font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 40px;
+
+.Mobile-Article .Mobile-Article-Container img{
+
 }
 
-.Mobile-App-Section p{
-    padding: 0 120px 0;
+@media screen and (max-width: 1380px) {
+
+    .Mobile-Article {
+        width: 100%;
+        height: auto;
+        padding: 70px 0;
+
+    }
+
+    .Mobile-Article .Mobile-Article-Container img{
+        margin-bottom: 20px;
+
+    }
+
+}
+@media screen and (max-width: 1230px) {
+
+    .Mobile-Article-Container {
+        flex-direction: column-reverse;
+    }
+
+    .Mobile-Article {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .Mobile-Article-text h2{
+        font-size: 50px;
+    }
+
+
 }
 
+@media screen and (max-width: 650px) {
+    .Mobile-Article .Mobile-Article-Container img{
+        width: 450px;
+
+    }
+
+
+    .Mobile-Article-text h2 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .Mobile-Article .Mobile-Article-Container img{
+        width: 350px;
+
+    }
+
+
+
+}
+
+/*--------Platforms---------*/
 .Platforms{
     margin-top: 100px;
     width: 100%;
     color: #080808;
+
 }
 
 .Platforms h2{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    color: #4644AA;
+    position: relative;
+    padding-bottom: 20px;
 }
 
-.Platforms span{
+.Platforms .Platform-Title:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
+}
+
+
+.Platforms p{
     text-align: center;
 }
+
+.Platform-Container{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70vh;
+    background: linear-gradient(#4644AA, #4644AA 50%, #FFFFFF 50%, #FFFFFF 100%);
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+
+.Platform-Card{
+    position: relative;
+    width: 320px;
+    background: #FFFFFF;
+    padding: 20px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.Platform-Icon{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: -90px auto 0;
+    background: #FFFFFF;
+    border: 18px solid #4644AA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Platform-Card:hover .Platform-Icon i{
+    transform: rotate(360deg);
+
+}
+
+.Platform-Card i{
+    font-size: 40px;
+    color: #4644AA;
+    transition: transform 1s;
+}
+
+.Platform-Card h2{
+    height: 35px;
+    width: 80%;
+    margin: 20px auto ;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+
+
+.Platform-Card h2::after{
+    content: '';
+    width: 40px;
+    height: 30px;
+    background: linear-gradient( to right, #fff, #4644AA);
+    position: absolute;
+    right: -5px;
+    top: -5px;
+
+}
+
+.Platform-Card h2::before{
+    content: '';
+    width: 40px;
+    height: 30px;
+    background: linear-gradient( to right, #4644AA, #FFFFFF);
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+
+}
+
+.Platform-Card p{
+   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1423px){
+
+    .Platforms{
+        margin-bottom: 50px;
+    }
+
+    .Platform-Container{
+        background: #4644AA;
+        gap: 100px;
+        padding: 100px 180px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 1191px){
+
+    .Platform-Container{
+        background: #4644AA;
+        gap: 100px;
+        padding: 100px 100px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 960px){
+
+    .Platform-Container{
+        background: #4644AA;
+        gap: 50px;
+        padding: 100px 50px;
+    }
+
+    .Platform-Card{
+        margin-top: 30px;
+    }
+
+
+}
+
+@media screen and (max-width: 810px){
+
+    .Platform-Container{
+        background: #4644AA;
+        gap: 20px;
+        padding: 100px 20px;
+
+    }
+
+    .Platform-Card{
+        margin-top: 70px;
+    }
+
+}
+
+@media screen and (max-width: 720px){
+
+    .Platform-Container{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .Platform-Card{
+        margin-top: 90px;
+    }
+
+}
+
+/*------Mobile-Tech-Slider----*/
+.Mobile-Tech{
+    text-align: center;
+    color: #080808;
+    padding: 150px 0 0;
+}
+
+.Mobile-Tech-Text{
+    margin-bottom: 30px;
+}
+
+.Mobile-Tech-Text h2 {
+    font-weight: bold;
+    font-size: 50PX;
+    color: #4644AA;
+    margin-bottom: 20px;
+}
+
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus{
+    outline: none;
+}
+
+.slick-slide{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    margin: 0 20px;
+}
+
+.slick-slide img{
+    display: block;
+    width: 100%;
+}
+
+.slick-initialized .slick-slide{
+    display: block;
+}
+
+.slick-loading .slick-slide{
+    visibility: hidden;
+}
+
+@media screen and (max-width: 800px) {
+     .Mobile-Tech{
+         padding: 0;
+     }
+    h2{
+        padding: 70px 0 50px;
+        font-size: 40px;
+    }
+}
+
+/*--------Mobile-Contact---------*/
+.Mobile-Contact{
+    background: #4644AA;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10rem 4rem 0;
+
+}
+
+.Mobile-Contact-Container{
+
+    padding: 4rem;
+    background-image: url("image/Backgroung-Img1.png");
+    height: 20rem;
+}
+
+
+.Mobile-Contact h2{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 40px;
+}
+.Mobile-Contact p{
+    margin: 30px 0;
+    color: #E5E5E5;
+
+
+}
+
+.Mobile-Contact a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 2em;
+    width: 8em;
+    border-radius: 25px;
+    text-decoration: none;
+    background: #FFFFFF;
+    color: #4644AA;
+    transition: 0.5s ease;
+    font-weight: bold;
+}
+
+.Mobile-Contact a:hover{
+    transform: scale(1.2);
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .Mobile-Contact {
+        height: auto;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .Mobile-Contact {
+        margin-top: 50px;
+
+    }
+
+    .Mobile-Contact-Container{
+        padding: 30px 20px;
+    }
+
+    .Mobile-Contact h2{
+
+        margin-top: 10px;
+    }
+
+    .Mobile-Contact p{}
+
+}
+
+
 
 /*----------------------Footer------------------------*/
 .footer {
