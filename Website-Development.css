@@ -366,6 +366,7 @@ nav:after{
 #footer-email{
     width: 250px;
     height: 40px;
+    padding-left: 5px;
     border-radius: 5px;
 }
 
