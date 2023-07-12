@@ -685,7 +685,7 @@ nav:after{
     }
 
     .Mobile-Contact-Container{
-        padding: 30px 20px;
+        padding: 10px 20px;
     }
 
     .Mobile-Contact h2{
@@ -693,7 +693,10 @@ nav:after{
         margin-top: 10px;
     }
 
-    .Mobile-Contact p{}
+    .Mobile-Contact p{
+
+        margin-top: 10px;
+    }
 
 }
 
