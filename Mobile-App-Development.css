@@ -31,7 +31,7 @@ body {
     background: #ffffff;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 99;
     box-shadow:  0 0 5px #262626;
 }
 
@@ -418,7 +418,7 @@ nav:after{
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    z-index: 10;
 }
 
 .Platform-Icon{
@@ -447,7 +447,7 @@ nav:after{
 .Platform-Card h2{
     height: 35px;
     width: 80%;
-    margin: 20px auto ;
+    margin: 50px auto ;
     font-size: 18px;
     font-weight: bold;
     position: relative;
@@ -459,11 +459,11 @@ nav:after{
     content: '';
     width: 40px;
     height: 30px;
-    background: linear-gradient( to right, #fff, #4644AA);
+    background: linear-gradient(to right, #FFFFFF, #4644AA);
     position: absolute;
     right: -5px;
     top: -5px;
-
+    z-index: -1;
 }
 
 .Platform-Card h2::before{
@@ -474,7 +474,7 @@ nav:after{
     position: absolute;
     left: -5px;
     bottom: -5px;
-
+    z-index: -1;
 }
 
 .Platform-Card p{
@@ -572,6 +572,18 @@ nav:after{
     font-size: 50PX;
     color: #4644AA;
     margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.Mobile-Tech-Text h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
 }
 
 .slick-list{
@@ -611,7 +623,7 @@ nav:after{
     .Mobile-Tech{
         padding: 0;
     }
-    h2{
+    .Mobile-Tech h2{
         padding: 70px 0 50px;
         font-size: 40px;
     }
@@ -624,14 +636,13 @@ nav:after{
     align-items: center;
     text-align: center;
     border-radius: 20px;
-    margin: 10rem 4rem 0;
+    margin: 10rem 5rem 0;
+    background-image: url("image/Backgroung-Img1.png");
 
 }
 
 .Mobile-Contact-Container{
-
     padding: 4rem;
-    background-image: url("image/Backgroung-Img1.png");
     height: 20rem;
 }
 
@@ -640,9 +651,21 @@ nav:after{
     color: #FFFFFF;
     font-weight: bold;
     font-size: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.Mobile-Contact h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
 }
 .Mobile-Contact p{
-    margin: 30px 0;
+    margin: 2rem 0;
     color: #E5E5E5;
 
 
@@ -670,30 +693,36 @@ nav:after{
 
 @media screen and (max-width: 1024px) {
 
-    .Mobile-Contact {
-        height: auto;
+    .Mobile-Contact p{
+        margin: 2rem 0;
 
     }
+
+
 }
 
-@media screen and (max-width: 600px) {
-
-    .Mobile-Contact {
-        margin-top: 50px;
-
-    }
+@media screen and (max-width: 700px) {
+       .Mobile-Contact{
+           padding: 0;
+           margin: 4rem 2rem;
+       }
 
     .Mobile-Contact-Container{
-        padding: 30px 20px;
+        padding: 2rem;
     }
 
-    .Mobile-Contact h2{
+       .Mobile-Contact h2{
+           margin: 0.1rem;
+       }
 
-        margin-top: 10px;
-    }
+       .Mobile-Contact p{
+           margin: 2rem;
+       }
 
-    .Mobile-Contact p{}
+       .Mobile-Contact a{
 
+
+       }
 }
 
 
@@ -908,9 +937,9 @@ nav:after{
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    z-index: 30;
 }
 #Scroll-Up-value {
-    display: block;
     height: calc(100% - 15px);
     width: calc(100% - 15px);
     background-color: #ffffff;

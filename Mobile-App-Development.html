@@ -5,6 +5,8 @@
     <title>SERVICES</title>
     <link rel="stylesheet" href="Mobile-App-Development.css">
     <link rel="shortcut icon" type="image/png" href="image/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/6ca54830c0.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -25,9 +27,9 @@
                     <div class="services-menu">
                         <ul class="services-links">
                             <li> <a href="#">Website Development</a> </li>
-                            <li><a href="#">Mobile App Development</a> </li>
-                            <li><a href="#">RPA</a> </li>
-                            <li><a href="#">Graphic Design</a> </li>
+                            <li><a href="Mobile-App-Development.html">Mobile App Development</a> </li>
+                            <li><a href="RPA.html">RPA</a> </li>
+                            <li><a href="Graphic-Design.html">Graphic Design</a> </li>
                         </ul>
                     </div>
                 </li>
@@ -145,6 +147,8 @@
 
 </section>
 
+
+<!-----------Mobile-Contact--------->
 <section class="Mobile-Contact">
     <div class="Mobile-Contact-Container">
         <h2>Get in Touch</h2>
@@ -218,53 +222,9 @@
 <section id="Scroll-Up">
     <span id="Scroll-Up-value"><i class="fa-solid fa-chevron-up"></i></span>
 </section>
-<!--------------Scroll-Up ----Start-------------->
+<!--------------Scroll-Up ----End-------------->
 
 <!-------------Script Section------->
 <script src="Mobile-App-Development.js"></script>
-
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/6473a8efad80445890ef94fd/1h1hsnq1g';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-    })();
-</script>
-<!--End of Tawk.to Script-->
-
-<!----Mobile-Tech-Slider-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-<script>
-
-
-    $(document).ready(function () {
-        $('.Mobile-Tech-Slider').slick({
-            slidesToShow: 8,
-            slidesToScroll: 1,
-            autoplay:true,
-            autoplaySpeed: 1500,
-            arrows:false,
-            dots:false,
-            pauseOnHover:false,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4
-                }
-            }, {
-                breakpoint: 520,
-                settings: {
-                    slidesToShow: 3
-                }
-
-            }]
-        });
-    })
-</script>
 </body>
 </html>
