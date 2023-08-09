@@ -11,7 +11,7 @@ html{
 
 body {
     background: #fdfdfdff;
-    color: #080808;
+    color: #fff;
 }
 
 
@@ -21,7 +21,7 @@ body {
 
 }
 .header-container{
-    padding: 0.1px 0;
+    padding: 0.1px 0px;
 
 }
 
@@ -58,7 +58,7 @@ nav:after{
 .nav-links li{
     float: left;
     display: inline-block;
-    margin: 0 50px;
+    margin: 0px 50px;
 
 }
 
@@ -75,7 +75,7 @@ nav:after{
 
 .nav-links li a:before{
     content: '';
-    width: 0;
+    width: 0%;
     height: 3px;
     bottom: 0;
     left: 50%;
@@ -129,7 +129,7 @@ nav:after{
 
     position: relative;
     list-style: none;
-    margin: 0;
+    margin: 0px;
     width: 300px;
     float: none;
     display: list-item;
@@ -239,7 +239,7 @@ nav:after{
 
     .services-links li{
         list-style: none;
-        margin: 0;
+        margin: 0px;
         width: 100%;
         float: none;
         transition: 0.3s ease;
@@ -260,7 +260,6 @@ nav:after{
 
 }
 /*------Header-End-----------*/
-
 
 /*----------------Main----------------*/
 .Mobile-Article{
@@ -419,7 +418,7 @@ nav:after{
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    z-index: 10;
 }
 
 .Platform-Icon{
@@ -448,7 +447,7 @@ nav:after{
 .Platform-Card h2{
     height: 35px;
     width: 80%;
-    margin: 20px auto ;
+    margin: 50px auto ;
     font-size: 18px;
     font-weight: bold;
     position: relative;
@@ -460,11 +459,11 @@ nav:after{
     content: '';
     width: 40px;
     height: 30px;
-    background: linear-gradient( to right, #fff, #4644AA);
+    background: linear-gradient(to right, #FFFFFF, #4644AA);
     position: absolute;
     right: -5px;
     top: -5px;
-
+    z-index: -1;
 }
 
 .Platform-Card h2::before{
@@ -475,11 +474,11 @@ nav:after{
     position: absolute;
     left: -5px;
     bottom: -5px;
-
+    z-index: -1;
 }
 
 .Platform-Card p{
-   margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 1423px){
@@ -573,6 +572,18 @@ nav:after{
     font-size: 50PX;
     color: #4644AA;
     margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.Mobile-Tech-Text h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
 }
 
 .slick-list{
@@ -609,10 +620,10 @@ nav:after{
 }
 
 @media screen and (max-width: 800px) {
-     .Mobile-Tech{
-         padding: 0;
-     }
-    h2{
+    .Mobile-Tech{
+        padding: 0;
+    }
+    .Mobile-Tech h2{
         padding: 70px 0 50px;
         font-size: 40px;
     }
@@ -625,14 +636,13 @@ nav:after{
     align-items: center;
     text-align: center;
     border-radius: 20px;
-    margin: 10rem 4rem 0;
+    margin: 10rem 5rem 0;
+    background-image: url("image/Backgroung-Img1.png");
 
 }
 
 .Mobile-Contact-Container{
-
     padding: 4rem;
-    background-image: url("image/Backgroung-Img1.png");
     height: 20rem;
 }
 
@@ -641,9 +651,21 @@ nav:after{
     color: #FFFFFF;
     font-weight: bold;
     font-size: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.Mobile-Contact h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
 }
 .Mobile-Contact p{
-    margin: 30px 0;
+    margin: 2rem 0;
     color: #E5E5E5;
 
 
@@ -671,61 +693,67 @@ nav:after{
 
 @media screen and (max-width: 1024px) {
 
-    .Mobile-Contact {
-        height: auto;
+    .Mobile-Contact p{
+        margin: 2rem 0;
 
     }
+
+
 }
 
-@media screen and (max-width: 600px) {
-
-    .Mobile-Contact {
-        margin-top: 50px;
-
-    }
+@media screen and (max-width: 700px) {
+       .Mobile-Contact{
+           padding: 0;
+           margin: 4rem 2rem;
+       }
 
     .Mobile-Contact-Container{
-        padding: 30px 20px;
+        padding: 2rem;
     }
 
-    .Mobile-Contact h2{
+       .Mobile-Contact h2{
+           margin: 0.1rem;
+       }
 
-        margin-top: 10px;
-    }
+       .Mobile-Contact p{
+           margin: 2rem;
+       }
 
-    .Mobile-Contact p{}
+       .Mobile-Contact a{
 
+
+       }
 }
 
 
 
 /*----------------------Footer------------------------*/
-.footer {
+.footer{
     font-size: 80%;
-    background: #1a1c27ff url("image/footer.png");
+    background: #1a1c27ff;
+    background-image: url("image/footer.png");
     height: auto;
-    padding: 03px 0;
-    margin-bottom: 0;
+    padding:03px 0 ;
+    margin-bottom: 0px;
     margin-top: 50px;
 }
-
-.footer-container {
+.footer-container{
     max-width: 2000px;
     margin: 50px;
 }
 
 
-.footer-row {
+.footer-row{
     display: flex;
     flex-wrap: wrap;
 }
 
-.footer-col {
+.footer-col{
     width: 25%;
     padding: 0 15px;
 }
 
-.footer-col h4 {
+.footer-col h4{
     font-size: 18px;
     color: #ffffff;
     text-transform: capitalize;
@@ -735,7 +763,8 @@ nav:after{
 }
 
 
-.footer-container ul {
+
+.footer-container ul{
     list-style: none;
     line-height: 2;
 }
@@ -744,36 +773,35 @@ nav:after{
     font-size: 16px;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
+    color:  #bbbbbb;
     display: block;
     transition: all 0.1s ease;
 }
 
-.Details ul li:hover {
+.Details ul li:hover{
     color: #ffffff;
 
 }
 
-.Details ul li i {
+.Details ul li i{
     margin-right: 10px;
 }
-
-.footer-col ul li a {
+.footer-col ul li a{
     font-size: 16px;
-    color: #bbbbbb;
+    color:  #bbbbbb;
     text-decoration: none;
     font-weight: 300;
     display: block;
     transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover {
+.footer-col ul li a:hover{
     color: #4644AA;
     letter-spacing: 1px;
 
 }
 
-.footer-col .social-icons a {
+.footer-col .social-icons a{
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -786,25 +814,25 @@ nav:after{
     transition: all 0.5s ease;
 }
 
-.footer-col .social-icons a:hover {
+.footer-col .social-icons a:hover{
     color: #4644AA;
     background-color: #ffffff;
 }
 
-.footer-logo {
-    width: 100px;
+.footer-logo{
+    width:100px;
     background-color: #ffffff;
     border-radius: 15px;
 }
 
-#footer-email {
+#footer-email{
     width: 250px;
     height: 40px;
     padding-left: 5px;
     border-radius: 5px;
 }
 
-#footer-submit {
+#footer-submit{
     width: 80px;
     height: 40px;
     border-radius: 5px;
@@ -813,29 +841,28 @@ nav:after{
     background-color: #4644AA;
     cursor: pointer;
 }
-
-#footer-submit:hover {
+#footer-submit:hover{
     background-color: #ffffff;
     color: #4644AA;
-    border: 1px solid #4644AA;
+    border:  1px solid #4644AA;
 }
 
-.Gratitude {
+.Gratitude{
     margin-top: 20px;
     color: #ffffff;
 }
 
-#footer-paragraph {
+#footer-paragraph{
     margin-top: 30px;
     color: #bbbbbb;
     font-size: 16px;
 }
 
-#footer-paragraph:hover {
+#footer-paragraph:hover{
     color: #ffffff;
 }
 
-.copyright {
+.copyright{
     text-align: center;
     margin-top: 50px;
     padding: 0;
@@ -846,62 +873,61 @@ nav:after{
 /*--------footer-responsive---------*/
 @media (max-width: 1555px) {
 
-    #footer-email {
+    #footer-email{
         width: 150px;
     }
 }
 
 @media (max-width: 1155px) {
 
-    #footer-submit {
+    #footer-submit{
         width: 60px;
     }
 }
 
 @media (max-width: 1077px) {
-    .footer-col {
+    .footer-col{
         width: 50%;
         margin-bottom: 30px;
     }
 
-    #footer-email {
+    #footer-email{
         width: 200px;
     }
-
-    #footer-submit {
+    #footer-submit{
         width: 80px;
     }
 }
 
 @media (max-width: 727px) {
 
-    #footer-submit {
+    #footer-submit{
         width: 60px;
     }
 }
 
 @media (max-width: 687px) {
-    #footer-email {
+    #footer-email{
         width: 150px;
     }
 }
 
 @media (max-width: 574px) {
-    .footer-col {
+    .footer-col{
         width: 100%;
     }
 
-    #footer-email {
+    #footer-email{
         width: 200px;
     }
 
-    #footer-submit {
+    #footer-submit{
         width: 80px;
     }
 }
 
 /*-----------------Scroll-Up-Stat----------------*/
-#Scroll-Up {
+#Scroll-Up{
     position: fixed;
     bottom: 20px;
     right: 10px;
@@ -912,8 +938,8 @@ nav:after{
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    z-index: 30;
 }
-
 #Scroll-Up-value {
     height: calc(100% - 15px);
     width: calc(100% - 15px);
@@ -924,6 +950,5 @@ nav:after{
     font-size: 35px;
     color: #4644AA;
 }
-
 
 /*-----------------Scroll-Up-End----------------*/

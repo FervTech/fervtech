@@ -28,12 +28,23 @@ body {
 .nav{
     font-weight: bold;
     font-size: 16px;
-    background: #ffffff;
     position: fixed;
     width: 100%;
-    z-index: 2;
-    box-shadow:  0 0 5px #262626;
+    z-index: 99;
+
 }
+
+.nav.sticky{
+    background: #FFFFFF;
+    box-shadow:  0 0 5px #262626;
+    z-index: 99;
+}
+
+
+.nav.sticky .nav-bar, .nav.sticky .nav-links li a{
+    color: #2B398D;
+}
+
 
 .nav .logo{
     padding-left: 50px;
@@ -65,7 +76,7 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color: #2B398D;
+    color: #FFFFFF;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
@@ -98,7 +109,7 @@ nav:after{
 
 
 .nav-bar{
-    color: #4644AA;
+    color: #FFFFFF;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -264,7 +275,7 @@ nav:after{
 
 /*----------------Slider--start------------------------------*/
 .slider {
-    margin: 70px auto auto auto;
+    margin: 0 auto auto auto;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -346,7 +357,7 @@ nav:after{
 }
 
 .slide-2{
-    background-image: url("image/Slide2.jpg");
+    background-image: url("image/Slide2.png");
 }
 
 .slide-3{
@@ -430,40 +441,61 @@ nav:after{
 /*----------------------Slider-End----------------------*/
 
 /*----------------------Who We Are -Start----------------------*/
-.WHO-WE-ARE{
-    margin-top: 50px;
-    padding-bottom: 20px;
+
+.WHO-WE-ARE {
+    width: 100%;
+    margin: 30px 0 auto;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.WHO-WE-ARE h2{
-    text-align: center;
-    font-weight: bold;
-    line-height: 1.5;
-    letter-spacing: 2px;
-    font-size: 40px;
+.WHO-WE-ARE-Container{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.WHO-WE-ARE-text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.WHO-WE-ARE-text h3{
     color: #2B398D;
-    position: relative;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 3.5em;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
 
-.WHO-WE-ARE h2:after{
-    content: "";
-    position: absolute;
-    left: 25%;
-    bottom: 0;
-    width: 7%;
-    margin-left:21%;
-    border: 2px solid #080808;
-}
-
-.WHO-WE-ARE p{
+.WHO-WE-ARE-text p{
+    margin-top: 25px;
     color: #080808;
-   width: 50%;
-    text-align: center;
-    margin: 20px 25%;
-    display: block;
+    font-size: 23px;
 
 }
+
+.WHO-WE-ARE img{
+    width: 400px;
+}
+.WHO-WE-ARE a {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    margin-top: 20px;
+    text-decoration:none;
+
+}
+
+
 .WHO-WE-ARE button{
     background-color: #4644AA;
     color: #ffffff;
@@ -484,19 +516,74 @@ nav:after{
 }
 
 
-.WHO-WE-ARE a {
-    width: 170px;
-    height: 40px;
-    display: flex;
-    margin: 0 auto;
-    text-decoration:none;
+@media screen and (max-width: 1380px) {
+
+    .WHO-WE-ARE  {
+        width: 100%;
+        height: auto;
+        padding: 70px 0;
+
+    }
+
+    .WHO-WE-ARE  img{
+        margin-bottom: 20px;
+
+    }
 
 }
+@media screen and (max-width: 1010px) {
+
+    .WHO-WE-ARE-Container {
+        flex-direction: column-reverse;
+    }
+
+    .WHO-WE-ARE  {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .WHO-WE-ARE-text h3{
+        font-size: 50px;
+    }
+
+    .WHO-WE-ARE-text{
+        width: 450px;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .WHO-WE-ARE  img{
+        width: 450px;
+
+    }
+
+
+    .WHO-WE-ARE-text h3 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .WHO-WE-ARE img{
+        width: 350px;
+
+    }
+
+
+
+}
+
 /*----------------------Who We Are -End----------------------*/
 
 /*----------------------Our Services -Start----------------------*/
 .OUR-SERVICES{
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .OUR-SERVICES h2{
@@ -799,7 +886,7 @@ nav:after{
     }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1020px) {
     .Web-Section-Container{
         flex-direction: column-reverse;
     }
@@ -886,7 +973,26 @@ nav:after{
     transition: 0.3s;
     box-shadow:  0 0 5px #262626;
     border-radius: 25px;
+    position: relative;
 }
+
+.WHY-CHOOSE-US-Row .cardly:before{
+    content: '';
+    width: 0px;
+    height: 6px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF;
+    position: absolute;
+    transition: all 0.4s ease;
+}
+
+.WHY-CHOOSE-US-Row .cardly:hover:before{
+    display: block;
+    width: 100px;
+}
+
 
 .WHY-CHOOSE-US-Row .cardly .member_img{
     background: #FFFFFF;

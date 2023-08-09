@@ -461,26 +461,49 @@ nav:after{
 }
 
 
+/*--------RPA-Contact-US--------*/
 .RPA-Contact-US{
-    background: #4644AA;
-    display: grid;
-    justify-content: center;
+    background-color: #4644AA;
+    display: flex;
     align-items: center;
     text-align: center;
-    padding-bottom: 80px;
-    background-image: url("image/Backgroung-Img1.png");
-     margin-top: 100px;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 10rem 5rem 0;
+    background-image: url("image/Background4.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+
 }
+
+.RPA-Contact-US-Container{
+    padding: 4rem;
+    height: 20rem;
+}
+
 
 .RPA-Contact-US h2{
     color: #FFFFFF;
-    margin-top: 80px;
     font-weight: bold;
     font-size: 40px;
+    position: relative;
+    padding-bottom: 20px;
 }
 
+.RPA-Contact-US h2:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #080808;
+}
+
+
 .RPA-Contact-US p{
-    margin: 30px 0 30px;
+    margin: 2rem 0;
     color: #E5E5E5;
 
 
@@ -506,16 +529,39 @@ nav:after{
 }
 
 
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1024px) {
 
-    .RPA-Contact-US {
-        margin-top: 50px;
+    .RPA-Contact-US p{
+        margin: 2rem 0;
 
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .RPA-Contact-US{
+        margin: 2.5rem 2rem;
+    }
+
+    .RPA-Contact-US-Container{
+        padding: 2rem 0;
+    }
+
+    .RPA-Contact-US h2{
+        margin: 0.1rem;
+        font-size: 30px;
 
     }
 
+    .RPA-Contact-US p{
+        margin: 2rem 0;
+    }
 
+    .RPA-Contact-US a{
+
+
+    }
 }
+
     /*----------------------Footer------------------------*/
     .footer {
         font-size: 80%;
