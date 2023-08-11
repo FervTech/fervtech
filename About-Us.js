@@ -12,6 +12,12 @@ angleDown.onclick = function (){
     servicesLinks.classList.toggle("active");
 }
 
+//---------navScroll----------//
+window.addEventListener("scroll", function (){
+    var nav = document.querySelector(".nav");
+    nav.classList.toggle("sticky", window.scrollY > 0);
+})
+
 //------------Scroll-Up------------//
 let calcScrollValue = () => {
     let scrollProgress = document.getElementById("Scroll-Up");
@@ -52,3 +58,16 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message))
 })
+
+//--Start of Tawk.to Script-//
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6473a8efad80445890ef94fd/1h1hsnq1g';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+})();
+
+<!--End of Tawk.to Script-->

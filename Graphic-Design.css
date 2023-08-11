@@ -42,6 +42,14 @@ body {
 
 
 .nav.sticky .nav-links li a{
+    color: #2B398D;
+}
+
+.nav.sticky .services-links li a{
+    color: #080808;
+}
+
+.nav.sticky .services-links li a:hover{
     color: #4644AA;
 }
 
@@ -275,26 +283,185 @@ nav:after{
 
 /*----------------Main----------------*/
 
+.image_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_header img{
+    width: 100em;
+    height: 50vh;
+}
+
+.graphic_services{
+
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1ff;
+    min-height: 100vh;
+    color: #4644AA;
+}
+
+.graphic_services_container{
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px ;
+}
+
+.graphic_card{
+    position: relative;
+    height: 250px;
+    background: #FFFFFF;
+    display: flex;
+    width: 30%;
+    margin: 40px 0;
+    box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+}
+
+.graphic_card .imgDg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4644AA;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.graphic_card:hover .imgDg{
+    width: 100px;
+    height: 100px;
+    left: -75px;
+    top:  calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: #ff0057;
+}
+
+.graphic_card .imgDg:before{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 4.5em;
+    color: rgba(255,255,255,0.05);
+    font-weight: 700;
+    z-index: -1;
+}
+
+.imgDg img{
+    max-width: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.graphic_card:hover .imgDg img{
+    max-width: 75px;
+}
+
+.graphic_services_text{
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graphic_services_text h3{
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.graphic_services_text p{
+    color: #080808;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1072px) {
+
+    .graphic_services_container{
+        width: 1000px;
+        margin: 20px;
+    }
+    .graphic_card{
+        height: 250px;
+        width: 45%;
+        margin: 40px 0;
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .graphic_services_container{
+        width: 100%;
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+@media screen and (max-width: 790px) {
+
+    .graphic_services_container{
+        margin: 5px;
+    }
+
+    .graphic_card{
+        height: 250px;
+        width: 80%;
+        margin: 40px 0;
+        gap: 10px;
+    }
+
+
+}
+
+
+
+
 
 /*--------Mobile-Contact---------*/
-.Mobile-Contact{
+.Graphic-Contact{
     background: #4644AA;
     display: flex;
     align-items: center;
     text-align: center;
     border-radius: 20px;
     margin: 10rem 5rem 0;
-    background-image: url("image/Backgroung-Img1.png");
+    background-image: url("image/Background6.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 
 }
 
-.Mobile-Contact-Container{
+.Graphic-Contact-Container{
     padding: 4rem;
     height: 20rem;
 }
 
 
-.Mobile-Contact h2{
+.Graphic-Contact h2{
     color: #FFFFFF;
     font-weight: bold;
     font-size: 40px;
@@ -302,7 +469,7 @@ nav:after{
     padding-bottom: 20px;
 }
 
-.Mobile-Contact h2:after{
+.Graphic-Contact h2:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -311,14 +478,14 @@ nav:after{
     margin-left:21%;
     border: 2px solid #080808;
 }
-.Mobile-Contact p{
-    margin: 2rem 0;
+.Graphic-Contact p{
+    margin: 2rem 15rem 2rem 0;
     color: #E5E5E5;
 
 
 }
 
-.Mobile-Contact a{
+.Graphic-Contact a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -333,14 +500,14 @@ nav:after{
     font-weight: bold;
 }
 
-.Mobile-Contact a:hover{
+.Graphic-Contact a:hover{
     transform: scale(1.2);
 }
 
 
 @media screen and (max-width: 1024px) {
 
-    .Mobile-Contact p{
+    .Graphic-Contact p{
         margin: 2rem 0;
 
     }
@@ -349,24 +516,24 @@ nav:after{
 }
 
 @media screen and (max-width: 700px) {
-    .Mobile-Contact{
+    .Graphic-Contact{
         padding: 0;
         margin: 4rem 2rem;
     }
 
-    .Mobile-Contact-Container{
+    .Graphic-Contact-Container{
         padding: 2rem;
     }
 
-    .Mobile-Contact h2{
+    .Graphic-Contact h2{
         margin: 0.1rem;
     }
 
-    .Mobile-Contact p{
+    .Graphic-Contact p{
         margin: 2rem;
     }
 
-    .Mobile-Contact a{
+    .Graphic-Contact a{
 
 
     }

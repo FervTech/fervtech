@@ -30,10 +30,24 @@ body {
 .nav{
     font-weight: bold;
     font-size: 16px;
-    background: #ffffff;
     position: fixed;
     width: 100%;
+    z-index: 99;
+
 }
+
+.nav.sticky{
+    background: #FFFFFF;
+    box-shadow:  0 0 5px #262626;
+    z-index: 99;
+}
+
+
+.nav.sticky .nav-links li a{
+    color: #4644AA;
+}
+
+
 
 .nav .logo{
     padding-left: 50px;

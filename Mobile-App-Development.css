@@ -28,12 +28,24 @@ body {
 .nav{
     font-weight: bold;
     font-size: 16px;
-    background: #ffffff;
     position: fixed;
     width: 100%;
     z-index: 99;
-    box-shadow:  0 0 5px #262626;
+
 }
+
+.nav.sticky{
+    background: #FFFFFF;
+    box-shadow:  0 0 5px #262626;
+    z-index: 99;
+}
+
+
+.nav.sticky .nav-links li a{
+    color: #4644AA;
+}
+
+
 
 .nav .logo{
     padding-left: 50px;
@@ -637,9 +649,11 @@ nav:after{
     text-align: center;
     border-radius: 20px;
     margin: 10rem 5rem 0;
-    background-image: url("image/Backgroung-Img1.png");
-
-}
+    background-image: url("image/Background5.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left, right;
+    }
 
 .Mobile-Contact-Container{
     padding: 4rem;
@@ -665,10 +679,8 @@ nav:after{
     border: 2px solid #080808;
 }
 .Mobile-Contact p{
-    margin: 2rem 0;
+    margin: 2rem 12rem;
     color: #E5E5E5;
-
-
 }
 
 .Mobile-Contact a{
@@ -692,6 +704,9 @@ nav:after{
 
 
 @media screen and (max-width: 1024px) {
+     .Mobile-Contact {
+         background-image: none;
+    }
 
     .Mobile-Contact p{
         margin: 2rem 0;

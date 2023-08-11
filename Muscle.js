@@ -89,13 +89,16 @@ setInterval(  function showslide() {
 } , time);   // Change every image after 3 seconds
 
 
-// Swiper
+// Testimonial Swiper//
 
 
 var swiper = new Swiper(".mySwiper", {
     loop: true,
     fade: 'true',
-    autoplay:true,
+    autoplay:{
+        delay:5000,
+        disableOnInteraction: false,
+    },
     autoplayTimeout: 50000,
     autoplayHoverPause:true,
 
@@ -122,6 +125,8 @@ var swiper = new Swiper(".mySwiper", {
     },
     
 });
+
+swiper.loopDestroy();
 
 //------------Scroll-Up------------//
 let calcScrollValue = () => {

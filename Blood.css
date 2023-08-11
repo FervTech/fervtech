@@ -1162,6 +1162,7 @@ nav:after{
     align-items: center;
 
 }
+
 .overlay{
     position: absolute;
     left: 0;
@@ -1185,6 +1186,7 @@ nav:after{
     border-radius: 0 25px 0 0;
     background-color: #FFF;
 }
+
 .card-image{
     position: relative;
     height: 10em;
