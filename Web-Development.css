@@ -1,8 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    outline: 0;
+    border: 0;
+    font-family:"Poppins", sans-serif;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 html{
@@ -41,8 +45,8 @@ body {
 }
 
 
-.nav.sticky .nav-links li a{
-    color: #4644AA;
+.nav.sticky .nav-bar, .nav.sticky .nav-links li a{
+    color: #2B398D;
 }
 
 
@@ -390,12 +394,19 @@ nav:after{
 
     }
 
-
-
 }
 
 
 /*----------------Web-Services-------------------*/
+.web_service{
+    max-width: 100vw;
+    padding-bottom: 12rem;
+}
+
+.web_service_container{
+    width: 84%;
+    margin: 0 auto;
+}
 .web_service h1{
     text-align: center;
     margin-bottom: 5rem;
@@ -409,7 +420,6 @@ nav:after{
     gap: 5rem;
     align-items: center;
     margin-top: 3rem;
-    padding: 3em;
 }
 
 .web_service_text h2{
@@ -418,10 +428,119 @@ nav:after{
     font-size: 40px;
 }
 
+.web_service_img img{
+    width: 100%;
+}
+
 @media screen and (max-width: 1024px){
 
 
+    .web_service_container{
+        width: 90%;
+    }
+
+    .web_service_content{
+        margin: auto;
+    }
+
+
 }
+
+@media screen and (max-width: 600px){
+
+    .web_service{
+        padding-bottom: 8rem;
+    }
+
+    .web_service_container{
+        width: 94%;
+    }
+    .web_service_content{
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
+        text-align: center;
+        gap: 0;
+    }
+
+    .web_service_content:nth-child(2) .web_service_img{
+        grid-row: 1;
+    }
+
+}
+
+/*--------------------Webpage-Contact--------*/
+.webpage_contact{
+    max-width: 100vw;
+    padding-bottom: 12rem;
+    background-color: #4644AA;
+    margin: 10rem 5rem 0;
+}
+
+.webpage_cont_container{
+    width: 84%;
+    margin: 0 auto;
+}
+
+.webpage_contact_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+.webpage_contact_text{
+    color: #FFFFFF;
+}
+
+.webpage_contact_text h2{
+    margin-bottom: 1.3rem;
+    font-size: 3.5rem;
+
+}
+
+
+
+.webpage_contact_img img{
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px){
+
+
+    .webpage_contact_container{
+        width: 90%;
+    }
+
+    .webpage_contact_content{
+        margin: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 600px){
+
+    .webpage_contact{
+        padding-bottom: 8rem;
+    }
+
+    .webpage_contact_container{
+        width: 94%;
+    }
+    .webpage_contact_content{
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
+        text-align: center;
+        gap: 0;
+    }
+
+    .webpage_contact_content:nth-child(2) .web_service_img{
+        grid-row: 1;
+    }
+
+}
+
+
 
 
 /*----------------------Footer------------------------*/
