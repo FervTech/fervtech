@@ -81,8 +81,6 @@ nav:after{
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
-    text-transform: uppercase;
-
 }
 
 .nav-links li a:before{
@@ -275,15 +273,31 @@ nav:after{
 
 
 /*----------------Main----------------*/
+
+
+/*----Image-Header-------------*/
+
+.image_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_header img{
+    width: 100em;
+    height: 50vh;
+}
+
 #main{
     padding: 30px 20px;
     background-color: #fdfdfdff;
-
 }
 
 .sub-title{
     text-align: center;
     color: #4644AA;
+    font-size: 3.5rem;
+    font-weight: bold;
 
 }
 
@@ -296,7 +310,7 @@ nav:after{
 
 .services-list .card{
     background: #ffffff;
-    color: #080808;
+    color: #4644AA;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -359,19 +373,19 @@ nav:after{
 }
 
 .services-list div h3{
-    font-size: 22px;
+    font-size: 40px;
     font-weight: bold;
     margin: 15px;
 }
 
 .services-list div p{
-    font-size: 17px;
-    color: #707070;
+    font-size: 20px;
+    color: #231F20;
 }
 
 .services-list div a{
     text-decoration: none;
-    font-size: 13px;
+    font-size: 20px;
     margin-top: 20px;
     display: inline-block;
     color: #4644AA;
@@ -403,6 +417,18 @@ nav:after{
     color: #4644AA;
 }
 
+@media screen and (max-width: 1400px) {
+    .services-list{
+        padding: 0 20px 0;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .services-list{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
 
 
 /*----------------------Footer------------------------*/

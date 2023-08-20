@@ -277,6 +277,20 @@ nav:after{
 /*----------------Main----------------*/
 
 
+/*----Image-Header-------------*/
+
+.image_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_header img{
+    width: 100em;
+    height: 50vh;
+}
+
+
 .RPA-Section{
     width: 100%;
     margin: 100px 0 auto;
@@ -474,108 +488,47 @@ nav:after{
 
 
 /*--------RPA-Contact-US--------*/
-.RPA-Contact-US{
+.rpa_contact{
     background-color: #4644AA;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
     border-radius: 20px;
     margin: 10rem 5rem 0;
-    background-image: url("image/Background4.png");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
-
 }
 
-.RPA-Contact-US-Container{
-    padding: 4rem;
-    height: 20rem;
-}
-
-
-.RPA-Contact-US h2{
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 40px;
-    position: relative;
-    padding-bottom: 20px;
-}
-
-.RPA-Contact-US h2:after{
-    content: "";
-    position: absolute;
-    left: 25%;
-    bottom: 0;
-    width: 7%;
-    margin-left:21%;
-    border: 2px solid #080808;
-}
-
-
-.RPA-Contact-US p{
-    margin: 2rem 0;
-    color: #E5E5E5;
-
-
-}
-
-.RPA-Contact-US a{
-    display: flex;
-    justify-content: center;
+.rpa_contact_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
     align-items: center;
-    margin: auto;
-    height: 2em;
-    width: 8em;
-    border-radius: 25px;
-    text-decoration: none;
+}
+
+.rpa_contact_content h2{
+    margin-bottom: 2rem;
+    font-size: 5rem;
+}
+
+.rpa_contact_content p{
+    margin-bottom: 2rem;
+}
+
+.rpa_contact_content a{
     background: #FFFFFF;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 1rem;
     color: #4644AA;
-    transition: 0.5s ease;
     font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.RPA-Contact-US a:hover{
-    transform: scale(1.2);
+.rpa_contact_content a:hover{
+   transform: scale(1.2);
+    color: #080808;
 }
 
 
-@media screen and (max-width: 1024px) {
-    .RPA-Contact-US{
-        background-image: none;
-    }
-
-    .RPA-Contact-US p{
-        margin: 2rem 0;
-
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .RPA-Contact-US{
-        margin: 2.5rem 2rem;
-    }
-
-    .RPA-Contact-US-Container{
-        padding: 2rem 0;
-    }
-
-    .RPA-Contact-US h2{
-        margin: 0.1rem;
-        font-size: 30px;
-
-    }
-
-    .RPA-Contact-US p{
-        margin: 2rem 0;
-    }
-
-    .RPA-Contact-US a{
 
 
-    }
-}
 
     /*----------------------Footer------------------------*/
     .footer {

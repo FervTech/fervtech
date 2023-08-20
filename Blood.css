@@ -12,7 +12,8 @@ html{
 
 body {
     background: #fdfdfdff;
-    color:  #080808;
+    color:  #231F20;
+    font-size: 20px;
 }
 
 
@@ -80,8 +81,6 @@ nav:after{
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
-    text-transform: uppercase;
-
 }
 
 .nav-links li a:before{
@@ -176,11 +175,10 @@ nav:after{
 
     .nav-links {
         margin-right: 20px;
+        color: #4644AA;
     }
 
-    .nav-links li a{
-        font-size: 15px;
-    }
+
 
 
 
@@ -323,15 +321,13 @@ nav:after{
 }
 
 .slide-data h1 {
-    font-family: "Anton", serif;
     font-weight: bolder;
     text-transform: uppercase;
-    font-size: 45px;
+    font-size: 3.5rem;
     margin-bottom: 10px;
 }
 
 .slide-data p {
-    font-family: "Lato", serif;
     font-size: 18px;
     margin-bottom: 30px;
 }
@@ -470,16 +466,15 @@ nav:after{
 .WHO-WE-ARE-text h3{
     color: #2B398D;
     margin-bottom: 20px;
+    font-weight: bold;
     font-size: 3.5em;
     text-transform: capitalize;
-    font-weight: bold;
     letter-spacing: 1.5px;
 }
 
 .WHO-WE-ARE-text p{
     margin-top: 25px;
-    color: #080808;
-    font-size: 23px;
+    font-size: 20px;
 
 }
 
@@ -502,7 +497,6 @@ nav:after{
     border: 2px solid transparent;
     border-radius: 30px;
     width: 170px;
-    font-weight: bold;
     font-size: 20px;
 }
 
@@ -586,18 +580,17 @@ nav:after{
   margin-top: 20px;
 }
 
-.OUR-SERVICES h2{
+.OUR-SERVICES h3{
     text-align: center;
     font-weight: bold;
     letter-spacing: 2px;
     color: #2B398D;
-    font-size: 40px;
+    font-size: 3.5rem;
     position: relative;
     margin-bottom: 20px;
     padding-bottom: 20px;
 
 }
-
 
 .OUR-SERVICES-h2:after{
     content: "";
@@ -606,7 +599,7 @@ nav:after{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #080808;
+    border: 2px solid #58595B;
 }
 
 .OUR-SERVICES-IMG{
@@ -643,16 +636,15 @@ nav:after{
 }
 .Web-Section .Web-Section-Container .Web-Section-Text h2{
     color: #4644AA;
-    margin-bottom: 20px;
-    font-size: 35px;
+    margin-bottom: 5px;
+    font-size: 40px;
     text-transform: capitalize;
     font-weight: bold;
+    text-align: left;
 }
 
 .Web-Section .Web-Section-Container .Web-Section-Text p{
-    color: #080808;
-    font-size: 30px;
-    letter-spacing: 1px;
+    font-size: 20px;
     margin-bottom: 45px;
 }
 
@@ -663,8 +655,7 @@ nav:after{
     text-decoration: none;
     padding: 10px 30px;
     border-radius: 30px;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 20px;
 }
 
 .Web-Section .Web-Section-Container .Web-Section-Text button:hover{
@@ -703,16 +694,15 @@ nav:after{
 }
 .App-Section .App-Section-Container .App-Section-Text h2{
     color: #4644AA;
-   margin-bottom: 20px;
-    font-size: 35px;
+   margin-bottom: 5px;
+    font-size: 40px;
     text-transform: capitalize;
     font-weight: bold;
+    text-align: left;
 }
 
 .App-Section .App-Section-Container .App-Section-Text p{
-    color: #080808;
-    font-size: 30px;
-    letter-spacing: 1px;
+    font-size: 20px;
     margin-bottom: 45px;
 }
 
@@ -723,8 +713,9 @@ nav:after{
     text-decoration: none;
     padding: 10px 30px;
     border-radius: 30px;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .App-Section .App-Section-Container .App-Section-Text button:hover{
@@ -732,8 +723,6 @@ nav:after{
     background-color: transparent;
     border: 2px solid #4644AA;
     color: #4644AA;
-    transition: 0.4s;
-    cursor: pointer;
 }
 
 
@@ -765,17 +754,15 @@ nav:after{
 }
 .RPA-Section .RPA-Section-Container .RPA-Section-Text h2{
     color: #4644AA;
-    margin-bottom: 20px;
-    font-size: 35px;
+    margin-bottom: 5px;
+    font-size: 40px;
     text-transform: capitalize;
     font-weight: bold;
+    text-align: left;
 }
 
 .RPA-Section .RPA-Section-Container .RPA-Section-Text p{
-    color: #080808;
-    font-size: 30px;
-
-    letter-spacing: 1px;
+    font-size: 20px;
     margin-bottom: 45px;
 }
 
@@ -786,8 +773,7 @@ nav:after{
     text-decoration: none;
     padding: 10px 30px;
     border-radius: 30px;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 20px;
 }
 
 .RPA-Section .RPA-Section-Container .RPA-Section-Text button:hover{
@@ -800,7 +786,7 @@ nav:after{
 }
 
 /*----------------------Graphic Design-Section----------------------*/
-.Graphic-Design-Section{
+.Graphic-DesignSection{
     width: 100%;
     height: 70vh;
     display: flex;
@@ -826,17 +812,17 @@ nav:after{
 }
 .Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text h2{
     color: #4644AA;
-    margin-bottom: 20px;
-    font-size: 35px;
+    margin-bottom: 5px;
+    font-size: 40px;
     text-transform: capitalize;
     font-weight: bold;
+    text-align: left;
 }
 
 .Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text p{
-    color: #080808;
-    font-size: 30px;
-    letter-spacing: 1px;
+    font-size: 20px;
     margin-bottom: 45px;
+
 }
 
 .Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text button{
@@ -846,8 +832,9 @@ nav:after{
     text-decoration: none;
     padding: 10px 30px;
     border-radius: 30px;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text button:hover{
@@ -924,16 +911,15 @@ nav:after{
 
 /*----------------------Why Choose Us-Start----------------------*/
 .WHY-CHOOSE-US{
-    margin-bottom: 20px;
+    margin: 50px 0 20px;
 }
 
 .WHY-CHOOSE-US h2{
     text-align: center;
-    font-weight: bold;
-    letter-spacing: 2px;
     color: #2B398D;
     padding-bottom: 10px;
-    font-size: 40px;
+    font-size: 3.5rem;
+    font-weight: bold;
     position: relative;
 }
 
@@ -944,7 +930,7 @@ nav:after{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #080808;
+    border: 2px solid #58595B;
 }
 
 .WHY-CHOOSE-US-Container{
@@ -952,7 +938,6 @@ nav:after{
     margin: 50px auto;
     text-align: center;
     background-color: #f1f1f1ff;
-
     padding: 50px 0 20px;
 
 }
@@ -1099,7 +1084,7 @@ nav:after{
     color: #2B398D;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 3.5rem;
     position: relative;
 }
 
@@ -1110,7 +1095,7 @@ nav:after{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #080808;
+    border: 2px solid #58595B;
 }
 
 
@@ -1348,9 +1333,8 @@ nav:after{
 }
 
 .footer-logo{
-    width:100px;
-    background-color: #ffffff;
-    border-radius: 15px;
+    width: 200px;
+
 }
 
 #footer-email{
