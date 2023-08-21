@@ -1,8 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    outline: 0;
+    border: 0;
+    font-family:"Poppins", sans-serif;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 html{
@@ -78,9 +82,9 @@ nav:after{
 .nav-links li a{
     position: relative;
     color: #FFFFFF;
-    text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .nav-links li a:before{
@@ -155,6 +159,7 @@ nav:after{
     color: #080808;
     padding: 8px 15px;
     transition: 0.2s ease;
+    text-transform: none;
 }
 
 .services-links li a:before{
@@ -611,7 +616,7 @@ nav:after{
 /*----------------------Web-Section----------------------*/
 .Web-Section{
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -671,7 +676,7 @@ nav:after{
 /*----------------------App-Section----------------------*/
 .App-Section{
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -729,7 +734,7 @@ nav:after{
 /*----------------------RPA-Section----------------------*/
 .RPA-Section{
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -788,7 +793,7 @@ nav:after{
 /*----------------------Graphic Design-Section----------------------*/
 .Graphic-DesignSection{
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -850,25 +855,25 @@ nav:after{
     .Web-Section{
         width: 100%;
         height: auto;
-        padding: 70px 0px;
+        padding: 30px 0px;
     }
     .App-Section{
         width: 100%;
         height: auto;
-        padding: 70px 0px;
+        padding: 30px 0px;
 
     }
     .RPA-Section{
         width: 100%;
         height: auto;
-        padding: 70px 0px;
+        padding: 30px 0px;
 
     }
 
     .Graphic-Design-Section{
         width: 100%;
         height: auto;
-        padding: 70px 0px;
+        padding: 30px 0px;
 
     }
 }

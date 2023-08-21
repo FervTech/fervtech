@@ -161,6 +161,7 @@ nav:after{
     color: #080808;
     padding: 8px 15px;
     transition: 0.2s ease;
+    text-transform: none;
 }
 
 .services-links li a:before{
@@ -474,11 +475,13 @@ nav:after{
     padding-bottom: 12rem;
     background-color: #4644AA;
     margin: 10rem 5rem 0;
+    border-radius: 10px;
 }
 
 .webpage_cont_container{
     width: 84%;
     margin: 0 auto;
+
 }
 
 .webpage_contact_content{
@@ -487,6 +490,7 @@ nav:after{
     gap: 5rem;
     align-items: center;
     margin-top: 3rem;
+    padding: 3rem;
 }
 .webpage_contact_text{
     color: #FFFFFF;
@@ -494,8 +498,29 @@ nav:after{
 
 .webpage_contact_text h2{
     margin-bottom: 1.3rem;
-    font-size: 3.5rem;
+    font-size: 5rem;
 
+}
+
+.webpage_contact_text p{
+    margin-bottom: 2rem;
+
+}
+
+.webpage_contact_text a{
+    background: #FFFFFF;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #4644AA;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.webpage_contact_text a:hover{
+    transform: scale(1.2);
+    color: #080808;
 }
 
 
@@ -513,6 +538,10 @@ nav:after{
 
     .webpage_contact_content{
         margin: auto;
+    }
+
+    .webpage_contact_text{
+
     }
 
 
