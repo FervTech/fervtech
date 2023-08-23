@@ -421,8 +421,8 @@ nav:after{
     display: inline-block;
     border-radius: 100%;
     margin: 0 6px;
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     background-color: #fff;
     cursor: pointer;
 }
@@ -472,7 +472,7 @@ nav:after{
     color: #2B398D;
     margin-bottom: 20px;
     font-weight: bold;
-    font-size: 3.5em;
+    font-size: 3.5rem;
     text-transform: capitalize;
     letter-spacing: 1.5px;
 }
@@ -1346,7 +1346,9 @@ nav:after{
     width: 250px;
     height: 40px;
     border-radius: 5px;
+    padding-left: 10px;
 }
+
 
 #footer-submit{
     width: 80px;
@@ -1386,59 +1388,26 @@ nav:after{
 }
 
 /*--------footer-responsive---------*/
-@media (max-width: 1555px) {
-
-    #footer-email{
-        width: 150px;
-    }
-}
-
-@media (max-width: 1155px) {
-
-    #footer-submit{
-        width: 60px;
-    }
-}
-
-@media (max-width: 1077px) {
+@media screen and (max-width: 1004px) {
     .footer-col{
         width: 50%;
         margin-bottom: 30px;
     }
 
-    #footer-email{
-        width: 200px;
-    }
-    #footer-submit{
-        width: 80px;
-    }
-}
-
-@media (max-width: 727px) {
-
-    #footer-submit{
-        width: 60px;
-    }
-}
-
-@media (max-width: 687px) {
-    #footer-email{
-        width: 150px;
-    }
-}
-
-@media (max-width: 574px) {
-    .footer-col{
+    .footer-col form{
         width: 100%;
     }
 
-    #footer-email{
-        width: 200px;
+}
+
+
+
+@media screen and  (max-width: 600px) {
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
     }
 
-    #footer-submit{
-        width: 80px;
-    }
 }
 
 /*-----------------Scroll-Up-Stat----------------*/

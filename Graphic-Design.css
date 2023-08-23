@@ -15,7 +15,8 @@ html{
 
 body {
     background: #fdfdfdff;
-    color: #fff;
+    color: #231F20;
+    font-size: 16px;
 }
 
 
@@ -44,6 +45,9 @@ body {
     z-index: 99;
 }
 
+.nav.sticky .logo{
+
+}
 
 .nav.sticky .nav-links li a{
     color: #2B398D;
@@ -291,15 +295,15 @@ nav:after{
 
 /*----Image-Header-------------*/
 
-.image_header {
+.hero_header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image_header img{
-    width: 100em;
-    height: 50vh;
+.hero_header_img img{
+    width: 100%;
+    object-fit: cover;
 }
 
 .graphic_services{
@@ -332,12 +336,11 @@ nav:after{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #080808;
+    border: 2px solid #58595B;
 }
 
 .graphic_text p{
     text-align: center;
-    color: #080808;
 }
 .graphic_services_container{
     display: flex;
@@ -527,7 +530,7 @@ nav:after{
 .graphic_contact{
     background-color: #4644AA;
     border-radius: 20px;
-    margin: 10rem 5rem 0;
+    margin: 10rem 5rem 5rem;
 }
 
 .graphic_contact_container{
@@ -537,8 +540,10 @@ nav:after{
     align-items: center;
 }
 .graphic_contact_content{
+    color: #FFFFFF;
    margin-left: 3rem;
 }
+
 
 .graphic_contact_content h2{
     margin-bottom: 2rem;
@@ -561,7 +566,7 @@ nav:after{
 
 .graphic_contact_content a:hover{
     transform: scale(1.2);
-    color: #080808;
+    color: #231F20;
 }
 
 @media screen and (max-width: 1000px) {
@@ -593,11 +598,10 @@ nav:after{
 .footer{
     font-size: 80%;
     background: #1a1c27ff;
-    background-image: url("image/footer.png");
     height: auto;
     padding:03px 0 ;
-    margin-bottom: 0px;
-    margin-top: 50px;
+    margin-bottom: 0;
+    background-image: url("image/footer.png");
 }
 .footer-container{
     max-width: 2000px;
@@ -642,7 +646,6 @@ nav:after{
 
 .Details ul li:hover{
     color: #ffffff;
-
 }
 
 .Details ul li i{
@@ -682,9 +685,8 @@ nav:after{
 }
 
 .footer-logo{
-    width:100px;
-    background-color: #ffffff;
-    border-radius: 15px;
+    width: 200px;
+
 }
 
 #footer-email{
@@ -729,7 +731,6 @@ nav:after{
     padding: 0;
     color: #ffffff;
 }
-
 
 /*--------footer-responsive---------*/
 @media (max-width: 1555px) {
@@ -786,7 +787,6 @@ nav:after{
         width: 80px;
     }
 }
-
 /*-----------------Scroll-Up-Stat----------------*/
 #Scroll-Up{
     position: fixed;

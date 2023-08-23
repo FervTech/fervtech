@@ -41,6 +41,7 @@ body {
 }
 
 
+
 .nav.sticky .nav-links li a{
     color: #4644AA;
 }
@@ -77,10 +78,11 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color: #2B398D;
+    color: #FFFFFF;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .nav-links li a:before{
@@ -155,6 +157,7 @@ nav:after{
     color: #080808;
     padding: 8px 15px;
     transition: 0.2s ease;
+    text-transform: capitalize;
 }
 
 .services-links li a:before{
@@ -277,15 +280,15 @@ nav:after{
 
 /*----Image-Header-------------*/
 
-.image_header {
+.hero_header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image_header img{
-    width: 100em;
-    height: 50vh;
+.hero_header img{
+    max-width: 100%;
+    object-fit: cover;
 }
 
 #main{
@@ -430,16 +433,14 @@ nav:after{
     }
 }
 
-
 /*----------------------Footer------------------------*/
 .footer{
     font-size: 80%;
     background: #1a1c27ff;
-    background-image: url("image/footer.png");
     height: auto;
     padding:03px 0 ;
     margin-bottom: 0;
-    margin-top: 50px;
+    background-image: url("image/footer.png");
 }
 .footer-container{
     max-width: 2000px;
@@ -484,7 +485,6 @@ nav:after{
 
 .Details ul li:hover{
     color: #ffffff;
-
 }
 
 .Details ul li i{
@@ -524,9 +524,8 @@ nav:after{
 }
 
 .footer-logo{
-    width:100px;
-    background-color: #ffffff;
-    border-radius: 15px;
+    width: 200px;
+
 }
 
 #footer-email{
@@ -571,7 +570,6 @@ nav:after{
     padding: 0;
     color: #ffffff;
 }
-
 
 /*--------footer-responsive---------*/
 @media (max-width: 1555px) {
@@ -628,6 +626,7 @@ nav:after{
         width: 80px;
     }
 }
+
 
 /*-----------------Scroll-Up-Stat----------------*/
 #Scroll-Up{

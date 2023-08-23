@@ -1,5 +1,7 @@
+//Nav---Bar//
+
 navBar= document.querySelector(".nav-bar");
-     navBar.onclick = function (){
+navBar.onclick = function (){
     navLinks= document.querySelector(".nav-links");
     navLinks.classList.toggle("active");
 }
@@ -15,7 +17,6 @@ window.addEventListener("scroll", function (){
     var nav = document.querySelector(".nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
 })
-
 
 //------------Scroll-Up------------//
 let calcScrollValue = () => {
@@ -34,10 +35,23 @@ let calcScrollValue = () => {
     scrollProgress.addEventListener("click", () => {
         document.documentElement.scrollTop = 0;
     });
-    scrollProgress.style.background = `conic-gradient(#0a3264ff ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+    scrollProgress.style.background = `conic-gradient(#4644AA ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
 };
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+
+//--------------- Tawk.to Script--------//
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6473a8efad80445890ef94fd/1h1hsnq1g';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+})();
+
 
 //------News Letter Sheet-------//
 
@@ -49,7 +63,7 @@ form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response =>{
-               msg.innerHTML= "Thank You For Subscribing"
+            msg.innerHTML= "Thank You For Subscribing"
             setTimeout(function (){
                 msg.innerHTML= ""
             },4000)
@@ -57,3 +71,5 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message))
 })
+
+

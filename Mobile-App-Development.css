@@ -42,6 +42,14 @@ body {
 
 
 .nav.sticky .nav-links li a{
+    color: #2B398D;
+}
+
+.nav.sticky .services-links li a{
+    color: #080808;
+}
+
+.nav.sticky .services-links li a:hover{
     color: #4644AA;
 }
 
@@ -77,7 +85,7 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color: #2B398D;
+    color: #FFFFFF;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
@@ -279,15 +287,15 @@ nav:after{
 
 /*----Image-Header-------------*/
 
-.image_header {
+.hero_header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image_header img{
-    width: 100em;
-    height: 50vh;
+.hero_header img{
+    width: 100%;
+    object-fit: cover;
 }
 
 
@@ -764,11 +772,10 @@ nav:after{
 .footer{
     font-size: 80%;
     background: #1a1c27ff;
-    background-image: url("image/footer.png");
     height: auto;
     padding:03px 0 ;
-    margin-bottom: 0px;
-    margin-top: 50px;
+    margin-bottom: 0;
+    background-image: url("image/footer.png");
 }
 .footer-container{
     max-width: 2000px;
@@ -813,7 +820,6 @@ nav:after{
 
 .Details ul li:hover{
     color: #ffffff;
-
 }
 
 .Details ul li i{
@@ -853,9 +859,8 @@ nav:after{
 }
 
 .footer-logo{
-    width:100px;
-    background-color: #ffffff;
-    border-radius: 15px;
+    width: 200px;
+
 }
 
 #footer-email{
@@ -900,7 +905,6 @@ nav:after{
     padding: 0;
     color: #ffffff;
 }
-
 
 /*--------footer-responsive---------*/
 @media (max-width: 1555px) {

@@ -48,6 +48,14 @@ body {
 
 
 .nav.sticky .nav-links li a{
+    color: #2B398D;
+}
+
+.nav.sticky .services-links li a{
+    color: #080808;
+}
+
+.nav.sticky .services-links li a:hover{
     color: #4644AA;
 }
 
@@ -83,7 +91,7 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color: #2B398D;
+    color: #FFFFFF;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
@@ -283,13 +291,13 @@ nav:after{
 
 /*----Image-Header-------------*/
 
-.image_header {
+.hero_header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image_header img{
+.hero_header img{
     width: 100em;
     height: 50vh;
 }
@@ -687,7 +695,7 @@ nav:after{
     background: #1a1c27ff;
     height: auto;
     padding:03px 0 ;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     background-image: url("image/footer.png");
 }
 .footer-container{
@@ -733,7 +741,6 @@ nav:after{
 
 .Details ul li:hover{
     color: #ffffff;
-    letter-spacing: 1px;
 }
 
 .Details ul li i{
@@ -749,7 +756,7 @@ nav:after{
 }
 
 .footer-col ul li a:hover{
-    color: #ffffff;
+    color: #4644AA;
     letter-spacing: 1px;
 
 }
@@ -773,9 +780,8 @@ nav:after{
 }
 
 .footer-logo{
-    width:100px;
-    background-color: #ffffff;
-    border-radius: 15px;
+    width: 200px;
+
 }
 
 #footer-email{
@@ -820,7 +826,6 @@ nav:after{
     padding: 0;
     color: #ffffff;
 }
-
 
 /*--------footer-responsive---------*/
 @media (max-width: 1555px) {
@@ -877,7 +882,6 @@ nav:after{
         width: 80px;
     }
 }
-
 /*-----------------Scroll-Up-Stat----------------*/
 #Scroll-Up{
     position: fixed;

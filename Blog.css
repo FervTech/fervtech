@@ -1,8 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    outline: 0;
+    border: 0;
+    font-family:"Poppins", sans-serif;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 html{
@@ -11,8 +15,9 @@ html{
 
 
 body {
-    background-color:#d3d7da;
-    color: #080808;
+    background: #fdfdfdff;
+    color:  #231F20;
+    font-size: 16px;
 }
 
 
@@ -20,10 +25,9 @@ body {
 #header{
     background: #ffffff;
 
-
 }
 .header-container{
-    padding: 0 05px;
+    padding: 0.1px 0px;
 
 }
 
@@ -44,9 +48,16 @@ body {
 
 
 .nav.sticky .nav-links li a{
-    color: #4644AA;
+    color: #2B398D;
 }
 
+.nav.sticky .services-links li a{
+    color: #080808;
+}
+
+.nav.sticky .services-links li a:hover{
+    color: #4644AA;
+}
 
 
 .nav .logo{
@@ -79,12 +90,11 @@ nav:after{
 
 .nav-links li a{
     position: relative;
-    color:  #0a3264ff;
+    color:  #FFFFFF;
     text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
     text-transform: uppercase;
-
 }
 
 .nav-links li a:before{
@@ -105,14 +115,14 @@ nav:after{
 
 .angleDown{
     display: none;
-    color:  #0a3264ff;
+    color:  #4644AA;
     font-size: 30px;
     cursor: pointer;
 }
 
 
 .nav-bar{
-    color: #0a3264ff;
+    color: #4644AA;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -129,7 +139,7 @@ nav:after{
     visibility: hidden;
     background: #ffffff;
     border-radius: 5px;
-    border-top:3px solid #0a3264ff;
+    border-top:3px solid #4644AA;
     z-index: 1;
 }
 
@@ -152,13 +162,14 @@ nav:after{
 
 .services-links li:hover{
     padding-left: 8px;
-    color: #0a3264ff;
+    color: #492d88ff;
 }
 
 .services-links li a{
-    color: #080808;
+    color: #231F20;
     padding: 8px 15px;
     transition: 0.2s ease;
+    text-transform: none;
 }
 
 .services-links li a:before{
@@ -166,9 +177,9 @@ nav:after{
 
 }
 .services-links li a:hover{
-    color: #0a3264ff;
+    color: #4644AA;
     border-radius: 5px;
-    box-shadow: 0 0 5px #0a3264ff, 0 0 5px #262626;
+    box-shadow: 0 0 5px #4644AA, 0 0 5px #262626;
 }
 
 @media (max-width: 1090px) {
@@ -181,9 +192,7 @@ nav:after{
         margin-right: 20px;
     }
 
-    .nav-links li a{
-        font-size: 15px;
-    }
+
 
 
 
@@ -277,61 +286,16 @@ nav:after{
 /*------Header-End-----------*/
 
 
-/*--------Under-Construction-----*/
-.Under-Construction{
+/* _--------------------Main---------------------- */
+.hero_header {
+    display: flex;
+
+    align-items: center;
+}
+
+.hero_header img{
     width: 100%;
-    height: 100vh;
-    background-image:  url(image/UnderConstruction.png);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    z-index: -1;
-}
-
-#Under-Construction-Text{
-    text-align: center;
-    margin-bottom: 25px;
-    margin-top: 750px;
-    font-weight: bold;
-    font-size: 40px;
-
-}
-
-#Under-Construction-Text2{
-    text-align: center;
-    font-size: 25px;
-
-}
-
-
-.Under-Construction-Details ul{
-    text-align: center;
-    width: 100%;
-}
-
-.Under-Construction-Details ul a{
-    display: inline-block;
-    font-size: 25px;
-    margin: 900px 30px 0;
-    cursor: pointer;
-    position: relative;
-    line-height: 40px;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    color: #080808;
-}
-
-.Under-Construction-Details ul a:hover{
-    color: #0a3264ff;
-    font-size: 30px;
-
-}
-
-
-@media (max-width: 767px) {
-    .Under-Construction-Details ul a{
-        margin: 950px 30px 0;
-    }
+    object-fit: cover;
 }
 
 
@@ -342,7 +306,7 @@ nav:after{
     background: #1a1c27ff;
     height: auto;
     padding:03px 0 ;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     background-image: url("image/footer.png");
 }
 .footer-container{
@@ -388,7 +352,6 @@ nav:after{
 
 .Details ul li:hover{
     color: #ffffff;
-    letter-spacing: 1px;
 }
 
 .Details ul li i{
@@ -404,7 +367,7 @@ nav:after{
 }
 
 .footer-col ul li a:hover{
-    color: #ffffff;
+    color: #4644AA;
     letter-spacing: 1px;
 
 }
@@ -428,9 +391,8 @@ nav:after{
 }
 
 .footer-logo{
-    width:100px;
-    background-color: #ffffff;
-    border-radius: 15px;
+    width: 200px;
+
 }
 
 #footer-email{
@@ -475,7 +437,6 @@ nav:after{
     padding: 0;
     color: #ffffff;
 }
-
 
 /*--------footer-responsive---------*/
 @media (max-width: 1555px) {
@@ -555,7 +516,7 @@ nav:after{
     display: grid;
     place-items: center;
     font-size: 35px;
-    color: #001a2e;
+    color: #4644AA;
 }
 
 /*-----------------Scroll-Up-End----------------*/
