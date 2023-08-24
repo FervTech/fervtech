@@ -16,7 +16,7 @@ html{
 
 body {
     background: #fdfdfdff;
-    color:  #231F20;
+    color:  #414042;
     font-size: 20px;
 }
 
@@ -41,7 +41,7 @@ body {
 
 .nav.sticky{
     background: #FFFFFF;
-    box-shadow:  0 0 5px #262626;
+    box-shadow:  0 0 5px #414042;
     z-index: 99;
 }
 
@@ -468,8 +468,8 @@ nav:after{
     max-width: 100%;
     padding: 0 10px;
 }
-.WHO-WE-ARE-text h3{
-    color: #2B398D;
+.WHO-WE-ARE-text h1{
+    color: #4644AA;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 3.5rem;
@@ -499,13 +499,13 @@ nav:after{
     background-color: #4644AA;
     color: #ffffff;
     border: 2px solid transparent;
-    border-radius: 30px;
-    width: 170px;
+    border-radius: 6px;
+    width: 120px;
     font-size: 20px;
 }
 
 .WHO-WE-ARE button:hover{
-    transform: scale(1.2);
+    transform: scale(1);
     background-color: transparent;
     border: 2px solid #4644AA;
     color: #4644AA;
@@ -1007,9 +1007,8 @@ nav:after{
 
 .WHY-CHOOSE-US-Row .cardly h3{
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 1.17rem;
     line-height: 18px;
-    letter-spacing: 2px;
     margin: 15px 0 0;
     color: #4644AA;
 }
@@ -1024,7 +1023,7 @@ nav:after{
 
 .WHY-CHOOSE-US-Row .cardly:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 40px -10px rgba(112, 112, 112, 112);
     background-color: #4644AA;
 
 }

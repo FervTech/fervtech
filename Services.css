@@ -41,8 +41,15 @@ body {
 }
 
 
-
 .nav.sticky .nav-links li a{
+    color: #2B398D;
+}
+
+.nav.sticky .services-links li a{
+    color: #231F20;
+}
+
+.nav.sticky .services-links li a:hover{
     color: #4644AA;
 }
 

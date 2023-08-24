@@ -15,7 +15,7 @@ html{
 
 body {
     background: #fdfdfdff;
-    color: #231F20;
+    color: #414042;
     font-size: 1em;
 }
 
@@ -334,18 +334,9 @@ nav:after{
     font-size: 3.5rem;
     text-transform: capitalize;
     font-weight: bold;
-    letter-spacing: 1.5px;
 }
 
-.webpage_article-text h2:after{
-    content: "";
-    position: absolute;
-    left: 25%;
-    bottom: 0;
-    width: 7%;
-    margin-left:21%;
-    border: 2px solid #58595B;
-}
+
 
 .webpage_article-text p{
     margin-top: 25px;
@@ -427,7 +418,19 @@ nav:after{
     text-align: center;
     margin-bottom: 5rem;
     font-size: 3.5rem;
-    color: #2B398D;
+    color: #4644AA;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.web_service h1:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #414042;
 }
 
 .web_service_content{
