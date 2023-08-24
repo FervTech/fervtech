@@ -17,7 +17,7 @@ html{
 body {
     background: #fdfdfdff;
     color:  #414042;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 
@@ -41,14 +41,24 @@ body {
 
 .nav.sticky{
     background: #FFFFFF;
-    box-shadow:  0 0 5px #414042;
+    box-shadow:  0 0 5px #262626;
     z-index: 99;
 }
 
 
-.nav.sticky .nav-bar, .nav.sticky .nav-links li a{
+.nav.sticky .nav-links li a{
     color: #2B398D;
 }
+
+.nav.sticky .services-links li a{
+    color: #080808;
+}
+
+.nav.sticky .services-links li a:hover{
+    color: #4644AA;
+}
+
+
 
 
 .nav .logo{
@@ -169,7 +179,7 @@ nav:after{
 .services-links li a:hover{
     color: #4644AA;
     border-radius: 5px;
-    box-shadow: 0 0 5px #4644AA, 0 0 5px #262626;
+    box-shadow: 0 0 5px #a2a1d4, 0 0 5px #FFFFFF;
 }
 
 @media (max-width: 1090px) {
@@ -450,7 +460,6 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .WHO-WE-ARE-Container{
@@ -478,8 +487,6 @@ nav:after{
 
 .WHO-WE-ARE-text p{
     margin-top: 25px;
-    font-size: 20px;
-
 }
 
 .WHO-WE-ARE img{
@@ -491,7 +498,6 @@ nav:after{
     display: flex;
     margin-top: 20px;
     text-decoration:none;
-
 }
 
 
@@ -500,12 +506,11 @@ nav:after{
     color: #ffffff;
     border: 2px solid transparent;
     border-radius: 6px;
-    width: 120px;
+    width: 200px;
     font-size: 20px;
 }
 
 .WHO-WE-ARE button:hover{
-    transform: scale(1);
     background-color: transparent;
     border: 2px solid #4644AA;
     color: #4644AA;
@@ -584,11 +589,10 @@ nav:after{
   margin-top: 20px;
 }
 
-.OUR-SERVICES h3{
+.OUR-SERVICES h1{
     text-align: center;
     font-weight: bold;
-    letter-spacing: 2px;
-    color: #2B398D;
+    color: #4644AA;
     font-size: 3.5rem;
     position: relative;
     margin-bottom: 20px;
@@ -632,38 +636,43 @@ nav:after{
     justify-content: space-around;
 }
 
-.Web-Section .Web-Section-Container .Web-Section-Text {
+.Web-Section-Container .Web-Section-Text {
     width: 550px;
     max-width: 100%;
     padding: 0 10px;
 
 }
-.Web-Section .Web-Section-Container .Web-Section-Text h2{
+ .Web-Section-Text h2{
     color: #4644AA;
     margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 2.5rem;
     text-transform: capitalize;
     font-weight: bold;
     text-align: left;
 }
 
-.Web-Section .Web-Section-Container .Web-Section-Text p{
-    font-size: 20px;
+.Web-Section-Text p{
     margin-bottom: 45px;
 }
 
-.Web-Section .Web-Section-Container .Web-Section-Text button{
-    background-color: #4644AA;
-    color: #ffffff;
-    border: 2px solid transparent;
-    text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    font-size: 20px;
+.Web-Section-Text a {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    margin-top: 20px;
+    text-decoration:none;
 }
 
-.Web-Section .Web-Section-Container .Web-Section-Text button:hover{
-    transform: scale(1.2);
+ .Web-Section-Text button{
+     background-color: #4644AA;
+     color: #ffffff;
+     border: 2px solid transparent;
+     border-radius: 6px;
+     width: 200px;
+     font-size: 20px;
+}
+
+ .Web-Section-Text button:hover{
     background-color: transparent;
     border: 2px solid #4644AA;
     color: #4644AA;
@@ -699,35 +708,41 @@ nav:after{
 .App-Section .App-Section-Container .App-Section-Text h2{
     color: #4644AA;
    margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 2.5rem;
     text-transform: capitalize;
     font-weight: bold;
     text-align: left;
 }
 
 .App-Section .App-Section-Container .App-Section-Text p{
-    font-size: 20px;
     margin-bottom: 45px;
 }
 
-.App-Section .App-Section-Container .App-Section-Text button{
+.App-Section-Text a {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    margin-top: 20px;
+    text-decoration:none;
+}
+
+.App-Section-Text button{
     background-color: #4644AA;
     color: #ffffff;
     border: 2px solid transparent;
-    text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 30px;
+    border-radius: 6px;
+    width: 200px;
     font-size: 20px;
-    cursor: pointer;
-    transition: 0.4s;
 }
 
-.App-Section .App-Section-Container .App-Section-Text button:hover{
-    transform: scale(1.2);
+.App-Section-Text button:hover{
     background-color: transparent;
     border: 2px solid #4644AA;
     color: #4644AA;
+    transition: 0.4s;
+    cursor: pointer;
 }
+
 
 
 /*----------------------RPA-Section----------------------*/
@@ -759,29 +774,34 @@ nav:after{
 .RPA-Section .RPA-Section-Container .RPA-Section-Text h2{
     color: #4644AA;
     margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 2.5rem;
     text-transform: capitalize;
     font-weight: bold;
     text-align: left;
 }
 
 .RPA-Section .RPA-Section-Container .RPA-Section-Text p{
-    font-size: 20px;
     margin-bottom: 45px;
 }
 
-.RPA-Section .RPA-Section-Container .RPA-Section-Text button{
+.RPA-Section-Text a {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    margin-top: 20px;
+    text-decoration:none;
+}
+
+.RPA-Section-Text button{
     background-color: #4644AA;
     color: #ffffff;
     border: 2px solid transparent;
-    text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 30px;
+    border-radius: 6px;
+    width: 200px;
     font-size: 20px;
 }
 
-.RPA-Section .RPA-Section-Container .RPA-Section-Text button:hover{
-    transform: scale(1.2);
+.RPA-Section-Text button:hover{
     background-color: transparent;
     border: 2px solid #4644AA;
     color: #4644AA;
@@ -817,32 +837,35 @@ nav:after{
 .Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text h2{
     color: #4644AA;
     margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 2.5rem;
     text-transform: capitalize;
     font-weight: bold;
     text-align: left;
 }
 
 .Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text p{
-    font-size: 20px;
     margin-bottom: 45px;
 
 }
 
-.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text button{
+.Graphic-Section-Text a {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    margin-top: 20px;
+    text-decoration:none;
+}
+
+.Graphic-Section-Text button{
     background-color: #4644AA;
     color: #ffffff;
     border: 2px solid transparent;
-    text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 30px;
+    border-radius: 6px;
+    width: 200px;
     font-size: 20px;
-    cursor: pointer;
-    transition: 0.4s;
 }
 
-.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text button:hover{
-    transform: scale(1.2);
+.Graphic-Section-Text button:hover{
     background-color: transparent;
     border: 2px solid #4644AA;
     color: #4644AA;
@@ -914,20 +937,20 @@ nav:after{
 /*----------------------Our Services-End----------------------*/
 
 /*----------------------Why Choose Us-Start----------------------*/
-.WHY-CHOOSE-US{
+.why_fervtech{
     margin: 50px 0 20px;
 }
 
-.WHY-CHOOSE-US h2{
+.why_fervtech h2{
     text-align: center;
-    color: #2B398D;
+    color: #4644AA;
     padding-bottom: 10px;
     font-size: 3.5rem;
     font-weight: bold;
     position: relative;
 }
 
-.WHY-CHOOSE-US h2:after{
+.why_fervtech h2:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -937,7 +960,7 @@ nav:after{
     border: 2px solid #58595B;
 }
 
-.WHY-CHOOSE-US-Container{
+.why_fervtech .why_fervtech_container{
     width: 90%;
     margin: 50px auto;
     text-align: center;
@@ -947,25 +970,25 @@ nav:after{
 }
 
 
-.WHY-CHOOSE-US-Row{
+.why_fervtech_container .why_fervtech_content{
     display: flex;
     justify-content: space-around;
     flex-flow: wrap;
 
 }
 
-.WHY-CHOOSE-US-Row .cardly{
+.why_fervtech_content .card{
     width: 290px;
     background: #fff;
     padding: 20px 10px;
     margin-bottom: 50px;
     transition: 0.3s;
-    box-shadow:  0 0 5px #262626;
+    box-shadow:  0 0 5px #414042;
     border-radius: 25px;
     position: relative;
 }
 
-.WHY-CHOOSE-US-Row .cardly:before{
+.why_fervtech_content .card:before{
     content: '';
     width: 0px;
     height: 6px;
@@ -977,13 +1000,13 @@ nav:after{
     transition: all 0.4s ease;
 }
 
-.WHY-CHOOSE-US-Row .cardly:hover:before{
+.why_fervtech_content .card:hover:before{
     display: block;
     width: 100px;
 }
 
 
-.WHY-CHOOSE-US-Row .cardly .member_img{
+.why_fervtech_content .card .card_img{
     background: #FFFFFF;
     max-width: 190px;
     width: 100%;
@@ -995,45 +1018,41 @@ nav:after{
     cursor: pointer;
 }
 
-.WHY-CHOOSE-US-Row .cardly .member_img img{
+.why_fervtech_content .card .card_img img{
     width: 100%;
     height: 100%;
 }
 
-.WHY-CHOOSE-US-Row .cardly:hover .member_img img{
+.why_fervtech_content .card:hover .card_img img{
     border: 5px solid #4644AA;
     border-radius: 50%;
 }
 
-.WHY-CHOOSE-US-Row .cardly h3{
+.why_fervtech_content .card h3{
     text-transform: uppercase;
-    font-size: 1.17rem;
+    font-size: 1.3rem;
     line-height: 18px;
     margin: 15px 0 0;
     color: #4644AA;
 }
 
-.WHY-CHOOSE-US-Row .cardly p{
+.why_fervtech_content .card p{
     margin-top: 20px;
-    font-size: 14px;
-    line-height: 20px;
-    color: #707070;
 }
 
-
-.WHY-CHOOSE-US-Row .cardly:hover {
+.why_fervtech_content .card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 40px -10px rgba(112, 112, 112, 112);
     background-color: #4644AA;
 
 }
 
-.WHY-CHOOSE-US-Row .cardly:hover h3, .WHY-CHOOSE-US-Row .cardly:hover p{
+.why_fervtech_content .card:hover h3, .why_fervtech_content .card:hover p{
     color: #FFFFFF;
 }
 
 @media screen and (max-width: 1415px) {
-    .WHY-CHOOSE-US-Row{
+    .why_fervtech_content {
         padding: 0 100px;
         gap: 150px;
     }
@@ -1041,7 +1060,7 @@ nav:after{
 }
 
 @media screen and (max-width: 1100px) {
-    .WHY-CHOOSE-US-Row{
+    .why_fervtech_content{
         padding: 0 100px;
         gap: 100px;
     }
@@ -1049,7 +1068,7 @@ nav:after{
 }
 
 @media screen and (max-width: 1100px) {
-    .WHY-CHOOSE-US-Row{
+    .why_fervtech_content{
         padding: 0 100px;
         gap: 70px;
     }
@@ -1059,14 +1078,14 @@ nav:after{
 
 
 @media screen and (max-width: 970px) {
-    .WHY-CHOOSE-US-Row {
+    .why_fervtech_content {
         padding: 0;
         gap: 0;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .WHY-CHOOSE-US-Row {
+    .why_fervtech_content{
         padding: 0;
         gap: 100px;
     }
@@ -1076,22 +1095,22 @@ nav:after{
 /*----------------------Why Choose Us-End----------------------*/
 
 /*----------------------Testimonial-Start----------------------*/
-.Testimonials{
+.testimonials{
     padding-bottom: 20px;
 }
 
-.Testimonials h2{
+.testimonials h2{
     text-align: center;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #2B398D;
+    color: #4644AA;
     padding-bottom: 20px;
     margin-bottom: 20px;
     font-size: 3.5rem;
     position: relative;
 }
 
-.Testimonials h2:after{
+.testimonials h2:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -1102,18 +1121,18 @@ nav:after{
 }
 
 
-.swiper{
+.testimonials .swiper{
     width: 100%;
 }
 
-.swiper-wrapper{
+.testimonials .swiper-wrapper{
     width: 100%;
     height: 35em;
     display: flex;
     align-items: center;
 }
 
-.card{
+.testimonials .card{
     width: 20em;
     height: 70%;
      background-color: #FFFFFF;
@@ -1125,23 +1144,23 @@ nav:after{
     margin: 0 2em;
 }
 
-.swiper-slide:not(.swiper-slide-active){
+.testimonials .swiper-slide:not(.swiper-slide-active){
     filter: blur(2px);
 
 }
-.card-content{
+.testimonials .card-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 14px;
 
 }
- .card-status{
+.testimonials .card-status{
     font-size: 16px;
     color: #4644AA;
     margin: 2px 0 9px 0;
 }
-.image-content{
+.testimonials .image-content{
     position: relative;
     width: 100%;
     padding: 20px 0;
@@ -1151,7 +1170,7 @@ nav:after{
 
 }
 
-.overlay{
+.testimonials .overlay{
     position: absolute;
     left: 0;
     top: 0;
@@ -1160,8 +1179,8 @@ nav:after{
     background-color: #4644AA;
     border-radius: 25px 25px 0 25px;
 }
-.overlay::before,
-.overlay::after{
+.testimonials .overlay::before,
+.testimonials .overlay::after{
     content: '';
     position: absolute;
     right: 0;
@@ -1170,12 +1189,12 @@ nav:after{
     width: 40px;
     background-color: #4644AA;
 }
-.overlay::after{
+.testimonials .overlay::after{
     border-radius: 0 25px 0 0;
     background-color: #FFF;
 }
 
-.card-image{
+.testimonials .card-image{
     position: relative;
     height: 10em;
     width: 10em;
@@ -1184,61 +1203,59 @@ nav:after{
     padding: 3px;
 
 }
-.card-image .card-img{
+.testimonials .card-image .card-img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #4644AA;
 }
-.card-name{
+.testimonials .card-name{
     font-size: 18px;
     font-weight: 500;
     color: #333;
 }
-.description{
-    font-size: 14px;
-    color: #707070;
+.testimonials .description{
     text-align: center;
     padding-bottom: 10px ;
 }
 
-.description i{
+.testimonials .description i{
     font-size: 10px;
     color: #4644AA;
     margin: 0 6px;
 }
 
-.swiper-navBtn{
+.testimonials .swiper-navBtn{
     color:  #080808;
     transition: color 0.3s ease;
 }
-.swiper-navBtn:hover{
+.testimonials .swiper-navBtn:hover{
     color: #4644AA;
 }
-.swiper-navBtn::before,
-.swiper-navBtn::after{
+.testimonials .swiper-navBtn::before,
+.testimonials .swiper-navBtn::after{
     font-size: 35px;
 }
-.swiper-button-next{
+.testimonials .swiper-button-next{
     right: 0;
 }
-.swiper-button-prev{
+.testimonials .swiper-button-prev{
     left: 0;
 }
-.swiper-pagination-bullet{
+.testimonials .swiper-pagination-bullet{
     background-color:  #4644AA;
     opacity: 1;
 }
-.swiper-pagination-bullet-active{
+.testimonials .swiper-pagination-bullet-active{
     background-color: #4644AA;
 }
 
 @media screen and (max-width: 768px) {
-    .slide-content{
+    .testimonials .slide-content{
         margin: 0 10px;
     }
-    .swiper-navBtn{
+    .testimonials .swiper-navBtn{
         display: none;
     }
 }
@@ -1248,7 +1265,7 @@ nav:after{
 /*----------------------Footer------------------------*/
 .footer{
     font-size: 80%;
-    background: #1a1c27ff;
+    background: #0B1123;
     height: auto;
     padding:03px 0 ;
     margin-bottom: 0;
@@ -1353,7 +1370,6 @@ nav:after{
     height: 40px;
     border-radius: 5px;
     color: #ffffff;
-    font-weight: bold;
     background-color: #4644AA;
     cursor: pointer;
 }

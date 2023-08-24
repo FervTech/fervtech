@@ -180,7 +180,7 @@ nav:after{
 .services-links li a:hover{
     color: #4644AA;
     border-radius: 5px;
-    box-shadow: 0 0 5px #4644AA, 0 0 5px #262626;
+    box-shadow: 0 0 5px #a2a1d4, 0 0 5px #FFFFFF;
 }
 
 @media (max-width: 1090px) {
@@ -351,9 +351,9 @@ nav:after{
     grid-area: form;
 }
 
-.contact h3{
+.contact h1{
     color: #2B398D;
-    font-size: 1.4em;
+    font-size: 3.5em;
     font-weight: 500;
     margin-bottom: 10px;
 }
@@ -444,11 +444,7 @@ nav:after{
     background: #2B398D;
 }
 
-.info h3{
-    color: #FFFFFF;
-    text-transform: uppercase;
-    font-weight: bold;
-}
+
 .Contact-Icons{
 
     display: flex;

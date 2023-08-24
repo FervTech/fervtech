@@ -15,8 +15,8 @@ html{
 
 body {
     background-color:#fdfdfdff;
-    color:  #231F20;
-    font-size: 20px;
+    color:  #414042;
+    font-size: 1.2rem;
 }
 
 
@@ -180,7 +180,7 @@ nav:after{
 .services-links li a:hover{
     color: #4644AA;
     border-radius: 5px;
-    box-shadow: 0 0 5px #4644AA, 0 0 5px #262626;
+    box-shadow: 0 0 5px #a2a1d4, 0 0 5px #FFFFFF;
 }
 
 @media (max-width: 1090px) {
@@ -306,16 +306,12 @@ nav:after{
 
 
 /*----------------------Who We Are -Start----------------------*/
-.WHO-WE-ARE{
-    margin-top: 50px;
-}
-
-.WHO-WE-ARE{
+.who_we_are{
     margin-top: 50px;
     padding-bottom: 20px;
 }
 
-.WHO-WE-ARE h2{
+.who_we_are h1{
     text-align: center;
     font-weight: bold;
     line-height: 1.5;
@@ -337,7 +333,7 @@ nav:after{
 }
 
 
-.WHO-WE-ARE p{
+.who_we_are p{
     width: 50%;
     text-align: center;
     margin: 20px 25%;
@@ -379,7 +375,7 @@ nav:after{
     background-color: #f1f1f1ff;
 }
 
-.Our-Mission .Mission-Text h2{
+.Our-Mission .Mission-Text h1{
     color: #4644AA;
     margin-bottom: 20px;
     font-size: 3.5rem;
@@ -426,7 +422,7 @@ nav:after{
     background-color: #f1f1f1ff;
 }
 
-.Our-Vision .Vision-Text h2{
+.Our-Vision .Vision-Text h1{
     color: #4644AA;
     margin-bottom: 20px;
     font-size: 3.5rem;
@@ -468,12 +464,12 @@ nav:after{
         margin-bottom: 35px;
     }
 
-    .Vision-Text h2{
+    .Vision-Text h1{
         font-size: 60px;
         margin-bottom: 25px;
     }
 
-    .Mission-Text h2{
+    .Mission-Text h1{
         font-size: 60px;
         margin-bottom: 25px;
     }
@@ -550,9 +546,7 @@ nav:after{
     font-weight: 600;
     color: #4644AA;
 }
-.Our-Core-Values-Container .card p {
-    font-size: 20px;
-}
+
 .Our-Core-Values-Container .card:hover {
     background-position: 0;
 }
@@ -657,10 +651,9 @@ nav:after{
     opacity: 1;
 }
 .caption h3{
-    font-size: 15px;
+    font-size: 1.3rem;
 }
 .caption p{
-    font-size: 16px;
     color: #4644AA;
     margin: 2px 0 9px 0;
 }

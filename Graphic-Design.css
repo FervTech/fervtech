@@ -183,7 +183,7 @@ nav:after{
 .services-links li a:hover{
     color:#4644AA;
     border-radius: 5px;
-    box-shadow: 0 0 5px #4644AA, 0 0 5px #262626;
+    box-shadow: 0 0 5px #a2a1d4, 0 0 5px #FFFFFF;
 }
 
 @media (max-width: 1090px) {
