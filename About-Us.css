@@ -563,12 +563,12 @@ nav:after{
 /*----------------------Our Core Values-End------------------------*/
 
 /*----------------------Our Team-Start------------------------*/
-.Our-Team{
+.our_team{
     text-align: center;
     margin: 50px 0;
 }
 
-.Our-Team h2{
+.our_team h1{
     font-weight: bold;
     color: #4644AA;
     padding-bottom: 10px;
@@ -577,7 +577,7 @@ nav:after{
     position: relative;
 }
 
-.Our-Team h2:after{
+.our_team h1:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -588,7 +588,7 @@ nav:after{
 
 }
 
-.Our-Team-Container{
+.our_team_container{
     width: 100%;
     height: 50vh;
     display: flex;
@@ -597,7 +597,7 @@ nav:after{
     background-color: #4644AA;
     flex-wrap: wrap;
 }
-.Team-Member{
+.team_member{
     position: relative;
     width: 220px;
     height: 220px;
@@ -608,18 +608,18 @@ nav:after{
     transition: .6s;
     margin: 0 70px;
 }
-.Team-Member:hover{
+.team_member:hover{
     border-radius: 10px;
     height: 260px;
 }
-.Team-Member .img{
+.team_member .img{
     position: relative;
     width: 100%;
     height: 100%;
     transition: .6s;
     z-index: 1;
 }
-.Team-Member:hover .img{
+.team_member:hover .img{
     transform: translateY(-60px);
 }
 .img img{
@@ -628,7 +628,7 @@ nav:after{
     box-shadow: 0 0 22px #3336;
     transition: .6s;
 }
-.Team-Member:hover img{
+.team_member:hover img{
     border-radius: 10px;
 }
 .caption{
@@ -637,7 +637,7 @@ nav:after{
     opacity: 0;
     transition: .6s;
 }
-.Team-Member:hover .caption{
+.team_member:hover .caption{
     opacity: 1;
 }
 .caption h3{
@@ -647,25 +647,29 @@ nav:after{
     color: #4644AA;
     margin: 2px 0 9px 0;
 }
-.caption .social-links a{
+.caption .social_links a{
     color: #333;
     margin-right: 8px;
     font-size: 21px;
     transition: .6s;
 }
-.social-links a:hover{
+.social_links a:hover{
     color: #4644AA;
 }
 
-@media (max-width: 1439px) {
-    .Our-Team-Container{
+@media screen and (max-width: 1452px) {
+    .our_team_container{
         height: 100vh;
+    }
+
+    .team_member{
+
     }
 }
 
-@media (max-width: 719px) {
-    .Our-Team-Container{
-        height: 200vh;
+@media screen and (max-width: 719px) {
+    .our_team_container{
+        height: 150vh;
     }
 }
 

@@ -334,7 +334,7 @@ nav:after{
 }
 
 .contact h1{
-    color: #2B398D;
+    color: #4644AA;
     font-size: 3.5em;
     font-weight: 500;
     margin-bottom: 10px;
@@ -363,12 +363,9 @@ nav:after{
 
 #Enquiry{
     font-weight: bold;
-    font-size: 15px;
+    color: #4644AA;
     cursor: pointer;
 }
-
-
-
 
 .client_details{
     display: grid;
@@ -409,15 +406,14 @@ nav:after{
     padding: .65em 3em;
     border-radius: 5px;
     cursor: pointer;
-    background: #2B398D;
+    background: #4644AA;
     color: #FFFFFF;
     font-weight: bold;
+    transition: 0.4s;
 }
 
 .btn:hover{
-    background: #4644AA;
-    color: #FFFFFF;
-    border: 2px solid #2B398D;
+    transform: scale(1.1);
 }
 
 /*---------Contact-Info----------*/
@@ -481,7 +477,7 @@ nav:after{
 @media screen and (max-width: 1050px){
 
     .Contact-Details{
-        background: #6699CC;
+        background-image: url("image/Background7.jpg");
         padding: 25px;
     }
 
@@ -503,7 +499,6 @@ nav:after{
 
 @media screen and (max-width: 901px) {
     .Contact-Details{
-        background: #6699CC;
         padding: 20px;
 
     }
