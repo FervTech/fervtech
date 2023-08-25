@@ -16,7 +16,7 @@ html{
 body {
     background-color:#fdfdfdff;
     color:  #414042;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
@@ -383,10 +383,6 @@ nav:after{
     font-weight: bold;
 }
 
-.Our-Mission .Mission-Text p{
-    font-size: 20px;
-}
-
 /*----------------------Our Mission-End----------------------*/
 
 /*----------------------Our Vision--Start----------------------*/
@@ -430,10 +426,6 @@ nav:after{
     font-weight: bold;
 }
 
-.Our-Vision .Vision-Text p{
-    font-size: 20px;
-
-}
 @media screen and (max-width: 1180px) {
     .Our-Vision {
         width: 100%;
@@ -518,7 +510,6 @@ nav:after{
     box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
     border-radius: 1em;
     transition: 0.5s;
-    cursor: pointer;
 }
 .Our-Core-Values-Container .card .icon {
     font-size: 2.5em;
@@ -579,7 +570,6 @@ nav:after{
 
 .Our-Team h2{
     font-weight: bold;
-    letter-spacing: 2px;
     color: #4644AA;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -684,31 +674,30 @@ nav:after{
 
 /*----------------------Footer------------------------*/
 .footer{
-    font-size: 80%;
-    background: #1a1c27ff;
+    background: #0B1123;
     height: auto;
     padding:03px 0 ;
     margin-bottom: 0;
     background-image: url("image/footer.png");
 }
-.footer-container{
+.footer_container{
     max-width: 2000px;
     margin: 50px;
 }
 
 
-.footer-row{
+.footer_row{
     display: flex;
     flex-wrap: wrap;
 }
 
-.footer-col{
+.footer_col{
     width: 25%;
     padding: 0 15px;
 }
 
-.footer-col h4{
-    font-size: 18px;
+.footer_col h3{
+    font-size: 1.3rem;
     color: #ffffff;
     text-transform: capitalize;
     margin-bottom: 20px;
@@ -718,13 +707,12 @@ nav:after{
 
 
 
-.footer-container ul{
+.footer_container ul{
     list-style: none;
     line-height: 2;
 }
 
-.Details ul li {
-    font-size: 16px;
+.details ul li {
     text-decoration: none;
     font-weight: 300;
     color:  #bbbbbb;
@@ -732,15 +720,14 @@ nav:after{
     transition: all 0.1s ease;
 }
 
-.Details ul li:hover{
+.details ul li:hover{
     color: #ffffff;
 }
 
-.Details ul li i{
+.details ul li i{
     margin-right: 10px;
 }
-.footer-col ul li a{
-    font-size: 16px;
+.footer_col ul li a{
     color:  #bbbbbb;
     text-decoration: none;
     font-weight: 300;
@@ -748,13 +735,13 @@ nav:after{
     transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover{
+.footer_col ul li a:hover{
     color: #4644AA;
     letter-spacing: 1px;
 
 }
 
-.footer-col .social-icons a{
+.footer_col .social_icons a{
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -767,46 +754,54 @@ nav:after{
     transition: all 0.5s ease;
 }
 
-.footer-col .social-icons a:hover{
+.footer_col .social_icons a:hover{
     color: #4644AA;
     background-color: #ffffff;
 }
 
-.footer-logo{
+.footer_logo{
     width: 200px;
 
 }
 
-#footer-email{
-    width: 250px;
-    height: 40px;
-    border-radius: 5px;
+.footer_col .footer_newsletter{
+    display: flex;
+    min-width: 300px;
+    flex-wrap: wrap;
+
 }
 
-#footer-submit{
-    width: 80px;
+#footer_email{
+    width: 65%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 3px;
+    padding-left: 10px;
+    margin-right: 0.3em;
+}
+
+
+#footer_submit{
+    width: 20%;
+    height: 40px;
+    border-radius: 3px;
     color: #ffffff;
-    font-weight: bold;
     background-color: #4644AA;
     cursor: pointer;
+    transition: all 0.2s ease-out;
 }
-#footer-submit:hover{
+#footer_submit:hover{
     background-color: #ffffff;
     color: #4644AA;
     border:  1px solid #4644AA;
 }
 
-.Gratitude{
-    margin-top: 20px;
+.gratitude{
     color: #ffffff;
 }
 
-#footer-paragraph{
+#footer_paragraph{
     margin-top: 30px;
     color: #bbbbbb;
-    font-size: 16px;
 }
 
 #footer-paragraph:hover{
@@ -821,59 +816,26 @@ nav:after{
 }
 
 /*--------footer-responsive---------*/
-@media (max-width: 1555px) {
-
-    #footer-email{
-        width: 150px;
-    }
-}
-
-@media (max-width: 1155px) {
-
-    #footer-submit{
-        width: 60px;
-    }
-}
-
-@media (max-width: 1077px) {
-    .footer-col{
+@media screen and (max-width: 1099px) {
+    .footer_col{
         width: 50%;
         margin-bottom: 30px;
     }
 
-    #footer-email{
-        width: 200px;
-    }
-    #footer-submit{
-        width: 80px;
-    }
-}
-
-@media (max-width: 727px) {
-
-    #footer-submit{
-        width: 60px;
-    }
-}
-
-@media (max-width: 687px) {
-    #footer-email{
-        width: 150px;
-    }
-}
-
-@media (max-width: 574px) {
-    .footer-col{
+    .footer_col form{
         width: 100%;
     }
 
-    #footer-email{
-        width: 200px;
+}
+
+
+
+@media screen and  (max-width: 600px) {
+    .footer_col{
+        width: 100%;
+        margin-bottom: 30px;
     }
 
-    #footer-submit{
-        width: 80px;
-    }
 }
 /*-----------------Scroll-Up-Stat----------------*/
 #Scroll-Up{

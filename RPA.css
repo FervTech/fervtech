@@ -15,7 +15,8 @@ html{
 
 body {
     background: #fdfdfdff;
-    color: #fff;
+    color: #414042;
+    font-size: 1rem;
 }
 
 
@@ -330,7 +331,7 @@ nav:after{
     max-width: 100%;
     padding: 0 10px;
 }
-.RPA-Section .RPA-Section-Container .RPA-Section-Text h2{
+.RPA-Section .RPA-Section-Container .RPA-Section-Text h1{
     color: #4644AA;
     margin-bottom: 20px;
     font-size: 35px;
@@ -339,18 +340,14 @@ nav:after{
 }
 
 .RPA-Section .RPA-Section-Container .RPA-Section-Text span{
-    color: #080808;
-    font-size: 30px;
-
-    letter-spacing: 1px;
+    color: #414042;
+    font-size: 1.2rem;
 
 }
 
 .RPA-Section .RPA-Section-Container .RPA-Section-Text p{
     margin-top: 25px;
     color: #707070;
-    font-size: 23px;
-
 }
 
 
@@ -412,43 +409,41 @@ nav:after{
 
 
     }
-
-.Benefits-Section{
+/*-------------Benefits------*/
+.benefits_section{
     margin: 100px 50px 0 0;
-    color: #080808;
     width: 100%;
     height: 100vh;
     padding: 0 8%;
 }
 
 
-.Benefits-Section-Text{
+.benefits_section_text{
     text-align: center;
 }
 
-.Benefits-Section-Text h2{
+.benefits_section_text h1{
     color: #4644AA;
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 3.5rem;
     text-transform: capitalize;
     font-weight: bold;
     padding-bottom: 10px;
     position: relative;
 
 }
-
-.Benefits-Section-Text h2:after{
+.benefits_section_text h1:after{
     content: "";
     position: absolute;
     left: 25%;
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #080808;
+    border: 2px solid #414042;
 }
 
-.Benefits-Section-Text span{
-    font-size: 14px;
+.benefits_section_text span{
+
 }
 
 .Grid{
@@ -461,7 +456,6 @@ nav:after{
 .rpa_benefits{
     text-align: center;
     padding: 25px 10px;
-    font-size: 14px;
     background: transparent;
     cursor: pointer;
     transition: 0.2s ease;
@@ -505,6 +499,7 @@ nav:after{
     background-color: #4644AA;
     border-radius: 20px;
     margin: 5rem;
+    color: #FFFFFF;
 }
 
 .rpa_contact_container{
@@ -514,9 +509,10 @@ nav:after{
     align-items: center;
 }
 
-.rpa_contact_content h2{
+.rpa_contact_content h1{
     margin-bottom: 2rem;
     font-size: 5rem;
+
 }
 
 .rpa_contact_content p{
@@ -536,7 +532,7 @@ nav:after{
 
 .rpa_contact_content a:hover{
    transform: scale(1.2);
-    color: #080808;
+    color: #414042;
 }
 
 
@@ -544,31 +540,30 @@ nav:after{
 
 /*----------------------Footer------------------------*/
 .footer{
-    font-size: 80%;
-    background: #1a1c27ff;
+    background: #0B1123;
     height: auto;
     padding:03px 0 ;
     margin-bottom: 0;
     background-image: url("image/footer.png");
 }
-.footer-container{
+.footer_container{
     max-width: 2000px;
     margin: 50px;
 }
 
 
-.footer-row{
+.footer_row{
     display: flex;
     flex-wrap: wrap;
 }
 
-.footer-col{
+.footer_col{
     width: 25%;
     padding: 0 15px;
 }
 
-.footer-col h4{
-    font-size: 18px;
+.footer_col h3{
+    font-size: 1.3rem;
     color: #ffffff;
     text-transform: capitalize;
     margin-bottom: 20px;
@@ -578,13 +573,12 @@ nav:after{
 
 
 
-.footer-container ul{
+.footer_container ul{
     list-style: none;
     line-height: 2;
 }
 
-.Details ul li {
-    font-size: 16px;
+.details ul li {
     text-decoration: none;
     font-weight: 300;
     color:  #bbbbbb;
@@ -592,15 +586,14 @@ nav:after{
     transition: all 0.1s ease;
 }
 
-.Details ul li:hover{
+.details ul li:hover{
     color: #ffffff;
 }
 
-.Details ul li i{
+.details ul li i{
     margin-right: 10px;
 }
-.footer-col ul li a{
-    font-size: 16px;
+.footer_col ul li a{
     color:  #bbbbbb;
     text-decoration: none;
     font-weight: 300;
@@ -608,13 +601,13 @@ nav:after{
     transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover{
+.footer_col ul li a:hover{
     color: #4644AA;
     letter-spacing: 1px;
 
 }
 
-.footer-col .social-icons a{
+.footer_col .social_icons a{
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -627,46 +620,54 @@ nav:after{
     transition: all 0.5s ease;
 }
 
-.footer-col .social-icons a:hover{
+.footer_col .social_icons a:hover{
     color: #4644AA;
     background-color: #ffffff;
 }
 
-.footer-logo{
+.footer_logo{
     width: 200px;
 
 }
 
-#footer-email{
-    width: 250px;
-    height: 40px;
-    border-radius: 5px;
+.footer_col .footer_newsletter{
+    display: flex;
+    min-width: 300px;
+    flex-wrap: wrap;
+
 }
 
-#footer-submit{
-    width: 80px;
+#footer_email{
+    width: 65%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 3px;
+    padding-left: 10px;
+    margin-right: 0.3em;
+}
+
+
+#footer_submit{
+    width: 20%;
+    height: 40px;
+    border-radius: 3px;
     color: #ffffff;
-    font-weight: bold;
     background-color: #4644AA;
     cursor: pointer;
+    transition: all 0.2s ease-out;
 }
-#footer-submit:hover{
+#footer_submit:hover{
     background-color: #ffffff;
     color: #4644AA;
     border:  1px solid #4644AA;
 }
 
-.Gratitude{
-    margin-top: 20px;
+.gratitude{
     color: #ffffff;
 }
 
-#footer-paragraph{
+#footer_paragraph{
     margin-top: 30px;
     color: #bbbbbb;
-    font-size: 16px;
 }
 
 #footer-paragraph:hover{
@@ -681,60 +682,28 @@ nav:after{
 }
 
 /*--------footer-responsive---------*/
-@media (max-width: 1555px) {
-
-    #footer-email{
-        width: 150px;
-    }
-}
-
-@media (max-width: 1155px) {
-
-    #footer-submit{
-        width: 60px;
-    }
-}
-
-@media (max-width: 1077px) {
-    .footer-col{
+@media screen and (max-width: 1099px) {
+    .footer_col{
         width: 50%;
         margin-bottom: 30px;
     }
 
-    #footer-email{
-        width: 200px;
-    }
-    #footer-submit{
-        width: 80px;
-    }
-}
-
-@media (max-width: 727px) {
-
-    #footer-submit{
-        width: 60px;
-    }
-}
-
-@media (max-width: 687px) {
-    #footer-email{
-        width: 150px;
-    }
-}
-
-@media (max-width: 574px) {
-    .footer-col{
+    .footer_col form{
         width: 100%;
     }
 
-    #footer-email{
-        width: 200px;
+}
+
+
+
+@media screen and  (max-width: 600px) {
+    .footer_col{
+        width: 100%;
+        margin-bottom: 30px;
     }
 
-    #footer-submit{
-        width: 80px;
-    }
 }
+
     /*-----------------Scroll-Up-Stat----------------*/
     #Scroll-Up {
         position: fixed;
