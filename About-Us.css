@@ -322,7 +322,7 @@ nav:after{
 
 }
 
-.WHO-WE-ARE h2:after{
+.who_we_are h1:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -669,7 +669,7 @@ nav:after{
 
 @media screen and (max-width: 719px) {
     .our_team_container{
-        height: 150vh;
+        height: 200vh;
     }
 }
 
@@ -834,7 +834,7 @@ nav:after{
 
 
 
-@media screen and  (max-width: 600px) {
+@media screen and  (max-width: 610px) {
     .footer_col{
         width: 100%;
         margin-bottom: 30px;

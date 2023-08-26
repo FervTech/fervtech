@@ -336,7 +336,7 @@ nav:after{
 .contact h1{
     color: #4644AA;
     font-size: 3.5em;
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -393,6 +393,7 @@ nav:after{
 #message{
     border: 0.5px solid #2B398D;
     resize: vertical;
+    cursor: auto;
 }
 
 .submit-button{
@@ -693,7 +694,7 @@ nav:after{
 
 
 
-@media screen and  (max-width: 600px) {
+@media screen and  (max-width: 610px) {
     .footer_col{
         width: 100%;
         margin-bottom: 30px;
