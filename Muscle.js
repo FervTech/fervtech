@@ -96,7 +96,6 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
     fade: 'true',
     autoplay:{
-        delay:5000,
         disableOnInteraction: false,
     },
     autoplayTimeout: 50000,
