@@ -1,14 +1,14 @@
 //---------NavBar--------//
 
-navBar= document.querySelector(".nav-bar");
+navBar= document.querySelector(".nav_bar");
 navBar.onclick = function (){
-    navLinks= document.querySelector(".nav-links");
+    navLinks= document.querySelector(".nav_links");
     navLinks.classList.toggle("active");
 }
 
 angleDown= document.querySelector(".angleDown");
 angleDown.onclick = function (){
-    servicesLinks= document.querySelector(".services-links");
+    servicesLinks= document.querySelector(".services_links");
     servicesLinks.classList.toggle("active");
 }
 

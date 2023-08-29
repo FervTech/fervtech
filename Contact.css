@@ -24,10 +24,9 @@ body {
 /*---------------Header-----------------*/
 #header{
     background: #ffffff;
-
 }
-.header-container{
-    padding: 0.1px 0px;
+.header_container{
+    padding: 0.1px 0;
 
 }
 
@@ -47,17 +46,22 @@ body {
 }
 
 
-.nav.sticky .nav-links li a{
-    color: #2B398D;
+.nav.sticky .nav_links li a{
+    color: #4644AA;
 }
 
-.nav.sticky .services-links li a{
+.nav.sticky .services_links li a{
     color: #080808;
 }
 
-.nav.sticky .services-links li a:hover{
+.nav.sticky .services_links li a:hover{
     color: #4644AA;
 }
+
+.nav.sticky .nav_bar{
+    color: #4644AA;
+}
+
 
 
 
@@ -73,7 +77,7 @@ nav:after{
 }
 
 
-.nav-links{
+.nav_links{
     float: right;
     list-style: none;
     margin-right: 40px;
@@ -81,24 +85,23 @@ nav:after{
 
 }
 
-.nav-links li{
+.nav_links li{
     float: left;
     display: inline-block;
-    margin: 0px 50px;
+    margin: 0 50px;
 
 }
 
 
-.nav-links li a{
+.nav_links li a{
     position: relative;
-    color:  #FFFFFF;
-    text-decoration: none;
+    color: #FFFFFF;
     line-height: 70px;
     padding-bottom: 8px;
     text-transform: uppercase;
 }
 
-.nav-links li a:before{
+.nav_links li a:before{
     content: '';
     width: 0%;
     height: 3px;
@@ -110,7 +113,7 @@ nav:after{
     transition: all 0.4s ease;
 }
 
-.nav-links li a:hover:before{
+.nav_links li a:hover:before{
     width: 100%;
 }
 
@@ -122,8 +125,8 @@ nav:after{
 }
 
 
-.nav-bar{
-    color: #4644AA;
+.nav_bar{
+    color: #FFFFFF;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -134,23 +137,23 @@ nav:after{
 
 
 
-.services-menu {
+.services_menu {
     position: absolute;
     opacity: 0;
     visibility: hidden;
     background: #ffffff;
     border-radius: 5px;
     border-top:3px solid #4644AA;
-    z-index: 1;
+    z-index: 99;
 }
 
-.nav-links li:hover .services-menu{
+.nav_links li:hover .services_menu{
     opacity: 1;
     visibility: visible;
 }
 
 
-.services-links li{
+.services_links li{
 
     position: relative;
     list-style: none;
@@ -161,23 +164,23 @@ nav:after{
     transition: 0.3s ease;
 }
 
-.services-links li:hover{
+.services_links li:hover{
     padding-left: 8px;
-    color: #492d88ff;
+    color: #4644AA;
 }
 
-.services-links li a{
-    color: #231F20;
+.services_links li a{
+    color: #080808;
     padding: 8px 15px;
     transition: 0.2s ease;
     text-transform: none;
 }
 
-.services-links li a:before{
+.services_links li a:before{
     background: none;
 
 }
-.services-links li a:hover{
+.services_links li a:hover{
     color: #4644AA;
     border-radius: 5px;
     box-shadow: 0 0 5px #a2a1d4, 0 0 5px #FFFFFF;
@@ -189,8 +192,9 @@ nav:after{
         padding-left: 60px;
     }
 
-    .nav-links {
+    .nav_links {
         margin-right: 20px;
+        color: #4644AA;
     }
 
 
@@ -200,11 +204,11 @@ nav:after{
 }
 
 @media (max-width: 1020px) {
-    .nav-bar{
+    .nav_bar{
         display: block;
     }
 
-    .nav-links{
+    .nav_links{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -213,14 +217,14 @@ nav:after{
         background-color: white;
     }
 
-    .nav-links.active{
+    .nav_links.active{
         left: 0;
         z-index: 1;
         height: 300px;
     }
 
 
-    .nav-links li {
+    .nav_links li {
         display: block;
         float: none;
         margin: 0;
@@ -228,7 +232,7 @@ nav:after{
 
     }
 
-    .nav-links li a{
+    .nav_links li a{
         font-size: 20px;
         padding: 0 20px;
         display: flex;
@@ -236,14 +240,14 @@ nav:after{
         align-items: center;
     }
 
-    .service-error{
+    .service_error{
         padding-right: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .nav-links li a:hover:before{
+    .nav_links li a:hover:before{
         display: none;
     }
 
@@ -253,7 +257,7 @@ nav:after{
     }
 
 
-    .services-links{
+    .services_links{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -261,21 +265,21 @@ nav:after{
         background-color: white;
     }
 
-    .services-links li{
+    .services_links li{
         list-style: none;
-        margin: 0px;
+        margin: 0;
         width: 100%;
         float: none;
         transition: 0.3s ease;
     }
 
-    .services-links li a:hover{
+    .services_links li a:hover{
         border:none;
         box-shadow: none;
     }
 
 
-    .services-links.active{
+    .services_links.active{
         left: 0;
         height: 330px;
     }
@@ -285,7 +289,6 @@ nav:after{
 }
 
 /*------Header-End-----------*/
-
 
 /* _--------------------Main---------------------- */
 .hero_header {

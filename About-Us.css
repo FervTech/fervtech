@@ -25,7 +25,7 @@ body {
     background: #ffffff;
 
 }
-.header-container{
+.header_container{
     padding: 0.1px 0px;
 
 }
@@ -47,15 +47,15 @@ body {
 }
 
 
-.nav.sticky .nav-links li a{
+.nav.sticky .nav_links li a{
     color: #2B398D;
 }
 
-.nav.sticky .services-links li a{
+.nav.sticky .services_links li a{
     color: #080808;
 }
 
-.nav.sticky .services-links li a:hover{
+.nav.sticky .services_links li a:hover{
     color: #4644AA;
 }
 
@@ -73,7 +73,7 @@ nav:after{
 }
 
 
-.nav-links{
+.nav_links{
     float: right;
     list-style: none;
     margin-right: 40px;
@@ -81,7 +81,7 @@ nav:after{
 
 }
 
-.nav-links li{
+.nav_links li{
     float: left;
     display: inline-block;
     margin: 0px 50px;
@@ -89,7 +89,7 @@ nav:after{
 }
 
 
-.nav-links li a{
+.nav_links li a{
     position: relative;
     color: #FFFFFF;
     text-decoration: none;
@@ -98,7 +98,7 @@ nav:after{
     text-transform: uppercase;
 }
 
-.nav-links li a:before{
+.nav_links li a:before{
     content: '';
     width: 0%;
     height: 3px;
@@ -110,7 +110,7 @@ nav:after{
     transition: all 0.4s ease;
 }
 
-.nav-links li a:hover:before{
+.nav_links li a:hover:before{
     width: 100%;
 }
 
@@ -122,7 +122,7 @@ nav:after{
 }
 
 
-.nav-bar{
+.nav_bar{
     color: #492d88ff;
     font-size: 30px;
     line-height: 80px;
@@ -134,7 +134,7 @@ nav:after{
 
 
 
-.services-menu {
+.services_menu {
     position: absolute;
     opacity: 0;
     visibility: hidden;
@@ -144,13 +144,13 @@ nav:after{
     z-index: 1;
 }
 
-.nav-links li:hover .services-menu{
+.nav_links li:hover .services_menu{
     opacity: 1;
     visibility: visible;
 }
 
 
-.services-links li{
+.services_links li{
 
     position: relative;
     list-style: none;
@@ -161,23 +161,23 @@ nav:after{
     transition: 0.3s ease;
 }
 
-.services-links li:hover{
+.services_links li:hover{
     padding-left: 8px;
     color: #4644AA;
 }
 
-.services-links li a{
+.services_links li a{
     color: #080808;
     padding: 8px 15px;
     transition: 0.2s ease;
     text-transform: none;
 }
 
-.services-links li a:before{
+.services_links li a:before{
     background: none;
 
 }
-.services-links li a:hover{
+.services_links li a:hover{
     color: #4644AA;
     border-radius: 5px;
     box-shadow: 0 0 5px #a2a1d4, 0 0 5px #FFFFFF;
@@ -189,11 +189,11 @@ nav:after{
         padding-left: 60px;
     }
 
-    .nav-links {
+    .nav_links {
         margin-right: 20px;
     }
 
-    .nav-links li a{
+    .nav_links li a{
         font-size: 15px;
     }
 
@@ -202,11 +202,11 @@ nav:after{
 }
 
 @media (max-width: 1020px) {
-    .nav-bar{
+    .nav_bar{
         display: block;
     }
 
-    .nav-links{
+    .nav_links{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -215,14 +215,14 @@ nav:after{
         background-color: white;
     }
 
-    .nav-links.active{
+    .nav_links.active{
         left: 0;
         z-index: 1;
         height: 300px;
     }
 
 
-    .nav-links li {
+    .nav_links li {
         display: block;
         float: none;
         margin: 0;
@@ -230,7 +230,7 @@ nav:after{
 
     }
 
-    .nav-links li a{
+    .nav_links li a{
         font-size: 20px;
         padding: 0 20px;
         display: flex;
@@ -238,14 +238,14 @@ nav:after{
         align-items: center;
     }
 
-    .service-error{
+    .service_error{
         padding-right: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .nav-links li a:hover:before{
+    .nav_links li a:hover:before{
         display: none;
     }
 
@@ -255,7 +255,7 @@ nav:after{
     }
 
 
-    .services-links{
+    .services_links{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -263,7 +263,7 @@ nav:after{
         background-color: white;
     }
 
-    .services-links li{
+    .services_links li{
         list-style: none;
         margin: 0px;
         width: 100%;
@@ -271,13 +271,13 @@ nav:after{
         transition: 0.3s ease;
     }
 
-    .services-links li a:hover{
+    .services_links li a:hover{
         border:none;
         box-shadow: none;
     }
 
 
-    .services-links.active{
+    .services_links.active{
         left: 0;
         height: 330px;
     }
