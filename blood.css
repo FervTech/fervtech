@@ -51,7 +51,7 @@ body {
 }
 
 .nav.sticky .services_links li a{
-    color: #080808;
+    color: #414042;
 }
 
 .nav.sticky .services_links li a:hover{
@@ -63,12 +63,11 @@ body {
 }
 
 
-
-
 .nav .logo{
     padding-left: 50px;
     width: 200px;
 }
+
 
 nav:after{
     content: '';
@@ -116,7 +115,6 @@ nav:after{
 .nav_links li a:hover:before{
     width: 100%;
 }
-
 .angleDown{
     display: none;
     color:  #4644AA;
@@ -154,14 +152,13 @@ nav:after{
 
 
 .services_links li{
-
     position: relative;
-    list-style: none;
-    margin: 0px;
+    margin: 0;
     width: 300px;
     float: none;
     display: list-item;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .services_links li:hover{
@@ -169,21 +166,36 @@ nav:after{
     color: #4644AA;
 }
 
-.services_links li a{
-    color: #080808;
-    padding: 8px 15px;
-    transition: 0.2s ease;
-    text-transform: none;
+.services_links li:before{
+    content: '';
+    width: 4px;
+    height: 0;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #4644AA;
+    position: absolute;
+    transition: all 0.5s ease;
+
+}
+
+.services_links li:hover:before{
+    display: block;
+    height: 40px;
+}
+
+.services_links li a {
+    text-transform: capitalize;
+    color: #414042;
+    padding-left: 15px;
 }
 
 .services_links li a:before{
     background: none;
-
 }
+
 .services_links li a:hover{
     color: #4644AA;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #a2a1d4, 0 0 5px #FFFFFF;
 }
 
 @media (max-width: 1090px) {
@@ -191,6 +203,7 @@ nav:after{
         font-size: 32px;
         padding-left: 60px;
     }
+
 
     .nav_links {
         margin-right: 20px;
@@ -273,8 +286,12 @@ nav:after{
         float: none;
         transition: 0.3s ease;
     }
+    .services_links li a{
+        color: #414042;
+    }
 
     .services_links li a:hover{
+        color: #4644AA;
         border:none;
         box-shadow: none;
     }
@@ -286,9 +303,7 @@ nav:after{
     }
 
 
-
 }
-
 /*------Header-End-----------*/
 
 /*----------------Slider--start------------------------------*/
@@ -591,11 +606,11 @@ nav:after{
 /*----------------------Who We Are -End----------------------*/
 
 /*----------------------Our Services -Start----------------------*/
-.OUR-SERVICES{
+.our_service{
   margin-top: 20px;
 }
 
-.OUR-SERVICES h1{
+.our_service h1{
     text-align: center;
     font-weight: bold;
     color: #4644AA;
@@ -606,7 +621,7 @@ nav:after{
 
 }
 
-.OUR-SERVICES-h2:after{
+.our_service h1:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -995,7 +1010,7 @@ nav:after{
 
 .why_fervtech_content .card:before{
     content: '';
-    width: 0px;
+    width: 0;
     height: 6px;
     top: 0;
     left: 50%;

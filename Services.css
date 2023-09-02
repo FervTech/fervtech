@@ -342,7 +342,7 @@ nav:after{
 .service_content .card{
     background: #ffffff;
     color: #4644AA;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     border-bottom: 7px solid #4644AA;
     transition: background 0.5s, transform 0.5s;

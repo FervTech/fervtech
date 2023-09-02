@@ -13,10 +13,31 @@ angleDown.onclick = function (){
 }
 
 //---------navScroll----------//
+
 window.addEventListener("scroll", function (){
     var nav = document.querySelector(".nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
+
 })
+
+// Change Navlgo on Scroll//
+
+const mainLogo = "image/Official-Logo1.png";
+const sclLogo = "image/Official-Logo.png";
+
+$(window).scroll(function() {
+    var value = $(this).scrollTop();
+    if (value > 0)
+        $(".logo").attr("src", sclLogo);
+    else
+        $(".logo").attr("src", mainLogo);
+});
+
+
+
+
+
+
 
 //Slider automatic//
 var slideIndex = 0;
@@ -36,7 +57,7 @@ function plusslide(position) {
         slideIndex = slide.length;
     }
 
-    // Defaultly active class is removed from all dots
+    // Default active class is removed from all dots
     for (let i = 0; i < dots.length; i++) {
         const element = dots[i];
         element.classList.remove("dot-active");
@@ -54,7 +75,7 @@ function currentslide(index) {
         index = slide.length;
     }
 
-    // Defaultly active class is removed from all dots
+    // Default active class is removed from all dots
     for (let i = 0; i < dots.length; i++) {
         const element = dots[i];
         element.classList.remove("dot-active");
@@ -77,7 +98,7 @@ setInterval(  function showslide() {
         slideIndex = slide.length;
     }
 
-    // Defaultly active class is removed from all dots
+    // Default active class is removed from all dots
     for (let i = 0; i < dots.length; i++) {
         var element = dots[i];
         element.classList.remove("dot-active");
@@ -181,4 +202,5 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 })();
 
 <!--End of Tawk.to Script-->
+
 

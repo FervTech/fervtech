@@ -143,7 +143,7 @@ nav:after{
     visibility: hidden;
     background: #ffffff;
     border-radius: 5px;
-    border-top:3px solid #4644AA;
+    border-top:5px solid #4644AA;
     z-index: 99;
 }
 
@@ -356,6 +356,7 @@ nav:after{
 }
 
 
+
 .form_control{
     width: 100%;
     padding: .85rem;
@@ -428,7 +429,6 @@ nav:after{
 
 
 .Contact-Icons{
-
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -443,7 +443,8 @@ nav:after{
     align-items: center;
     border-radius: 50%;
     font-size: 20px;
-    background: #6699CC;
+    background: #FFFFFF;
+    color: #4644AA;
 }
 
 .Contact-Icons p{
@@ -464,7 +465,7 @@ nav:after{
 
 .contact_social-icons a:hover{
     transform: scale(1.5);
-    color: #6699CC;
+    color: #4644AA;
 }
 
 /*---------Contact-Map----------*/
