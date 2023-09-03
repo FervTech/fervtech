@@ -31,6 +31,7 @@ body {
 }
 
 
+/* -----------------Nav-Section-------------*/
 .nav{
     font-weight: bold;
     font-size: 16px;
@@ -48,23 +49,27 @@ body {
 
 
 .nav.sticky .nav_links li a{
-    color: #2B398D;
+    color: #4644AA;
 }
 
 .nav.sticky .services_links li a{
-    color: #080808;
+    color: #414042;
 }
 
 .nav.sticky .services_links li a:hover{
     color: #4644AA;
 }
 
+.nav.sticky .nav_bar{
+    color: #4644AA;
+}
 
 
 .nav .logo{
     padding-left: 50px;
     width: 200px;
 }
+
 
 nav:after{
     content: '';
@@ -84,7 +89,7 @@ nav:after{
 .nav_links li{
     float: left;
     display: inline-block;
-    margin: 0px 50px;
+    margin: 0 50px;
 
 }
 
@@ -92,7 +97,6 @@ nav:after{
 .nav_links li a{
     position: relative;
     color: #FFFFFF;
-    text-decoration: none;
     line-height: 70px;
     padding-bottom: 8px;
     text-transform: uppercase;
@@ -113,17 +117,16 @@ nav:after{
 .nav_links li a:hover:before{
     width: 100%;
 }
-
 .angleDown{
     display: none;
-    color:  #492d88ff;
+    color:  #4644AA;
     font-size: 30px;
     cursor: pointer;
 }
 
 
 .nav_bar{
-    color: #492d88ff;
+    color: #FFFFFF;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -141,7 +144,7 @@ nav:after{
     background: #ffffff;
     border-radius: 5px;
     border-top:3px solid #4644AA;
-    z-index: 1;
+    z-index: 99;
 }
 
 .nav_links li:hover .services_menu{
@@ -151,14 +154,13 @@ nav:after{
 
 
 .services_links li{
-
     position: relative;
-    list-style: none;
-    margin: 0px;
+    margin: 0;
     width: 300px;
     float: none;
     display: list-item;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .services_links li:hover{
@@ -166,21 +168,36 @@ nav:after{
     color: #4644AA;
 }
 
-.services_links li a{
-    color: #080808;
-    padding: 8px 15px;
-    transition: 0.2s ease;
-    text-transform: none;
+.services_links li:before{
+    content: '';
+    width: 4px;
+    height: 0;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #4644AA;
+    position: absolute;
+    transition: all 0.5s ease;
+
+}
+
+.services_links li:hover:before{
+    display: block;
+    height: 40px;
+}
+
+.services_links li a {
+    text-transform: capitalize;
+    color: #414042;
+    padding-left: 15px;
 }
 
 .services_links li a:before{
     background: none;
-
 }
+
 .services_links li a:hover{
     color: #4644AA;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #a2a1d4, 0 0 5px #FFFFFF;
 }
 
 @media (max-width: 1090px) {
@@ -189,13 +206,13 @@ nav:after{
         padding-left: 60px;
     }
 
+
     .nav_links {
         margin-right: 20px;
+        color: #4644AA;
     }
 
-    .nav_links li a{
-        font-size: 15px;
-    }
+
 
 
 
@@ -232,6 +249,7 @@ nav:after{
 
     .nav_links li a{
         font-size: 20px;
+        color: #4644AA;
         padding: 0 20px;
         display: flex;
         justify-content: space-between;
@@ -265,13 +283,17 @@ nav:after{
 
     .services_links li{
         list-style: none;
-        margin: 0px;
+        margin: 0;
         width: 100%;
         float: none;
         transition: 0.3s ease;
     }
+    .services_links li a{
+        color: #414042;
+    }
 
     .services_links li a:hover{
+        color: #4644AA;
         border:none;
         box-shadow: none;
     }
@@ -283,9 +305,7 @@ nav:after{
     }
 
 
-
 }
-
 /*------Header-End-----------*/
 
 
@@ -710,7 +730,6 @@ nav:after{
 }
 
 
-
 .footer_container ul{
     list-style: none;
     line-height: 2;
@@ -841,6 +860,7 @@ nav:after{
     }
 
 }
+
 /*-----------------Scroll-Up-Stat----------------*/
 #Scroll-Up{
     position: fixed;

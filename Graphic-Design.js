@@ -17,6 +17,19 @@ window.addEventListener("scroll", function (){
     nav.classList.toggle("sticky", window.scrollY > 0);
 })
 
+// Change Navlgo on Scroll//
+
+const mainLogo = "image/Official-Logo1.png";
+const sclLogo = "image/Official-Logo.png";
+
+$(window).scroll(function() {
+    var value = $(this).scrollTop();
+    if (value > 0)
+        $(".logo").attr("src", sclLogo);
+    else
+        $(".logo").attr("src", mainLogo);
+});
+
 //--Start of Tawk.to Script-//
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){

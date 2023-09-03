@@ -12,5 +12,6 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="twitter-bootstrap" level="application" />
     <orderEntry type="library" name="6ca54830c0" level="application" />
+    <orderEntry type="library" name="intl-tel-input" level="application" />
   </component>
 </module>

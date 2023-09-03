@@ -1,4 +1,4 @@
-//Nav---Bar//
+//---------NavBar--------//
 
 navBar= document.querySelector(".nav_bar");
 navBar.onclick = function (){
@@ -16,8 +16,21 @@ angleDown.onclick = function (){
 window.addEventListener("scroll", function (){
     var nav = document.querySelector(".nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
-
 })
+
+// Change Navlgo on Scroll//
+
+const mainLogo = "image/Official-Logo1.png";
+const sclLogo = "image/Official-Logo.png";
+
+$(window).scroll(function() {
+    var value = $(this).scrollTop();
+    if (value > 0)
+        $(".logo").attr("src", sclLogo);
+    else
+        $(".logo").attr("src", mainLogo);
+});
+
 
 //------------Scroll-Up------------//
 let calcScrollValue = () => {
@@ -41,19 +54,6 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
-
-//--------------- Tawk.to Script--------//
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6473a8efad80445890ef94fd/1h1hsnq1g';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-})();
-
-
 //------News Letter Sheet-------//
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycby8yOr11n0piAqVnIcoDcZ0cuQ3D63b0WoyW8nfG7bEj-8q4w6nKVgzQKN9dCFcjez26Q/exec'
@@ -73,4 +73,40 @@ form.addEventListener('submit', e => {
         .catch(error => console.error('Error!', error.message))
 })
 
+//----Mobile-Tech-Slider--//
 
+    $(document).ready(function () {
+    $('.Mobile-Tech-Slider').slick({
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed: 1500,
+        arrows:false,
+        dots:false,
+        pauseOnHover:false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+
+        }]
+    });
+})
+
+//-----Chat--Bot--///
+
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6473a8efad80445890ef94fd/1h1hsnq1g';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+})();

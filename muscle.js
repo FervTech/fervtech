@@ -33,13 +33,7 @@ $(window).scroll(function() {
         $(".logo").attr("src", mainLogo);
 });
 
-
-
-
-
-
-
-//Slider automatic//
+//-----Slider-------//
 var slideIndex = 0;
 var slider = document.querySelector(".slider");
 var slides = document.querySelector(".slides");
@@ -108,8 +102,6 @@ setInterval(  function showslide() {
     dots[slideIndex - 1].classList.add("dot-active");
 
 } , time);   // Change every image after 3 seconds
-
-
 // Testimonial Swiper//
 
 

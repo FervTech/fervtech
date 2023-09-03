@@ -30,6 +30,7 @@ body {
 
 }
 
+/* -----------------Nav-Section-------------*/
 .nav{
     font-weight: bold;
     font-size: 16px;
@@ -333,7 +334,9 @@ nav:after{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
 }
+
 
 .slide::before {
     content: "";
@@ -391,6 +394,8 @@ nav:after{
     background-image: url("image/Slide2.png");
 }
 
+
+
 .slide-3{
     background-image: url("image/Slide3.png");
 }
@@ -421,6 +426,10 @@ nav:after{
 .slider .arrow-right {
     right: 3%;
     font-size: 60px;
+}
+
+.slider input{
+    display: none;
 }
 
 .slider input:nth-child(1):checked ~ .slides {
@@ -1309,7 +1318,6 @@ nav:after{
     font-weight: 500;
     position: relative;
 }
-
 
 
 .footer_container ul{

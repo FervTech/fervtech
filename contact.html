@@ -8,6 +8,9 @@
     500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="image/favicon.png">
     <script src="https://kit.fontawesome.com/6ca54830c0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
 </head>
 <body>
 <!--------------------Header-Start--------------------------->
@@ -19,7 +22,7 @@
         <nav class="nav">
 
 
-            <a href="skeleton.html"><img src="image/Official-Logo.png" class="logo" alt=""> </a>
+            <a href="skeleton.html"><img src="image/Official-Logo1.png" class="logo" alt=""> </a>
             <!...........Nav Links.............>
             <ul class="nav_links">
                 <li><div class="service_error"><a href="services.html">Services</a><label class="angleDown"><i class="fa-solid fa-angle-down"></i></label></div>
@@ -74,7 +77,7 @@
                 <div  class="details-fill">
                     <input type="text" name="name" class="forms-fill" placeholder="Full Name" required>
                     <input type="email" name="email" class="forms-fill" placeholder="Email" required>
-                    <input type="text" name="phone" class="forms-fill" placeholder="Phone" required >
+                    <input type="text" name="phone" id="phone" class="forms-fill" placeholder="Phone" required >
                    <input type="text" name="location" class="forms-fill" placeholder="Location" required>
                 </div>
             </div>
@@ -85,7 +88,8 @@
              <label  class="submit-button">
                  <button class="btn">Submit</button>
              </label>
-
+            <span id="valid-msg" class="hide">✓ Valid</span>
+            <span id="error-msg" class="hide"></span>
         </form>
     </div>
 
@@ -201,7 +205,7 @@
 <!--------------Scroll-Up ----Start-------------->
 
 <!-------------Script Section------->
-<script src="Contact.js"></script>
+<script src="contact.js"></script>
 <!-------------<script src="https://smtpjs.com/v3/smtp.js">
 </script>---------->
 

@@ -1,4 +1,4 @@
-//---------NavBar--------//
+//Nav---Bar//
 
 navBar= document.querySelector(".nav_bar");
 navBar.onclick = function (){
@@ -16,7 +16,64 @@ angleDown.onclick = function (){
 window.addEventListener("scroll", function (){
     var nav = document.querySelector(".nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
+
 })
+
+// Change Navlgo on Scroll//
+
+const mainLogo = "image/Official-Logo1.png";
+const sclLogo = "image/Official-Logo.png";
+
+$(window).scroll(function() {
+    var value = $(this).scrollTop();
+    if (value > 0)
+        $(".logo").attr("src", sclLogo);
+    else
+        $(".logo").attr("src", mainLogo);
+});
+
+
+//-----------Forms-Number---------------//
+const input = document.querySelector("#phone");
+const button = document.querySelector("#btn");
+const errorMsg = document.querySelector("#error-msg");
+const validMsg = document.querySelector("#valid-msg");
+
+// here, the index maps to the error code returned from getValidationError - see readme
+const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+// initialise plugin
+const iti = window.intlTelInput(input, {
+    utilsScript: "/intl-tel-input/js/utils.js?1690975972744"
+});
+
+const reset = () => {
+    input.classList.remove("error");
+    errorMsg.innerHTML = "";
+    errorMsg.classList.add("hide");
+    validMsg.classList.add("hide");
+};
+
+// on click button: validate
+button.addEventListener('click', () => {
+    reset();
+    if (input.value.trim()) {
+        if (iti.isValidNumber()) {
+            validMsg.classList.remove("hide");
+        } else {
+            input.classList.add("error");
+            const errorCode = iti.getValidationError();
+            errorMsg.innerHTML = errorMap[errorCode];
+            errorMsg.classList.remove("hide");
+        }
+    }
+});
+
+// on keyup / change flag: reset
+input.addEventListener('change', reset);
+input.addEventListener('keyup', reset);
+
+
 
 
 //------------Scroll-Up------------//
@@ -41,6 +98,19 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
+
+//--------------- Tawk.to Script--------//
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6473a8efad80445890ef94fd/1h1hsnq1g';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+})();
+
+
 //------News Letter Sheet-------//
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycby8yOr11n0piAqVnIcoDcZ0cuQ3D63b0WoyW8nfG7bEj-8q4w6nKVgzQKN9dCFcjez26Q/exec'
@@ -60,40 +130,4 @@ form.addEventListener('submit', e => {
         .catch(error => console.error('Error!', error.message))
 })
 
-//----Mobile-Tech-Slider--//
 
-    $(document).ready(function () {
-    $('.Mobile-Tech-Slider').slick({
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        autoplay:true,
-        autoplaySpeed: 1500,
-        arrows:false,
-        dots:false,
-        pauseOnHover:false,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4
-            }
-        }, {
-            breakpoint: 520,
-            settings: {
-                slidesToShow: 3
-            }
-
-        }]
-    });
-})
-
-//-----Chat--Bot--///
-
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6473a8efad80445890ef94fd/1h1hsnq1g';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-})();
