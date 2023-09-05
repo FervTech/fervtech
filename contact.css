@@ -362,12 +362,20 @@ nav:after{
 
 
 
-.form_group{
+.select_container{
+    display: flex;
+    justify-content: center;
     position: relative;
     width: 100%;
     margin-bottom: 1rem;
 }
-.form_group input{
+
+.message_container{
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.client_details input{
      display: flex;
     gap: 20px;
 }
@@ -382,10 +390,34 @@ nav:after{
     cursor: pointer;
 }
 
+
 #Enquiry{
     font-weight: bold;
     color: #4644AA;
     cursor: pointer;
+    appearance: none;
+    border: none;
+}
+
+.select_icon{
+    color: #4644AA;
+ width: 50px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.select_icon i{
+    font-size: 2rem;
+}
+
+
+.select_icon:hover #Enquiry{
+  visibility: visible;
 }
 
 .client_details{
@@ -419,10 +451,19 @@ nav:after{
 
 .submit-button{
     display: flex;
+
     justify-content: center;
+    background-color: #FFFFFF;
+    color:#4644AA;
+    border-radius: 6px;
+    right: 0;
+    left: 0;
+    width: 200px;
+    transition: 0.4s;
+    cursor: pointer;
 
 }
-.btn{
+.submit-button button{
     border: none;
     font-size: 1em;
     padding: .65em 3em;
@@ -434,9 +475,7 @@ nav:after{
     transition: 0.4s;
 }
 
-.btn:hover{
-    transform: scale(1.1);
-}
+
 
 /*---------Contact-Info----------*/
 .info {
@@ -448,7 +487,7 @@ nav:after{
 .Contact-Icons{
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
 }
 
 .Contact-Icons i{

@@ -1269,11 +1269,12 @@ nav:after{
 }
 
 .testimonials .swiper-navBtn{
-    color:  #080808;
-    transition: color 0.3s ease;
+    color:  #4644AA;
+    transition: color 0.4s;
 }
 .testimonials .swiper-navBtn:hover{
-    color: #4644AA;
+    transform: scale(1.3);
+    font-size: 60px;
 }
 .testimonials .swiper-navBtn::before,
 .testimonials .swiper-navBtn::after{

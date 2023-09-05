@@ -62,8 +62,7 @@
         <div class="contact form">
             <h1>Send a Request</h1>
         <form action="https://formspree.io/f/xeqwevar" method="POST" >
-            <div class="form_group">
-
+            <div class="select_container">
                 <select name="services" id="Enquiry" class="form_control" >
                     <option value="">CATEGORY</option>
                     <option value="mobileApp">MOBILE APP DEVELOPMENT</option>
@@ -72,7 +71,11 @@
                     <option value="automation">RPA</option>
                     <option value="general_enquiries">GENERAL ENQUIRIES</option>
                 </select>
+                     <div class="select_icon">
+                         <i class="fa-solid fa-caret-down"></i>
+                     </div>
             </div>
+
             <div class="client_details">
                 <div  class="details-fill">
                     <input type="text" name="name" class="forms-fill" placeholder="Full Name" required>
@@ -82,14 +85,12 @@
                 </div>
             </div>
 
-            <div class="form_group">
+            <div class="message_container">
                 <textarea id="message" class="form_control" name="Message" placeholder="Message"  rows="10"></textarea>
             </div>
              <label  class="submit-button">
-                 <button class="btn">Submit</button>
+                 <button >Submit</button>
              </label>
-            <span id="valid-msg" class="hide">✓ Valid</span>
-            <span id="error-msg" class="hide"></span>
         </form>
     </div>
 
@@ -101,10 +102,6 @@
                 <i class="fa-solid fa-clock"></i>
                 <p>Working Hours: <br>Monday-Friday(9:00am-4:00pm)</br></p>
             </div>
-        <div class="Contact-Icons">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Accra,Ghana</p>
-        </div>
         <div class="Contact-Icons">
                 <i class="fa-solid fa-phone-volume"></i>
                 <p>0302335585</p>
@@ -205,11 +202,7 @@
 <!--------------Scroll-Up ----Start-------------->
 
 <!-------------Script Section------->
-<script src="contact.js"></script>
-<!-------------<script src="https://smtpjs.com/v3/smtp.js">
-</script>---------->
-
-
+<script src="contact.js"></script></script>
 
 </body>
 </html>
