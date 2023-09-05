@@ -388,7 +388,7 @@ nav:after{
 
 .slide-1{
     background-image: url("image/Slide1.jpg");
-    animation: zoom 23s linear infinite;
+    animation: zoom 14s linear infinite;
 }
 @keyframes zoom {
     0%{

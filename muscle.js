@@ -39,7 +39,7 @@ var slider = document.querySelector(".slider");
 var slides = document.querySelector(".slides");
 var slide = document.querySelectorAll(".slide");
 var dots = document.querySelectorAll(".dots label")
-var time = 7000;
+var time = 4000;
 
 function plusslide(position) {
     slideIndex += position;
@@ -102,9 +102,9 @@ setInterval(  function showslide() {
     dots[slideIndex - 1].classList.add("dot-active");
 
 } , time);   // Change every image after 3 seconds
+
+
 // Testimonial Swiper//
-
-
 var swiper = new Swiper(".mySwiper", {
     loop: true,
     fade: 'true',
@@ -180,7 +180,7 @@ form.addEventListener('submit', e => {
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))
-})
+});
 
 //--Start of Tawk.to Script-//
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

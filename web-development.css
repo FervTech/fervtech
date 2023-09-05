@@ -321,7 +321,7 @@ nav:after{
 }
 
 
-/*---------Mobile-Article--------*/
+/*---------Webpage-Article--------*/
 .webpage_article{
     width: 100%;
     margin: 100px 0 auto;
@@ -405,7 +405,7 @@ nav:after{
     }
 
 
-    .webpage_article-text h2 {
+    .webpage_article_text h2 {
         font-size: 40px;
         margin-bottom: 25px;
     }
@@ -413,7 +413,7 @@ nav:after{
 }
 
 @media screen and (max-width: 550px) {
-    .Mobile-Article .Mobile-Article-Container img{
+    .webpage_article .webpage_article_container img{
         width: 350px;
 
     }

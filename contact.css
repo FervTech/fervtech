@@ -82,6 +82,7 @@ nav:after{
     list-style: none;
     margin-right: 40px;
     position: relative;
+
 }
 
 .nav_links li{
@@ -143,7 +144,6 @@ nav:after{
     border-radius: 5px;
     border-top:3px solid #4644AA;
     z-index: 99;
-    width: 300px;
 }
 
 .nav_links li:hover .services_menu{
@@ -155,6 +155,7 @@ nav:after{
 .services_links li{
     position: relative;
     margin: 0;
+    width: 300px;
     float: none;
     display: list-item;
     transition: 0.3s ease;
@@ -209,6 +210,7 @@ nav:after{
         margin-right: 20px;
         color: #4644AA;
     }
+
 
 
 
@@ -291,7 +293,8 @@ nav:after{
 
     .services_links li a:hover{
         color: #4644AA;
-
+        border:none;
+        box-shadow: none;
     }
 
 
