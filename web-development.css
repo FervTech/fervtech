@@ -604,6 +604,12 @@ nav:after{
         gap: 0;
     }
 
+    .webpage_contact_text button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
 }
 
