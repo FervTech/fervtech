@@ -432,14 +432,13 @@ nav:after{
     margin-top: 20px;
     display: inline-block;
     color: #4644AA;
-
 }
 
 
 .service_content div:hover a{
     background-color: #FFFFFF;
     color: #4644AA;
-    border-radius: 25px;
+    border-radius: 6px;
     height: 2em;
     width: 8em;
     display: flex;
