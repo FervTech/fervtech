@@ -621,6 +621,7 @@ nav:after{
 .Mobile-Tech{
     text-align: center;
     padding: 150px 0 0;
+    margin-bottom: 5em;
 }
 
 .Mobile-Tech-Text{
@@ -690,106 +691,102 @@ nav:after{
 }
 
 /*--------Mobile-Contact---------*/
-.Mobile-Contact{
-    background: #4644AA;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    border-radius: 20px;
-    margin: 10rem 5rem 0;
-    background-image: url("image/Background5.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left, right;
-    }
-
-.Mobile-Contact-Container{
-    padding: 4rem;
-    height: 20rem;
+.mobile_contact{
+    max-width: 100vw;
+    background: url("image/Background7.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 3%;
+    margin-bottom: 5rem;
 }
 
-
-.Mobile-Contact h2{
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 40px;
-    position: relative;
-    padding-bottom: 20px;
+.mobile_contact_container{
+    width: 84%;
+    margin: 0 auto;
 }
 
-.Mobile-Contact h2:after{
-    content: "";
-    position: absolute;
-    left: 25%;
-    bottom: 0;
-    width: 7%;
-    margin-left:21%;
-    border: 2px solid #080808;
-}
-.Mobile-Contact p{
-    margin: 2rem 12rem;
-    color: #E5E5E5;
-}
-
-.Mobile-Contact a{
-    display: flex;
+.mobile_contact_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    height: 2em;
-    width: 8em;
-    border-radius: 25px;
-    text-decoration: none;
-    background: #FFFFFF;
+}
+
+.mobile_contact_content h1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.mobile_contact_content p{
+    color: #FFFFFF;
+    padding: 1rem 0;
+}
+
+.mobile_contact_text a {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.mobile_contact_img img{
+    width: 100%;
+}
+
+
+.mobile_contact_text button{
+    background-color: #FFFFFF;
+    color:#4644AA;
+    border-radius: 6px;
+    width: 200px;
+    font-size: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.mobile_contact_text button:hover{
+    transform: scale(1.1);
     color: #4644AA;
-    transition: 0.5s ease;
-    font-weight: bold;
-}
-
-.Mobile-Contact a:hover{
-    transform: scale(1.2);
+    transition: 0.4s;
+    cursor: pointer;
 }
 
 
-@media screen and (max-width: 1024px) {
-     .Mobile-Contact {
-         background-image: none;
+
+
+@media screen and (max-width: 1024px){
+
+
+    .mobile_contact_container{
+        width: 90%;
     }
 
-    .Mobile-Contact p{
-        margin: 2rem 0;
+    .mobile_contact_content{
+        margin: auto;
+    }
 
+}
+
+@media screen and (max-width: 700px){
+
+    .mobile_contact{
+        padding-bottom: 8rem;
+    }
+
+    .mobile_contact_container{
+        width: 94%;
+    }
+    .mobile_contact_content{
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
+        text-align: center;
+        gap: 0;
     }
 
 
 }
-
-@media screen and (max-width: 700px) {
-       .Mobile-Contact{
-           padding: 0;
-           margin: 4rem 2rem;
-       }
-
-    .Mobile-Contact-Container{
-        padding: 2rem;
-    }
-
-       .Mobile-Contact h2{
-           margin: 0.1rem;
-       }
-
-       .Mobile-Contact p{
-           margin: 2rem;
-       }
-
-       .Mobile-Contact a{
-
-
-       }
-}
-
-
-
 /*----------------------Footer------------------------*/
 .footer{
     background: #0B1123;
