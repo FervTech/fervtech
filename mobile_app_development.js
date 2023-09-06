@@ -71,12 +71,12 @@ form.addEventListener('submit', e => {
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))
-})
+});
 
 //----Mobile-Tech-Slider--//
 
     $(document).ready(function () {
-    $('.Mobile-Tech-Slider').slick({
+    $('.mobile_tech_slider').slick({
         slidesToShow: 8,
         slidesToScroll: 1,
         autoplay:true,
@@ -97,7 +97,7 @@ form.addEventListener('submit', e => {
 
         }]
     });
-})
+});
 
 //-----Chat--Bot--///
 

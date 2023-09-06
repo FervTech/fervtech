@@ -33,6 +33,8 @@ $(window).scroll(function() {
 });
 
 
+
+
 //------------Scroll-Up------------//
 let calcScrollValue = () => {
     let scrollProgress = document.getElementById("Scroll-Up");
@@ -72,8 +74,35 @@ form.addEventListener('submit', e => {
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))
-})
+});
 
+
+
+//----Web-Tech-Slider--//
+
+$(document).ready(function () {
+    $('.web_tech_slider').slick({
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed: 1500,
+        arrows:false,
+        dots:false,
+        pauseOnHover:false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+
+        }]
+    });
+});
 
 
 //-----Chat--Bot--///

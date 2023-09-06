@@ -618,17 +618,17 @@ nav:after{
 }
 
 /*------Mobile-Tech-Slider----*/
-.Mobile-Tech{
+.mobile_tech{
     text-align: center;
     padding: 150px 0 0;
     margin-bottom: 5em;
 }
 
-.Mobile-Tech-Text{
+.mobile_tech_text{
     margin-bottom: 30px;
 }
 
-.Mobile-Tech-Text h1 {
+.mobile_tech_text h1 {
     font-weight: bold;
     font-size: 3.5rem;
     color: #4644AA;
@@ -637,7 +637,7 @@ nav:after{
     padding-bottom: 20px;
 }
 
-.Mobile-Tech-Text h1:after{
+.mobile_tech_text h1:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -681,10 +681,10 @@ nav:after{
 }
 
 @media screen and (max-width: 800px) {
-    .Mobile-Tech{
+    .mobile_tech{
         padding: 0;
     }
-    .Mobile-Tech h2{
+    .mobile_tech h2{
         padding: 70px 0 50px;
         font-size: 40px;
     }
