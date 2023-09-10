@@ -329,7 +329,7 @@ nav:after{
 
 /*----------------------Who We Are -Start----------------------*/
 .who_we_are{
-    margin-top: 50px;
+    margin: 5em 0;
     padding-bottom: 20px;
 }
 
@@ -383,7 +383,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 5em;
 }
 
 .our_mission .our_mission_container{
@@ -433,6 +433,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5em;
 
 }
 
@@ -506,7 +507,7 @@ nav:after{
 /*----------------------Our Core Values-Start------------------------*/
 .Our-Core-Values{
     text-align: center;
-    margin: 50px 0;
+    margin-bottom: 5em;
 }
 
 .Our-Core-Values h1{
@@ -605,7 +606,7 @@ nav:after{
 /*----------------------Executive-Team-Start------------------------*/
 .our_team{
     text-align: center;
-    margin: 50px 0;
+    margin-bottom: 5em;
 }
 
 .our_team h1{
@@ -778,22 +779,19 @@ nav:after{
 }
 
 .footer_col h3{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 20px;
-    font-weight: 500;
+    margin-bottom:  0.625rem ;
     position: relative;
 }
 
 
 .footer_container ul{
-    list-style: none;
     line-height: 2;
 }
 
 .details ul li {
-    text-decoration: none;
     font-weight: 300;
     color:  #bbbbbb;
     display: block;
