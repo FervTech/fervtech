@@ -310,7 +310,7 @@ nav:after{
 
 /*----------------Slider--start------------------------------*/
 .slider {
-    margin: 0 auto auto auto;
+    margin: 0 auto 5em;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -504,7 +504,7 @@ nav:after{
 
 .who_we_are {
     width: 100%;
-    margin: 5em 0;
+    margin-bottom: 5em;
     height: 75vh;
     display: flex;
     justify-content: center;
