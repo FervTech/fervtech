@@ -32,6 +32,7 @@ body {
 
 }
 
+
 /* -----------------Nav-Section-------------*/
 .nav{
     font-weight: bold;
@@ -212,10 +213,6 @@ nav:after{
         color: #4644AA;
     }
 
-
-
-
-
 }
 
 @media (max-width: 1020px) {
@@ -306,10 +303,8 @@ nav:after{
 
 
 }
-
-
-
 /*------Header-End-----------*/
+
 
 /*----------------Slider--start------------------------------*/
 .slider {
