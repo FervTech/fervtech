@@ -308,23 +308,7 @@ nav:after{
 }
 
 
-@media screen and (max-width: 380px){
-    .nav_bar{
-        padding-right: 20px;
-    }
 
-    .nav_links{
-        width: 90%;
-        margin-top: 1rem;
-
-    }
-
-
-    .nav .logo{
-        padding-left: 10px;
-        width: 150px;
-    }
-}
 /*------Header-End-----------*/
 
 /*----------------Slider--start------------------------------*/
