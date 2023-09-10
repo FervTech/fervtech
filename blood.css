@@ -11,6 +11,7 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 
@@ -34,7 +35,6 @@ body {
 /* -----------------Nav-Section-------------*/
 .nav{
     font-weight: bold;
-    font-size: 16px;
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -504,7 +504,7 @@ nav:after{
 
 .who_we_are {
     width: 100%;
-    margin: 30px 0 auto;
+    margin: 5em 0;
     height: 75vh;
     display: flex;
     justify-content: center;
@@ -632,7 +632,7 @@ nav:after{
 
 /*----------------------Our Services -Start----------------------*/
 .our_service{
-  margin-top: 20px;
+  margin-bottom: 5em;
 }
 
 .our_service h1{
@@ -973,7 +973,7 @@ nav:after{
 
 /*----------------------Why Choose Us-Start----------------------*/
 .why_fervtech{
-    margin: 50px 0 20px;
+    margin-bottom: 5em;
 }
 
 .why_fervtech h1{
@@ -1127,7 +1127,7 @@ nav:after{
 
 /*----------------------Testimonial-Start----------------------*/
 .testimonials{
-    padding-bottom: 20px;
+    margin-bottom: 5em;
 }
 
 .testimonials h1{

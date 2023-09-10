@@ -36,7 +36,6 @@ body {
 /* -----------------Nav-Section-------------*/
 .nav{
     font-weight: bold;
-    font-size: 16px;
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -505,12 +504,12 @@ nav:after{
 
 }
 /*----------------------Our Core Values-Start------------------------*/
-.Our-Core-Values{
+.values{
     text-align: center;
     margin-bottom: 5em;
 }
 
-.Our-Core-Values h1{
+.values h1{
     font-weight: bold;
     letter-spacing: 1px;
     color: #4644AA;
@@ -520,7 +519,7 @@ nav:after{
     margin-bottom: 1.875rem;
 }
 
-.Our-Core-Values h1:after{
+.values h1:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -532,14 +531,14 @@ nav:after{
 }
 
 
-.Our-Core-Values-Container {
+.values_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
     margin-top: 50px;
     padding: 0 50px 0;
 }
-.Our-Core-Values-Container .card {
+.values_container .card {
     padding: 1.25em;
     text-align: center;
     background: linear-gradient(0deg, #4644AA 10px, transparent 10px);
@@ -549,7 +548,7 @@ nav:after{
     border-radius: 1em;
     transition: 0.5s;
 }
-.Our-Core-Values-Container .card .icon {
+.values_container .card .icon {
     font-size: 2.5em;
     height: 2em;
     width: 2em;
@@ -560,7 +559,7 @@ nav:after{
     border-radius: 50%;
     color: #ffffff;
 }
-.Our-Core-Values-Container .icon:before {
+.values_container .icon:before {
     position: absolute;
     content: "";
     height: 1.5em;
@@ -569,34 +568,34 @@ nav:after{
     border-radius: 50%;
     transition: 0.5s;
 }
-.Our-Core-Values-Container .card h3{
+.values_container .card h3{
     font-size: 1.2rem;
     margin: 1em 0 0.625rem 0;
     color: #4644AA;
 }
 
-.Our-Core-Values-Container .card p{
+.values_container .card p{
    line-height: 1.2;
 }
 
-.Our-Core-Values-Container .card:hover {
+.values_container .card:hover {
     background-position: 0;
 }
-.Our-Core-Values-Container .card:hover .icon:before {
+.values_container .card:hover .icon:before {
     height: 2.25em;
     width: 2.25em;
 }
 
 
 @media screen and (max-width: 1400px) {
-    .Our-Core-Values-Container{
+    .values_container{
         padding: 0 20px 0;
        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     }
 }
 
 @media screen and (max-width: 965px) {
-    .Our-Core-Values-Container{
+    .values_container{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
