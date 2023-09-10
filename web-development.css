@@ -11,12 +11,14 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
     background: #fdfdfdff;
     color: #414042;
     font-size: 1rem;
+    letter-spacing: normal;
 }
 
 /*---------------Header-----------------*/
@@ -32,7 +34,6 @@ body {
 /* -----------------Nav-Section-------------*/
 .nav{
     font-weight: bold;
-    font-size: 16px;
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -324,7 +325,7 @@ nav:after{
 /*---------Webpage-Article--------*/
 .webpage_article{
     width: 100%;
-    margin: 100px 0 auto;
+    margin: 5em 0;
     height: 85vh;
     display: flex;
     justify-content: center;
@@ -349,17 +350,18 @@ nav:after{
 }
 .webpage_article_text h2{
     color: #4644AA;
-    margin-bottom: 20px;
+    margin-bottom: 1.875rem;
     font-size: 3.5rem;
     text-transform: capitalize;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 
 
 .webpage_article_text p{
-    margin-top: 25px;
     color: #231F20;
+    line-height: 1.2;
 }
 
 
@@ -391,23 +393,12 @@ nav:after{
 
     }
 
-    .webpage_article_text h2{
-        font-size: 50px;
-    }
-
-
 }
 
 @media screen and (max-width: 650px) {
     .webpage_article .webpage_article_container img{
         width: 450px;
 
-    }
-
-
-    .webpage_article_text h2 {
-        font-size: 40px;
-        margin-bottom: 25px;
     }
 
 }
@@ -424,7 +415,7 @@ nav:after{
 /*----------------Web-Services-------------------*/
 .web_service{
     max-width: 100vw;
-    padding-bottom: 12rem;
+    margin-bottom: 5em;
 }
 
 .web_service_container{
@@ -438,6 +429,7 @@ nav:after{
     color: #4644AA;
     position: relative;
     padding-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .web_service h1:after{
@@ -455,13 +447,16 @@ nav:after{
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: center;
-    margin-top: 3rem;
 }
 
 .web_service_text h2{
     color: #4644AA;
-    margin-bottom: 1.3rem;
-    font-size: 40px;
+    margin-bottom: 1.25rem;
+    font-size: 2.5rem;
+}
+
+.web_service_text p{
+    line-height: 1.2;
 }
 
 .web_service_img img{
@@ -484,16 +479,12 @@ nav:after{
 
 @media screen and (max-width: 700px){
 
-    .web_service{
-        padding-bottom: 8rem;
-    }
-
     .web_service_container{
         width: 94%;
     }
     .web_service_content{
         grid-template-columns: 1fr;
-        margin-top: 5rem;
+        margin-bottom: 2rem;
         text-align: center;
         gap: 0;
     }
@@ -507,7 +498,6 @@ nav:after{
 /*------Mobile-Tech-Slider----*/
 .web_tech{
     text-align: center;
-    padding: 150px 0 0;
     margin-bottom: 5em;
 }
 
@@ -519,9 +509,10 @@ nav:after{
     font-weight: bold;
     font-size: 3.5rem;
     color: #4644AA;
-    margin-bottom: 20px;
+    margin-bottom: 1.875rem;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .web_tech_text h1:after{
@@ -567,15 +558,6 @@ nav:after{
     visibility: hidden;
 }
 
-@media screen and (max-width: 800px) {
-    .web_tech{
-        padding: 0;
-    }
-    .web_tech h2{
-        padding: 70px 0 50px;
-        font-size: 40px;
-    }
-}
 
 
 /*--------------------Webpage-Contact--------*/
@@ -605,18 +587,20 @@ nav:after{
     font-size: 3.5rem;
     text-transform: capitalize;
     color: #FFFFFF;
+    margin-bottom: 1.875rem;
+    letter-spacing: 1px;
 }
 
 .webpage_contact_content p{
     color: #FFFFFF;
     padding: 1rem 0;
+    line-height: 1.2;
 }
 
 .webpage_contact_text a {
     width: 170px;
     height: 40px;
     display: flex;
-    margin-top: 20px;
 }
 
 .webpage_contact_img img{
@@ -660,7 +644,6 @@ nav:after{
 @media screen and (max-width: 700px){
 
     .webpage_contact{
-        display: grid;
         padding-bottom: 8rem;
     }
 
@@ -669,12 +652,15 @@ nav:after{
     }
     .webpage_contact_content{
         grid-template-columns: 1fr;
-        margin-top: 5rem;
+        margin-top: 2rem;
         text-align: center;
         gap: 0;
 
     }
 
+    .webpage_contact_text a {
+        margin: 20px auto 0;
+    }
 
 
 
@@ -706,17 +692,15 @@ nav:after{
 }
 
 .footer_col h3{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 20px;
-    font-weight: 500;
+    margin-bottom: 0.625rem;
     position: relative;
 }
 
 
 .footer_container ul{
-    list-style: none;
     line-height: 2;
 }
 
@@ -737,7 +721,6 @@ nav:after{
 }
 .footer_col ul li a{
     color:  #bbbbbb;
-    text-decoration: none;
     font-weight: 300;
     display: block;
     transition: all 0.3s ease;

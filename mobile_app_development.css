@@ -11,12 +11,14 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
     background: #fdfdfdff;
     color: #414042;
     font-size: 1rem;
+    letter-spacing: normal;
 }
 
 
@@ -33,7 +35,6 @@ body {
 /* -----------------Nav-Section-------------*/
 .nav{
     font-weight: bold;
-    font-size: 16px;
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -327,7 +328,7 @@ nav:after{
 /*---------Mobile-Article--------*/
 .Mobile-Article{
     width: 100%;
-    margin: 100px 0 auto;
+    margin: 5em 0;
     height: 85vh;
     display: flex;
     justify-content: center;
@@ -350,31 +351,25 @@ nav:after{
     max-width: 100%;
     padding: 0 10px;
 }
-.Mobile-Article-text h2{
+.Mobile-Article-text h1{
     color: #4644AA;
-    margin-bottom: 20px;
+    margin-bottom: 1.875rem;
     font-size: 3.5rem;
     text-transform: capitalize;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .Mobile-Article-text p{
-    margin-top: 25px;
-
+    line-height: 1.2;
 }
 
-
-.Mobile-Article .Mobile-Article-Container img{
-
-}
 
 @media screen and (max-width: 1380px) {
 
     .Mobile-Article {
         width: 100%;
         height: auto;
-        padding: 70px 0;
-
     }
 
     .Mobile-Article .Mobile-Article-Container img{
@@ -395,10 +390,6 @@ nav:after{
 
     }
 
-    .Mobile-Article-text h2{
-        font-size: 50px;
-    }
-
 
 }
 
@@ -406,12 +397,6 @@ nav:after{
     .Mobile-Article .Mobile-Article-Container img{
         width: 450px;
 
-    }
-
-
-    .Mobile-Article-text h2 {
-        font-size: 40px;
-        margin-bottom: 25px;
     }
 
 }
@@ -427,23 +412,24 @@ nav:after{
 }
 
 /*--------Platforms---------*/
-.Platforms{
-    margin-top: 100px;
+.platforms{
+    margin-bottom: 5em;
     width: 100%;
 
 }
 
-.Platforms h1{
+.platforms h1{
     font-size: 3.5rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.875rem;
     color: #4644AA;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-.Platforms h1:after{
+.platforms h1:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -454,22 +440,22 @@ nav:after{
 }
 
 
-.Platforms p{
+.platforms p{
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-.Platform-Container{
-    margin-top: 80px;
+.platform_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 70vh;
+    min-height: 90vh;
     background: linear-gradient(#4644AA, #4644AA 50%, #FFFFFF 50%, #FFFFFF 100%);
     flex-wrap: wrap;
     padding: 0 50px;
 }
 
-.Platform-Card{
+.platform_card{
     position: relative;
     width: 320px;
     background: #FFFFFF;
@@ -480,7 +466,7 @@ nav:after{
     z-index: 10;
 }
 
-.Platform-Icon{
+.platform_icon{
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -492,76 +478,47 @@ nav:after{
     align-items: center;
 }
 
-.Platform-Card:hover .Platform-Icon i{
+.platform_card:hover .platform_icon i{
     transform: rotate(360deg);
 
 }
 
-.Platform-Card i{
+.platform_card i{
     font-size: 40px;
     color: #4644AA;
     transition: transform 1s;
 }
 
-.Platform-Card h2{
+.platform_card h3{
     color: #4644AA;
     height: 35px;
     width: 80%;
-    text-align: center;
-    margin: 50px auto ;
-    font-size: 1.5rem;
-    font-weight: bold;
+    margin: 0.625rem auto .625rem;
+    font-size: 1.2rem;
     position: relative;
+    text-align: center;
+    align-items: center;
 }
 
-
-
-.Platform-Card h2::after{
-    content: '';
-    width: 40px;
-    height: 30px;
-    background: linear-gradient(to right, #FFFFFF, #4644AA);
-    position: absolute;
-    right: -5px;
-    top: -5px;
-    z-index: -1;
-}
-
-.Platform-Card h2::before{
-    content: '';
-    width: 40px;
-    height: 30px;
-    background: linear-gradient( to right, #4644AA, #FFFFFF);
-    position: absolute;
-    left: -5px;
-    bottom: -5px;
-    z-index: -1;
-}
-
-.Platform-Card p{
+.platform_card p{
     margin-bottom: 50px;
+    line-height: 1.2;
 }
 
 @media screen and (max-width: 1423px){
 
-    .Platforms{
-        margin-bottom: 50px;
-    }
-
-    .Platform-Container{
+    .platform_container{
         background: #4644AA;
         gap: 100px;
         padding: 100px 180px;
     }
-
-
 
 }
 
 
 @media screen and (max-width: 1191px){
 
-    .Platform-Container{
+    .platform_container{
         background: #4644AA;
         gap: 100px;
         padding: 100px 100px;
@@ -574,45 +531,43 @@ nav:after{
 
 @media screen and (max-width: 960px){
 
-    .Platform-Container{
+    .platform_container{
         background: #4644AA;
         gap: 50px;
         padding: 100px 50px;
     }
 
-    .Platform-Card{
-        margin-top: 30px;
+    .platform_card{
+        margin-bottom: 2rem;
     }
-
 
 }
 
 @media screen and (max-width: 810px){
 
-    .Platform-Container{
+    .platform_container{
         background: #4644AA;
         gap: 20px;
         padding: 100px 20px;
 
     }
 
-    .Platform-Card{
-        margin-top: 70px;
+    .platform_card{
+        margin-bottom: 4rem;
     }
-
 }
 
 @media screen and (max-width: 720px){
 
-    .Platform-Container{
+    .platform_container{
         display: grid;
         justify-content: center;
         align-items: center;
         padding-top: 20px;
     }
 
-    .Platform-Card{
-        margin-top: 90px;
+    .platform_card{
+        margin: 4rem auto 0;
     }
 
 }
@@ -620,7 +575,6 @@ nav:after{
 /*------Mobile-Tech-Slider----*/
 .mobile_tech{
     text-align: center;
-    padding: 150px 0 0;
     margin-bottom: 5em;
 }
 
@@ -632,9 +586,10 @@ nav:after{
     font-weight: bold;
     font-size: 3.5rem;
     color: #4644AA;
-    margin-bottom: 20px;
+    margin-bottom: 1.875rem;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .mobile_tech_text h1:after{
@@ -680,16 +635,6 @@ nav:after{
     visibility: hidden;
 }
 
-@media screen and (max-width: 800px) {
-    .mobile_tech{
-        padding: 0;
-    }
-    .mobile_tech h2{
-        padding: 70px 0 50px;
-        font-size: 40px;
-    }
-}
-
 /*--------Mobile-Contact---------*/
 .mobile_contact{
     max-width: 100vw;
@@ -717,18 +662,20 @@ nav:after{
     font-size: 3.5rem;
     text-transform: capitalize;
     color: #FFFFFF;
+    margin-bottom: 1.875rem;
+    letter-spacing: 1px;
 }
 
 .mobile_contact_content p{
     color: #FFFFFF;
     padding: 1rem 0;
+    line-height: 1.2;
 }
 
 .mobile_contact_text a {
     width: 170px;
     height: 40px;
     display: flex;
-    margin-top: 20px;
 }
 
 .mobile_contact_img img{
@@ -744,6 +691,7 @@ nav:after{
     font-size: 20px;
     transition: 0.4s;
     cursor: pointer;
+
 }
 
 .mobile_contact_text button:hover{
@@ -785,6 +733,10 @@ nav:after{
         gap: 0;
     }
 
+    .mobile_contact_text a {
+        margin: 20px auto 0;
+    }
+
 
 }
 /*----------------------Footer------------------------*/
@@ -812,17 +764,15 @@ nav:after{
 }
 
 .footer_col h3{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #ffffff;
     text-transform: capitalize;
     margin-bottom: 20px;
-    font-weight: 500;
     position: relative;
 }
 
 
 .footer_container ul{
-    list-style: none;
     line-height: 2;
 }
 

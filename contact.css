@@ -11,6 +11,7 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 
@@ -33,7 +34,6 @@ body {
 /* -----------------Nav-Section-------------*/
 .nav{
     font-weight: bold;
-    font-size: 16px;
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -357,7 +357,7 @@ nav:after{
     color: #4644AA;
     font-size: 3.5em;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 1.875rem;
 }
 
 
@@ -501,10 +501,6 @@ nav:after{
     color: #4644AA;
 }
 
-.Contact-Icons p{
-    font-size: 20px;
-}
-
 .contact_social-icons{
     margin-top: 40px;
     display: flex;
@@ -621,14 +617,12 @@ nav:after{
     font-size: 1.3rem;
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 20px;
-    font-weight: 500;
+    margin-bottom:  0.625rem;
     position: relative;
 }
 
 
 .footer_container ul{
-    list-style: none;
     line-height: 2;
 }
 
@@ -772,7 +766,6 @@ nav:after{
     cursor: pointer;
 }
 #Scroll-Up-value {
-    display: block;
     height: calc(100% - 15px);
     width: calc(100% - 15px);
     background-color: #ffffff;
