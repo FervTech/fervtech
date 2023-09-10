@@ -306,6 +306,25 @@ nav:after{
 
 
 }
+
+
+@media screen and (max-width: 380px){
+    .nav_bar{
+        padding-right: 20px;
+    }
+
+    .nav_links{
+        width: 90%;
+        margin-top: 1rem;
+
+    }
+
+
+    .nav .logo{
+        padding-left: 10px;
+        width: 150px;
+    }
+}
 /*------Header-End-----------*/
 
 /*----------------Slider--start------------------------------*/
@@ -1073,7 +1092,7 @@ nav:after{
 
 .why_fervtech_content .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 40px -10px rgba(112, 112, 112, 112);
+    box-shadow: 0 0 20px -10px rgba(114, 114, 114, 114)
     background-color: #4644AA;
 
 }

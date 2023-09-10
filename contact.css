@@ -199,7 +199,7 @@ nav:after{
     color: #4644AA;
 }
 
-@media (max-width: 1090px) {
+@media screen and (max-width: 1090px) {
     .nav .logo{
         font-size: 32px;
         padding-left: 60px;
@@ -217,7 +217,7 @@ nav:after{
 
 }
 
-@media (max-width: 1020px) {
+@media screen and (max-width: 1020px) {
     .nav_bar{
         display: block;
     }
@@ -305,6 +305,8 @@ nav:after{
 
 
 }
+
+
 /*------Header-End-----------*/
 
 /* _--------------------Main---------------------- */
