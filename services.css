@@ -3,7 +3,7 @@
     padding: 0;
     outline: 0;
     border: 0;
-    font-family:"Poppins", sans-serif;
+    font-family: sans-serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -336,6 +336,8 @@ nav:after{
     font-weight: bold;
     position: relative;
     padding-bottom: 20px;
+    margin-bottom: 1.875rem;
+    letter-spacing: 1px;
 }
 
 .service_container h1:after{
@@ -367,6 +369,7 @@ nav:after{
 
 }
 
+
 .service_content .card:hover{
     background: #4644AA;
     transform: translateY(-10px);
@@ -377,6 +380,7 @@ nav:after{
 .service_content div:hover p{
     color: #ffffff;
     margin-bottom: 15px;
+
 }
 
 
@@ -420,11 +424,13 @@ nav:after{
 .service_content .card h3{
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 15px;
+    margin: 15px 15px 0.9375rem;
 }
 
 .service_content .card  p{
     color: #414042;
+    line-height: 1.2;
+    letter-spacing: normal;
 }
 
 .service_content .card  a{

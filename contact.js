@@ -72,21 +72,23 @@ window.onload = calcScrollValue;
 //------News Letter Sheet-------//
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycby8yOr11n0piAqVnIcoDcZ0cuQ3D63b0WoyW8nfG7bEj-8q4w6nKVgzQKN9dCFcjez26Q/exec'
-const form = document.forms['submit-to-google-sheet']
+const letter = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
 
-form.addEventListener('submit', e => {
+letter.addEventListener('submit', e => {
     e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    fetch(scriptURL, { method: 'POST', body: new FormData(letter)})
         .then(response =>{
             msg.innerHTML= "Thank You For Subscribing"
             setTimeout(function (){
                 msg.innerHTML= ""
             },4000)
-            form.reset()
+
+            letter.reset()
         })
         .catch(error => console.error('Error!', error.message))
 });
+
 
 
 //---------------Number-Validation--------------//
@@ -128,3 +130,11 @@ button.addEventListener('click', () => {
 // on keyup / change flag: reset
 input.addEventListener('change', reset);
 input.addEventListener('keyup', reset);
+
+//----------Reset--Form----------------//
+
+Window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {
+        form.reset();
+    }
+};
