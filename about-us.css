@@ -341,7 +341,7 @@ nav:after{
     color: #4644AA;
     position: relative;
     margin-bottom: 1.875rem;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 
 }
 
@@ -363,6 +363,16 @@ nav:after{
     display: block;
     line-height: 1.2;
 
+}
+
+@media screen and (max-device-width: 570px){
+    .who_we_are p{
+        line-height: 1.2;
+        width: 80%;
+        margin: 0 3em 1em;
+
+
+    }
 }
 /*----------------------Who We Are-End----------------------*/
 
@@ -492,15 +502,6 @@ nav:after{
         margin-bottom: 35px;
     }
 
-    .vision_text h1{
-        font-size: 60px;
-        margin-bottom: 25px;
-    }
-
-    .mission_text h1{
-        font-size: 60px;
-        margin-bottom: 25px;
-    }
 }
 /*----------------------Our Core Values-Start------------------------*/
 .Our-Core-Values{
@@ -512,7 +513,7 @@ nav:after{
     font-weight: bold;
     letter-spacing: 1px;
     color: #4644AA;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     font-size: 3.5rem;
     position: relative;
     margin-bottom: 1.875rem;
@@ -570,7 +571,6 @@ nav:after{
 .Our-Core-Values-Container .card h3{
     font-size: 1.2rem;
     margin: 1em 0 0.625rem 0;
-    font-weight: 600;
     color: #4644AA;
 }
 
@@ -686,7 +686,6 @@ nav:after{
 .caption h3{
     font-size: 1.2rem;
     margin-bottom: 0.625rem;
-
 }
 .caption p{
     color: #4644AA;
@@ -720,6 +719,35 @@ nav:after{
     .our_team_container{
         height: 150vh;
     }
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    .team_member{
+        border-radius: 10px;
+        height: 260px;
+    }
+
+    .team_member .team_img{
+        transform: translateY(-60px);
+    }
+
+    .team_member img{
+        border-radius: 10px;
+    }
+
+    .caption{
+        transform: translateY(-80px);
+        opacity: 1;
+    }
+
+
+    .social_links a{
+        color: #4644AA;
+    }
+
 }
 
 /*----------------------Our Team-End------------------------*/
@@ -904,7 +932,6 @@ nav:after{
     cursor: pointer;
 }
 #Scroll-Up-value {
-    display: block;
     height: calc(100% - 15px);
     width: calc(100% - 15px);
     background-color: #ffffff;
