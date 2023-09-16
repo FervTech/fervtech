@@ -557,14 +557,12 @@ nav:after{
     border-radius: 6px;
     width: 200px;
     font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .who_we_are button:hover{
-    background-color: transparent;
-    border: 2px solid #4644AA;
-    color: #4644AA;
-    transition: 0.4s;
-    cursor: pointer;
+    transform: scale(1.1);
 }
 
 
@@ -716,14 +714,12 @@ nav:after{
      border-radius: 6px;
      width: 200px;
      font-size: 20px;
+     cursor: pointer;
+     transition: 0.4s;
 }
 
  .Web-Section-Text button:hover{
-    background-color: transparent;
-    border: 2px solid #4644AA;
-    color: #4644AA;
-    transition: 0.4s;
-    cursor: pointer;
+     transform: scale(1.1);
 }
 
 
@@ -780,14 +776,12 @@ nav:after{
     border-radius: 6px;
     width: 200px;
     font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .App-Section-Text button:hover{
-    background-color: transparent;
-    border: 2px solid #4644AA;
-    color: #4644AA;
-    transition: 0.4s;
-    cursor: pointer;
+    transform: scale(1.1);
 }
 
 
@@ -848,14 +842,12 @@ nav:after{
     border-radius: 6px;
     width: 200px;
     font-size: 20px;
+    transition: 0.4s;
+    cursor: pointer;
 }
 
 .RPA-Section-Text button:hover{
-    background-color: transparent;
-    border: 2px solid #4644AA;
-    color: #4644AA;
-    transition: 0.4s;
-    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /*----------------------Graphic Design-Section----------------------*/
@@ -914,15 +906,14 @@ nav:after{
     border-radius: 6px;
     width: 200px;
     font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .Graphic-Section-Text button:hover{
-    background-color: transparent;
-    border: 2px solid #4644AA;
-    color: #4644AA;
-    transition: 0.4s;
-    cursor: pointer;
+    transform: scale(1.1);
 }
+
 
 @media screen and (max-width: 1180px) {
     .Web-Section{
@@ -1071,7 +1062,7 @@ nav:after{
 
 .why_fervtech_content .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px -10px rgba(114, 114, 114, 114)
+    box-shadow: 0 0 20px -10px rgba(112, 112, 112, 112);
     background-color: #4644AA;
 
 }
@@ -1122,6 +1113,106 @@ nav:after{
 
 
 /*----------------------Why Choose Us-End----------------------*/
+
+
+/*--------RPA-Contact-US--------*/
+.add_on_section1{
+    max-width: 100vw;
+    background: url("image/Background7.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 3%;
+    margin-bottom: 5rem ;
+}
+
+.add_on_section1_container{
+    width: 84%;
+    margin: 0 auto;
+}
+
+.add_on_section1_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_on_section1_title h1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 1.875rem;
+    letter-spacing: 1px;
+}
+
+.add_on_section1_text p{
+    color: #FFFFFF;
+    padding: 1rem 0;
+    line-height: 1.2;
+}
+
+.add_on_section1_text a {
+    width: 170px;
+    height: 40px;
+    display: flex;
+
+}
+
+
+.add_on_section1_text button{
+    background-color: #FFFFFF;
+    color:#4644AA;
+    border-radius: 6px;
+    width: 200px;
+    font-size: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.add_on_section1_text button:hover{
+    transform: scale(1.1);
+    color: #4644AA;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px){
+
+
+    .ad_contact_container{
+        width: 90%;
+    }
+
+    .add_on_section1_content{
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+    .add_on_section1{
+        padding-bottom: 8rem;
+    }
+
+    .add_on_section1_container{
+        width: 94%;
+    }
+    .add_on_section1_content{
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
+        text-align: center;
+        gap: 0;
+    }
+
+    .add_on_section1_text a {
+        margin: 20px auto 0;
+    }
+
+
+}
+
 
 /*----------------------Testimonial-Start----------------------*/
 .testimonials{

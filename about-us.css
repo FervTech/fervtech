@@ -714,21 +714,20 @@ nav:after{
     }
 }
 
-@media screen and (max-width: 586px) {
+@media screen and (max-width: 600px) {
 
     .our_team_container{
-        height: 150vh;
+        height: 250vh;
     }
 }
 
+@media screen and (max-width: 420px) {
 
-
-@media screen and (max-width: 480px) {
-
-    .team_member{
+    .team_member {
         border-radius: 10px;
         height: 260px;
     }
+
 
     .team_member .team_img{
         transform: translateY(-60px);
