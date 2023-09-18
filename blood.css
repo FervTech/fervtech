@@ -3,7 +3,7 @@
     padding: 0;
     outline: 0;
     border: 0;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -146,6 +146,7 @@ nav:after{
     border-radius: 5px;
     border-top:3px solid #4644AA;
     z-index: 99;
+    width: 300px;
 }
 
 .nav_links li:hover .services_menu{
@@ -153,11 +154,9 @@ nav:after{
     visibility: visible;
 }
 
-
 .services_links li{
     position: relative;
     margin: 0;
-    width: 300px;
     float: none;
     display: list-item;
     transition: 0.3s ease;
@@ -166,7 +165,6 @@ nav:after{
 
 .services_links li:hover{
     padding-left: 8px;
-    color: #4644AA;
 }
 
 .services_links li:before{
@@ -183,7 +181,6 @@ nav:after{
 }
 
 .services_links li:hover:before{
-    display: block;
     height: 40px;
 }
 
@@ -269,6 +266,10 @@ nav:after{
         display: block;
     }
 
+    .services_menu{
+        border:none;
+    }
+
 
     .services_links{
         position: fixed;
@@ -279,12 +280,12 @@ nav:after{
     }
 
     .services_links li{
-        list-style: none;
         margin: 0;
         width: 100%;
         float: none;
         transition: 0.3s ease;
     }
+
     .services_links li a{
         color: #414042;
     }
@@ -1498,13 +1499,17 @@ nav:after{
     background-color: #4644AA;
     cursor: pointer;
     transition: all 0.2s ease-out;
-}
+   }
 #footer_submit:hover{
     background-color: #ffffff;
     color: #4644AA;
     border:  1px solid #4644AA;
 }
 
+#footer_submit i{
+    font-size: 2.3em;
+    transform: rotate(20deg);
+}
 .gratitude{
     color: #ffffff;
 }
