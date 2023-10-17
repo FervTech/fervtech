@@ -1362,10 +1362,11 @@ nav:after{
     font-size: 35px;
 }
 .testimonials .swiper-button-next{
-    right: 0;
+    right: 50px;
 }
 .testimonials .swiper-button-prev{
-    left: 0;
+    left: 50px;
+
 }
 .testimonials .swiper-pagination-bullet{
     background-color:  #4644AA;
