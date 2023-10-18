@@ -27,7 +27,7 @@ body {
 
 }
 .header_container{
-    padding: 0.1px 0px;
+    padding: 0.1px 0;
 
 }
 
@@ -563,9 +563,8 @@ nav:after{
 /*--------------------Webpage-Contact--------*/
 .webpage_contact{
     max-width: 100vw;
-    background: url("image/Background7.jpg");
     background-size: cover;
-    background-position: center;
+    background: url("image/Background7.jpg") center;
     padding: 2rem 3%;
     margin-bottom: 5rem;
 }
@@ -669,11 +668,10 @@ nav:after{
 
 /*----------------------Footer------------------------*/
 .footer{
-    background: #0B1123;
     height: auto;
     padding:03px 0 ;
     margin-bottom: 0;
-    background-image: url("image/footer.png");
+    background: #0B1123 url("image/footer.png");
 }
 .footer_container{
     max-width: 2000px;
