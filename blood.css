@@ -418,6 +418,16 @@ nav:after{
 
 }
 
+.slide-4{
+    background-image: url("image/hmm2.jpg");
+
+}
+
+.slide-5{
+    background-image: url("image/RPA-Hero-Header.jpg");
+
+}
+
 .slider .arrows {
     display: flex;
     position: absolute;
@@ -462,9 +472,19 @@ nav:after{
     left: -200%;
 }
 
+.slider input:nth-child(4):checked ~ .slides {
+    left: -300%;
+}
+
+.slider input:nth-child(5):checked ~ .slides {
+    left: -400%;
+}
+
 .slider input:nth-child(1):checked ~ .arrows label:nth-child(1),
 .slider input:nth-child(2):checked ~ .arrows label:nth-child(2),
-.slider input:nth-child(3):checked ~ .arrows label:nth-child(3) {
+.slider input:nth-child(3):checked ~ .arrows label:nth-child(3),
+.slider input:nth-child(4):checked ~ .arrows label:nth-child(4),
+.slider input:nth-child(5):checked ~ .arrows label:nth-child(5){
     display: block;
 }
 
@@ -487,7 +507,9 @@ nav:after{
 
 .slider input:nth-child(1):checked ~ .dots label:nth-child(1),
 .slider input:nth-child(2):checked ~ .dots label:nth-child(2),
-.slider input:nth-child(3):checked ~ .dots label:nth-child(3) {
+.slider input:nth-child(3):checked ~ .dots label:nth-child(3),
+.slider input:nth-child(4):checked ~ .dots label:nth-child(3),
+.slider input:nth-child(5):checked ~ .dots label:nth-child(3){
 
 }
 .dot-active {
