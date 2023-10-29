@@ -22,6 +22,33 @@ body {
     letter-spacing: normal;
 }
 
+h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+    margin-bottom: 1.875rem;
+    color: #4644AA;
+    font-weight: bold;
+
+}
+
+h2{
+    color: #4644AA;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+h3{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: #4644AA;
+}
+
+p {
+    line-height: 1.5;
+}
+
 
 /*---------------Header-----------------*/
 #header{
@@ -363,6 +390,7 @@ nav:after{
     text-transform: uppercase;
     font-size: 3.5rem;
     margin-bottom: 10px;
+    color: #FFFFFF;
 }
 
 .slide-data p {
@@ -412,19 +440,8 @@ nav:after{
 }
 
 
-
 .slide-3{
     background-image: url("image/hmm2.jpg");
-
-}
-
-.slide-4{
-    background-image: url("image/hmm2.jpg");
-
-}
-
-.slide-5{
-    background-image: url("image/RPA-Hero-Header.jpg");
 
 }
 
@@ -472,19 +489,9 @@ nav:after{
     left: -200%;
 }
 
-.slider input:nth-child(4):checked ~ .slides {
-    left: -300%;
-}
-
-.slider input:nth-child(5):checked ~ .slides {
-    left: -400%;
-}
-
 .slider input:nth-child(1):checked ~ .arrows label:nth-child(1),
 .slider input:nth-child(2):checked ~ .arrows label:nth-child(2),
-.slider input:nth-child(3):checked ~ .arrows label:nth-child(3),
-.slider input:nth-child(4):checked ~ .arrows label:nth-child(4),
-.slider input:nth-child(5):checked ~ .arrows label:nth-child(5){
+.slider input:nth-child(3):checked ~ .arrows label:nth-child(3){
     display: block;
 }
 
@@ -507,9 +514,7 @@ nav:after{
 
 .slider input:nth-child(1):checked ~ .dots label:nth-child(1),
 .slider input:nth-child(2):checked ~ .dots label:nth-child(2),
-.slider input:nth-child(3):checked ~ .dots label:nth-child(3),
-.slider input:nth-child(4):checked ~ .dots label:nth-child(3),
-.slider input:nth-child(5):checked ~ .dots label:nth-child(3){
+.slider input:nth-child(3):checked ~ .dots label:nth-child(3){
 
 }
 .dot-active {
@@ -548,19 +553,7 @@ nav:after{
     padding: 0 10px;
 }
 
-.who_we_are_text h1{
-    color: #4644AA;
-    margin-bottom: 1.875rem;
-    font-weight: bold;
-    font-size: 3.5rem;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-}
 
-.who_we_are_text p{
-    line-height: 1.2;
-    letter-spacing: normal;
-}
 .who_we_are img{
     width: 400px;
 }
@@ -617,7 +610,7 @@ nav:after{
     }
 
     .who_we_are_text h1{
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 
     .who_we_are_text{
@@ -656,13 +649,8 @@ nav:after{
 
 .our_service h1{
     text-align: center;
-    font-weight: bold;
-    color: #4644AA;
-    font-size: 3.5rem;
     position: relative;
-    margin-bottom: 1.875rem;
     padding-bottom: 10px;
-    letter-spacing: 1px;
 }
 
 .our_service h1:after{
@@ -708,18 +696,12 @@ nav:after{
 
 }
  .Web-Section-Text h2{
-    color: #4644AA;
-    margin-bottom: 1.25rem;
-    font-size: 2.5rem;
-    text-transform: capitalize;
-    font-weight: bold;
     text-align: left;
 }
 
 .Web-Section-Text p{
     margin-bottom: 45px;
-    line-height: 1.2;
-    letter-spacing: normal;
+
 }
 
 .Web-Section-Text a {
@@ -765,24 +747,17 @@ nav:after{
     justify-content: space-around;
 }
 
-.App-Section .App-Section-Container .App-Section-Text {
+.App-Section-Text {
     width: 550px;
     max-width: 100%;
     padding: 0 10px;
 }
-.App-Section .App-Section-Container .App-Section-Text h2{
-    color: #4644AA;
-   margin-bottom: 1.25rem;
-    font-size: 2.5rem;
-    text-transform: capitalize;
-    font-weight: bold;
+ .App-Section-Text h2{
     text-align: left;
 }
 
-.App-Section .App-Section-Container .App-Section-Text p{
+ .App-Section-Text p{
     margin-bottom: 45px;
-    line-height: 1.2;
-    letter-spacing: normal;
 }
 
 .App-Section-Text a {
@@ -830,24 +805,17 @@ nav:after{
     justify-content: space-around;
 }
 
-.RPA-Section .RPA-Section-Container .RPA-Section-Text {
+ .RPA-Section-Text {
     width: 550px;
     max-width: 100%;
     padding: 0 10px;
 }
-.RPA-Section .RPA-Section-Container .RPA-Section-Text h2{
-    color: #4644AA;
-    margin-bottom: 1.25rem;
-    font-size: 2.5rem;
-    text-transform: capitalize;
-    font-weight: bold;
+.RPA-Section-Text h2{
     text-align: left;
 }
 
-.RPA-Section .RPA-Section-Container .RPA-Section-Text p{
+.RPA-Section-Text p{
     margin-bottom: 45px;
-    line-height: 1.2;
-    letter-spacing: normal;
 }
 
 .RPA-Section-Text a {
@@ -893,25 +861,17 @@ nav:after{
     justify-content: space-around;
 }
 
-.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text {
+.Graphic-Section-Text {
     width: 550px;
     max-width: 100%;
     padding: 0 10px;
 }
-.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text h2{
-    color: #4644AA;
-    margin-bottom: 1.25rem;
-    font-size: 2.5rem;
-    text-transform: capitalize;
-    font-weight: bold;
+.Graphic-Section-Text h2{
     text-align: left;
 }
 
-.Graphic-Design-Section .Graphic-Section-Container .Graphic-Section-Text p{
+.Graphic-Section-Text p{
     margin-bottom: 45px;
-    line-height: 1.2;
-    letter-spacing: normal;
-
 }
 
 .Graphic-Section-Text a {
@@ -990,13 +950,9 @@ nav:after{
 
 .why_fervtech h1{
     text-align: center;
-    color: #4644AA;
     padding-bottom: 10px;
-    font-size: 3.5rem;
-    font-weight: bold;
     position: relative;
-    margin-bottom: 1.875rem;
-    letter-spacing: 1px;
+
 }
 
 .why_fervtech h1:after{
@@ -1073,14 +1029,8 @@ nav:after{
 }
 
 .why_fervtech_content .card h3{
-    text-transform: uppercase;
-    font-size: 1.2rem;
     margin: 15px 0 0.625rem;
-    color: #4644AA;
-}
 
-.why_fervtech_content .card p{
-    line-height: 1.2;
 }
 
 .why_fervtech_content .card:hover {
@@ -1161,17 +1111,14 @@ nav:after{
 }
 
 .add_on_section1_title h1{
-    font-size: 3.5rem;
-    text-transform: capitalize;
     color: #FFFFFF;
-    margin-bottom: 1.875rem;
-    letter-spacing: 1px;
+
 }
 
 .add_on_section1_text p{
     color: #FFFFFF;
     padding: 1rem 0;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 .add_on_section1_text a {
@@ -1243,12 +1190,7 @@ nav:after{
 
 .testimonials h1{
     text-align: center;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #4644AA;
     padding-bottom: 10px;
-    margin-bottom: 1.875rem;
-    font-size: 3.5rem;
     position: relative;
 }
 
@@ -1353,18 +1295,16 @@ nav:after{
     border: 4px solid #4644AA;
 }
 .testimonials h3{
-    font-size: 1.2rem;
     color: #333;
     margin-bottom: 0.625rem;
 }
 
-.testimonials .description{
+.testimonials p{
     text-align: center;
     padding-bottom: 10px ;
-    line-height: 1.2;
 }
 
-.testimonials .description i{
+.testimonials p i{
     font-size: 10px;
     color: #4644AA;
     margin: 0 6px;
@@ -1432,9 +1372,7 @@ nav:after{
 }
 
 .footer_col h3{
-    font-size: 1.2rem;
     color: #ffffff;
-    text-transform: capitalize;
     margin-bottom:  0.625rem;
     position: relative;
 }

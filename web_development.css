@@ -360,7 +360,7 @@ nav:after{
 
 .webpage_article_text p{
     color: #231F20;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 
@@ -424,11 +424,10 @@ nav:after{
 .web_service h1{
     text-align: center;
     margin-bottom: 5rem;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #4644AA;
     position: relative;
     padding-bottom: 10px;
-    letter-spacing: 1px;
 }
 
 .web_service h1:after{
@@ -455,7 +454,7 @@ nav:after{
 }
 
 .web_service_text p{
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 .web_service_img img{
@@ -506,12 +505,11 @@ nav:after{
 
 .web_tech_text h1 {
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #4644AA;
     margin-bottom: 1.875rem;
     position: relative;
     padding-bottom: 10px;
-    letter-spacing: 1px;
 }
 
 .web_tech_text h1:after{
@@ -582,17 +580,16 @@ nav:after{
 }
 
 .webpage_contact_content h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-transform: capitalize;
     color: #FFFFFF;
     margin-bottom: 1.875rem;
-    letter-spacing: 1px;
 }
 
 .webpage_contact_content p{
     color: #FFFFFF;
     padding: 1rem 0;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 .webpage_contact_text a {

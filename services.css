@@ -22,6 +22,35 @@ body {
     letter-spacing: normal;
 }
 
+h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+    margin-bottom: 1.875rem;
+    color: #4644AA;
+    font-weight: bold;
+
+}
+
+h2{
+    color: #4644AA;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+h3{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: #4644AA;
+}
+
+p {
+    line-height: 1.5;
+}
+
+
+
 
 /*---------------Header-----------------*/
 #header{
@@ -379,11 +408,17 @@ nav:after{
 
 }
 
+.service_content div:hover h3{
+    color: #FFFFFF;
+}
+
 .service_content div:hover p{
     color: #ffffff;
     margin-bottom: 15px;
 
 }
+
+
 
 
 .service_content div:hover .icon{
@@ -654,7 +689,6 @@ nav:after{
     cursor: pointer;
 }
 #Scroll-Up-value {
-    display: block;
     height: calc(100% - 15px);
     width: calc(100% - 15px);
     background-color: #ffffff;
