@@ -11,7 +11,7 @@
 
 html{
     scroll-behavior: smooth;
-    font-size: 16px;
+
 }
 
 
@@ -46,7 +46,7 @@ h3{
 }
 
 p {
-    line-height: 1.7;
+    line-height: 1.5;
     margin-bottom: 30px;
 }
 
@@ -448,12 +448,12 @@ nav:after{
 }
 
 .slide-2{
-    background-image: url("image/hmm1.jpg");
+    background-image: url("image/Web-Hero-Header.jpg");
 }
 
 
 .slide-3{
-    background-image: url("image/hmm2.jpg");
+    background-image: url("image/RPA-Hero-Header.jpg");
 
 }
 
@@ -1257,7 +1257,7 @@ nav:after{
 }
 
 .testimonials .swiper-navBtn{
-    color:  #4644AA;
+    color: #414042;
     transition: color 0.4s;
 }
 .testimonials .swiper-navBtn:hover{
@@ -1270,10 +1270,10 @@ nav:after{
     font-weight: bolder;
 }
 .testimonials .swiper-button-next{
-    right: 50px;
+    right: 0;
 }
 .testimonials .swiper-button-prev{
-    left: 50px;
+    left: 0;
 
 }
 .testimonials .swiper-pagination-bullet{
@@ -1291,13 +1291,14 @@ nav:after{
 
 }
 
-
-@media screen and (max-width: 460px){
-
+@media screen and (max-width: 430px) {
     .testimonials .swiper-navBtn{
         display: none;
     }
 }
+
+
+
 /*----------------------Testimonial-End----------------------*/
 
 /*----------------------Footer------------------------*/

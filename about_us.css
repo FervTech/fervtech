@@ -3,7 +3,7 @@
     padding: 0;
     outline: 0;
     border: 0;
-    font-family:"Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -14,11 +14,51 @@ html{
     font-size: 16px;
 }
 
+
 body {
-    background-color:#fdfdfdff;
+    background: #fdfdfdff;
     color:  #414042;
     font-size: 1rem;
     letter-spacing: normal;
+}
+
+h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+    margin-bottom: 1.875rem;
+    color: #4644AA;
+    font-weight: bolder;
+
+}
+
+h2{
+    color: #4644AA;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+h3{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: #4644AA;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+button{
+    background-color: #4644AA;
+    color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    width: 200px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1rem;
 }
 
 
@@ -327,20 +367,14 @@ nav:after{
 
 /*----------------------Who We Are -Start----------------------*/
 .who_we_are{
-    margin: 5em 0;
+    margin: 1em 0;
     padding-bottom: 20px;
 }
 
 .who_we_are h1{
     text-align: center;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 3.5rem;
-    color: #4644AA;
     position: relative;
-    margin-bottom: 1.875rem;
     padding-bottom: 10px;
-
 }
 
 .who_we_are h1:after{
@@ -359,13 +393,10 @@ nav:after{
     text-align: center;
     margin: 0 25% 20px;
     display: block;
-    line-height: 1.2;
-
 }
 
 @media screen and (max-device-width: 570px){
     .who_we_are p{
-        line-height: 1.2;
         width: 80%;
         margin: 0 3em 1em;
 
@@ -381,7 +412,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
 }
 
 .our_mission .our_mission_container{
@@ -408,19 +439,8 @@ nav:after{
 }
 
 .our_mission .mission_text h1{
-    color: #4644AA;
-    margin-bottom: 1.875rem;
-    font-size: 3.5rem;
     text-transform: capitalize;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
-
-.our_mission .mission_text p{
-    line-height: 1.2;
-}
-
-
 
 /*----------------------Our Mission-End----------------------*/
 
@@ -431,7 +451,7 @@ nav:after{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
 
 }
 
@@ -459,17 +479,9 @@ nav:after{
 }
 
 .our_vision .vision_text h1{
-    color: #4644AA;
-    margin-bottom: 1.875rem;
-    font-size: 3.5rem;
     text-transform: capitalize;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
 
-.our_vision .vision_text p{
-    line-height: 1.2;
-}
 
 @media screen and (max-width: 1180px) {
     .our_vision {
@@ -502,20 +514,21 @@ nav:after{
     }
 
 }
+
+@media screen and (max-width: 430px) {
+    .our_mission{
+       height: 60vh;
+    }
+}
 /*----------------------Our Core Values-Start------------------------*/
 .values{
     text-align: center;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 .values h1{
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #4644AA;
     padding-bottom: 10px;
-    font-size: 3.5rem;
     position: relative;
-    margin-bottom: 1.875rem;
 }
 
 .values h1:after{
@@ -566,13 +579,7 @@ nav:after{
     transition: 0.5s;
 }
 .values_container .card h3{
-    font-size: 1.2rem;
     margin: 1em 0 0.625rem 0;
-    color: #4644AA;
-}
-
-.values_container .card p{
-   line-height: 1.2;
 }
 
 .values_container .card:hover {
@@ -602,17 +609,13 @@ nav:after{
 /*----------------------Executive-Team-Start------------------------*/
 .our_team{
     text-align: center;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
 }
 
 .our_team h1{
-    font-weight: bold;
-    color: #4644AA;
     padding-bottom: 10px;
-    margin-bottom:  1.875rem;
-    font-size: 3.5rem;
     position: relative;
-    letter-spacing: 1px;
+
 }
 
 .our_team h1:after{
@@ -681,11 +684,10 @@ nav:after{
     opacity: 1;
 }
 .caption h3{
-    font-size: 1.2rem;
     margin-bottom: 0.625rem;
 }
 .caption p{
-    color: #4644AA;
+    color: #414042;
     margin: 0 0 9px 0;
 }
 .caption .social_links a{
@@ -752,7 +754,7 @@ nav:after{
 /*----------------------Footer------------------------*/
 .footer{
     height: auto;
-    padding:03px 0 ;
+    padding: 3px 0 ;
     margin-bottom: 0;
     background: #0B1123 url("image/footer.png");
 }
@@ -773,19 +775,19 @@ nav:after{
 }
 
 .footer_col h3{
-    font-size: 1.2rem;
     color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom:  0.625rem ;
+    margin-bottom:  0.625rem;
     position: relative;
 }
 
 
 .footer_container ul{
+    list-style: none;
     line-height: 2;
 }
 
 .details ul li {
+    text-decoration: none;
     font-weight: 300;
     color:  #bbbbbb;
     display: block;
@@ -853,11 +855,12 @@ nav:after{
 
 
 #footer_submit{
-    width: 20%;
+    width: 22%;
     height: 40px;
     border-radius: 3px;
     color: #ffffff;
     background-color: #4644AA;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.2s ease-out;
 }
@@ -866,7 +869,6 @@ nav:after{
     color: #4644AA;
     border:  1px solid #4644AA;
 }
-
 .gratitude{
     color: #ffffff;
 }
