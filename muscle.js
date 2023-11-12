@@ -140,7 +140,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
 });
-
+swiper.update();
 swiper.loopDestroy();
 
 //------------Scroll-Up------------//
