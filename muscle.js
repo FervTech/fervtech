@@ -106,6 +106,8 @@ setInterval(  function showslide() {
 
 // Testimonial Swiper//
 var swiper = new Swiper(".mySwiper", {
+    observer: true,
+    observeParents: true,
     loop: true,
     fade: 'true',
     autoplay:{
