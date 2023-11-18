@@ -945,18 +945,20 @@ nav:after{
 }
 
 
+
 @media screen and (max-width: 476px) {
     #Scroll-Up{
         height: 50px;
         width: 50px;
     }
 
+    #Scroll-Up-value i{
+        font-size: 25px;
+
+    }
+
 }
 
-#Scroll-Up-value i{
 
-    font-size: 25px;
-
-}
 
 /*-----------------Scroll-Up-End----------------*/

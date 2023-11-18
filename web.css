@@ -824,6 +824,22 @@ nav:after{
 }
 
 
+
+@media screen and (max-width: 476px){
+    #footer_email{
+        width: 60%;
+
+    }
+
+
+    #footer_submit{
+        width: 25%;
+
+    }
+}
+
+
+
 /*-----------------Scroll-Up-Stat----------------*/
 #Scroll-Up{
     position: fixed;
@@ -849,4 +865,17 @@ nav:after{
     color: #4644AA;
 }
 
+
+@media screen and (max-width: 476px) {
+    #Scroll-Up{
+        height: 50px;
+        width: 50px;
+    }
+
+    #Scroll-Up-value i{
+        font-size: 25px;
+
+    }
+
+}
 /*-----------------Scroll-Up-End----------------*/
