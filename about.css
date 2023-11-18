@@ -515,6 +515,16 @@ nav:after{
 
 }
 
+
+@media screen and (max-width: 476px){
+    .our_mission_img{
+        margin-bottom: 15px;
+    }
+    .Our-Vision-IMG{
+        margin-bottom: 15px;
+    }
+}
+
 @media screen and (max-width: 430px) {
     .our_mission{
        height: 50vh;
