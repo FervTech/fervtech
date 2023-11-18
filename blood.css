@@ -251,7 +251,7 @@ nav:after{
 
 }
 
-@media (max-width: 1020px) {
+@media screen and (max-width: 1020px) {
     .nav_bar{
         display: block;
     }
@@ -1460,6 +1460,22 @@ nav:after{
         margin-bottom: 30px;
     }
 
+}
+
+@media screen and (max-width: 476px){
+    #footer_email{
+        width: 60%;
+
+    }
+
+
+    #footer_submit{
+        width: 25%;
+
+
+
+
+    }
 }
 
 /*-----------------Scroll-Up-Stat----------------*/
