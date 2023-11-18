@@ -674,6 +674,18 @@ nav:after{
 
 }
 
+@media screen and (max-width: 476px){
+    #footer_email{
+        width: 60%;
+
+    }
+
+
+    #footer_submit{
+        width: 25%;
+
+    }
+}
 
 /*-----------------Scroll-Up-Stat----------------*/
 #Scroll-Up{

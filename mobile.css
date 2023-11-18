@@ -905,6 +905,19 @@ nav:after{
 
 }
 
+@media screen and (max-width: 476px){
+    #footer_email{
+        width: 60%;
+
+    }
+
+
+    #footer_submit{
+        width: 25%;
+
+    }
+}
+
 
 /*-----------------Scroll-Up-Stat----------------*/
 #Scroll-Up{
@@ -929,6 +942,15 @@ nav:after{
     place-items: center;
     font-size: 35px;
     color: #4644AA;
+}
+
+
+@media screen and (max-width: 476px) {
+    #Scroll-Up{
+        height: 50px;
+        width: 50px;
+    }
+
 }
 
 /*-----------------Scroll-Up-End----------------*/
