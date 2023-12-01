@@ -427,7 +427,7 @@ nav:after{
 
 .graphic_text h1 {
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 3.5rem;
     color: #4644AA;
     margin-bottom: 20px;
@@ -633,9 +633,8 @@ nav:after{
 /*--------Graphic-Contact---------*/
 .graphic_contact{
     max-width: 100vw;
-    background: url("image/Background7.jpg");
     background-size: cover;
-    background-position: center;
+    background: url(../image/Background7.jpg) center;
     padding: 2rem 3%;
     margin-bottom: 5rem;
 }
@@ -738,11 +737,10 @@ nav:after{
 
 /*----------------------Footer------------------------*/
 .footer{
-    background: #0B1123;
     height: auto;
     padding:03px 0 ;
     margin-bottom: 0;
-    background-image: url("image/footer.png");
+    background: #0B1123 url(../image/footer.png);
 }
 .footer_container{
     max-width: 2000px;

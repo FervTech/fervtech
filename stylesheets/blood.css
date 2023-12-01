@@ -427,7 +427,7 @@ nav:after{
 }
 
 .slide-1{
-    background-image: url("image/Slide1.jpg");
+    background-image: url(../image/Slide1.jpg);
     animation: zoom 14s linear infinite;
 }
 @keyframes zoom {
@@ -448,12 +448,12 @@ nav:after{
 }
 
 .slide-2{
-    background-image: url("image/Web-Hero-Header.jpg");
+    background-image: url(../image/Web-Hero-Header.jpg);
 }
 
 
 .slide-3{
-    background-image: url("image/RPA-Hero-Header.jpg");
+    background-image: url(../image/RPA-Hero-Header.jpg);
 
 }
 
@@ -1047,7 +1047,7 @@ nav:after{
 .add_on_section1{
     max-width: 100vw;
     background-size: cover;
-    background: url("image/Background7.jpg") center;
+    background: url(../image/Background7.jpg) center;
     padding: 2rem 3%;
     margin-bottom: 2rem ;
 }
@@ -1306,7 +1306,7 @@ nav:after{
     height: auto;
     padding: 3px 0 ;
     margin-bottom: 0;
-    background: #0B1123 url("image/footer.png");
+    background: #0B1123 url(../image/footer.png);
 }
 .footer_container{
     max-width: 2000px;
