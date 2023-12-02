@@ -3,7 +3,7 @@
     padding: 0;
     outline: 0;
     border: 0;
-    font-family:"Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -11,17 +11,41 @@
 
 html{
     scroll-behavior: smooth;
-    font-size: 16px;
+
 }
+
 
 body {
     background: #fdfdfdff;
-    color: #414042;
+    color:  #414042;
     font-size: 1rem;
     letter-spacing: normal;
 }
 
+h1{
+    font-size: 3rem;
+    margin-bottom: 1.875rem;
+    color: #4644AA;
+    font-weight: bold;
 
+}
+
+h2{
+    color: #4644AA;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+h3{
+    font-size: 1.2rem;
+    color: #4644AA;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
 /*---------------Header-----------------*/
 #header{
     background: #ffffff;
@@ -352,18 +376,6 @@ nav:after{
     max-width: 100%;
     padding: 0 10px;
 }
-.Mobile-Article-text h1{
-    color: #4644AA;
-    margin-bottom: 1.875rem;
-    font-size: 3.5rem;
-    text-transform: capitalize;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.Mobile-Article-text p{
-    line-height: 1.2;
-}
 
 .Mobile-Article-Img img{
     width: 30em;
@@ -425,14 +437,9 @@ nav:after{
 }
 
 .platforms h1{
-    font-size: 3.5rem;
-    font-weight: bold;
     text-align: center;
-    margin-bottom: 1.875rem;
-    color: #4644AA;
     position: relative;
     padding-bottom: 10px;
-    letter-spacing: 1px;
 }
 
 .platforms h1:after{
@@ -448,7 +455,6 @@ nav:after{
 
 .platforms p{
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .platform_container{
@@ -496,19 +502,12 @@ nav:after{
 }
 
 .platform_card h3{
-    color: #4644AA;
     height: 35px;
     width: 80%;
     margin: 0.625rem auto .625rem;
-    font-size: 1.2rem;
     position: relative;
     text-align: center;
     align-items: center;
-}
-
-.platform_card p{
-    margin-bottom: 50px;
-    line-height: 1.2;
 }
 
 @media screen and (max-width: 1423px){
@@ -589,13 +588,8 @@ nav:after{
 }
 
 .mobile_tech_text h1 {
-    font-weight: bold;
-    font-size: 3.5rem;
-    color: #4644AA;
-    margin-bottom: 1.875rem;
     position: relative;
     padding-bottom: 10px;
-    letter-spacing: 1px;
 }
 
 .mobile_tech_text h1:after{
@@ -664,17 +658,12 @@ nav:after{
 }
 
 .mobile_contact_content h1{
-    font-size: 3.5rem;
-    text-transform: capitalize;
     color: #FFFFFF;
-    margin-bottom: 1.875rem;
-    letter-spacing: 1px;
 }
 
 .mobile_contact_content p{
     color: #FFFFFF;
     padding: 1rem 0;
-    line-height: 1.2;
 }
 
 .mobile_contact_text a {

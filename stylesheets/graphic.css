@@ -3,7 +3,7 @@
     padding: 0;
     outline: 0;
     border: 0;
-    font-family:"Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -11,17 +11,41 @@
 
 html{
     scroll-behavior: smooth;
-    font-size: 16px;
+
 }
+
 
 body {
     background: #fdfdfdff;
-    color: #414042;
+    color:  #414042;
     font-size: 1rem;
     letter-spacing: normal;
 }
 
+h1{
+    font-size: 3rem;
+    margin-bottom: 1.875rem;
+    color: #4644AA;
+    font-weight: bold;
 
+}
+
+h2{
+    color: #4644AA;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+h3{
+    font-size: 1.2rem;
+    color: #4644AA;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
 /*---------------Header-----------------*/
 #header{
     background: #ffffff;
@@ -349,21 +373,6 @@ nav:after{
     max-width: 100%;
     padding: 0 10px;
 }
-.graphic_article_text h1{
-    color: #4644AA;
-    margin-bottom: 1.875rem;
-    font-size: 3.5rem;
-    text-transform: capitalize;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-
-
-.graphic_article_text p{
-    line-height: 1.2;
-}
-
 
 
 @media screen and (max-width: 1380px) {
@@ -426,11 +435,6 @@ nav:after{
 }
 
 .graphic_text h1 {
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size: 3.5rem;
-    color: #4644AA;
-    margin-bottom: 20px;
     position: relative;
     padding-bottom: 20px;
 }
@@ -446,9 +450,6 @@ nav:after{
     border: 2px solid #58595B;
 }
 
-.graphic_text p{
-   margin-bottom: 2rem;
-}
 .graphic_services_container{
     display: flex;
     justify-content: center;
@@ -529,21 +530,22 @@ nav:after{
     right: 0;
     width: calc(100% - 75px);
     height: 100%;
-    padding: 20px;
+    padding: 30px 20px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .graphic_services_text h3{
-    margin-bottom: 0.625rem;
-    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .graphic_services_text p{
     color: #414042;
     display: inline-block;
     padding: 5px;
+    line-height: 1.2;
+
 }
 
 @media screen and (max-width: 1180px) {
@@ -653,17 +655,14 @@ nav:after{
 }
 
 .graphic_contact_content h1{
-    font-size: 3.5rem;
-    text-transform: capitalize;
     color: #FFFFFF;
-    margin-bottom: 1.875rem;
-    letter-spacing: 1px;
+
 }
 
 .graphic_contact_content p{
     color: #FFFFFF;
     padding: 1rem 0;
-    line-height: 1.2;
+
 }
 
 .graphic_contact_text a {
