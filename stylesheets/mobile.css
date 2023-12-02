@@ -32,6 +32,7 @@ body {
 
 }
 
+
 /* -----------------Nav-Section-------------*/
 .nav{
     font-weight: bold;
@@ -80,7 +81,6 @@ nav:after{
 
 .nav_links{
     float: right;
-    list-style: none;
     margin-right: 40px;
     position: relative;
 
@@ -306,6 +306,7 @@ nav:after{
 
 
 }
+
 /*------Header-End-----------*/
 /*----------------Main----------------*/
 
