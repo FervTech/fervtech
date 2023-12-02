@@ -21,8 +21,8 @@ window.addEventListener("scroll", function (){
 
 // Change Navlgo on Scroll//
 
-const mainLogo = "image/Official-Logo1.png";
-const sclLogo = "image/Official-Logo.png";
+const mainLogo = "../image/Official-Logo1.png";
+const sclLogo = "../image/Official-Logo.png";
 
 $(window).scroll(function() {
     var value = $(this).scrollTop();
