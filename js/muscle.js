@@ -41,6 +41,7 @@ var slide = document.querySelectorAll(".slide");
 var dots = document.querySelectorAll(".dots label")
 var time = 5000;
 
+
 function plusslide(position) {
     slideIndex += position;
 
