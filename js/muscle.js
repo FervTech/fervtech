@@ -144,6 +144,7 @@ var swiper = new Swiper(".mySwiper", {
 swiper.update();
 swiper.loopDestroy();
 
+
 //------------Scroll-Up------------//
 let calcScrollValue = () => {
     let scrollProgress = document.getElementById("Scroll-Up");
@@ -185,6 +186,7 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message))
 });
+
 
 //--Start of Tawk.to Script-//
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -247,5 +249,6 @@ Window.onbeforeunload = () => {
         form.reset();
     }
 };
+
 
 

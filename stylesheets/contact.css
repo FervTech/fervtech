@@ -3,7 +3,7 @@
     padding: 0;
     outline: 0;
     border: 0;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -11,7 +11,7 @@
 
 html{
     scroll-behavior: smooth;
-    font-size: 16px;
+
 }
 
 
@@ -19,9 +19,33 @@ body {
     background: #fdfdfdff;
     color:  #414042;
     font-size: 1rem;
+    letter-spacing: normal;
 }
 
+h1{
+    font-size: 3rem;
+    margin-bottom: 1.875rem;
+    color: #4644AA;
+    font-weight: bold;
 
+}
+
+h2{
+    color: #4644AA;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+h3{
+    font-size: 1.2rem;
+    color: #4644AA;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
 
 /* _--------------------Main---------------------- */
 .hero_header {
@@ -92,7 +116,7 @@ body {
     margin-bottom: 1rem;
 }
 .client_details input{
-     display: flex;
+    display: flex;
     gap: 20px;
 }
 
@@ -118,7 +142,7 @@ body {
 
 .select_icon{
     color: #4644AA;
- width: 50px;
+    width: 50px;
     height: 100%;
     position: absolute;
     right: 0;
@@ -137,14 +161,14 @@ body {
 
 
 .select_icon:hover #Enquiry{
-  visibility: visible;
+    visibility: visible;
 }
 
 .client_details{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     width: 100%;
-    }
+}
 
 
 .details-fill {
@@ -210,7 +234,7 @@ body {
 .contact_icons{
     display: flex;
     align-items: center;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .contact_icons i{
@@ -224,6 +248,12 @@ body {
     font-size: 20px;
     background: #FFFFFF;
     color: #4644AA;
+}
+
+.contact_icons p{
+ margin-top: 25px;
+
+
 }
 
 .contact_social-icons{
@@ -313,4 +343,3 @@ body {
         border: 0.5px solid #2B398D;
     }
 }
-

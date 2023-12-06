@@ -50,17 +50,6 @@ p {
     margin-bottom: 30px;
 }
 
-button{
-    background-color: #4644AA;
-    color: #ffffff;
-    border: 2px solid transparent;
-    border-radius: 6px;
-    width: 200px;
-    cursor: pointer;
-    transition: 0.4s;
-    font-size: 1rem;
-}
-
 
 /*---------------Header-----------------*/
 #header{

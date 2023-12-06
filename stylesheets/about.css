@@ -329,6 +329,14 @@ button{
     }
 }
 
+@media screen and (max-width: 497px) {
+    .values_container .card:hover .icon:before {
+    height: 1.25em;
+    width: 1.25em;
+}
+
+}
+
 /*----------------------Our Core Values-End------------------------*/
 
 /*----------------------Executive-Team-Start------------------------*/
