@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+
+body {
+    background: #fdfdfdff;
+    color:  #414042;
+    font-size: 1rem;
+    letter-spacing: normal;
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 1.875rem;
+    color: #4644AA;
+    font-weight: bolder;
+
+}
+
+h2{
+    color: #4644AA;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+h3{
+    font-size: 1.2rem;
+    color: #4644AA;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.launch_container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("image/Background7.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+}
+
+.launch_container .logo{
+    width: 300px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.launch_content{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #FFFFFF;
+}
+
+.launch_content h1{
+    font-size: 64px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.launch_content h1 span{
+    color: #ff0057;
+
+}
+
+.launch_time{
+    display: flex;
+}
+
+.launch_time .time{
+    flex-basis: 100px;
+}
+
+.launch_time .time p{
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+
+.launch_img{
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: launch_img 4s linear infinite;
+}
+
+@keyframes launch_img {
+
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100%{
+        bottom: 105%;
+        opacity: 1;
+    }
+
+}
