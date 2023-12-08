@@ -215,15 +215,19 @@ button{
 }
 
 @media screen and (max-width: 1400px) {
-    .service_content{
-        padding: 0 20px 0;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    .service_content {
+        padding: 0 1em 0;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr ));
+        gap: 150px;
     }
+
+    .service_content card{
+        margin: 5em;
+    }
+
+
+
 }
 
-@media screen and (max-width: 1075px) {
-    .service_content {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-}
+
 

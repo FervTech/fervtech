@@ -137,8 +137,11 @@ p {
     color: #4644AA;
     cursor: pointer;
     appearance: none;
-    border: none;
+    border: 2px #4644AA;
+
+
 }
+
 
 .select_icon{
     color: #4644AA;
@@ -234,7 +237,6 @@ p {
 .contact_icons{
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
 }
 
 .contact_icons i{
