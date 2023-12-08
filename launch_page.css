@@ -114,3 +114,26 @@ p {
     }
 
 }
+
+@media screen  and (max-width: 497px){
+    .launch_container .logo{
+        width: 150px;
+        padding: 20px 0;
+        cursor: pointer;
+    }
+
+
+
+    .launch_content h1{
+        font-size: 64px;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+
+
+
+    .launch_time .time p{
+        font-size: 60px;
+        margin-bottom: -14px;
+    }
+}
