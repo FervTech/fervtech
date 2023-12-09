@@ -80,6 +80,8 @@ p {
 
 }
 
+
+
 .launch_time{
     display: flex;
     margin-bottom: 5em;
@@ -116,6 +118,24 @@ p {
 
 }
 
+/*------Social-Icons--------*/
+.launch_social-icons{
+    display: flex;
+    gap: 35px;
+    font-size: 35px;
+}
+
+.launch_social-icons a{
+    color: #FFFFFF;
+    transition: 0.5s ease;
+}
+
+.launch_social-icons a:hover{
+    transform: scale(1.5);
+}
+
+
+
 @media screen  and (max-width: 497px){
     .launch_container .logo{
         width: 200px;
@@ -137,25 +157,7 @@ p {
         font-size: 60px;
         margin-bottom: -14px;
     }
-}
 
-.launch_social-icons{
-    display: flex;
-    gap: 35px;
-    font-size: 35px;
-}
-
-.launch_social-icons a{
-    color: #FFFFFF;
-    transition: 0.5s ease;
-}
-
-.launch_social-icons a:hover{
-    transform: scale(1.5);
-}
-
-
-@media screen and (max-width: 497px){
     .launch_social-icons{
         gap: 25px;
         font-size: 25px;
