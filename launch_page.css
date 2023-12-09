@@ -157,7 +157,7 @@ p {
 
 @media screen and (max-width: 497px){
     .launch_social-icons{
-        gap: 20px;
-        font-size: 20px;
+        gap: 25px;
+        font-size: 25px;
     }
 }
