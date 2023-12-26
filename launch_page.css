@@ -60,6 +60,8 @@ p {
     width: 300px;
     padding: 20px 0;
     cursor: pointer;
+    margin: auto;
+
 }
 
 .launch_content{
@@ -70,6 +72,7 @@ p {
 }
 
 .launch_content h1{
+   display: inline-block;
     font-size: 64px;
     font-weight: 600;
     color: #FFFFFF;
@@ -119,25 +122,32 @@ p {
 }
 
 /*------Social-Icons--------*/
-.launch_social-icons{
+.launch_social_icons{
     display: flex;
     gap: 35px;
     font-size: 35px;
 }
 
-.launch_social-icons a{
+.launch_social_icons a{
     color: #FFFFFF;
     transition: 0.5s ease;
 }
 
-.launch_social-icons a:hover{
+.launch_social_icons a:hover{
     transform: scale(1.5);
 }
 
 
+@media screen  and (max-width: 764px){
+    .launch_social_icons{
+        margin: auto;
+    }
+}
+
 
 @media screen  and (max-width: 497px){
     .launch_container .logo{
+        display: flex;
         width: 200px;
         padding: 20px 0;
         cursor: pointer;
@@ -158,7 +168,7 @@ p {
         margin-bottom: -14px;
     }
 
-    .launch_social-icons{
+    .launch_social_icons{
         gap: 25px;
         font-size: 25px;
     }
