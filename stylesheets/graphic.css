@@ -346,6 +346,12 @@ p {
 
 }
 
+@media screen and (max-width:497px) {
+    .graphic_card{
+        width: 80%;
+    }
+}
+
 
 
 
