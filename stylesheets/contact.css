@@ -50,7 +50,6 @@ p {
 /* _--------------------Main---------------------- */
 .hero_header {
     display: flex;
-
     align-items: center;
 }
 
