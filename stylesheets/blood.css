@@ -125,6 +125,12 @@ button{
     height: 40px;
     display: flex;
     text-decoration:none;
+
+}
+
+.text_content button{
+    background-color: #FFFFFF;
+    color: #4644AA;
 }
 
 .text_content button:hover{
@@ -663,6 +669,10 @@ button{
 }
 
 @media screen and (max-width: 1415px) {
+    .why_fervtech .why_fervtech_container{
+
+    }
+
     .why_fervtech_content {
         padding: 0 100px;
         gap: 150px;

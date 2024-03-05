@@ -93,6 +93,21 @@ p {
     color: #4644AA;
 }
 
+.nav.sticky .nav_links li .nav_contact{
+    height: 40px;
+    text-decoration: none;
+
+}
+
+.nav.sticky .nav_links li .nav_contact button{
+    background-color: #4644AA;
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 8em;
+    height: 3em;
+    text-transform: uppercase;
+}
+
 
 .nav .logo{
     padding-left: 50px;
@@ -226,6 +241,30 @@ nav:after{
     color: #4644AA;
 }
 
+.nav_links li .nav_contact{
+    height: 40px;
+    text-decoration: none;
+
+}
+
+
+
+.nav_contact button{
+    background-color: #FFFFFF;
+    color: #4644AA;
+    font-weight: bold;
+    width: 8em;
+    height: 3em;
+    text-transform: uppercase;
+
+}
+
+.nav_contact:before{
+    display: none;
+}
+
+
+
 @media (max-width: 1090px) {
     .nav .logo{
         font-size: 32px;
@@ -237,6 +276,8 @@ nav:after{
         margin-right: 20px;
         color: #4644AA;
     }
+
+
 
 }
 
@@ -289,6 +330,16 @@ nav:after{
         display: none;
     }
 
+    .nav_contact button{
+        background-color: #4644AA;
+        color: #FFFFFF;
+        font-weight: bold;
+        width: 8em;
+        height: 3em;
+        text-transform: uppercase;
+
+    }
+
 
     .angleDown{
         display: block;
@@ -329,6 +380,8 @@ nav:after{
         left: 0;
         height: 330px;
     }
+
+
 
 
 }
