@@ -24,6 +24,7 @@ body {
 
 h1{
     font-size: 3rem;
+    text-transform: capitalize;
     margin-bottom: 1.875rem;
     color: #4644AA;
     font-weight: bold;
@@ -33,11 +34,13 @@ h1{
 h2{
     color: #4644AA;
     font-size: 2rem;
+    text-transform: capitalize;
     font-weight: bold;
     margin-bottom: 1.25rem;
 }
 
 h3{
+    text-transform: capitalize;
     font-size: 1.2rem;
     color: #4644AA;
 }
@@ -45,6 +48,17 @@ h3{
 p {
     line-height: 1.5;
     margin-bottom: 30px;
+}
+
+button{
+    background-color: #4644AA;
+    color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    width: 200px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1rem;
 }
 
 /* _--------------------Main---------------------- */
@@ -59,6 +73,96 @@ p {
 }
 
 
+/*----------F.A.Q---------*/
+.accordion{
+    margin: 60px auto;
+    width: 1200px;
+}
+
+.accordion h1{
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.accordion h1:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid #58595B;
+}
+
+.accordion ul li{
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    box-shadow:  6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                 -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.accordion ul li label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #4644AA;
+    color: #FFFFFF;
+}
+
+.accordion ul li label::after{
+    content: '+' ;
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.accordion ul li  input[type="checkbox"]{
+    display: none;
+}
+
+.accordion_content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+
+
+.accordion ul li  input[type="checkbox"]:checked + label + .accordion_content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+
+.accordion ul li  input[type="checkbox"]:checked + label::after{
+    content: '-';
+}
+
+@media screen and (max-width: 1400px){
+    .accordion{
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .accordion ul{
+        margin-right: 2.5em;
+    }
+}
+
+
+/*----------Contact-Details---------*/
 .Contact-Details{
     margin-top: 10rem;
     background-image: url("../image/Background7.jpg");

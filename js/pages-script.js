@@ -1,3 +1,4 @@
+
 //-----Chat--Bot--///
 
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -99,6 +100,7 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
+
 //------News Letter Sheet-------//
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycby8yOr11n0piAqVnIcoDcZ0cuQ3D63b0WoyW8nfG7bEj-8q4w6nKVgzQKN9dCFcjez26Q/exec'
@@ -168,5 +170,10 @@ $(document).ready(function () {
         }]
     });
 });
+
+
+
+
+
 
 
