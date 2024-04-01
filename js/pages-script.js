@@ -171,6 +171,19 @@ $(document).ready(function () {
     });
 });
 
+// Remove .html extension from URLs
+function removeHtmlExtension() {
+    var currentUrl = window.location.href;
+    if (currentUrl.endsWith('.html')) {
+        var newUrl = currentUrl.replace('.html', '');
+        window.history.pushState({}, '', newUrl);
+    }
+}
+
+// Call the function on page load
+removeHtmlExtension();
+
+
 
 
 
