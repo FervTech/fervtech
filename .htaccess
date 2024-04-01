@@ -1,0 +1,24 @@
+
+#remove html file extension https://example.com/page.html
+# to https://example.com/page
+
+Options +MultiViews
+
+#mod_rewrite starts here
+
+
+#Does not apply to existing directories, meaning that if the folder  exists on the
+server then don't change anything and don't run the rule.
+
+
+#Check for  the file in directory with .html extension.
+
+
+#Here we actually show the page that has the .html extension
+
+RewriteEngine On
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
