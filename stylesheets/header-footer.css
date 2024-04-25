@@ -100,7 +100,7 @@ p {
 }
 
 .nav.sticky .nav_links li .nav_contact button{
-    background-color: #4644AA;
+    background-color: #f1683a;
     color: #FFFFFF;
     font-weight: bold;
     width: 8em;
@@ -148,12 +148,12 @@ nav:after{
 
 .nav_links li a:before{
     content: '';
-    width: 0%;
+    width: 0;
     height: 3px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #080808;
+    background: #f1683a;
     position: absolute;
     transition: all 0.4s ease;
 }
@@ -161,6 +161,8 @@ nav:after{
 .nav_links li a:hover:before{
     width: 100%;
 }
+
+
 .angleDown{
     display: none;
     color:  #4644AA;
@@ -250,8 +252,8 @@ nav:after{
 
 
 .nav_contact button{
-    background-color: #FFFFFF;
-    color: #4644AA;
+    background-color: #f1683a;
+    color: #FFFFFF;
     font-weight: bold;
     width: 8em;
     height: 3em;
@@ -511,9 +513,9 @@ nav:after{
     transition: all 0.2s ease-out;
 }
 #footer_submit:hover{
-    background-color: #ffffff;
-    color: #4644AA;
-    border:  1px solid #4644AA;
+    background-color: #f1683a;
+    color: #FFFFFF;
+    border:  1px solid #f1683a;
 }
 .gratitude{
     color: #ffffff;
