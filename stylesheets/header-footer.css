@@ -100,7 +100,7 @@ p {
 }
 
 .nav.sticky .nav_links li .nav_contact button{
-    background-color: #f1683a;
+    background-color: #EB2F36;
     color: #FFFFFF;
     font-weight: bold;
     width: 8em;
@@ -153,7 +153,7 @@ nav:after{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #f1683a;
+    background: #EB2F36;
     position: absolute;
     transition: all 0.4s ease;
 }
@@ -252,7 +252,7 @@ nav:after{
 
 
 .nav_contact button{
-    background-color: #f1683a;
+    background-color: #EB2F36;
     color: #FFFFFF;
     font-weight: bold;
     width: 8em;
@@ -513,9 +513,9 @@ nav:after{
     transition: all 0.2s ease-out;
 }
 #footer_submit:hover{
-    background-color: #f1683a;
+    background-color: #EB2F36;
     color: #FFFFFF;
-    border:  1px solid #f1683a;
+    border:  1px solid #EB2F36;
 }
 .gratitude{
     color: #ffffff;
