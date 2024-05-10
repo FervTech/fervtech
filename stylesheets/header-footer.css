@@ -387,10 +387,11 @@ nav:after{
 
 }
 
-@media screen and (max-width: 497px) {
+@media screen and (max-width: 600px) {
     .nav .logo {
         padding-left: 15px;
     }
+
 
 }
 /*------Header-End-----------*/
