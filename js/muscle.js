@@ -1,26 +1,22 @@
-
-
-
-
-
 //Nav---Bar//
 
-navBar= document.querySelector(".nav_bar");
+let navBar = document.querySelector(".nav_bar");
+
 navBar.onclick = function (){
-    navLinks= document.querySelector(".nav_links");
+    let navLinks= document.querySelector(".nav_links");
     navLinks.classList.toggle("active");
 }
 
-angleDown= document.querySelector(".angleDown");
+let angleDown= document.querySelector(".angleDown");
 angleDown.onclick = function (){
-    servicesLinks= document.querySelector(".services_links");
+    let servicesLinks= document.querySelector(".services_links");
     servicesLinks.classList.toggle("active");
 }
 
 //---------navScroll----------//
 
 window.addEventListener("scroll", function (){
-    var nav = document.querySelector(".nav");
+    let nav = document.querySelector(".nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
 
 })
@@ -31,90 +27,20 @@ const mainLogo = "image/Official-Logo1.png";
 const sclLogo = "image/Official-Logo.png";
 
 $(window).scroll(function() {
-    var value = $(this).scrollTop();
+    let value = $(this).scrollTop();
     if (value > 0)
         $(".logo").attr("src", sclLogo);
     else
         $(".logo").attr("src", mainLogo);
 });
 
-//-----Slider-------//
-var slideIndex = 0;
-var slider = document.querySelector(".slider");
-var slides = document.querySelector(".slides");
-var slide = document.querySelectorAll(".slide");
-var dots = document.querySelectorAll(".dots label")
-var time = 5000;
-
-
-function plusslide(position) {
-    slideIndex += position;
-
-    if (slideIndex > slide.length) {
-        slideIndex = 1;
-    }
-    else if (slideIndex < 1) {
-        slideIndex = slide.length;
-    }
-
-    // Default active class is removed from all dots
-    for (let i = 0; i < dots.length; i++) {
-        const element = dots[i];
-        element.classList.remove("dot-active");
-    }
-
-    slides.style.left = `-${slideIndex - 1}00%`;
-    dots[slideIndex - 1].classList.add("dot-active");
-}
-
-function currentslide(index) {
-    if (index > slide.length) {
-        index = 1;
-    }
-    else if (index < 1) {
-        index = slide.length;
-    }
-
-    // Default active class is removed from all dots
-    for (let i = 0; i < dots.length; i++) {
-        const element = dots[i];
-        element.classList.remove("dot-active");
-    }
-
-    slides.style.left = `-${index - 1}00%`;
-    dots[index - 1].classList.add("dot-active");
-
-    slideIndex = index;
-}
-
-
-setInterval(  function showslide() {
-    slideIndex++;
-
-    if (slideIndex > slide.length) {
-        slideIndex = 1;
-    }
-    else if (slideIndex < 1) {
-        slideIndex = slide.length;
-    }
-
-    // Default active class is removed from all dots
-    for (let i = 0; i < dots.length; i++) {
-        var element = dots[i];
-        element.classList.remove("dot-active");
-    }
-
-    slides.style.left = `-${slideIndex - 1}00%`;
-    dots[slideIndex - 1].classList.add("dot-active");
-
-} , time);   // Change every image after 3 seconds
 
 
 // Testimonial Swiper//
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
     observer: true,
     observeParents: true,
-    loop: true,
+    loop: false,
     fade: 'true',
     autoplay:{
         disableOnInteraction: false,
@@ -147,7 +73,7 @@ var swiper = new Swiper(".mySwiper", {
 
 });
 swiper.update();
-swiper.loopDestroy();
+
 
 
 //------------Scroll-Up------------//
@@ -193,10 +119,11 @@ form.addEventListener('submit', e => {
 });
 
 
+
 //--Start of Tawk.to Script-//
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
     s1.async=true;
     s1.src='https://embed.tawk.to/6473a8efad80445890ef94fd/1h1hsnq1g';
     s1.charset='UTF-8';
@@ -204,48 +131,60 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     s0.parentNode.insertBefore(s1,s0);
 })();
 
-<!--End of Tawk.to Script-->
+//--End of Tawk.to Script--//
 
 
-//---------------Number-Validation--------------//
-const input = document.querySelector("#phone");
-const button = document.querySelector("#btn");
-const errorMsg = document.querySelector("#error-msg");
-const validMsg = document.querySelector("#valid-msg");
+//----------Landing -Slider---------//
+let nextLanding = document.getElementById('next');
+let prevLanding = document.getElementById('prev');
 
-// here, the index maps to the error code returned from getValidationError - see readme
-const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
 
-// initialise plugin
-const iti = window.intlTelInput(input, {
-    utilsScript: "/intl-tel-input/js/utils.js?1690975972744"
-});
+let landingSlider = document.querySelector('.landing_slider');
+let landingSlides = document.querySelector('.landing_slides');
 
-const reset = () => {
-    input.classList.remove("error");
-    errorMsg.innerHTML = "";
-    errorMsg.classList.add("hide");
-    validMsg.classList.add("hide");
-};
+nextLanding.onclick = function (){
+    showLandingSlider('next');
+}
 
-// on click button: validate
-button.addEventListener('click', () => {
-    reset();
-    if (input.value.trim()) {
-        if (iti.isValidNumber()) {
-            validMsg.classList.remove("hide");
-        } else {
-            input.classList.add("error");
-            const errorCode = iti.getValidationError();
-            errorMsg.innerHTML = errorMap[errorCode];
-            errorMsg.classList.remove("hide");
-        }
+prevLanding.onclick = function (){
+    showLandingSlider('prev');
+}
+let timeCycling = 0;
+let timeAutoLandingSlide = 5000;
+let autoLandingSlide = setTimeout(() => {
+    nextLanding.click();
+}, timeAutoLandingSlide);
+let runTime;
+
+function showLandingSlider(type){
+    let landingSlide = document.querySelectorAll('.landing_slide');
+
+
+    if (type === 'next'){
+        landingSlides.appendChild(landingSlide[0]);
+        landingSlider.classList.add('next');
     }
-});
 
-// on keyup / change flag: reset
-input.addEventListener('change', reset);
-input.addEventListener('keyup', reset);
+    else {
+        landingSlides.prepend(landingSlide[landingSlide.length - 1]);
+        landingSlider.classList.add('prev');
+    }
+
+    clearTimeout(runTime);
+    runTime = setTimeout(() =>{
+        landingSlider.classList.remove('next');
+        landingSlider.classList.remove('prev');
+    }, timeCycling);
+
+    clearTimeout(autoLandingSlide);
+    autoLandingSlide = setTimeout(() => {
+        nextLanding.click();
+    }, timeAutoLandingSlide)
+}
+
+
+
+
 
 //----------Reset--Form----------------//
 

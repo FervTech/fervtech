@@ -230,7 +230,7 @@ button{
     left: -75px;
     top:  calc(50% - 75px);
     transition: 0.5s ease-in-out;
-    background: #ff0057;
+    background: #EB2F36;
 }
 
 .graphic_card .imgDg:before{

@@ -99,23 +99,21 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #58595B;
+    border: 2px solid #EB2F36;
 }
 
 
 .who_we_are p{
-    width: 50%;
+    width: 100%;
     text-align: center;
-    margin: 0 25% 20px;
+    margin: 0 auto;
     display: block;
+    padding: 0 200px;
 }
 
-@media screen and (max-device-width: 570px){
+@media screen and (max-device-width: 1024px){
     .who_we_are p{
-        width: 80%;
-        margin: 0 3em 1em;
-
-
+        padding: 0 50px;
     }
 }
 /*----------------------Who We Are-End----------------------*/
@@ -130,12 +128,11 @@ button{
     margin-bottom: 1em;
 }
 
-.our_mission .our_mission_container{
+.our_mission_container{
     width: 1280px;
     max-width: 95%;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -153,9 +150,6 @@ button{
     background-color: #f1f1f1ff;
 }
 
-.our_mission .mission_text h1{
-    text-transform: capitalize;
-}
 
 /*----------------------Our Mission-End----------------------*/
 
@@ -170,12 +164,11 @@ button{
 
 }
 
-.our_vision .our_vision_container{
+.our_vision_container{
     width: 1280px;
     max-width: 95%;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -193,58 +186,36 @@ button{
     background-color: #f1f1f1ff;
 }
 
-.our_vision .vision_text h1{
-    text-transform: capitalize;
-}
 
-
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1024px) {
     .our_vision {
-        width: 100%;
         height: auto;
-        padding: 50px 0;
     }
     .our_mission {
-        width: 100%;
         height: auto;
-        padding: 50px 0;
+    }
+    .our_vision_img{
+        width: 300px;
     }
 
+    .our_mission_img{
+        width: 300px;
+    }
 }
 
-@media screen and (max-width: 999px) {
-
+@media screen and (max-width: 600px) {
     .our_mission_container{
+        text-align: center;
         flex-direction: column-reverse;
+        flex-wrap: wrap;
     }
 
-}
-
-@media screen and (max-width: 650px) {
-    .our_mission_img{
-        margin-bottom: 35px;
-    }
-    .Our-Vision-IMG{
-        margin-bottom: 35px;
-    }
-
-}
-
-
-@media screen and (max-width: 476px){
-    .our_mission_img{
-        margin-bottom: 15px;
-    }
-    .Our-Vision-IMG{
-        margin-bottom: 15px;
+    .our_vision_container{
+        text-align: center;
+        flex-wrap: wrap;
     }
 }
 
-@media screen and (max-width: 430px) {
-    .our_mission{
-       height: 60vh;
-    }
-}
 /*----------------------Our Core Values-Start------------------------*/
 .values{
     text-align: center;
@@ -263,7 +234,7 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #58595B;
+    border: 2px solid #EB2F36;
 
 }
 
@@ -343,7 +314,6 @@ button{
 .our_team{
     text-align: center;
     margin-bottom: 1em;
-    display: none;
 }
 
 .our_team h1{
@@ -359,16 +329,14 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #58595B;
+    border: 2px solid #EB2F36;
 
 }
 
 .our_team_container{
     height: 50vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     padding: 0 50px 0;
     background-color: #4644AA;
     place-items: center;
@@ -421,7 +389,7 @@ button{
     margin-bottom: 0.625rem;
 }
 .caption p{
-    color: #414042;
+    color: #EB2F36;
     margin: 0 0 9px 0;
 }
 .caption .social_links a{
@@ -434,27 +402,30 @@ button{
     color: #4644AA;
 }
 
-@media screen and (max-width: 1210px) {
+
+
+@media screen and (max-width: 1024px) {
     .our_team_container{
-        height: 80vh;
-        grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-        grid-gap: 0;
-        margin: 0;
+        height: 70vh;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     }
 
-    .team_member{
-       margin: 10px 0;
-    }
 }
+
+@media screen and (max-width: 719px){
+    .our_team_container{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+}
+
+
 
 @media screen and (max-width: 600px) {
 
     .our_team_container{
-        height: 250vh;
+        height: 200vh;
     }
-}
-
-@media screen and (max-width: 420px) {
 
     .team_member {
         border-radius: 10px;

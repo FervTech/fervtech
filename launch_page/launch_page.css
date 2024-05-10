@@ -50,7 +50,7 @@ p {
 .launch_container{
     width: 100vw;
     height: 100vh;
-    background: url("image/Background7.jpg") center;
+    background: url("../image/Background7.jpg") center;
     background-size: cover;
     padding: 0 8%;
 }
@@ -78,7 +78,7 @@ p {
 }
 
 .launch_content h1 span{
-    color: #ff0057;
+    color: #EB2F36;
 
 }
 

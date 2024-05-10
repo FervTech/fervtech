@@ -1,3 +1,7 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC, L]
 
 #remove html file extension https://example.com/page.html
 # to https://example.com/page
@@ -16,9 +20,4 @@ server then don't change anything and don't run the rule.
 
 #Here we actually show the page that has the .html extension
 
-RewriteEngine On
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R]
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 

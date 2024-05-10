@@ -3,3 +3,56 @@
 
   <span style="display: none;">experience.
                           Partner with us to bring your app aspirations to life.</span>
+
+
+
+
+
+
+                          //----------Landing -Slider---------//
+                          let nextLanding = document.getElementById('next');
+                          let prevLanding = document.getElementById('prev');
+
+
+                          let landingSlider = document.querySelector('.landing_slider');
+                          let landingSlides = document.querySelector('.landing_slides');
+
+                          nextLanding.onclick = function (){
+                              showLandingSlider('next');
+                          }
+
+                          prevLanding.onclick = function (){
+                              showLandingSlider('prev');
+                          }
+                          let timeCycling = 3000;
+                          let timeAutoLandingSlide = 7000;
+                          let autoLandingSlide = setTimeout(() => {
+                              nextLanding.click();
+                          }, timeAutoLandingSlide);
+                          let runTime;
+
+                          function showLandingSlider(type){
+                              let landingSlide = document.querySelectorAll('.landing_slide');
+
+                              if (type === 'next'){
+                                  landingSlides.appendChild(landingSlide[0]);
+                                  landingSlider.classList.add('next');
+                              }
+
+                              else {
+                                  let positionLastSlide = landingSlide.length - 1;
+                                  landingSlides.prepend(landingSlide[positionLastSlide]);
+                                  landingSlider.classList.add('prev');
+                              }
+
+                              clearTimeout(runTime);
+                              runTime = setTimeout(() =>{
+                                  landingSlider.classList.remove('next');
+                                  landingSlider.classList.remove('prev');
+                              }, timeCycling);
+
+                              clearTimeout(autoLandingSlide);
+                              autoLandingSlide = setTimeout(() => {
+                                  nextLanding.click();
+                              }, timeAutoLandingSlide);
+                          }

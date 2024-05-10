@@ -1,4 +1,5 @@
 
+
 //-----Chat--Bot--///
 
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -42,16 +43,16 @@ var x = setInterval(function (){
 
 //---------NavBar--------//
 
-navBar= document.querySelector(".nav_bar");
+let navBar= document.querySelector(".nav_bar");
 navBar.onclick = function (){
-    navLinks= document.querySelector(".nav_links");
+   let navLinks= document.querySelector(".nav_links");
     navLinks.classList.toggle("active");
 }
 
 angleDown= document.querySelector(".angleDown");
 angleDown.onclick = function (){
-    servicesLinks= document.querySelector(".services_links");
-    servicesLinks.classList.toggle("active");
+ let servicesLinks= document.querySelector(".services_links");
+     servicesLinks.classList.toggle("active");
 }
 
 //---------navScroll----------//
@@ -120,6 +121,16 @@ form.addEventListener('submit', e => {
         .catch(error => console.error('Error!', error.message))
 });
 
+
+//----------Reset--Form----------------//
+
+Window.onbeforeunload = () => {
+
+    for(const form of document.getElementsByTagName('form')) {
+        form.reset();
+    }
+};
+
 //----Mobile-Tech-Slider--//
 
     $(document).ready(function () {
@@ -171,17 +182,7 @@ $(document).ready(function () {
     });
 });
 
-// Remove .html extension from URLs
-function removeHtmlExtension() {
-    var currentUrl = window.location.href;
-    if (currentUrl.endsWith('.html')) {
-        var newUrl = currentUrl.replace('.html', '');
-        window.history.pushState({}, '', newUrl);
-    }
-}
 
-// Call the function on page load
-removeHtmlExtension();
 
 <!-- Google tag (gtag.js) -->
 
@@ -192,6 +193,32 @@ removeHtmlExtension();
     gtag('config', 'G-GCTE6D73KY');
 
 
+
+
+// Default country code
+let defaultCountryCode = '+1'; // Change this to your desired default country code
+
+// Pre-fill phone number input with default country code
+document.getElementById('phone').value = defaultCountryCode;
+
+// Function to get user's country code based on geolocation
+function getUserCountryCode() {
+    if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            // Determine country code based on latitude
+            let latitude = position.coords.latitude;
+            let userCountryCode = (latitude >= 0) ? '+1' : ''; // Example: Assume US if latitude is positive
+
+            // Pre-fill phone number input with user's country code
+            document.getElementById('phone').value = userCountryCode;
+        }, function(error) {
+            console.error('Geolocation error:', error.message);
+        });
+    } else {
+        console.error('Geolocation is not supported by this browser.');
+    }
+}
+getUserCountryCode();
 
 
 

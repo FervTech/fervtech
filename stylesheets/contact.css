@@ -303,12 +303,7 @@ button{
     display: flex;
     justify-content: center;
     margin: auto;
-    background-color: #FFFFFF;
-    color:#4644AA;
-    border-radius: 6px;
     width: 200px;
-    transition: 0.4s;
-    cursor: pointer;
 
 }
 .submit-button button{
@@ -317,7 +312,7 @@ button{
     padding: .65em 3em;
     border-radius: 5px;
     cursor: pointer;
-    background: #4644AA;
+    background: #EB2F36;
     color: #FFFFFF;
     font-weight: bold;
     transition: 0.4s;

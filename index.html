@@ -32,20 +32,20 @@
             <a href="index.html"><img src="image/Official-Logo1.png" class="logo" alt=""> </a>
             <!...........Nav Links.............>
             <ul class="nav_links">
-                <li><div class="service_error"><a href="services.html">Services</a><label class="angleDown"><i class="fa-solid fa-angle-down"></i></label></div>
+                <li><div class="service_error"><a href="pages/services.html">Services</a><label class="angleDown"><i class="fa-solid fa-angle-down"></i></label></div>
                     <!-----------Services--------------------->
                     <div class="services_menu">
                         <ul class="services_links">
-                            <li> <a href="web.html">Web Development</a> </li>
-                            <li><a href="mobile.html">Mobile App Development</a> </li>
-                            <li><a href="rpa.html">RPA</a> </li>
-                            <li><a href="graphic.html">Graphic Design</a> </li>
+                            <li> <a href="pages/web.html">Web Development</a> </li>
+                            <li><a href="pages/mobile.html">Mobile App Development</a> </li>
+                            <li><a href="pages/rpa.html">RPA</a> </li>
+                            <li><a href="pages/graphic.html">Graphic Design</a> </li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html" class="nav_contact"><button>Contact Us</button></a></li>
+                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="pages/blog.html">Blog</a></li>
+                <li><a href="pages/contact.html" class="nav_contact"><button>Contact Us</button></a></li>
 
 
             </ul>
@@ -61,18 +61,106 @@
 
 
 <!---------Home-Landing-Page------------------->
-<section class="home" id="home">
-    <div class="home_container">
-        <div class="text_content">
-
-                <div class="text_animate">
-                    <h1> Welcome To Fervtech</h1>
+<section class="landing_slider">
+    <div class="landing_slides">
+        <div class="landing_slide">
+            <img src="image/Graphic-Hero-Header.jpg">
+            <div class="landing_content">
+                <div class="topic">Welcome To Fervtech</div>
+                <div class="des">
+                    We make your vision a reality
                 </div>
-            <p>We make your vision  a reality</p>
+                <div class="landing_button">
+                    <button>Read More</button>
+                    <button>Read More</button>
 
-            <a href="contact.html"><button>Let's Discuss Your Project</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="landing_slide">
+            <img src="image/Web-Hero-Header.jpg">
+            <div class="landing_content">
+                <div class="topic">Animal</div>
+                <div class="des">
+                    We make your vision a reality
+                </div>
+                <div class="landing_button">
+                    <button>Read More</button>
+                    <button>Read More</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="landing_slide">
+            <img src="image/Web-Hero-Header.jpg">
+            <div class="landing_content">
+                <div class="topic">Animal</div>
+                <div class="des">
+                    We make your vision a reality
+                </div>
+                <div class="landing_button">
+                    <button>Read More</button>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="landing_slide">
+            <img src="image/Web-Hero-Header.jpg">
+            <div class="landing_content">
+                <div class="topic">Animal</div>
+                <div class="des">
+                    We make your vision a reality
+                </div>
+                <div class="landing_button">
+                    <button>Read More</button>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="landing_slide">
+            <img src="image/About-Hero-Header.jpg">
+            <div class="landing_content">
+                <div class="topic">Animal</div>
+                <div class="des">
+                    We make your vision a reality
+                </div>
+                <div class="landing_button">
+                    <button>Read More</button>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+        <!-------------------arrows----------->
+    <div class="landing_arrows right_hand">
+            <button id="next">></button>
+    </div>
+
+    <div class="landing_arrows left_hand">
+            <button id="prev"><</button>
+    </div>
+
+    <ul class="landing_dots">
+        <li ></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul class="landing_dots_active">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+
+    <!--------time---------->
+    <div class="landing_time"></div>
 
 </section>
 
@@ -87,7 +175,7 @@
             <P>FervTech, a dynamic tech company, fueled by a passionate team of enthusiasts,
                 developers, and creatives. We craft outstanding digital experiences that surpass expectations.
                 From web development and mobile app development to graphic design and robotic process automation (RPA), our mission is to turn visions into realities.</P>
-            <a href="about.html"><button class="btn">Read more </button></a>
+            <a href="pages/about.html"><button class="btn">Read more </button></a>
         </div>
 
         <div class="who_we_are_img">
@@ -102,65 +190,151 @@
 <section class="our_service">
     <h1 >Our Services</h1>
 
-    <div class="Web-Section">
-        <div class="Web-Section-Container">
-       <div class="Web-Section-Text">
+    <div class="our_services_container">
+        <div class="our_services_content">
+       <div class="our_services_text">
            <h2>Web Development</h2>
            <P>Elevate your brand online with FervTech's collaborative web development.
                We fuse your vision with our expertise to create unique,
                impactful websites and web apps that grow your business and captivate your audience.
                Partner with us for a client-centric journey into the digital realm.</P>
-           <a href="web.html"><button>Read more </button></a>
+           <a href="pages/web.html"><button>Read more </button></a>
        </div>
-      <img src="image/Web.png" class="OUR-SERVICES-IMG">
+      <img src="image/Web.png" class="our_services_img">
         </div>
     </div>
 
-    <div class="App-Section">
-         <div class="App-Section-Container">
-        <img src="image/Mobile.png" class="OUR-SERVICES-IMG">
+    <div class="our_services_container">
+         <div class="our_services_content">
+        <img src="image/Mobile.png" class="our_services_img">
 
-        <div class="App-Section-Text">
+        <div class="our_services_text">
             <h2>App Development</h2>
             <P>Realize your vision with expert app development. Our team turns your app idea into a tangible reality,
                 combining innovation with technical prowess. From concept to launch,
                 we're here to craft an app that resonates with your audience,
                 delivering both functionality and an unforgettable user experience.
                 Partner with us to bring your app aspirations to life.</P>
-            <a href="mobile.html"><button>Read more </button></a>
+            <a href="pages/mobile.html"><button>Read more </button></a>
         </div>
          </div>
     </div>
 
-    <div class="RPA-Section">
-        <div class="RPA-Section-Container">
-        <div class="RPA-Section-Text">
+    <div class="our_services_container">
+        <div class="our_services_content">
+        <div class="our_services_text">
             <h2>RPA</h2>
             <P>Transform your operations with robotic process automation (RPA). Discover how our RPA service can be your transformative solution. By entrusting routine tasks to software bots, you'll free up invaluable time and resources, enabling you to focus on strategic endeavors that drive your business forward.
                 Embrace RPA and unlock a new era of productivity and success.</P>
-            <a href="rpa.html"><button>Read more </button></a>
+            <a href="pages/rpa.html"><button>Read more </button></a>
         </div>
-        <img src="image/RPA.png" class="OUR-SERVICES-IMG">
+        <img src="image/RPA.png" class="our_services_img">
         </div>
     </div>
 
 
-    <div class="Graphic-Design-Section">
-        <div class="Graphic-Section-Container">
-        <img src="image/Graphic.png" class="OUR-SERVICES-IMG" alt="">
-        <div class="Graphic-Section-Text">
+    <div class="our_services_container">
+        <div class="our_services_content">
+        <img src="image/Graphic.png" class="our_services_img" alt="">
+        <div class="our_services_text">
             <h2>Graphic Design</h2>
             <P>Inspire with exceptional Graphic Design. Ignite your brand's visual presence using our creative prowess.
                 From dynamic logos and compelling visuals to engaging flyers and comprehensive brand identity design,
                 we're dedicated to translating your concepts into impactful designs that linger in memory.
                 Partner with us to weave a captivating visual story that distinguishes your brand and
                 resonates deeply with your audience.</P>
-            <a href="graphic.html"><button>Read more </button></a>
+            <a href="pages/graphic.html"><button>Read more </button></a>
         </div>
             </div>
     </div>
 </section>
 <!---------Our Services -End------------------->
+
+
+
+<!-----------------Industries------------------------>
+<section class="industries">
+    <h1>Industry</h1>
+    <div class="industry_container">
+    <div class="content industry_content">
+        <div class="industry_left">
+            <p>
+                Our deep industry expertise spans across sectors, including technology, finance, healthcare,
+                logistics, and more, allowing us to develop scalable,
+                secure, and reliable  solutions tailored to the unique
+                needs of each industry.
+
+                With a focus on innovation, efficiency,
+                and customer satisfaction, Fervtech collaborates closely
+                with clients to deliver impactful digital solutions that drive
+                business success and competitive advantage.
+
+            </p>
+        </div>
+
+        <div class="industry_right">
+
+
+            <div class="industry">
+                <span class="industry_icon"><i class="fa-solid fa-sack-dollar"></i></span>
+                <h4>Finance</h4>
+                <p>
+                    We excel in digital banking, fraud detection,
+                    DeFi, InsurTech,
+                    and tax and loan management solutions.
+                </p>
+            </div>
+
+            <div class="industry">
+                <span class="industry_icon"><i class="fa-solid fa-stethoscope"></i></span>
+                <h4>Healthcare</h4>
+                <p>
+                    Our focus spans telemedicine platforms,  healthcare analytics,
+                    and patient management software.
+                </p>
+            </div>
+
+            <div class="industry">
+                <span class="industry_icon"><i class="fa-solid fa-cart-plus"></i></span>
+                <h4>Logistics</h4>
+                <p>
+                    We specialize in supply chain management, inventory management, warehouse automation,
+                    and fleet management.
+                </p>
+            </div>
+
+            <div class="industry">
+                <span class="industry_icon"><i class="fa-solid fa-user-graduate"></i></span>
+                <h4>Education</h4>
+                <p>
+                    Our focus lies in learning management systems, student information systems,
+                    virtual classroom platforms, and content management systems.
+                </p>
+            </div>
+
+            <div class="industry">
+            <span class="industry_icon"><i class="fa-solid fa-wheat-awn"></i></span>
+            <h4>Agriculture</h4>
+            <p>
+                Our expertise extends to farming technologies,
+                crop monitoring systems, livestock management solutions,
+                farm management software.
+            </p>
+
+        </div>
+
+            <div class="industry">
+                <span class="industry_icon"><i class="fa-brands fa-pix"></i></span>
+                <h4>Media & Entertainment</h4>
+                <p>
+                    Our expertise includes content management systems, digital rights management,
+                    audience analytic and graphic design services.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
 
 <!---------Why Fervtech -Start------------------->
 <section class="why_fervtech">
@@ -224,7 +398,7 @@
             <div class="add_on_section1_text">
 
                 <p> We work together with all business niche to solve real digital problems and drive innovative solutions. </p>
-                <a href="contact.html"><button >Let's collaborate </button></a>
+                <a href="pages/contact.html"><button >Let's collaborate </button></a>
             </div>
 
 
@@ -245,7 +419,7 @@
                     <span class="overlay"></span>
 
                     <div class="card-image">
-                        <img src="image/Team4.jpg" alt="" class="card-img">
+                        <img src="image/adams.jpeg" alt="" class="card-img">
                     </div>
                 </div>
                     <div class="card-content">
@@ -290,6 +464,8 @@
                             Lorem dolor sit amet consectetur adipisicing elit.<i class="fa-solid fa-quote-right"></i></p>
                     </div>
                 </div>
+
+
 
         </div>
 
@@ -332,20 +508,20 @@
             <div class="footer_col">
                 <h3>IMPORTANT LINKS</h3>
                 <ul>
-                    <li><a href="services.html">Services</a> </li>
-                    <li><a href="about.html">About Us</a> </li>
-                    <li><a href="blog.html">Blog</a> </li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="pages/services.html">Services</a> </li>
+                    <li><a href="pages/about.html">About Us</a> </li>
+                    <li><a href="pages/blog.html">Blog</a> </li>
+                    <li><a href="pages/contact.html">Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="footer_col">
                 <h3>OUR SERVICES</h3>
                 <ul>
-                    <li><a href="web.html">Web Development</a> </li>
-                    <li><a href="mobile.html">Mobile Development</a> </li>
-                    <li><a href="rpa.html">RPA</a> </li>
-                    <li><a href="graphic.html">Graphic Design</a> </li>
+                    <li><a href="pages/web.html">Web Development</a> </li>
+                    <li><a href="pages/mobile.html">Mobile Development</a> </li>
+                    <li><a href="pages/rpa.html">RPA</a> </li>
+                    <li><a href="pages/graphic.html">Graphic Design</a> </li>
                 </ul>
             </div>
 
@@ -362,7 +538,7 @@
         </div>
 
         </div>
-        <div class="copyright"><p> &copy Copyright 2023 FervTech. All Rights Reserved. </p></div>
+        <div class="copyright"><p> &copy Copyright 2024 FervTech. All Rights Reserved. </p></div>
     </section>
 </footer>
 <!------------------End-------------------->
@@ -381,5 +557,6 @@
 <!--Muscle----->
 <script src="js/muscle.js"></script>
 
+</script>
 </body>
 </html>
