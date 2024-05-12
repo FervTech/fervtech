@@ -56,3 +56,25 @@
                                   nextLanding.click();
                               }, timeAutoLandingSlide);
                           }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              // Remove .html extension from URLs
+              function removeHtmlExtension() {
+                  var currentUrl = window.location.href;
+                  if (currentUrl.endsWith('.html')) {
+                      var newUrl = currentUrl.replace('.html', '');
+                      window.history.pushState({}, '', newUrl);
+                  }
+              }

@@ -747,18 +747,18 @@ button{
         padding: 0 20px;
     }
     .why_fervtech_content .card{
-        width: 350px;
-        margin: 50px;
+        width: 450px;
+        margin: 10px;
     }
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1024px) {
     .why_fervtech_content {
         padding: 0 5px;
     }
 
     .why_fervtech_content .card{
-        width: 290px;
+        width: 350px;
         margin: 15px;
     }
 
@@ -768,6 +768,10 @@ button{
     .why_fervtech_content{
         padding: 0;
         gap: 10px;
+    }
+
+    .why_fervtech_content .card{
+        width: 290px;
     }
 }
 
