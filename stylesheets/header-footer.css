@@ -18,13 +18,12 @@ html{
 body {
     background: #fdfdfdff;
     color:  #414042;
-    font-size: 1rem;
+    font-size: 16px;
     letter-spacing: normal;
 }
 
 h1{
     font-size: 3rem;
-    text-transform: capitalize;
     margin-bottom: 1.875rem;
     color: #4644AA;
     font-weight: bold;
@@ -33,15 +32,13 @@ h1{
 
 h2{
     color: #4644AA;
-    font-size: 2rem;
-    text-transform: capitalize;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1.25rem;
 }
 
 h3{
-    text-transform: capitalize;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #4644AA;
 }
 
@@ -49,6 +46,46 @@ p {
     line-height: 1.5;
     margin-bottom: 30px;
 }
+
+button{
+    background-color: #EB2F36;
+    color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    width: 200px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px){
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    h3{
+        font-size: 1rem;
+    }
+}
+
 
 
 /*---------------Header-----------------*/
@@ -282,7 +319,7 @@ nav:after{
 
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
     .nav_bar{
         display: block;
     }
@@ -332,7 +369,7 @@ nav:after{
     }
 
     .nav_contact button{
-        background-color: #4644AA;
+        background-color: #EB2F36;
         color: #FFFFFF;
         font-weight: bold;
         width: 8em;

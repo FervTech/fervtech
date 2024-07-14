@@ -18,13 +18,12 @@ html{
 body {
     background: #fdfdfdff;
     color:  #414042;
-    font-size: 1rem;
+    font-size: 16px;
     letter-spacing: normal;
 }
 
 h1{
     font-size: 3rem;
-    text-transform: capitalize;
     margin-bottom: 1.875rem;
     color: #4644AA;
     font-weight: bold;
@@ -33,15 +32,18 @@ h1{
 
 h2{
     color: #4644AA;
-    font-size: 2rem;
-    text-transform: capitalize;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1.25rem;
 }
 
 h3{
-    text-transform: capitalize;
-    font-size: 1.2rem;
+    font-size: 2rem;
+    color: #4644AA;
+}
+
+h4{
+    font-size: 1.5rem;
     color: #4644AA;
 }
 
@@ -51,7 +53,7 @@ p {
 }
 
 button{
-    background-color: #4644AA;
+    background-color: #EB2F36;
     color: #ffffff;
     border: 2px solid transparent;
     border-radius: 6px;
@@ -61,6 +63,45 @@ button{
     font-size: 1rem;
 }
 
+@media screen and (max-width: 1024px){
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    h4{
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    h3{
+        font-size: 1.25rem;
+    }
+
+    h4{
+        font-size: 1rem;
+    }
+}
+
+
+
+
 /*-------------Main--------------*/
 /*----Image-Header-------------*/
 
@@ -68,6 +109,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2em;
 }
 
 .hero_header img{
@@ -78,56 +120,62 @@ button{
 
 /*---------Mobile-Article--------*/
 .mobile_article{
-    max-width: 100vw;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 2em;
 
 }
 
 .mobile_article_container{
-    width: 84%;
+    width: 1280px;
+    max-width: 95%;
     margin: 0 auto;
-}
-
-.mobile_article_content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
-.mobile_article_img img{
-    width: 100%;
+.mobile_article_text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
 }
+
+.mobile_article_img img{
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+}
+
+
 
 
 @media screen and (max-width: 1024px) {
 
-    .mobile_article_container {
-        width: 90%;
+    .mobile_article {
+        height: auto;
     }
 
-    .mobile_article_content{
-        margin: auto;
+    .mobile_article_img img{
+        width: 300px;
 
     }
+
+
 
 }
 
-@media screen and (max-width: 700px) {
-
-    .mobile_article_container{
-        width: 94%;
-    }
-
-    .mobile_article_content{
-        grid-template-columns: 1fr;
-        margin-bottom: 2rem;
+@media screen and (max-width: 600px) {
+        .mobile_article_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        gap: 0;
-    }
-
-    .mobile_article_content:nth-child(1) .mobile_article_img{
-        grid-row: 1;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
 
 }
@@ -205,13 +253,14 @@ button{
     transition: transform 1s;
 }
 
-.platform_card h3{
+.platform_card h4{
     height: 35px;
     width: 80%;
     margin: 0.625rem auto .625rem;
     position: relative;
     text-align: center;
     align-items: center;
+    font-size: 1.3rem;
 }
 
 @media screen and (max-width: 1423px){

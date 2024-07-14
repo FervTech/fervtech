@@ -23,7 +23,7 @@ body {
 }
 
 h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.875rem;
     color: #4644AA;
     font-weight: bold;
@@ -32,12 +32,17 @@ h1{
 
 h2{
     color: #4644AA;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1.25rem;
 }
 
 h3{
+    font-size: 2rem;
+    color: #4644AA;
+}
+
+h4{
     font-size: 1.5rem;
     color: #4644AA;
 }
@@ -59,54 +64,63 @@ button{
 }
 
 @media screen and (max-width: 1024px){
-         h1{
-             font-size: 2rem;
-         }
+    h1{
+        font-size: 2.5rem;
+    }
 
-         h2{
-             font-size: 1.5rem;
-         }
+    h2{
+        font-size: 2rem;
+    }
 
-         h3{
-             font-size: 1.25rem;
-         }
+    h3{
+        font-size: 1.5rem;
+    }
+
+    h4{
+        font-size: 1.25rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
-        h1{
-            font-size: 1.5rem;
-        }
+    h1{
+        font-size: 2rem;
+    }
 
-        h2{
-            font-size: 1.25rem;
-        }
+    h2{
+        font-size: 1.5rem;
+    }
 
-        h3{
-            font-size: 1rem;
-        }
+    h3{
+        font-size: 1.25rem;
+    }
+
+    h4{
+        font-size: 1rem;
+    }
 }
-
-
 
 
 
 /*----------------Home-Landing-Page------------------------------*/
 .landing_slider{
-    height: 100vh;
+    height: 80vh;
+    width: 100%;
     overflow: hidden;
-    margin-top: -50px;
     position: relative;
-    margin-bottom: 2em;
+    margin: auto;
 }
 
-.landing_slide{
+
+
+.landing_slide {
     position: absolute;
-   inset: 0 0 0 0;
+    inset: 0 0 0 0;
+
 }
 
 .landing_slide img{
     width: 100%;
-    height: 100%;
+    height: 80vh;
     object-fit: cover;
 }
 
@@ -197,7 +211,7 @@ button{
 
 .landing_dots{
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     color: #EB2F36;
     left: 0;
     width: 100%;
@@ -210,34 +224,19 @@ button{
 
 .landing_dots li{
     list-style: none;
-    width: 25px;
-    height: 25px;
-    background-color:#ffffff;
-    margin: 20px;
-    border-radius: 50%;
-}
-
-.landing_dots_active{
-    position: absolute;
-    bottom: 10%;
-    color: #080808;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    z-index: 12;
-}
-
-.landing_dots_active li{
-    list-style: none;
     width: 20px;
     height: 20px;
-    background-color:#080808;
-    margin: 20px;
-    border-radius: 20px;
+    background-color:#ffffff;
+    border: 3px solid #bbb;
+    margin:0 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
+
+.landing_dots .active{
+    background-color: #555;
+}
+
 
 
 .landing_slide:nth-child(1){
@@ -336,10 +335,18 @@ button{
     }
 }
 
+@media screen and (max-width: 1024px){
+
+
+
+}
+
+
 @media screen and (max-width: 678px){
     .landing_content{
         padding-right: 0;
     }
+
 
 
 }
@@ -351,7 +358,7 @@ button{
 
 .who_we_are {
     width: 100%;
-    margin-bottom: 1em;
+    margin: 2rem 0;
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -447,7 +454,7 @@ button{
 }
 
 
-/*----------------------Ser-Section----------------------*/
+/*----------------------Service-Section----------------------*/
 .our_services_container{
     width: 100%;
     height: 50vh;
@@ -621,14 +628,16 @@ button{
 }
 
 @media screen and (max-width: 600px) {
-    .industry_right{
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
-    }
+
 
     .industry{
         padding: 1rem;
         border-radius: 1rem;
+    }
+
+    .industry_right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
     }
 
     .industry_icon{

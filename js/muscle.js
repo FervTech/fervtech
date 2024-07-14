@@ -141,10 +141,15 @@ let prevLanding = document.getElementById('prev');
 
 let landingSlider = document.querySelector('.landing_slider');
 let landingSlides = document.querySelector('.landing_slides');
+let landingDots = document.querySelector('.landing_dots')
 
 nextLanding.onclick = function (){
     showLandingSlider('next');
 }
+
+landingDots.onclick = function (){
+    showLandingSlider('active')
+};
 
 prevLanding.onclick = function (){
     showLandingSlider('prev');
@@ -158,15 +163,18 @@ let runTime;
 
 function showLandingSlider(type){
     let landingSlide = document.querySelectorAll('.landing_slide');
+    let landingDot = document.querySelectorAll('.dot')
 
 
     if (type === 'next'){
         landingSlides.appendChild(landingSlide[0]);
+        landingDots.appendChild(landingDot[0]);
         landingSlider.classList.add('next');
     }
 
     else {
         landingSlides.prepend(landingSlide[landingSlide.length - 1]);
+        landingDots.prepend(landingDot[landingDot.length - 1]);
         landingSlider.classList.add('prev');
     }
 

@@ -69,6 +69,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2em;
 }
 
 .hero_header img{
@@ -79,81 +80,59 @@ button{
 /*---------------RPA-Article----------------*/
 .rpa_article{
     width: 100%;
-    margin: 5em 0;
-    height: 85vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
+    margin-bottom: 2em;
 }
 
-.rpa_article .rpa_article_container{
+.rpa_article_container{
     width: 1280px;
     max-width: 95%;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
 }
 
-.rpa_article_container .rpa_article_text {
+.rpa_article_text {
     width: 550px;
     max-width: 100%;
     padding: 0 10px;
 }
 
+.rpa_article_img img{
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+}
 
-
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1024px) {
 
     .rpa_article {
-        width: 100%;
         height: auto;
-        padding: 70px 0;
+       }
 
-    }
-
-    .rpa_article_container img{
-        margin-bottom: 20px;
+    .rpa_article_img img{
+        width: 300px;
 
     }
 
 }
-    @media screen and (max-width: 1230px) {
+    @media screen and (max-width: 600px) {
 
         .rpa_article_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
             flex-direction: column-reverse;
         }
-
-        .rpa_article {
-            width: 100%;
-            height: auto;
-
-        }
-
-
     }
 
-    @media screen and (max-width: 650px) {
-        .rpa_article .rpa_article_container img{
-            width: 450px;
 
-        }
-
-
-    }
-
-    @media screen and (max-width: 550px) {
-        .rpa_article .rpa_article_container img{
-            width: 350px;
-
-        }
-
-
-
-    }
 /*-------------Benefits------*/
 .benefits_section{
     margin:  5rem 0;
