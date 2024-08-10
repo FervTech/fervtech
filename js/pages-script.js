@@ -207,7 +207,7 @@ function getUserCountryCode() {
         navigator.geolocation.getCurrentPosition(function(position) {
             // Determine country code based on latitude
             let latitude = position.coords.latitude;
-            let userCountryCode = (latitude >= 0) ? '+1' : ''; // Example: Assume US if latitude is positive
+            let userCountryCode = (latitude >= 0) ? '+233' : ''; // Example: Assume US if latitude is positive
 
             // Pre-fill phone number input with user's country code
             document.getElementById('phone').value = userCountryCode;
