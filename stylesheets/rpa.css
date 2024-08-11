@@ -233,7 +233,7 @@ button{
     margin-bottom: 0.625rem;
 }
 
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1024px) {
 
     .benefits_section {
         width: 100%;
@@ -243,7 +243,7 @@ button{
 
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
     .rpa_benefits{
         box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
         border-radius: 10px;

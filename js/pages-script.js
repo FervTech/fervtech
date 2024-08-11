@@ -13,34 +13,6 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 })();
 
 
-
-//--------lauching-Page-------//
-
-var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
-var x = setInterval(function (){
-    var now =  new Date().getTime();
-    var distance = countDownDate - now;
-
-    var days = Math.floor(distance/ (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds =  Math.floor((distance % (1000 * 60)) / (1000));
-
-    document.getElementById("days").innerHTML = days
-    document.getElementById("hours").innerHTML = hours
-    document.getElementById("minutes").innerHTML = minutes
-    document.getElementById("seconds").innerHTML = seconds
-
-    if(distance < 0){
-        clearInterval(x);
-        document.getElementById("days").innerHTML = "00"
-        document.getElementById("hours").innerHTML ="00"
-        document.getElementById("minutes").innerHTML = "00"
-        document.getElementById("seconds").innerHTML = "00"
-
-    }
-}, 1000);
-
 //---------NavBar--------//
 
 let navBar= document.querySelector(".nav_bar");
@@ -195,33 +167,86 @@ $(document).ready(function () {
 
 
 
-// Default country code
-let defaultCountryCode = '+1'; // Change this to your desired default country code
+//Location Change
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded and parsed");
 
-// Pre-fill phone number input with default country code
-document.getElementById('phone').value = defaultCountryCode;
+    // Default country code
+    const defaultCountryCode = '+233';
 
-// Function to get user's country code based on geolocation
-function getUserCountryCode() {
-    if ('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            // Determine country code based on latitude
-            let latitude = position.coords.latitude;
-            let userCountryCode = (latitude >= 0) ? '+233' : ''; // Example: Assume US if latitude is positive
-
-            // Pre-fill phone number input with user's country code
-            document.getElementById('phone').value = userCountryCode;
-        }, function(error) {
-            console.error('Geolocation error:', error.message);
-        });
-    } else {
-        console.error('Geolocation is not supported by this browser.');
+    // Function to set the country code in the phone input
+    function setCountryCode(code) {
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+            phoneInput.value = code;
+            console.log(`Phone input set to: ${code}`);
+        } else {
+            console.error('Phone input element not found.');
+        }
     }
-}
-getUserCountryCode();
 
+    // Function to get user's country code based on geolocation
+    function getUserCountryCode() {
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
 
+                    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
 
+                    // Call function to determine country code based on latitude and longitude
+                    determineCountryCode(latitude, longitude).then(userCountryCode => {
+                        // If user country code is determined, update the phone input
+                        if (userCountryCode) {
+                            setCountryCode(userCountryCode);
+                        } else {
+                            // Fall back to the default country code
+                            setCountryCode(defaultCountryCode);
+                        }
+                    }).catch(error => {
+                        console.error('Error determining country code:', error);
+                        // Fall back to the default country code
+                        setCountryCode(defaultCountryCode);
+                    });
+                },
+                function (error) {
+                    console.error('Geolocation error:', error.message);
+                    // Fall back to the default country code
+                    setCountryCode(defaultCountryCode);
+                }
+            );
+        } else {
+            console.error('Geolocation is not supported by this browser.');
+            // Fall back to the default country code
+            setCountryCode(defaultCountryCode);
+        }
+    }
+
+    // Function to determine country code from latitude and longitude
+    function determineCountryCode(latitude, longitude) {
+        // Example API call to get country code using Geocode.xyz
+        const apiUrl = `https://geocode.xyz/${latitude},${longitude}?geoit=json&auth=114204130262851212611x114383`;
+
+        return new Promise((resolve, reject) => {
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.country && data.country_code) {
+                        resolve(`+${data.country_code}`); // Format the country code as needed
+                    } else {
+                        resolve(null); // Fallback if no country code is found
+                    }
+                })
+                .catch(error => {
+                    reject(error);
+                });
+        });
+    }
+
+    // Attempt to get the user's geolocation and update the country code accordingly
+    getUserCountryCode();
+});
 
 
 
