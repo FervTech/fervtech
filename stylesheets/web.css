@@ -217,8 +217,6 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1em;
-    box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
     padding: 1em;
 }
 
