@@ -138,58 +138,81 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 let nextLanding = document.getElementById('next');
 let prevLanding = document.getElementById('prev');
 
-
 let landingSlider = document.querySelector('.landing_slider');
 let landingSlides = document.querySelector('.landing_slides');
-let landingDots = document.querySelector('.landing_dots')
+let landingDots = document.querySelector('.landing_dots');
+let landingDot = document.querySelectorAll('.dot');
 
-nextLanding.onclick = function (){
-    showLandingSlider('next');
-}
-
-landingDots.onclick = function (){
-    showLandingSlider('active')
-};
-
-prevLanding.onclick = function (){
-    showLandingSlider('prev');
-}
-let timeCycling = 0;
+let currentIndex = 0;
+let slideCount = landingSlides.children.length;
 let timeAutoLandingSlide = 5000;
-let autoLandingSlide = setTimeout(() => {
-    nextLanding.click();
-}, timeAutoLandingSlide);
-let runTime;
+let autoLandingSlide;
 
-function showLandingSlider(type){
-    let landingSlide = document.querySelectorAll('.landing_slide');
-    let landingDot = document.querySelectorAll('.dot')
+// Initialize auto-slide functionality
+startAutoSlide();
 
+// Event listeners for navigation buttons
+nextLanding.onclick = () => changeSlide('next');
+prevLanding.onclick = () => changeSlide('prev');
 
-    if (type === 'next'){
-        landingSlides.appendChild(landingSlide[0]);
-        landingDots.appendChild(landingDot[0]);
-        landingSlider.classList.add('next');
-    }
+// Event listeners for dots
+landingDot.forEach((dot, index) => {
+    dot.addEventListener('click', () => changeSlide(index));
+});
 
-    else {
-        landingSlides.prepend(landingSlide[landingSlide.length - 1]);
-        landingDots.prepend(landingDot[landingDot.length - 1]);
-        landingSlider.classList.add('prev');
-    }
+// Mouseover and mouseout events to control auto-slide
+landingSlides.addEventListener('mouseover', stopAutoSlide);
+landingSlides.addEventListener('mouseout', startAutoSlide);
 
-    clearTimeout(runTime);
-    runTime = setTimeout(() =>{
-        landingSlider.classList.remove('next');
-        landingSlider.classList.remove('prev');
-    }, timeCycling);
-
-    clearTimeout(autoLandingSlide);
-    autoLandingSlide = setTimeout(() => {
-        nextLanding.click();
-    }, timeAutoLandingSlide)
+// Start the auto-slide timer
+function startAutoSlide() {
+    autoLandingSlide = setInterval(() => {
+        changeSlide('next');
+    }, timeAutoLandingSlide);
 }
 
+// Stop the auto-slide timer
+function stopAutoSlide() {
+    clearInterval(autoLandingSlide);
+}
+
+// Function to change slides based on direction or index
+function changeSlide(directionOrIndex) {
+    let landingSlide = document.querySelectorAll('.landing_slide');
+    if (directionOrIndex === 'next') {
+        landingSlides.appendChild(landingSlide[0]);
+        currentIndex = (currentIndex + 1) % slideCount;
+    } else if (directionOrIndex === 'prev') {
+        landingSlides.prepend(landingSlide[slideCount - 1]);
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    } else if (typeof directionOrIndex === 'number') {
+        let newIndex = directionOrIndex;
+        if (newIndex !== currentIndex) {
+            while (currentIndex !== newIndex) {
+                if (currentIndex < newIndex) {
+                    landingSlides.appendChild(landingSlides.firstElementChild);
+                    currentIndex++;
+                } else {
+                    landingSlides.prepend(landingSlides.lastElementChild);
+                    currentIndex--;
+                }
+                currentIndex = (currentIndex + slideCount) % slideCount;
+            }
+        }
+    }
+    updateDots();
+}
+
+// Function to update the dots' active status
+function updateDots() {
+    landingDot.forEach((dot, index) => {
+        if (index === currentIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
 
 
 

@@ -11,14 +11,13 @@
 
 html{
     scroll-behavior: smooth;
-
+    font-size: 16px;
 }
 
 
 body {
     background: #fdfdfdff;
     color:  #414042;
-    font-size: 16px;
     letter-spacing: normal;
 }
 
