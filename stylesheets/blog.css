@@ -1,3 +1,7 @@
+/* Merianda Font*/
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -9,16 +13,23 @@
     text-decoration: none;
 }
 
+:root{
+    --pr-color : #4644AA;
+    --sc-color : #EB2F36;
+    --font-color : #414042;
+    --neu-color : #ffffff;
+}
+
+
 html{
     scroll-behavior: smooth;
-
+    font-size: 16px;
 }
 
 
 body {
     background: #fdfdfdff;
-    color:  #414042;
-    font-size: 16px;
+    color:  var(--font-color);
     letter-spacing: normal;
 }
 
@@ -27,11 +38,12 @@ h1{
     margin-bottom: 1.875rem;
     color: #4644AA;
     font-weight: bold;
+    font-family: Merienda, sans-serif;
 
 }
 
 h2{
-    color: #4644AA;
+    color: var(--pr-color);
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1.25rem;
@@ -39,12 +51,12 @@ h2{
 
 h3{
     font-size: 1.5rem;
-    color: #4644AA;
+    color: var(--pr-color);
 }
 
 h4{
     font-size: 1.2rem;
-    color: #4644AA;
+    color: var(--pr-color);
 }
 
 p {
@@ -53,8 +65,8 @@ p {
 }
 
 button{
-    background-color: #EB2F36;
-    color: #ffffff;
+    background-color: var(--sc-color);
+    color: var(--neu-color);
     border: 2px solid transparent;
     border-radius: 6px;
     width: 200px;
@@ -98,8 +110,6 @@ button{
         font-size: 0.8rem;
     }
 }
-
-
 
 /* --------------------Main---------------------- */
 .hero_header {

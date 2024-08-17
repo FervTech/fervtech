@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("DOM fully loaded and parsed");
 
     // Default country code
-    const defaultCountryCode = '+233';
+    const defaultCountryCode = '+';
 
     // Function to set the country code in the phone input
     function setCountryCode(code) {

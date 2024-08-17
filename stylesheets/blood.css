@@ -1,3 +1,7 @@
+/* Merianda Font*/
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +13,14 @@
     text-decoration: none;
 }
 
+:root{
+    --pr-color : #4644AA;
+    --sc-color : #EB2F36;
+    --font-color : #414042;
+    --neu-color : #ffffff;
+}
+
+
 html{
     scroll-behavior: smooth;
     font-size: 16px;
@@ -17,7 +29,7 @@ html{
 
 body {
     background: #fdfdfdff;
-    color:  #414042;
+    color:  var(--font-color);
     letter-spacing: normal;
 }
 
@@ -26,11 +38,12 @@ h1{
     margin-bottom: 1.875rem;
     color: #4644AA;
     font-weight: bold;
+    font-family: Merienda, sans-serif;
 
 }
 
 h2{
-    color: #4644AA;
+    color: var(--pr-color);
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1.25rem;
@@ -38,12 +51,12 @@ h2{
 
 h3{
     font-size: 1.5rem;
-    color: #4644AA;
+    color: var(--pr-color);
 }
 
 h4{
     font-size: 1.2rem;
-    color: #4644AA;
+    color: var(--pr-color);
 }
 
 p {
@@ -52,8 +65,8 @@ p {
 }
 
 button{
-    background-color: #EB2F36;
-    color: #ffffff;
+    background-color: var(--sc-color);
+    color: var(--neu-color);
     border: 2px solid transparent;
     border-radius: 6px;
     width: 200px;
@@ -100,7 +113,6 @@ button{
 
 
 
-
 /*----------------Home-Landing-Page------------------------------*/
 .landing_slider{
     height: 80vh;
@@ -133,7 +145,7 @@ button{
     transform: translateX(-50%);
     padding-right: 30%;
     box-sizing: border-box;
-    color: #FFFFFF;
+    color: var(--neu-color);
     text-shadow: 0 5px 10px #0004;
 }
 
@@ -143,7 +155,7 @@ button{
     font-weight: bold;
     font-size: 3em;
     line-height: 1.3em;
-    color: #EB2F36;
+    color: var(--sc-color);
 }
 
 
@@ -159,7 +171,7 @@ button{
     width: 130px;
     border: none;
     border-radius: 3px;
-    color: #4644AA;
+    color: var(--pr-color);
     background-color: #eee;
     font-weight: 500;
 }
@@ -212,7 +224,7 @@ button{
 .landing_dots{
     position: absolute;
     bottom: 5%;
-    color: #EB2F36;
+    color: var(--sc-color);
     left: 0;
     width: 100%;
     margin: 0;
@@ -226,7 +238,7 @@ button{
     list-style: none;
     width: 20px;
     height: 20px;
-    background-color:#ffffff;
+    background-color:var(--neu-color);
     border: 3px solid #bbb;
     margin:0 10px;
     border-radius: 50%;
@@ -316,7 +328,7 @@ button{
 .landing_time{
     width: 0%;
     height: 5px;
-    background-color: #EB2F36;
+    background-color: var(--sc-color);
     position: absolute;
     z-index: 20;
     top: 0;
@@ -336,17 +348,65 @@ button{
 }
 
 @media screen and (max-width: 1024px){
+    .landing_slider{
+        height: 60vh;
+    }
+    .landing_slide img{
+       height: 60vh;
+    }
 
+    .landing_dots li{
+        width: 15px;
+        height: 15px;
+
+    }
 
 
 }
 
 
-@media screen and (max-width: 678px){
-    .landing_content{
-        padding-right: 0;
+@media screen and (max-width: 600px){
+
+    .landing_slider{
+        height: 45vh;
+    }
+    .landing_slide img{
+        height: 45vh;
+        object-fit: fill;
     }
 
+    .landing_content{
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        margin: auto;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .landing_content .topic{
+        font-weight: bold;
+        font-size: 2.5rem;
+        line-height: 1.3rem;
+        color: var(--sc-color);
+    }
+
+    .landing_button{
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: 40px;
+        gap: 2px;
+        margin-top: 20px;
+    }
+
+    .landing_button button{
+        width: 100px;
+        border: none;
+        border-radius: 3px;
+        color: var(--pr-color);
+        background-color: #eee;
+        font-weight: 500;
+    }
 
 
 }
@@ -450,7 +510,7 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #EB2F36;
+    border: 2px solid var(--sc-color);
 }
 
 
@@ -555,7 +615,7 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #EB2F36;
+    border: 2px solid var(--sc-color);
 }
 .industry_container{
 
@@ -600,7 +660,7 @@ button{
     background-color: #EB2F36;
     padding: 0.7rem;
     border-radius: 0.9rem;
-    color: #ffffff;
+    color: var(--neu-color);
 }
 
 .industry h4{
