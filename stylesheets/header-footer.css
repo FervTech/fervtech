@@ -1,51 +1,25 @@
-/* Merianda Font*/
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
-
-
 *{
     margin: 0;
     padding: 0;
     outline: 0;
     border: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
 }
 
-:root{
-    /*--Colors--*/
-    --pr-color : #4644AA;
-    --sc-color : #EB2F36;
-    --font-color : #414042;
-    --neu-color : #ffffff;
-
-    /*--Font-family--*/
-    --pr-font:'Poppins', sans-serif;
-    --hd-font:'Merienda', sans-serif;
-
-    /*--Font-Size--*/
-    --pr-fs: 16px;
-
-
-}
-
-html:focus-within{
-    scroll-behavior: smooth;
-}
-
-
 html{
-    font-size: var(--pr-fs);
+    scroll-behavior: smooth;
+
 }
 
 
 body {
-    text-rendering: optimizeLegibility;
     background: #fdfdfdff;
-    color:  var(--font-color);
+    color:  #414042;
+    font-size: 16px;
     letter-spacing: normal;
-    line-height: 1.5;
-    font-family: var(--pr-font);
 }
 
 h1{
@@ -53,36 +27,34 @@ h1{
     margin-bottom: 1.875rem;
     color: #4644AA;
     font-weight: bold;
-    font-family: var(--hd-font);
 
 }
 
 h2{
-    color: var(--pr-color);
+    color: #4644AA;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1.25rem;
 }
 
 h3{
-    font-size: 1.75rem;
-    color: var(--pr-color);
+    font-size: 1.5rem;
+    color: #4644AA;
 }
 
 h4{
-    font-size: 1.5rem;
-    color: var(--pr-color);
+    font-size: 1.2rem;
+    color: #4644AA;
 }
 
 p {
-    font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 30px;
 }
 
 button{
-    background-color: var(--sc-color);
-    color: var(--neu-color);
+    background-color: #EB2F36;
+    color: #ffffff;
     border: 2px solid transparent;
     border-radius: 6px;
     width: 200px;
@@ -93,47 +65,40 @@ button{
 
 @media screen and (max-width: 1024px){
     h1{
-        font-size: 2.25rem;
-    }
-
-    h2{
         font-size: 2rem;
     }
 
+    h2{
+        font-size: 1.5rem;
+    }
+
     h3{
-        font-size: 1.625rem;
+        font-size: 1.2rem;
     }
 
     h4{
-        font-size: 1.375rem;
-    }
-
-    p{
-        font-size: 0.9375rem;
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 600px) {
     h1{
-        font-size: 2rem;
-    }
-
-    h2{
-        font-size: 1.75rem;
-    }
-
-    h3{
         font-size: 1.5rem;
     }
 
-    h4{
-        font-size: 1.25rem;
+    h2{
+        font-size: 1.2rem;
     }
 
-    p{
-        font-size:0.875rem;
+    h3{
+        font-size: 1rem;
+    }
+
+    h4{
+        font-size: 0.8rem;
     }
 }
+
 
 
 
@@ -164,19 +129,19 @@ button{
 
 
 .nav.sticky .nav_links li a{
-    color: var(--pr-color);
+    color: #4644AA;
 }
 
 .nav.sticky .services_links li a{
-    color: var(--font-color);
+    color: #414042;
 }
 
 .nav.sticky .services_links li a:hover{
-    color: var(--pr-color);
+    color: #4644AA;
 }
 
 .nav.sticky .nav_bar{
-    color: var(--pr-color);
+    color: #4644AA;
 }
 
 .nav.sticky .nav_links li .nav_contact{
@@ -230,35 +195,41 @@ nav:after{
     line-height: 70px;
     padding-bottom: 8px;
     text-transform: uppercase;
+    display: block;
+    
 }
 
 .nav_links li a:before{
     content: '';
     width: 0;
-    height: 3px;
+    height: 5px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--sc-color);
+    background: #EB2F36;
     position: absolute;
     transition: all 0.4s ease;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
 }
 
 .nav_links li a:hover:before{
     width: 100%;
+
 }
 
 
 .angleDown{
     display: none;
-    color:  var(--pr-color);
+    color:  #4644AA;
     font-size: 30px;
     cursor: pointer;
 }
 
 
 .nav_bar{
-    color: var(--neu-color);
+    color: #FFFFFF;
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -273,9 +244,9 @@ nav:after{
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    background: var(--neu-color);
+    background: #ffffff;
     border-radius: 5px;
-    border-top:3px solid var(--pr-color);
+    border-top:3px solid #4644AA;
     z-index: 99;
     width: 300px;
 }
@@ -305,7 +276,7 @@ nav:after{
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background: var(--pr-color);
+    background: #4644AA;
     position: absolute;
     transition: all 0.5s ease;
 
@@ -317,8 +288,7 @@ nav:after{
 
 .services_links li a {
     text-transform: capitalize;
-    display: block;
-    color: var(--font-color);
+    color: #414042;
     padding-left: 15px;
 }
 
@@ -327,7 +297,7 @@ nav:after{
 }
 
 .services_links li a:hover{
-    color: var(--pr-color);
+    color: #4644AA;
 }
 
 .nav_links li .nav_contact{
@@ -380,7 +350,7 @@ nav:after{
         height: 100vh;
         top: 60px;
         left:-100%;
-        background-color: var(--neu-color);
+        background-color: white;
     }
 
     .nav_links.active{
@@ -400,7 +370,7 @@ nav:after{
 
     .nav_links li a{
         font-size: 20px;
-        color: var(--pr-color);
+        color: #4644AA;
         padding: 0 20px;
         display: flex;
         justify-content: space-between;
@@ -419,8 +389,8 @@ nav:after{
     }
 
     .nav_contact button{
-        background-color: var(--sc-color);
-        color: var(--neu-color);
+        background-color: #EB2F36;
+        color: #FFFFFF;
         font-weight: bold;
         width: 8em;
         height: 3em;
@@ -443,7 +413,7 @@ nav:after{
         width: 100%;
         height: 100vh;
         left:-100%;
-        background-color: var(--neu-color);
+        background-color: white;
     }
 
     .services_links li{
@@ -482,6 +452,22 @@ nav:after{
 
 }
 /*------Header-End-----------*/
+
+
+/*----Image-Header-------------*/
+
+.hero_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65vh;
+}
+
+.hero_header img{
+    width: 100%;
+    object-fit: cover;
+}
 
 
 

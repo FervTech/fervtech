@@ -158,13 +158,13 @@ button{
     background-color: #fdfdfdff;
 }
 
-.service_container h1{
+.service h1{
     text-align: center;
     position: relative;
     padding-bottom: 10px;
 }
 
-.service_container h1:after{
+.service h1:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -174,9 +174,15 @@ button{
     border: 2px solid #EB2F36;
 }
 
+.service_container{
+    padding: 0 1em;
+}
+
+
+
 .service_container .service_content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -196,34 +202,29 @@ button{
 .service_content .card:hover{
     background: #4644AA;
     transform: translateY(-10px);
-    color: #ffffff;
+    color: var(--neu-color);
 
 }
 
+
 .service_content div:hover h3{
-    color: #FFFFFF;
+    color: var(--neu-color);
+}
+
+ .service_content p{
+    display: none;
 }
 
 .service_content div:hover p{
+    display: contents;
     color: #ffffff;
-    margin-bottom: 15px;
+}
 
+.service_content div:hover .icon, .service_content div:hover h3{
+   display: none;
 }
 
 
-
-
-.service_content div:hover .icon{
-    color: #4644AA;
-    background-color: #FFFFFF;
-}
-
-.service_content div:hover .fa-laptop-code, .service_content div:hover .fa-robot,
-.service_content div:hover .fa-mobile, .service_content div:hover .fa-palette{
-    color: #4644AA ;
-    transform: scale(1.5);
-
-}
 
 .service_content div .fa-laptop-code, .service_content div .fa-robot,
 .service_content div .fa-mobile, .service_content div .fa-palette{
@@ -251,17 +252,12 @@ button{
 }
 
 .service_content .card h3{
-    margin: 15px 15px 0.625rem;
+    margin: 15px 15px 3rem;
 }
 
-.service_content .card  p{
-    color: #414042;
-}
 
 .service_content .card  a{
-    margin-top: 20px;
-    display: inline-block;
-    color: #4644AA;
+    display: none;
 }
 
 
@@ -272,7 +268,7 @@ button{
     height: 2em;
     width: 8em;
     display: flex;
-    margin: auto;
+    margin: 20px auto;
     justify-content: center;
     align-items: center;
 }

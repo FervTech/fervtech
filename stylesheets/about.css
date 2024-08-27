@@ -137,25 +137,11 @@ button{
 
 
 
-/*----Image-Header-------------*/
-
-.hero_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero_header img{
-    width: 100%;
-    object-fit: cover;
-}
-
-
 
 
 /*----------------------Who We Are -Start----------------------*/
 .who_we_are{
-    margin: 1em 0;
+    margin: 15em 1em 0;
     padding-bottom: 20px;
 }
 

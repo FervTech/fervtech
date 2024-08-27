@@ -140,21 +140,6 @@ button{
 /*----------------Main----------------*/
 
 
-/*----Image-Header-------------*/
-
-.hero_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.hero_header_img img{
-    width: 100%;
-    object-fit: cover;
-}
-
-
 /*---------Graphic-Article--------*/
 .graphic_article{
     width: 100%;
@@ -162,7 +147,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2em;
+    margin:15em 2em 0;
 }
 
 .graphic_article_container{
@@ -427,9 +412,6 @@ button{
         text-align: center ;
     }
 }
-
-
-
 
 
 /*--------Graphic-Contact---------*/

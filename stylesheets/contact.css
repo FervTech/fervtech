@@ -138,16 +138,6 @@ button{
 
 
 /* _--------------------Main---------------------- */
-.hero_header {
-    display: flex;
-    align-items: center;
-}
-
-.hero_header img{
-    width: 100%;
-    object-fit: cover;
-}
-
 
 /*----------F.A.Q---------*/
 .accordion{
@@ -240,7 +230,7 @@ button{
 
 /*----------Contact-Details---------*/
 .Contact-Details{
-    margin-top: 10rem;
+    margin-top: 15rem;
     background-image: url("../image/Background7.jpg");
     color: #fff;
     position: relative;

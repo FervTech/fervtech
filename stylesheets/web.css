@@ -139,19 +139,7 @@ button{
 
 /*----------------Main----------------*/
 
-/*----Image-Header-------------*/
 
-.hero_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2em;
-}
-
-.hero_header img{
-    width: 100%;
-    object-fit: cover;
-}
 
 
 /*---------Webpage-Article--------*/
@@ -161,7 +149,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2em;
+    margin: 15em 2em 0;
 
 }
 
@@ -279,6 +267,7 @@ button{
     text-align: right;
 }
 
+
 .web_service_content:hover .web_service_icon{
     background-color: #EB2F36;
     transition: 0.5s;
@@ -288,6 +277,7 @@ button{
     color: #FFFFFF;
     transition: 0.5s ease;
 }
+
 
 
 

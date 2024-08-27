@@ -139,7 +139,7 @@ button{
 
 /*----------------Home-Landing-Page------------------------------*/
 .landing_slider{
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -156,7 +156,7 @@ button{
 
 .landing_slide img{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     object-fit: cover;
 }
 
@@ -373,10 +373,10 @@ button{
 
 @media screen and (max-width: 1024px){
     .landing_slider{
-        height: 60vh;
+        height: 50vh;
     }
     .landing_slide img{
-       height: 60vh;
+       height: 50vh;
     }
 
     .landing_dots li{
@@ -392,10 +392,10 @@ button{
 @media screen and (max-width: 600px){
 
     .landing_slider{
-        height: 45vh;
+        height: 30vh;
     }
     .landing_slide img{
-        height: 45vh;
+        height: 30vh;
         object-fit: fill;
     }
 
@@ -746,8 +746,8 @@ button{
 
 .why_fervtech h1{
     text-align: center;
-    padding-bottom: 10px;
     position: relative;
+    padding-bottom: 10px;
 
 }
 
@@ -758,7 +758,7 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #EB2F36;
+    border: 2px solid var(--sc-color);
 }
 
 .why_fervtech_container{
@@ -997,7 +997,7 @@ button{
 
 .testimonials .card{
     width: 20em;
-    height: 70%;
+    height: 60%;
      background-color: #FFFFFF;
     border-radius: 2em;
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
@@ -1020,8 +1020,8 @@ button{
 }
 .testimonials .card-status{
     font-size: 16px;
-    color: #EB2F36;
-    margin: 2px 0 9px 0;
+    color: var(--neu-color);
+    z-index: 2;
 }
 .testimonials .image-content{
     position: relative;
@@ -1032,6 +1032,21 @@ button{
     align-items: center;
 
 }
+
+.image-content .swipe_img{
+    display: flex;
+    position: absolute;
+    left: 20px;
+    height: 3em;
+    width: 3em;
+    z-index: 2;
+}
+
+.swipe_img img{
+    border-radius: 100%;
+}
+
+
 
 .testimonials .overlay{
     position: absolute;
@@ -1057,25 +1072,11 @@ button{
     background-color: #FFF;
 }
 
-.testimonials .card-image{
-    position: relative;
-    height: 10em;
-    width: 10em;
-    border-radius: 50%;
-    background: #FFFFFF;
-    padding: 3px;
 
-}
-.testimonials .card-image .card-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #4644AA;
-}
-.testimonials h3{
-    color: #4644AA;
+.testimonials h4{
+    color: var(--neu-color);
     margin-bottom: 0.625rem;
+    z-index: 2;
 }
 
 .testimonials p{
