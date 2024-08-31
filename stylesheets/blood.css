@@ -450,8 +450,8 @@ button{
 }
 
 .who_we_are_container{
-    width: 1280px;
-    max-width: 95%;
+    width: 1500px;
+    max-width: 97%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -555,8 +555,8 @@ button{
 
 
 .our_services_content{
-    width: 1280px;
-    max-width: 95%;
+    width: 1500px;
+    max-width: 97%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -660,16 +660,16 @@ button{
 
 .industry_left p{
     margin: 1rem 0 3rem;
-    color: #FFFFFF;
+    color: var(--neu-color);
 }
 
 .industry_right{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1em;
 }
 .industry{
-    background: #FFFFFF;
+    background: var(--neu-color);
     padding: 2rem;
     border-radius: 2rem;
     transition: all 400ms ease;
@@ -681,7 +681,7 @@ button{
 }
 
 .industry_icon{
-    background-color: #EB2F36;
+    background-color: var(--sc-color);
     padding: 0.7rem;
     border-radius: 0.9rem;
     color: var(--neu-color);

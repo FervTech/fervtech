@@ -140,7 +140,6 @@ button{
 /*-------------Main--------------*/
 
 
-
 /*---------Mobile-Article--------*/
 .mobile_article{
     width: 100%;
@@ -148,13 +147,13 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15em 2em 0;
+    margin-top: 10em;
 
 }
 
 .mobile_article_container{
-    width: 1280px;
-    max-width: 95%;
+    width: 1500px;
+    max-width: 97%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -204,6 +203,96 @@ button{
 }
 
 
+
+/*---------------Mobile-Services-----------*/
+.mobile_services{
+    margin-bottom: 2em;
+}
+
+.mobile_services h1{
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.mobile_services h1:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid var(--sc-color);
+}
+
+.mobile_services p{
+    text-align: center;
+}
+
+.mobile_services_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 2em;
+
+}
+
+.mobile_services_card{
+    background: var(--neu-color);
+    border-radius: 10px;
+    padding:1.25em;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+
+}
+
+.mobile_services_icon{
+    background-color: var(--pr-color);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+    color: var(--neu-color);
+}
+
+
+.mobile_services_card h4{
+    margin: 2rem 0 1rem;
+    color: var(--pr-color);
+}
+
+.mobile_services_card p{
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+@media screen and (max-width: 1024px){
+    .mobile_services_container{
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+}
+
+@media screen and (max-width: 600px){
+    .mobile_services_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .mobile_services_card p, .mobile_services_card h4{
+        text-align: center;
+        justify-content: center;
+    }
+
+    .mobile_services_card span{
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+
+
+
 /*--------Platforms---------*/
 .platforms{
     margin-bottom: 2em;
@@ -234,124 +323,79 @@ button{
 
 .platform_container{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    min-height: 70vh;
-    background: linear-gradient(var(--pr-color), var(--pr-color) 50%, var(--neu-color) 50%, var(--neu-color) 100%);
-    flex-wrap: wrap;
-    padding: 0 50px;
+    padding: 2em;
+    gap: 1em;
 }
 
 .platform_card{
-    position: relative;
     width: 320px;
-    background: #FFFFFF;
-    padding: 20px 15px;
-    border-radius: 20px;
-    cursor: pointer;
+    background: var(--neu-color);
+    padding: 1em 1.25em;
+    border-radius: 10px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
     z-index: 10;
+    transition: 0.5s ease;
 }
 
 .platform_icon{
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    margin: -90px auto 0;
-    background: var(--neu-color);
-    border: 18px solid var(--pr-color);
+    position: relative;
+    background-color: var(--pr-color);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+    color: var(--neu-color);
+    margin: auto;
+    font-size: 2.5em;
+    height: 2em;
+    width: 2em;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.platform_card:hover .platform_icon i{
-    transform: rotate(360deg);
-
-}
-
-.platform_card i{
-    font-size: 40px;
-    color: var(--pr-color);
-    transition: transform 1s;
+    justify-content: center;
 }
 
 .platform_card h4{
-    height: 35px;
-    width: 80%;
-    margin: 0.625rem auto .625rem;
-    position: relative;
+    margin: 2rem 0 1rem;
+    color: #4644AA;
     text-align: center;
-    align-items: center;
-    font-size: 1.3rem;
 }
 
-@media screen and (max-width: 1423px){
-
-    .platform_container{
-        background: #4644AA;
-        gap: 100px;
-        padding: 100px 180px;
-    }
-
+.platform_card p{
+    text-align: left;
+    margin: 0;
+    display: none;
 }
 
+.platform_card:hover{
+    background-color: var(--pr-color);
+    color: var(--neu-color);
+}
 
-@media screen and (max-width: 1191px){
-
-    .platform_container{
-        background: #4644AA;
-        gap: 100px;
-        padding: 100px 100px;
-    }
-
-
-
+.platform_card:hover h4, .platform_card:hover .platform_icon{
+    display: none;
+}
+.platform_card:hover p{
+    display: contents;
 }
 
 
-@media screen and (max-width: 960px){
+@media screen  and (max-width: 600px){
 
     .platform_container{
-        background: #4644AA;
-        gap: 50px;
-        padding: 100px 50px;
-    }
-
-    .platform_card{
-        margin-bottom: 2rem;
-    }
-
-}
-
-@media screen and (max-width: 810px){
-
-    .platform_container{
-        background: #4644AA;
-        gap: 20px;
-        padding: 100px 20px;
-
-    }
-
-    .platform_card{
-        margin-bottom: 4rem;
-    }
-}
-
-@media screen and (max-width: 720px){
-
-    .platform_container{
-        display: grid;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 20px;
+        padding: 1em;
+        text-align: center;
     }
 
     .platform_card{
-        margin: 4rem auto 0;
+       min-width: 350px;
+        height: 250px;
     }
 
 }
+
 
 /*------Mobile-Tech-Slider----*/
 .mobile_tech{

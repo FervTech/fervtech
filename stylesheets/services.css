@@ -140,22 +140,11 @@ button{
 /*----------------Main----------------*/
 
 
-/*----Image-Header-------------*/
-
-.hero_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero_header img{
-    max-width: 100%;
-    object-fit: cover;
-}
 /*------------service page-------*/
 .service{
     padding: 30px 20px;
     background-color: #fdfdfdff;
+    margin-top: 15em;
 }
 
 .service h1{

@@ -137,21 +137,11 @@ button{
 
 
 /* --------------------Main---------------------- */
-.hero_header {
-    display: flex;
 
-    align-items: center;
-}
-
-.hero_header img{
-    width: 100%;
-    object-fit: cover;
-}
 
 /*---------------Main-----------------*/
 .blog_main{
-    margin-top: 10rem;
-    position: relative;
+    margin-top: 7em;
 }
 
 .blog_section_container{
@@ -160,10 +150,17 @@ button{
     grid-template-rows: 1fr;
     grid-gap: 20px;
     padding: 0 20px;
+
+
+
 }
 .blog_section {
     display: flex;
     flex-direction: column;
+    background: var(--neu-color);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    border-radius: 10px;
 }
 .blog_section h1{
     position: relative;
@@ -171,6 +168,7 @@ button{
 }
 
 .recent_post{
+
     display: flex;
     justify-content: left;
     align-items: center;
@@ -258,6 +256,15 @@ button{
     display: flex;
     flex-direction: column;
     gap: 5em;
+
+}
+
+.sidebar{
+    background: var(--neu-color);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    z-index: 5;
+    border-radius: 10px;
 }
 
 .sidebar ul {
@@ -266,6 +273,7 @@ button{
     flex-direction: column;
     grid-gap: 20px;
 }
+
 
 .trend_list{
   display: flex;
