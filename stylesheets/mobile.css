@@ -147,9 +147,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10em;
-
-}
+   }
 
 .mobile_article_container{
     width: 1500px;
@@ -231,7 +229,7 @@ button{
 
 .mobile_services_container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     padding: 2em;
 
@@ -292,15 +290,17 @@ button{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .mobile_services_card p, .mobile_services_card h4{
-        text-align: center;
+    .mobile_services_card{
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
     }
 
-    .mobile_services_card span{
-        display: flex;
-        justify-content: center;
-
+    .mobile_services_card p{
+        text-align: center;
     }
 }
 

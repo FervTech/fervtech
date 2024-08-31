@@ -147,12 +147,12 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15em 2em 0;
+
 }
 
 .rpa_article_container{
-    width: 1280px;
-    max-width: 95%;
+    width: 1500px;
+    max-width: 97%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -195,10 +195,112 @@ button{
         }
     }
 
+/*---------------Services----------------*/
+.rpa_services{
+    margin-bottom: 2em;
+}
+
+.rpa_services h1{
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.rpa_services h1:after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 7%;
+    margin-left:21%;
+    border: 2px solid var(--sc-color);
+}
+
+.rpa_services p{
+    text-align: center;
+}
+.rpa_services_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    padding: 2em;
+}
+
+.rpa_services_card{
+    background: var(--neu-color);
+    border-radius: 10px;
+    padding:1.25em;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.rpa_services_card:hover{
+    background-color: var(--pr-color);
+    color: var(--neu-color);
+}
+
+.rpa_services_card:hover h4{
+    color: var(--neu-color);
+}
+
+.rpa_services_card:hover .rpa_services_icon{
+    background-color: var(--neu-color);
+    color: var(--pr-color);
+}
+
+.rpa_services_icon{
+    background-color: var(--pr-color);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+    color: var(--neu-color);
+}
+
+
+.rpa_services_card h4{
+    margin: 2rem 0 1rem;
+    color: var(--pr-color);
+}
+
+.rpa_services_card p{
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+@media screen and (max-width: 1024px){
+    .rpa_services_container{
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+}
+
+@media screen and (max-width: 600px){
+    .rpa_services_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .rpa_services_card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+
+    .rpa_services_card p{
+        text-align: center;
+    }
+
+}
+
+
 
 /*-------------Benefits------*/
 .benefits_section{
-    margin:  5rem 0;
     width: 100%;
     padding: 0 8%;
 }
@@ -221,7 +323,7 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #EB2F36;
+    border: 2px solid var(--sc-color);
 }
 
 
