@@ -245,6 +245,20 @@ button{
 
 }
 
+.mobile_services_card:hover{
+    background-color: var(--pr-color);
+    color: var(--neu-color);
+}
+
+.mobile_services_card:hover h4{
+    color: var(--neu-color);
+}
+
+.mobile_services_card:hover .mobile_services_icon{
+    background-color: var(--neu-color);
+    color: var(--pr-color);
+}
+
 .mobile_services_icon{
     background-color: var(--pr-color);
     padding: 0.7rem;

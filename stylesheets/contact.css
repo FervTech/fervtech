@@ -377,8 +377,8 @@ button{
     padding: .65em 3em;
     border-radius: 5px;
     cursor: pointer;
-    background: #EB2F36;
-    color: #FFFFFF;
+    background: var(--pr-color);
+    color: var(--neu-color);
     font-weight: bold;
     transition: 0.4s;
 }
