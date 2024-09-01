@@ -219,7 +219,7 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #EB2F36;
+    border: 2px solid var(--sc-color);
 }
 
 .web_services p{
@@ -325,7 +325,7 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #EB2F36;
+    border: 2px solid var(--sc-color);
 }
 
 .slick-list{
@@ -386,12 +386,12 @@ button{
 }
 
 .webpage_contact_content h1{
-    color: #FFFFFF;
+    color: var(--neu-color);
 }
 
 
 .webpage_contact_content p{
-    color: #FFFFFF;
+    color: var(--neu-color);
     padding: 1rem 0;
 }
 
@@ -407,8 +407,8 @@ button{
 
 
 .webpage_contact_text button{
-    background-color: #FFFFFF;
-    color:#4644AA;
+    background-color: var(--neu-color);
+    color: var(--pr-color);
     border-radius: 6px;
     width: 200px;
     font-size: 20px;
@@ -418,7 +418,7 @@ button{
 
 .webpage_contact_text button:hover{
     transform: scale(1.1);
-    color: #4644AA;
+    color: var(--pr-color);
     transition: 0.4s;
     cursor: pointer;
 }

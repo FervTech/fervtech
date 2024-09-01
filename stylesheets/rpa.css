@@ -345,13 +345,13 @@ button{
 .rpa_benefits:hover{
     box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    border-bottom: solid 10px #4644AA;
+    border-bottom: solid 10px var(--pr-color);
 }
 
 .rpa_benefits i{
     font-size: 40px;
     margin-bottom: 10px;
-    color: #4644AA;
+    color: var(--pr-color);
 }
 
 .rpa_benefits h3{
@@ -370,9 +370,9 @@ button{
 
 @media screen and (max-width: 600px) {
     .rpa_benefits{
-        box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+        box-shadow: var(--bs-color);
         border-radius: 10px;
-        border-bottom: solid 10px #4644AA;
+        border-bottom: solid 10px var(--pr-color);
     }
 }
 
@@ -400,11 +400,11 @@ button{
 }
 
 .rpa_contact_content h1{
-    color: #FFFFFF;
+    color: var(--neu-color);
 }
 
 .rpa_contact_content p{
-    color: #FFFFFF;
+    color: var(--neu-color);
     padding: 1rem 0;
 }
 
@@ -421,8 +421,8 @@ button{
 
 
 .rpa_contact_text button{
-    background-color: #FFFFFF;
-    color:#4644AA;
+    background-color: var(--neu-color);
+    color: var(--pr-color);
     border-radius: 6px;
     width: 200px;
     font-size: 20px;
@@ -432,7 +432,7 @@ button{
 
 .rpa_contact_text button:hover{
     transform: scale(1.1);
-    color: #4644AA;
+    color: var(--pr-color);
     transition: 0.4s;
     cursor: pointer;
 }

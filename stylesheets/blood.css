@@ -18,6 +18,8 @@
     --sc-color : #EB2F36;
     --font-color : #414042;
     --neu-color : #ffffff;
+    --bs-color : 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    --bg-color : #fdfdfdff;
 
     /*--Font-family--*/
     --pr-font:'Poppins', sans-serif;
@@ -41,7 +43,7 @@ html{
 
 body {
     text-rendering: optimizeLegibility;
-    background: #fdfdfdff;
+    background: var(--bg-color);
     color:  var(--font-color);
     letter-spacing: normal;
     line-height: 1.5;
@@ -550,7 +552,7 @@ button{
 
 .our_services_container:nth-child(even)
 {
-    background-color: #f1f1f1ff;
+    background-color: var(--bg-color);
 }
 
 
@@ -676,7 +678,7 @@ button{
 }
 
 .industry:hover{
-    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    box-shadow: var(--bs-color);
     z-index: 1;
 }
 
@@ -689,7 +691,7 @@ button{
 
 .industry h4{
     margin: 2rem 0 1rem;
-    color: #4644AA;
+    color: var(--pr-color);
 }
 
 .industry p{
@@ -785,17 +787,17 @@ button{
     flex-direction: column;
     text-align: center;
     width: 290px;
-    background: #fff;
+    background: var(--neu-color);
     padding: 10px;
     transition: 0.3s;
-    box-shadow:  5px 10px 10px rgba(0,0,0,0.6);
+    box-shadow:  var(--bs-color);
     border-radius: 25px;
     position: relative;
 }
 
 
 .why_fervtech_card_img{
-    background: #FFFFFF;
+    background: var(--neu-color);
     max-width: 190px;
     width: 100%;
     height: 190px;
@@ -803,7 +805,6 @@ button{
     border-radius: 50%;
     padding: 5px;
     position: relative;
-    cursor: pointer;
 }
 
 .why_fervtech_card_img img{
@@ -817,13 +818,13 @@ button{
 
 .why_fervtech_card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px -10px rgba(112, 112, 112, 112);
-    background-color: #4644AA;
+    box-shadow: var(--bs-color);
+    background-color: var(--pr-color);
 
 }
 
 .why_fervtech_card:hover h4,.why_fervtech_card:hover p{
-    color: #FFFFFF;
+    color: var(--neu-color);
 }
 
 .why_fervtech_text{
@@ -896,12 +897,12 @@ button{
 }
 
 .add_on_section1_title h1{
-    color: #FFFFFF;
+    color: var(--neu-color);
 
 }
 
 .add_on_section1_text p{
-    color: #FFFFFF;
+    color: var(--neu-color);
     padding: 1rem 0;
 }
 
@@ -914,8 +915,8 @@ button{
 
 
 .add_on_section1_text button{
-    background-color: #FFFFFF;
-    color:#4644AA;
+    background-color: var(--neu-color);
+    color: var(--pr-color);
 }
 
 .add_on_section1_text button:hover {
@@ -981,7 +982,7 @@ button{
     bottom: 0;
     width: 7%;
     margin-left:21%;
-    border: 2px solid #EB2F36;
+    border: 2px solid var(--sc-color);
 }
 
 .testimonials .swiper{
@@ -998,9 +999,9 @@ button{
 .testimonials .card{
     width: 20em;
     height: 60%;
-     background-color: #FFFFFF;
+     background-color: var(--neu-color);
     border-radius: 2em;
-    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+    box-shadow: var(--bs-color);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1054,7 +1055,7 @@ button{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #4644AA;
+    background-color: var(--pr-color);
     border-radius: 25px 25px 0 25px;
 }
 .testimonials .overlay::before,
@@ -1065,11 +1066,11 @@ button{
     bottom: -40px;
     height: 40px;
     width: 40px;
-    background-color: #4644AA;
+    background-color: var(--pr-color);
 }
 .testimonials .overlay::after{
     border-radius: 0 25px 0 0;
-    background-color: #FFF;
+    background-color: var(--neu-color);
 }
 
 
@@ -1086,12 +1087,12 @@ button{
 
 .testimonials p i{
     font-size: 10px;
-    color: #4644AA;
+    color: var(--pr-color);
     margin: 0 6px;
 }
 
 .testimonials .swiper-navBtn{
-    color: #414042;
+    color: var(--font-color);
     transition: color 0.4s;
 }
 .testimonials .swiper-navBtn:hover{
@@ -1111,11 +1112,11 @@ button{
 
 }
 .testimonials .swiper-pagination-bullet{
-    background-color:  #4644AA;
+    background-color:  var(--pr-color);
     opacity: 1;
 }
 .testimonials .swiper-pagination-bullet-active{
-    background-color: #4644AA;
+    background-color:  var(--pr-color);
 }
 
 @media screen and (max-width: 768px) {
