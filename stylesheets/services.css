@@ -38,11 +38,11 @@
 }
 
 .service_content .card{
-    background: #ffffff;
-    color: #4644AA;
+    background: var(--neu-color);
+    color: var(--pr-color);
     padding: 15px;
     border-radius: 10px;
-    border-bottom: 7px solid #4644AA;
+    border-bottom: 7px solid var(--pr-color);
     transition: background 0.5s, transform 0.5s;
     box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
     text-align: center;
@@ -50,7 +50,7 @@
 
 
 .service_content .card:hover{
-    background: #4644AA;
+    background: var(--pr-color);
     transform: translateY(-10px);
     color: var(--neu-color);
 

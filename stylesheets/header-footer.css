@@ -17,7 +17,6 @@
     width: 100%;
     z-index: 99;
     transition: 0.5s ease;
-
 }
 
 .nav.sticky{
@@ -416,7 +415,7 @@ nav:after{
     padding: 0 15px;
 }
 
-.footer_col h3{
+.footer_col h4{
     color: #ffffff;
     margin-bottom:  0.625rem;
     position: relative;

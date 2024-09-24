@@ -80,6 +80,7 @@ p {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 30px;
+    color: var(--font-color);
 }
 
 button{
@@ -653,33 +654,27 @@ button{
 
 .industry_content{
     display: grid;
-    grid-template-columns: 40% 60%;
-}
-
-.industry_left{
-    margin-right: 4rem;
-}
-
-.industry_left p{
-    margin: 1rem 0 3rem;
-    color: var(--neu-color);
-}
-
-.industry_right{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1em;
+    padding: 2em;
 }
+
+
 .industry{
     background: var(--neu-color);
-    padding: 2rem;
-    border-radius: 2rem;
-    transition: all 400ms ease;
+    color: var(--pr-color);
+    padding: 15px;
+    border-radius: 10px;
+    border-bottom: 7px solid var(--pr-color);
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
 .industry:hover{
-    box-shadow: var(--bs-color);
-    z-index: 1;
+    background: var(--pr-color);
+    transform: translateY(-10px);
+    color: var(--neu-color);
 }
 
 .industry_icon{
@@ -695,44 +690,50 @@ button{
 }
 
 .industry p{
-    font-size: 0.85rem;
+    display: none;
 }
+
+.industry_content div:hover p{
+    display: contents;
+    color: #ffffff;
+}
+
+.industry_content div:hover .industry_icon, .industry_content div:hover h4{
+    display: none;
+}
+
+.industry_content div .fa-sack-dollar, .industry_content div .fa-cart-plus,
+.industry_content div .fa-stethoscope, .industry_content div .fa-user-graduate,
+.industry_content div .fa-wheat-awn, .industry_content div .fa-pix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+
+}
+
+.industry .industry_icon{
+    background-color: #4644AA;
+    margin: auto;
+    font-size: 2.5em;
+    height: 2.7em;
+    width: 2.7em;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
 
 @media screen and (max-width: 1024px) {
-    .industries{
-        margin-bottom: 5em;
-
-    }
-   .industry_container {
-       height: auto;
-   }
-
-    .industry_content{
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    .industry_content {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-template-rows: auto auto; /* Two rows */
+        grid-gap: 40px; /* Gap between the cards */
     }
 
-    .industry_left{
-        margin-right: 0;
-    }
-}
-
-@media screen and (max-width: 600px) {
-
-
-    .industry{
-        padding: 1rem;
-        border-radius: 1rem;
-    }
-
-    .industry_right{
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
-    }
-
-    .industry_icon{
-        margin-top: 4px;
-        display: inline-block;
+    .industry {
+        grid-column: span 1; /* Ensure each card spans 1 column */
+        grid-row: span 1; /* Ensure each card spans 1 row */
     }
 }
 
