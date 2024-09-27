@@ -109,9 +109,10 @@
     color: var(--neu-color);
 }
 
-.mobile_services_card:hover h4{
+.mobile_services_card:hover p, .mobile_services_card:hover h4{
     color: var(--neu-color);
 }
+
 
 .mobile_services_card:hover .mobile_services_icon{
     background-color: var(--neu-color);
@@ -251,6 +252,7 @@
 }
 .platform_card:hover p{
     display: contents;
+    color: var(--neu-color);
 }
 
 

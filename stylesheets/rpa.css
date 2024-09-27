@@ -60,7 +60,7 @@
 
 /*---------------Services----------------*/
 .rpa_services{
-    margin-bottom: 2em;
+    margin-bottom: 5em;
 }
 
 .rpa_services h1{
@@ -103,7 +103,7 @@
     color: var(--neu-color);
 }
 
-.rpa_services_card:hover h4{
+.rpa_services_card:hover p, .rpa_services_card:hover h4{
     color: var(--neu-color);
 }
 

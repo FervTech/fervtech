@@ -1,7 +1,7 @@
 
 /*----------------------Who We Are -Start----------------------*/
 .about_us{
-    margin: 15em 1em 0;
+    margin: 0 1em 0;
     padding-bottom: 20px;
 }
 
@@ -11,7 +11,7 @@
     padding-bottom: 10px;
 }
 
-.about_us:after{
+.about_us h1:after{
     content: "";
     position: absolute;
     left: 25%;
@@ -21,20 +21,36 @@
     border: 2px solid var(--sc-color);
 }
 
+.about_us_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.about_us_content{
+    width: 80%;
+}
 
 .about_us p{
-    width: 100%;
+
     text-align: center;
-    margin: 0 auto;
-    display: block;
-    padding: 0 200px;
+
+
+
 }
 
-@media screen and (max-device-width: 1024px){
-    .who_we_are p{
-        padding: 0 50px;
+@media screen and (max-device-width: 600px){
+
+    .about_us_content{
+        width: 95%;
+
     }
+
 }
+
+
 /*----------------------Who We Are-End----------------------*/
 
 /*----------------------Our Mission-Start----------------------*/
@@ -256,7 +272,7 @@
     height: 50vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    padding: 0 50px 0;
+    padding: 0;
     background-color: var(--pr-color);
     place-items: center;
 
@@ -325,15 +341,27 @@
 
 @media screen and (max-width: 1024px) {
     .our_team_container{
-        height: 50vh;
+        height: auto;
         grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        grid-gap: 2em;
+        padding: 10px 40px;
     }
 
 }
 
-@media screen and (max-width: 719px){
+@media screen and (max-width: 750px){
     .our_team_container{
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    }
+
+}
+
+@media screen and (max-width: 611px){
+    .our_team_container{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 10px 30px;
+
     }
 
 }
@@ -343,7 +371,9 @@
 @media screen and (max-width: 600px) {
 
     .our_team_container{
-        height: 120vh;
+        height: auto;
+        grid-gap: 3em;
+        padding: 50px 0;
     }
 
     .team_member {

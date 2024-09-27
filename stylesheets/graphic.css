@@ -9,12 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:15em 2em 0;
 }
 
 .graphic_article_container{
-    width: 1280px;
-    max-width: 95%;
+    width: 1500px;
+    max-width: 97%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;

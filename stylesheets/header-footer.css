@@ -378,18 +378,13 @@ nav:after{
 
 @media screen and (max-width: 1024px){
     .hero_header {
-        height: 40vh;
+        height: auto;
 
     }
 
 }
 
-@media screen and (max-width: 600px) {
-    .hero_header {
-        height: 20vh;
 
-    }
-}
 
 
 /*----------------------Footer------------------------*/
@@ -415,7 +410,7 @@ nav:after{
     padding: 0 15px;
 }
 
-.footer_col h4{
+.footer_col h5{
     color: #ffffff;
     margin-bottom:  0.625rem;
     position: relative;
