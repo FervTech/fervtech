@@ -1,0 +1,1555 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fervtech - Next-Gen Technology Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --secondary: #ec4899;
+            --accent: #8b5cf6;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: float 20s infinite;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -150px;
+            right: -150px;
+            animation-delay: 5s;
+        }
+
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 50%;
+            right: 10%;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(100px, -100px) scale(1.1); }
+            66% { transform: translate(-50px, 100px) scale(0.9); }
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo i {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.router-link-active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .cta-btn {
+            padding: 12px 28px;
+            background: var(--gradient-1);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--gray);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            padding: 12px 28px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary);
+        }
+
+        /* Services Grid */
+        .section {
+            padding: 100px 24px;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 24px;
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotateY(360deg);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .learn-more {
+            color: var(--primary-light);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        .service-card:hover .learn-more {
+            gap: 12px;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 30px;
+            padding: 80px 40px;
+            margin: 100px 24px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Tech Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .tech-item i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .author-info h4 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 80px 24px 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-section h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-light);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-1);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--light);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--light);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .form-control::placeholder {
+            color: var(--gray);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .success-message {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--success);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 24px;
+            color: var(--success);
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background: rgba(15, 23, 42, 0.98);
+                backdrop-filter: blur(20px);
+                width: 100%;
+                padding: 40px;
+                gap: 30px;
+                transition: left 0.3s ease;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding-top: 140px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--darker);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!-- Loading Screen -->
+    <div class="loading" :class="{ hidden: !loading }">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header :class="{ scrolled: scrolled }">
+        <div class="container">
+            <nav>
+                <router-link to="/" class="logo">
+                    <i class="fas fa-rocket"></i> Fervtech
+                </router-link>
+
+                <button class="mobile-menu-btn" @click="mobileMenuOpen = !mobileMenuOpen">
+                    <i :class="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+                </button>
+
+                <ul class="nav-links" :class="{ active: mobileMenuOpen }">
+                    <li><router-link to="/" @click="mobileMenuOpen = false">Home</router-link></li>
+                    <li><router-link to="/services" @click="mobileMenuOpen = false">Services</router-link></li>
+                    <li><router-link to="/products" @click="mobileMenuOpen = false">Products</router-link></li>
+                    <li><router-link to="/about" @click="mobileMenuOpen = false">About</router-link></li>
+                    <li><router-link to="/contact" class="cta-btn" @click="mobileMenuOpen = false">Get Started</router-link></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <router-view></router-view>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-rocket"></i> Fervtech
+                    </div>
+                    <p style="color: var(--gray); margin-bottom: 20px;">
+                        Transforming businesses with cutting-edge technology solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><router-link to="/services">Web Development</router-link></li>
+                        <li><router-link to="/services">App Development</router-link></li>
+                        <li><router-link to="/services">RPA Solutions</router-link></li>
+                        <li><router-link to="/services">Graphic Design</router-link></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><router-link to="/about">About Us</router-link></li>
+                        <li><router-link to="/products">Products</router-link></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li style="color: var(--gray);">info@fervtech.com</li>
+                        <li style="color: var(--gray);">+1 (555) 123-4567</li>
+                        <li style="color: var(--gray);">Innovation City, IC 10101</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 Fervtech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/x-template" id="home-page">
+    <div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Transform Your Business with Cutting-Edge Technology</h1>
+                <p>We build powerful digital solutions that drive growth, enhance efficiency, and create exceptional user experiences.</p>
+                <div class="hero-buttons">
+                    <router-link to="/contact" class="cta-btn">Start Your Project</router-link>
+                    <router-link to="/services" class="btn-secondary">Explore Services</router-link>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Our Services</h2>
+                    <p>Comprehensive technology solutions tailored to your business needs</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card fade-in" v-for="service in services" :key="service.id">
+                        <div class="service-icon">
+                            <i :class="service.icon"></i>
+                        </div>
+                        <h3>{{ service.title }}</h3>
+                        <p>{{ service.description }}</p>
+                        <router-link to="/services" class="learn-more">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </router-link>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <div class="container">
+            <div class="stats-section fade-in">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>250+</h3>
+                        <p>Projects Delivered</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Enterprise Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>8+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Our Technology Stack</h2>
+                    <p>We work with cutting-edge technologies to deliver exceptional results</p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-item fade-in" v-for="tech in technologies" :key="tech.id">
+                        <i :class="tech.icon"></i>
+                        <p style="color: white; font-weight: 600;">{{ tech.name }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>What Our Clients Say</h2>
+                    <p>Real feedback from businesses we've helped transform</p>
+                </div>
+
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div class="testimonial-card fade-in" v-for="testimonial in testimonials" :key="testimonial.id">
+                        <div class="testimonial-content">
+                            "{{ testimonial.text }}"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>{{ testimonial.name }}</h4>
+                                <p>{{ testimonial.position }}, {{ testimonial.company }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</script>
+
+<script type="text/x-template" id="services-page">
+    <div>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-content">
+                <h1>Our Services</h1>
+                <p>Comprehensive technology solutions designed to help your business thrive</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card" v-for="service in allServices" :key="service.id">
+                        <div class="service-icon">
+                            <i :class="service.icon"></i>
+                        </div>
+                        <h3>{{ service.title }}</h3>
+                        <p>{{ service.fullDescription }}</p>
+                        <ul style="color: var(--gray); margin: 20px 0; line-height: 1.8;">
+                            <li v-for="feature in service.features" :key="feature" style="margin-bottom: 8px;">
+                                <i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
+                                {{ feature }}
+                            </li>
+                        </ul>
+                        <router-link to="/contact" class="cta-btn">Get Started</router-link>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</script>
+
+<script type="text/x-template" id="products-page">
+    <div>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-content">
+                <h1>Our Products</h1>
+                <p>Powerful software solutions to streamline your operations</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card" v-for="product in products" :key="product.id">
+                        <div class="service-icon">
+                            <i :class="product.icon"></i>
+                        </div>
+                        <h3>{{ product.name }}</h3>
+                        <p style="color: var(--primary-light); font-weight: 600; margin-bottom: 12px;">{{ product.tagline }}</p>
+                        <p>{{ product.description }}</p>
+                        <div style="margin: 24px 0; padding: 20px; background: rgba(99, 102, 241, 0.1); border-radius: 12px;">
+                            <p style="color: white; font-size: 2rem; font-weight: 800; margin-bottom: 8px;">{{ product.price }}</p>
+                        </div>
+                        <router-link to="/contact" class="cta-btn" style="width: 100%; text-align: center;">Request Demo</router-link>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</script>
+
+<script type="text/x-template" id="about-page">
+    <div>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-content">
+                <h1>About Fervtech</h1>
+                <p>Pioneering digital transformation since 2015</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Our Story</h2>
+                    <p>From startup to industry leader - our journey of innovation and excellence</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To empower businesses with cutting-edge technology solutions that drive growth, enhance efficiency, and create exceptional user experiences.</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be the world's most trusted technology partner, transforming businesses through innovative digital solutions.</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Our Values</h3>
+                        <p>Innovation, Excellence, Integrity, Collaboration, and Customer Success drive everything we do.</p>
+                    </div>
+                </div>
+
+                <div class="section-header fade-in" style="margin-top: 100px;">
+                    <h2>Our Team</h2>
+                    <p>Meet the brilliant minds behind our success</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card fade-in" v-for="member in team" :key="member.id">
+                        <div style="width: 80px; height: 80px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i :class="member.icon" style="font-size: 32px;"></i>
+                        </div>
+                        <h3>{{ member.name }}</h3>
+                        <p style="color: var(--primary-light); margin-bottom: 12px;">{{ member.position }}</p>
+                        <p>{{ member.bio }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</script>
+
+<script type="text/x-template" id="contact-page">
+    <div>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-content">
+                <h1>Get in Touch</h1>
+                <p>Ready to transform your business? Let's discuss how we can help you achieve your goals.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>For general inquiries and project discussions</p>
+                        <p style="color: var(--primary-light); font-weight: 600; margin-top: 16px;">info@fervtech.com</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>Available Monday to Friday, 9 AM - 6 PM</p>
+                        <p style="color: var(--primary-light); font-weight: 600; margin-top: 16px;">+1 (555) 123-4567</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p>Schedule a meeting at our headquarters</p>
+                        <p style="color: var(--primary-light); font-weight: 600; margin-top: 16px;">Innovation City, IC 10101</p>
+                    </div>
+                </div>
+
+                <div class="section-header fade-in" style="margin-top: 100px;">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                </div>
+
+                <div class="contact-form fade-in">
+                    <form @submit.prevent="submitForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" v-model="formData.name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" v-model="formData.email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="What is this regarding?" v-model="formData.subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" class="form-control" v-model="formData.service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="web">Web Development</option>
+                                <option value="app">App Development</option>
+                                <option value="rpa">RPA Solutions</option>
+                                <option value="design">Graphic Design</option>
+                                <option value="product">Product Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your project or inquiry..." v-model="formData.message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-btn" style="width: 100%;">
+                            <span v-if="!submitting">Send Message</span>
+                            <span v-if="submitting">Sending...</span>
+                        </button>
+
+                        <div v-if="submitted" class="success-message">
+                            <i class="fas fa-check-circle" style="margin-right: 8px;"></i>
+                            Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</script>
+
+<script>
+    const { createApp } = Vue;
+    const { createRouter, createWebHashHistory } = VueRouter;
+
+    // Home Page Component
+    const HomePage = {
+        template: '#home-page',
+        data() {
+            return {
+                services: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-code',
+                        title: 'Web Development',
+                        description: 'Custom websites and web applications built with modern technologies and best practices.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-mobile-alt',
+                        title: 'App Development',
+                        description: 'Native and cross-platform mobile applications for iOS and Android platforms.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-robot',
+                        title: 'RPA Solutions',
+                        description: 'Robotic Process Automation to streamline business processes and increase efficiency.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-paint-brush',
+                        title: 'Graphic Design',
+                        description: 'Creative design services including branding, UI/UX, and marketing materials.'
+                    }
+                ],
+                technologies: [
+                    { id: 1, icon: 'fab fa-vuejs', name: 'Vue.js' },
+                    { id: 2, icon: 'fab fa-react', name: 'React' },
+                    { id: 3, icon: 'fab fa-node-js', name: 'Node.js' },
+                    { id: 4, icon: 'fab fa-python', name: 'Python' },
+                    { id: 5, icon: 'fas fa-database', name: 'MongoDB' },
+                    { id: 6, icon: 'fab fa-aws', name: 'AWS' },
+                    { id: 7, icon: 'fab fa-docker', name: 'Docker' },
+                    { id: 8, icon: 'fab fa-figma', name: 'Figma' }
+                ],
+                testimonials: [
+                    {
+                        id: 1,
+                        name: 'Sarah Johnson',
+                        position: 'CEO',
+                        company: 'TechFlow Solutions',
+                        text: 'Fervtech transformed our digital presence with their exceptional web development services. The team was professional, knowledgeable, and delivered beyond our expectations.'
+                    },
+                    {
+                        id: 2,
+                        name: 'Michael Chen',
+                        position: 'CTO',
+                        company: 'InnovateCorp',
+                        text: 'The mobile app developed by Fervtech has been a game-changer for our business. User engagement increased by 300% and customer satisfaction is at an all-time high.'
+                    },
+                    {
+                        id: 3,
+                        name: 'Elena Rodriguez',
+                        position: 'Operations Director',
+                        company: 'Global Retail Group',
+                        text: 'Their RPA solutions automated our most tedious processes, saving us thousands of hours annually. The ROI was evident within the first quarter.'
+                    }
+                ]
+            }
+        },
+        mounted() {
+            this.initScrollAnimations();
+        },
+        methods: {
+            initScrollAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+            }
+        }
+    };
+
+    // Services Page Component
+    const ServicesPage = {
+        template: '#services-page',
+        data() {
+            return {
+                allServices: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-code',
+                        title: 'Web Development',
+                        fullDescription: 'We create responsive, high-performance websites and web applications using the latest technologies. Our solutions are scalable, secure, and optimized for performance.',
+                        features: [
+                            'Custom website development',
+                            'E-commerce solutions',
+                            'Content Management Systems',
+                            'Progressive Web Apps',
+                            'API integration',
+                            'Performance optimization',
+                            'Security implementation',
+                            'SEO optimization'
+                        ]
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-mobile-alt',
+                        title: 'App Development',
+                        fullDescription: 'Native and cross-platform mobile applications for iOS and Android that provide seamless user experiences and meet business objectives.',
+                        features: [
+                            'iOS app development (Swift)',
+                            'Android app development (Kotlin)',
+                            'React Native applications',
+                            'Flutter development',
+                            'App Store deployment',
+                            'Push notifications',
+                            'API integration',
+                            'App maintenance'
+                        ]
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-robot',
+                        title: 'RPA Solutions',
+                        fullDescription: 'Robotic Process Automation to automate repetitive, rule-based tasks, freeing up your team to focus on higher-value work and improving operational efficiency.',
+                        features: [
+                            'Process analysis and optimization',
+                            'Custom RPA bot development',
+                            'Legacy system integration',
+                            'Workflow automation',
+                            'Data extraction and processing',
+                            'Error handling and monitoring',
+                            'Scalability planning',
+                            'Performance analytics'
+                        ]
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-paint-brush',
+                        title: 'Graphic Design',
+                        fullDescription: 'Creative design services that communicate your brand message effectively and create memorable experiences for your audience.',
+                        features: [
+                            'Logo and brand identity',
+                            'UI/UX design',
+                            'Marketing collateral',
+                            'Social media graphics',
+                            'Presentation design',
+                            'Packaging design',
+                            'Infographic design',
+                            'Brand style guides'
+                        ]
+                    }
+                ]
+            }
+        },
+        mounted() {
+            this.initScrollAnimations();
+        },
+        methods: {
+            initScrollAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+            }
+        }
+    };
+
+    // Products Page Component
+    const ProductsPage = {
+        template: '#products-page',
+        data() {
+            return {
+                products: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-chart-line',
+                        name: 'Business Analytics Suite',
+                        tagline: 'Data-Driven Decision Making',
+                        description: 'Comprehensive analytics platform to track business performance and make data-driven decisions with real-time insights and predictive analytics.',
+                        price: 'Starting at $499/month'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-cogs',
+                        name: 'Process Automator Pro',
+                        tagline: 'Intelligent Automation Platform',
+                        description: 'Advanced RPA tool to automate complex business processes across multiple systems with AI-powered decision making and analytics.',
+                        price: 'Starting at $799/month'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-shopping-cart',
+                        name: 'E-Commerce Platform',
+                        tagline: 'Complete Online Store Solution',
+                        description: 'Full-featured online store solution with inventory management, payment processing, and customer relationship management tools.',
+                        price: 'Starting at $299/month'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-cloud',
+                        name: 'Cloud Management Suite',
+                        tagline: 'Simplified Cloud Operations',
+                        description: 'Centralized platform to manage multiple cloud services, optimize costs, and ensure security compliance across your cloud infrastructure.',
+                        price: 'Starting at $599/month'
+                    }
+                ]
+            }
+        },
+        mounted() {
+            this.initScrollAnimations();
+        },
+        methods: {
+            initScrollAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+            }
+        }
+    };
+
+    // About Page Component
+    const AboutPage = {
+        template: '#about-page',
+        data() {
+            return {
+                team: [
+                    {
+                        id: 1,
+                        name: 'Alex Morgan',
+                        position: 'CEO & Founder',
+                        icon: 'fas fa-user-tie',
+                        bio: 'With over 15 years in tech leadership, Alex founded Fervtech with a vision to make cutting-edge technology accessible to businesses of all sizes.'
+                    },
+                    {
+                        id: 2,
+                        name: 'Dr. Lisa Wong',
+                        position: 'CTO',
+                        icon: 'fas fa-laptop-code',
+                        bio: 'PhD in Computer Science with expertise in AI and cloud architecture. Lisa leads our technical teams in delivering innovative solutions.'
+                    },
+                    {
+                        id: 3,
+                        name: 'Marcus Chen',
+                        position: 'Head of Design',
+                        icon: 'fas fa-palette',
+                        bio: 'Award-winning designer with 10+ years of experience creating intuitive user experiences and compelling brand identities.'
+                    },
+                    {
+                        id: 4,
+                        name: 'Sarah Johnson',
+                        position: 'Head of RPA Solutions',
+                        icon: 'fas fa-robot',
+                        bio: 'Automation expert with deep knowledge in process optimization and intelligent automation technologies.'
+                    }
+                ]
+            }
+        },
+        mounted() {
+            this.initScrollAnimations();
+        },
+        methods: {
+            initScrollAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+            }
+        }
+    };
+
+    // Contact Page Component
+    const ContactPage = {
+        template: '#contact-page',
+        data() {
+            return {
+                formData: {
+                    name: '',
+                    email: '',
+                    subject: '',
+                    service: '',
+                    message: ''
+                },
+                submitting: false,
+                submitted: false
+            }
+        },
+        methods: {
+            async submitForm() {
+                this.submitting = true;
+
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 1500));
+
+                console.log('Form submitted:', this.formData);
+
+                this.submitting = false;
+                this.submitted = true;
+
+                // Reset form
+                this.formData = {
+                    name: '',
+                    email: '',
+                    subject: '',
+                    service: '',
+                    message: ''
+                };
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    this.submitted = false;
+                }, 5000);
+            }
+        },
+        mounted() {
+            this.initScrollAnimations();
+        },
+        methods: {
+            initScrollAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+            },
+            async submitForm() {
+                this.submitting = true;
+
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 1500));
+
+                console.log('Form submitted:', this.formData);
+
+                this.submitting = false;
+                this.submitted = true;
+
+                // Reset form
+                this.formData = {
+                    name: '',
+                    email: '',
+                    subject: '',
+                    service: '',
+                    message: ''
+                };
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    this.submitted = false;
+                }, 5000);
+            }
+        }
+    };
+
+    // Router Configuration
+    const routes = [
+        { path: '/', component: HomePage },
+        { path: '/services', component: ServicesPage },
+        { path: '/products', component: ProductsPage },
+        { path: '/about', component: AboutPage },
+        { path: '/contact', component: ContactPage }
+    ];
+
+    const router = createRouter({
+        history: createWebHashHistory(),
+        routes
+    });
+
+    // Create Vue App
+    const app = createApp({
+        data() {
+            return {
+                loading: true,
+                scrolled: false,
+                mobileMenuOpen: false
+            }
+        },
+        methods: {
+            handleScroll() {
+                this.scrolled = window.scrollY > 50;
+            }
+        },
+        mounted() {
+            // Simulate loading
+            setTimeout(() => {
+                this.loading = false;
+            }, 1500);
+
+            // Handle scroll events
+            window.addEventListener('scroll', this.handleScroll);
+
+            // Initialize scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observe all fade-in elements
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+            }, 100);
+        },
+        beforeUnmount() {
+            window.removeEventListener('scroll', this.handleScroll);
+        }
+    });
+
+    app.use(router);
+    app.mount('#app');
+</script>
+</body>
+</html>

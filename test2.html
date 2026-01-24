@@ -1,0 +1,3638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fervtech - Technology Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <style>
+        :root {
+            --primary-blue: #0a2463;
+            --secondary-blue: #1e88e5;
+            --accent-blue: #64b5f6;
+            --light-blue: #e3f2fd;
+            --dark-gray: #333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+            position: relative;
+        }
+
+        .nav-links > li > a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links > li > a:hover,
+        .nav-links > li > a.router-link-active {
+            color: var(--secondary-blue);
+        }
+
+        .nav-links > li > a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-blue);
+            left: 0;
+            bottom: -5px;
+            transition: var(--transition);
+        }
+
+        .nav-links > li > a:hover::after,
+        .nav-links > li > a.router-link-active::after {
+            width: 100%;
+        }
+
+        /* Dropdown Menu for Services */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            z-index: 1;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: var(--dark-gray);
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            padding-left: 25px;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: var(--primary-blue);
+            margin-bottom: 4px;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            min-height: calc(100vh - 200px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: var(--white);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Page Sections */
+        .page-section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-blue);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+        }
+
+        /* Industry Section */
+        .industry-section {
+            background-color: var(--white);
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .industry-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--secondary-blue);
+        }
+
+        .industry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .industry-icon {
+            font-size: 50px;
+            color: var(--secondary-blue);
+            margin-bottom: 25px;
+        }
+
+        .industry-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .industry-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-section {
+            background-color: var(--light-blue);
+        }
+
+        .why-choose-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .why-choose-text {
+            padding-right: 20px;
+        }
+
+        .why-choose-text h2 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .why-choose-text p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .why-choose-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            color: var(--secondary-blue);
+            margin-right: 15px;
+            margin-top: 5px;
+            min-width: 30px;
+        }
+
+        .feature-content h3 {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .feature-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .why-choose-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-box {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-blue);
+            margin-bottom: 10px;
+        }
+
+        .stat-text {
+            font-size: 1.1rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: var(--white);
+        }
+
+        .testimonials-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .testimonial-track {
+            display: flex;
+            transition: var(--transition);
+        }
+
+        .testimonial-card {
+            flex: 0 0 100%;
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin: 0 10px;
+        }
+
+        .testimonial-content {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .testimonial-content:before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -15px;
+            font-size: 60px;
+            color: var(--light-blue);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary-blue);
+            font-size: 24px;
+        }
+
+        .author-info h4 {
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--secondary-blue);
+            font-weight: 600;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 15px;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--light-blue);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .nav-dot.active {
+            background-color: var(--secondary-blue);
+            transform: scale(1.2);
+        }
+
+        /* Clients & Partners Section */
+        .clients-section {
+            background-color: var(--light-blue);
+        }
+
+        .clients-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .client-logo {
+            background-color: var(--white);
+            width: 180px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            padding: 20px;
+        }
+
+        .client-logo:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .client-logo i {
+            font-size: 60px;
+            color: var(--primary-blue);
+        }
+
+        .client-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Technology Expertise Section */
+        .tech-expertise-section {
+            background-color: var(--white);
+        }
+
+        .tech-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 50px;
+        }
+
+        .tech-tab {
+            background-color: var(--light-blue);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tech-tab:hover {
+            background-color: var(--secondary-blue);
+            color: var(--white);
+        }
+
+        .tech-tab.active {
+            background-color: var(--secondary-blue);
+            color: var(--white);
+        }
+
+        .tech-content {
+            display: none;
+        }
+
+        .tech-content.active {
+            display: block;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-bottom: 4px solid var(--secondary-blue);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .tech-icon {
+            font-size: 50px;
+            color: var(--secondary-blue);
+            margin-bottom: 20px;
+        }
+
+        .tech-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .tech-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .tech-tag {
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Service Detail Page */
+        .service-detail-page {
+            background-color: var(--light-blue);
+        }
+
+        .service-detail-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .service-icon-large {
+            font-size: 80px;
+            color: var(--secondary-blue);
+            margin-bottom: 25px;
+        }
+
+        .service-header h1 {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .service-header p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Service Cards Grid Layout */
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+        }
+
+        .service-section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .service-section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .service-section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-blue);
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .service-section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 4px solid var(--secondary-blue);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: var(--secondary-blue);
+            margin-bottom: 20px;
+            background-color: var(--light-blue);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Process Cards */
+        .process-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .process-step-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background-color: var(--secondary-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .process-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            padding-top: 10px;
+        }
+
+        .process-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Benefit Cards */
+        .benefit-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-bottom: 4px solid var(--accent-blue);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .benefit-icon {
+            font-size: 35px;
+            color: var(--secondary-blue);
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .benefit-card strong {
+            color: var(--primary-blue);
+        }
+
+        /* Service CTA */
+        .service-cta {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            border-radius: 10px;
+            color: white;
+        }
+
+        .service-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .service-cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Products Page */
+        .products-page {
+            background-color: var(--white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .product-card-detailed {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .product-card-detailed:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .product-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .product-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .product-body {
+            padding: 30px;
+        }
+
+        .product-features {
+            margin: 25px 0;
+        }
+
+        .product-features h4 {
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .product-features ul {
+            list-style: none;
+        }
+
+        .product-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .product-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-blue);
+            font-weight: bold;
+        }
+
+        .product-price {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+        }
+
+        .product-price h3 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        /* About Page */
+        .about-page {
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .about-mission {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-mission h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .team-section {
+            margin-top: 80px;
+        }
+
+        .team-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .team-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-img {
+            height: 200px;
+            background-color: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: var(--primary-blue);
+        }
+
+        .member-info {
+            padding: 25px;
+        }
+
+        .member-info h4 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        .member-info p {
+            color: var(--secondary-blue);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Page */
+        .contact-page {
+            background-color: var(--white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-detail i {
+            font-size: 24px;
+            color: var(--secondary-blue);
+            margin-right: 15px;
+            width: 30px;
+            margin-top: 5px;
+        }
+
+        .contact-detail h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--secondary-blue);
+            color: var(--white);
+            border: none;
+            padding: 15px 35px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-blue);
+        }
+
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Homepage Specific */
+        .home-services-preview {
+            background-color: var(--light-blue);
+            padding: 100px 0;
+        }
+
+        .services-preview-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-preview-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-preview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-preview-icon {
+            font-size: 50px;
+            color: var(--secondary-blue);
+            margin-bottom: 25px;
+        }
+
+        .service-preview-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .view-all {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 60px 0 30px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about {
+            grid-column: span 1;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .footer-about p {
+            color: #ccc;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .footer-social {
+            margin-top: 25px;
+        }
+
+        .footer-social h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--white);
+        }
+
+        .footer-social h4::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-blue);
+            bottom: 0;
+            left: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 20px;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-links-column h4,
+        .footer-services-column h4,
+        .footer-newsletter h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--white);
+        }
+
+        .footer-links-column h4::after,
+        .footer-services-column h4::after,
+        .footer-newsletter h4::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-blue);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links-column ul,
+        .footer-services-column ul {
+            list-style: none;
+        }
+
+        .footer-links-column li,
+        .footer-services-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links-column a,
+        .footer-services-column a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links-column a:hover,
+        .footer-services-column a:hover {
+            color: var(--accent-blue);
+            padding-left: 5px;
+        }
+
+        .footer-newsletter p {
+            color: #ccc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .newsletter-form input {
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .newsletter-form button {
+            background-color: var(--accent-blue);
+            color: var(--white);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--secondary-blue);
+        }
+
+        .newsletter-note {
+            color: #aaa;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-blue);
+            transform: translateY(-5px);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .page-section {
+                padding: 80px 0;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .service-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .why-choose-container {
+                grid-template-columns: 1fr;
+            }
+
+            .why-choose-text {
+                padding-right: 0;
+            }
+
+            .clients-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-about {
+                grid-column: span 2;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background-color: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+                padding: 20px 0;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                display: none;
+                background-color: #f9f9f9;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .client-logo {
+                width: 160px;
+                height: 90px;
+            }
+
+            .tech-tabs {
+                gap: 8px;
+            }
+
+            .tech-tab {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-about {
+                grid-column: span 1;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .why-choose-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 140px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card,
+            .process-card,
+            .benefit-card {
+                padding: 25px;
+            }
+
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .client-logo {
+                width: 140px;
+                height: 80px;
+            }
+
+            .client-logo i {
+                font-size: 50px;
+            }
+
+            .tech-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tech-tab {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+
+            .back-to-top {
+                bottom: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .testimonial-card {
+                padding: 30px 25px;
+            }
+
+            .industry-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <router-link to="/" class="logo">
+                    <i class="fas fa-rocket"></i> Fervtech
+                </router-link>
+
+                <div class="hamburger" :class="{ active: mobileMenuOpen }" @click="toggleMobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-links" :class="{ active: mobileMenuOpen }">
+                    <li><router-link to="/" @click="closeMobileMenu">Home</router-link></li>
+
+                    <li class="dropdown" :class="{ active: servicesDropdownOpen }">
+                        <a href="#" @click.prevent="toggleServicesDropdown">Services <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i></a>
+                        <div class="dropdown-content">
+                            <router-link to="/services/web-development" @click="closeMobileMenu">Web Development</router-link>
+                            <router-link to="/services/app-development" @click="closeMobileMenu">App Development</router-link>
+                            <router-link to="/services/rpa-solutions" @click="closeMobileMenu">RPA Solutions</router-link>
+                            <router-link to="/services/graphic-design" @click="closeMobileMenu">Graphic Design</router-link>
+                        </div>
+                    </li>
+
+                    <li><router-link to="/products" @click="closeMobileMenu">Products</router-link></li>
+                    <li><router-link to="/about" @click="closeMobileMenu">About Us</router-link></li>
+                    <li><router-link to="/contact" @click="closeMobileMenu">Contact</router-link></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <router-view></router-view>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Fervtech</div>
+                    <p>Providing innovative technology solutions to help businesses thrive in the digital world. We specialize in web development, app development, RPA, and graphic design.</p>
+
+                    <div class="footer-social">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-links-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><router-link to="/">Home</router-link></li>
+                        <li><router-link to="/products">Products</router-link></li>
+                        <li><router-link to="/about">About Us</router-link></li>
+                        <li><router-link to="/contact">Contact</router-link></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services-column">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><router-link to="/services/web-development">Web Development</router-link></li>
+                        <li><router-link to="/services/app-development">App Development</router-link></li>
+                        <li><router-link to="/services/rpa-solutions">RPA Solutions</router-link></li>
+                        <li><router-link to="/services/graphic-design">Graphic Design</router-link></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email" v-model="newsletterEmail">
+                        <button type="button" @click="subscribeNewsletter" id="footer_submit">Subscribe</button>
+                    </div>
+                    <p id="footer_paragraph" class="newsletter-note">Receive informative weekly newsletter.</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 Fervtech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" :class="{ show: showBackToTop }" @click="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+</div>
+
+<!-- Vue Templates -->
+<script type="text/x-template" id="home-page">
+    <div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Innovative Technology Solutions</h1>
+                <p>Fervtech provides cutting-edge web development, app development, RPA, and graphic design services to transform your business and drive growth in the digital age.</p>
+                <router-link to="/contact" class="cta-button">Get Started</router-link>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="home-services-preview">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Services</h2>
+                    <p>We offer a comprehensive range of technology solutions to help your business thrive in the digital world.</p>
+                </div>
+
+                <div class="services-preview-container">
+                    <div class="service-preview-card" v-for="service in services" :key="service.id">
+                        <div class="service-preview-icon">
+                            <i :class="service.icon"></i>
+                        </div>
+                        <h3>{{ service.title }}</h3>
+                        <p>{{ service.shortDescription }}</p>
+                        <div style="margin-top: 20px;">
+                            <router-link :to="service.link" class="cta-button">Learn More</router-link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Section -->
+        <section class="industry-section page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Industries We Serve</h2>
+                    <p>We provide technology solutions across various industries, helping businesses of all sizes achieve their digital transformation goals.</p>
+                </div>
+
+                <div class="industry-grid">
+                    <div class="industry-card" v-for="industry in industries" :key="industry.id">
+                        <div class="industry-icon">
+                            <i :class="industry.icon"></i>
+                        </div>
+                        <h3>{{ industry.title }}</h3>
+                        <p>{{ industry.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Fervtech Section -->
+        <section class="why-choose-section page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Fervtech</h2>
+                    <p>Discover what makes us the preferred technology partner for businesses worldwide.</p>
+                </div>
+
+                <div class="why-choose-container">
+                    <div class="why-choose-text">
+                        <h2>Your Trusted Technology Partner</h2>
+                        <p>At Fervtech, we combine technical expertise with business acumen to deliver solutions that drive real results. Our client-centric approach ensures we understand your unique challenges and deliver tailored solutions.</p>
+
+                        <div class="why-choose-features">
+                            <div class="feature-item" v-for="feature in whyChooseFeatures" :key="feature.id">
+                                <div class="feature-icon">
+                                    <i :class="feature.icon"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>{{ feature.title }}</h3>
+                                    <p>{{ feature.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="why-choose-stats">
+                            <div class="stat-box">
+                                <div class="stat-number">250+</div>
+                                <div class="stat-text">Projects Completed</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-text">Client Satisfaction</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-text">Happy Clients</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">8+</div>
+                                <div class="stat-text">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="why-choose-image">
+                        <div class="member-img" style="height: 100%; border-radius: 10px;">
+                            <i class="fas fa-chart-line" style="font-size: 100px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients & Partners Section -->
+        <section class="clients-section page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Clients & Partners</h2>
+                    <p>We're proud to work with industry leaders and innovative companies across various sectors.</p>
+                </div>
+
+                <div class="clients-container">
+                    <div class="clients-grid">
+                        <div class="client-logo" v-for="client in clients" :key="client.id">
+                            <i :class="client.icon"></i>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <p class="client-name">Trusted by 50+ companies worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Expertise Section -->
+        <section class="tech-expertise-section page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Technology Expertise</h2>
+                    <p>We work with the latest technologies and frameworks to deliver cutting-edge solutions.</p>
+                </div>
+
+                <div class="tech-tabs">
+                    <button class="tech-tab"
+                            v-for="tab in techTabs"
+                            :key="tab.id"
+                            :class="{ active: activeTechTab === tab.id }"
+                            @click="activeTechTab = tab.id">
+                        {{ tab.title }}
+                    </button>
+                </div>
+
+                <div class="tech-content" v-for="tab in techTabs" :key="tab.id" :class="{ active: activeTechTab === tab.id }">
+                    <div class="tech-grid">
+                        <div class="tech-card" v-for="tech in tab.technologies" :key="tech.id">
+                            <div class="tech-icon">
+                                <i :class="tech.icon"></i>
+                            </div>
+                            <h3>{{ tech.title }}</h3>
+                            <p>{{ tech.description }}</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag" v-for="tag in tech.tags" :key="tag">{{ tag }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Client Testimonials</h2>
+                    <p>See what our clients say about working with Fervtech and the impact of our solutions.</p>
+                </div>
+
+                <div class="testimonials-container">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-track" :style="{ transform: `translateX(-${currentTestimonial * 100}%)` }">
+                            <div class="testimonial-card" v-for="testimonial in testimonials" :key="testimonial.id">
+                                <div class="testimonial-content">
+                                    <p class="testimonial-text">{{ testimonial.text }}</p>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="author-info">
+                                            <h4>{{ testimonial.name }}</h4>
+                                            <p>{{ testimonial.position }}, {{ testimonial.company }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-nav">
+                        <div class="nav-dot"
+                             v-for="(testimonial, index) in testimonials"
+                             :key="index"
+                             :class="{ active: currentTestimonial === index }"
+                             @click="currentTestimonial = index"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Preview -->
+        <section class="products-page">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Products</h2>
+                    <p>Explore our innovative software solutions designed to streamline operations and enhance productivity.</p>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card-detailed" v-for="product in products.slice(0, 3)" :key="product.id">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <i :class="product.icon"></i>
+                            </div>
+                            <h2>{{ product.name }}</h2>
+                            <p>{{ product.tagline }}</p>
+                        </div>
+                        <div class="product-body">
+                            <p>{{ product.description }}</p>
+
+                            <div class="product-features">
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li v-for="feature in product.features.slice(0, 3)" :key="feature">{{ feature }}</li>
+                                </ul>
+                            </div>
+
+                            <div class="product-price">
+                                <h3>{{ product.price }}</h3>
+                                <router-link to="/contact" class="cta-button">Request a Demo</router-link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-all">
+                    <router-link to="/products" class="cta-button">View All Products</router-link>
+                </div>
+            </div>
+        </section>
+    </div>
+</script>
+
+<!-- Web Development Service Page -->
+<script type="text/x-template" id="web-development-page">
+    <div class="service-detail-page page-section">
+        <div class="container">
+            <div class="service-header">
+                <div class="service-icon-large">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h1>Web Development</h1>
+                <p>We create responsive, high-performance websites and web applications using the latest technologies. From simple business websites to complex web applications, we deliver solutions that drive results.</p>
+            </div>
+
+            <div class="service-content">
+                <!-- Features Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Our Web Development Services</h2>
+                        <p>Comprehensive web solutions tailored to your business needs</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="feature-card" v-for="feature in webFeatures" :key="feature.id">
+                            <div class="feature-icon">
+                                <i :class="feature.icon"></i>
+                            </div>
+                            <h3>{{ feature.title }}</h3>
+                            <p>{{ feature.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Our Development Process</h2>
+                        <p>A structured approach to delivering exceptional web solutions</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="process-card" v-for="step in webProcess" :key="step.id">
+                            <div class="process-step-number">{{ step.step }}</div>
+                            <h3>{{ step.title }}</h3>
+                            <p>{{ step.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Benefits of Our Web Development</h2>
+                        <p>Why choose our web development services</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="benefit-card" v-for="benefit in webBenefits" :key="benefit.id">
+                            <div class="benefit-icon">
+                                <i :class="benefit.icon"></i>
+                            </div>
+                            <h3>{{ benefit.title }}</h3>
+                            <p>{{ benefit.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-cta">
+                <h2>Ready to Build Your Website?</h2>
+                <p>Contact us today to discuss your web development project. We'll work with you to create a solution that meets your goals and exceeds your expectations.</p>
+                <router-link to="/contact" class="cta-button">Start Your Project</router-link>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- App Development Service Page -->
+<script type="text/x-template" id="app-development-page">
+    <div class="service-detail-page page-section">
+        <div class="container">
+            <div class="service-header">
+                <div class="service-icon-large">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h1>App Development</h1>
+                <p>Our mobile app development services cover both iOS and Android platforms. We build native and cross-platform applications that provide seamless user experiences and meet business objectives.</p>
+            </div>
+
+            <div class="service-content">
+                <!-- Features Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Our App Development Services</h2>
+                        <p>Complete mobile solutions for iOS, Android, and cross-platform</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="feature-card" v-for="feature in appFeatures" :key="feature.id">
+                            <div class="feature-icon">
+                                <i :class="feature.icon"></i>
+                            </div>
+                            <h3>{{ feature.title }}</h3>
+                            <p>{{ feature.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Our App Development Process</h2>
+                        <p>From concept to deployment and beyond</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="process-card" v-for="step in appProcess" :key="step.id">
+                            <div class="process-step-number">{{ step.step }}</div>
+                            <h3>{{ step.title }}</h3>
+                            <p>{{ step.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Why Choose Our App Development</h2>
+                        <p>Advantages of partnering with us for your mobile app</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="benefit-card" v-for="benefit in appBenefits" :key="benefit.id">
+                            <div class="benefit-icon">
+                                <i :class="benefit.icon"></i>
+                            </div>
+                            <h3>{{ benefit.title }}</h3>
+                            <p>{{ benefit.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-cta">
+                <h2>Bring Your App Idea to Life</h2>
+                <p>Whether you need a native iOS/Android app or a cross-platform solution, we have the expertise to build an app that users will love.</p>
+                <router-link to="/contact" class="cta-button">Discuss Your App Project</router-link>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- RPA Solutions Service Page -->
+<script type="text/x-template" id="rpa-solutions-page">
+    <div class="service-detail-page page-section">
+        <div class="container">
+            <div class="service-header">
+                <div class="service-icon-large">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1>RPA Solutions</h1>
+                <p>We implement Robotic Process Automation to automate repetitive, rule-based tasks, freeing up your team to focus on higher-value work and improving operational efficiency.</p>
+            </div>
+
+            <div class="service-content">
+                <!-- Features Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Our RPA Services</h2>
+                        <p>Comprehensive automation solutions for your business processes</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="feature-card" v-for="feature in rpaFeatures" :key="feature.id">
+                            <div class="feature-icon">
+                                <i :class="feature.icon"></i>
+                            </div>
+                            <h3>{{ feature.title }}</h3>
+                            <p>{{ feature.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Our RPA Implementation Process</h2>
+                        <p>Structured approach to successful automation</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="process-card" v-for="step in rpaProcess" :key="step.id">
+                            <div class="process-step-number">{{ step.step }}</div>
+                            <h3>{{ step.title }}</h3>
+                            <p>{{ step.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Benefits of RPA Automation</h2>
+                        <p>Transform your operations with intelligent automation</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="benefit-card" v-for="benefit in rpaBenefits" :key="benefit.id">
+                            <div class="benefit-icon">
+                                <i :class="benefit.icon"></i>
+                            </div>
+                            <h3>{{ benefit.title }}</h3>
+                            <p>{{ benefit.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-cta">
+                <h2>Automate Your Business Processes</h2>
+                <p>Transform your operations with intelligent automation. Our RPA solutions can help you save time, reduce costs, and improve accuracy across your organization.</p>
+                <router-link to="/contact" class="cta-button">Schedule an RPA Consultation</router-link>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- Graphic Design Service Page -->
+<script type="text/x-template" id="graphic-design-page">
+    <div class="service-detail-page page-section">
+        <div class="container">
+            <div class="service-header">
+                <div class="service-icon-large">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h1>Graphic Design</h1>
+                <p>Our creative design team delivers visually compelling designs that communicate your brand message effectively and create memorable experiences for your audience.</p>
+            </div>
+
+            <div class="service-content">
+                <!-- Features Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Our Graphic Design Services</h2>
+                        <p>Complete creative solutions for your brand and marketing needs</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="feature-card" v-for="feature in designFeatures" :key="feature.id">
+                            <div class="feature-icon">
+                                <i :class="feature.icon"></i>
+                            </div>
+                            <h3>{{ feature.title }}</h3>
+                            <p>{{ feature.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Our Design Process</h2>
+                        <p>Collaborative approach to delivering exceptional design</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="process-card" v-for="step in designProcess" :key="step.id">
+                            <div class="process-step-number">{{ step.step }}</div>
+                            <h3>{{ step.title }}</h3>
+                            <p>{{ step.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="service-section">
+                    <div class="service-section-title">
+                        <h2>Why Choose Our Design Services</h2>
+                        <p>Advantages of professional design for your business</p>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="benefit-card" v-for="benefit in designBenefits" :key="benefit.id">
+                            <div class="benefit-icon">
+                                <i :class="benefit.icon"></i>
+                            </div>
+                            <h3>{{ benefit.title }}</h3>
+                            <p>{{ benefit.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-cta">
+                <h2>Elevate Your Brand with Professional Design</h2>
+                <p>Great design makes a lasting impression. Let us help you create visual assets that communicate your brand's value and engage your target audience.</p>
+                <router-link to="/contact" class="cta-button">Start Your Design Project</router-link>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- Products Page -->
+<script type="text/x-template" id="products-page">
+    <div class="products-page page-section">
+        <div class="container">
+            <div class="section-title">
+                <h1>Our Products</h1>
+                <p>Discover our range of innovative software products designed to solve business challenges and drive efficiency.</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card-detailed" v-for="product in products" :key="product.id">
+                    <div class="product-header">
+                        <div class="product-icon">
+                            <i :class="product.icon"></i>
+                        </div>
+                        <h2>{{ product.name }}</h2>
+                        <p>{{ product.tagline }}</p>
+                    </div>
+                    <div class="product-body">
+                        <p>{{ product.description }}</p>
+
+                        <div class="product-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li v-for="feature in product.features" :key="feature">{{ feature }}</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-price">
+                            <h3>{{ product.price }}</h3>
+                            <router-link to="/contact" class="cta-button">Request a Demo</router-link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- About Page -->
+<script type="text/x-template" id="about-page">
+    <div class="about-page page-section">
+        <div class="container">
+            <div class="section-title">
+                <h1>About Us</h1>
+                <p>Learn more about Fervtech, our mission, our team, and our journey in delivering exceptional technology solutions.</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Driving Digital Transformation Since 2015</h2>
+                    <p>Fervtech is a leading technology company specializing in web development, mobile applications, robotic process automation, and graphic design. Our team of experienced professionals is dedicated to delivering innovative solutions that help businesses streamline operations and achieve their goals.</p>
+                    <p>We believe in building long-term partnerships with our clients, providing ongoing support and adapting to evolving technology landscapes.</p>
+
+                    <div class="about-mission">
+                        <h3>Our Mission</h3>
+                        <p>To empower businesses with innovative technology solutions that drive growth, enhance efficiency, and create meaningful impact in the digital world.</p>
+                    </div>
+
+                    <div class="about-mission">
+                        <h3>Our Vision</h3>
+                        <p>To be the most trusted technology partner for businesses seeking digital transformation and cutting-edge solutions.</p>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="member-img">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-section">
+                <div class="team-title">
+                    <h2>Meet Our Leadership Team</h2>
+                    <p>The talented professionals behind Fervtech's success</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-member" v-for="member in team" :key="member.id">
+                        <div class="member-img">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="member-info">
+                            <h4>{{ member.name }}</h4>
+                            <p>{{ member.position }}</p>
+                            <p>{{ member.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- Contact Page -->
+<script type="text/x-template" id="contact-page">
+    <div class="contact-page page-section">
+        <div class="container">
+            <div class="section-title">
+                <h1>Contact Us</h1>
+                <p>Get in touch with us to discuss your project or learn more about our services. We're here to help!</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have a project in mind? We'd love to hear about it. Send us a message and we'll respond as soon as possible.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Our Office</h4>
+                                <p>123 Tech Street, Innovation City, IC 10101</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>info@fervtech.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form @submit.prevent="submitForm">
+                        <input type="text" placeholder="Your Name" v-model="formData.name" required>
+                        <input type="email" placeholder="Your Email" v-model="formData.email" required>
+                        <input type="text" placeholder="Subject" v-model="formData.subject" required>
+                        <select v-model="formData.service" required>
+                            <option value="" disabled selected>Select a Service</option>
+                            <option value="web">Web Development</option>
+                            <option value="app">App Development</option>
+                            <option value="rpa">RPA Solutions</option>
+                            <option value="design">Graphic Design</option>
+                            <option value="products">Our Products</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea placeholder="Your Message" v-model="formData.message" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+
+                    <div v-if="formSubmitted" class="success-message">
+                        Thank you! Your message has been sent. We'll get back to you within 24 hours.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script>
+    const { createApp } = Vue;
+    const { createRouter, createWebHashHistory } = VueRouter;
+
+    // Home Page Component
+    const HomePage = {
+        template: '#home-page',
+        data() {
+            return {
+                services: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-code',
+                        title: 'Web Development',
+                        shortDescription: 'Custom websites and web applications built with modern technologies.',
+                        link: '/services/web-development'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-mobile-alt',
+                        title: 'App Development',
+                        shortDescription: 'Native and cross-platform mobile applications for iOS and Android.',
+                        link: '/services/app-development'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-robot',
+                        title: 'RPA Solutions',
+                        shortDescription: 'Robotic Process Automation to automate repetitive business tasks.',
+                        link: '/services/rpa-solutions'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-paint-brush',
+                        title: 'Graphic Design',
+                        shortDescription: 'Creative design services including logos, branding, and UI/UX.',
+                        link: '/services/graphic-design'
+                    }
+                ],
+                industries: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-building',
+                        title: 'Finance & Banking',
+                        description: 'Secure digital banking solutions, fintech apps, and financial process automation.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-heartbeat',
+                        title: 'Healthcare',
+                        description: 'Healthtech solutions, patient portals, medical apps, and healthcare automation.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-shopping-cart',
+                        title: 'Retail & E-commerce',
+                        description: 'Online stores, inventory management, and customer engagement platforms.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-graduation-cap',
+                        title: 'Education',
+                        description: 'E-learning platforms, educational apps, and institutional management systems.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-industry',
+                        title: 'Manufacturing',
+                        description: 'Industrial automation, supply chain management, and production optimization.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-truck',
+                        title: 'Logistics',
+                        description: 'Fleet management, tracking systems, and logistics automation solutions.'
+                    }
+                ],
+                whyChooseFeatures: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-users',
+                        title: 'Expert Team',
+                        description: 'Our team comprises industry experts with years of experience in technology solutions.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-lightbulb',
+                        title: 'Innovative Solutions',
+                        description: 'We stay ahead of technology trends to deliver cutting-edge solutions.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-handshake',
+                        title: 'Client-Centric Approach',
+                        description: 'We work closely with clients to understand their unique needs and challenges.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-clock',
+                        title: 'Timely Delivery',
+                        description: 'We adhere to project timelines and deliver quality solutions on schedule.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-shield-alt',
+                        title: 'Quality Assurance',
+                        description: 'Rigorous testing ensures our solutions are reliable and perform optimally.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-headset',
+                        title: 'Ongoing Support',
+                        description: 'We provide comprehensive support and maintenance for all our solutions.'
+                    }
+                ],
+                clients: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-building',
+                        name: 'TechCorp'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-university',
+                        name: 'Global Bank'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-heartbeat',
+                        name: 'MediCare Plus'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-shopping-bag',
+                        name: 'Retail Giant'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-graduation-cap',
+                        name: 'EduTech Solutions'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-industry',
+                        name: 'Manufacturing Inc'
+                    },
+                    {
+                        id: 7,
+                        icon: 'fas fa-truck',
+                        name: 'LogiStream'
+                    },
+                    {
+                        id: 8,
+                        icon: 'fas fa-mobile-alt',
+                        name: 'MobileFirst'
+                    }
+                ],
+                techTabs: [
+                    {
+                        id: 'frontend',
+                        title: 'Frontend Technologies',
+                        technologies: [
+                            {
+                                id: 1,
+                                icon: 'fab fa-react',
+                                title: 'React.js',
+                                description: 'Building modern, responsive user interfaces with component-based architecture.',
+                                tags: ['React', 'Redux', 'Hooks', 'Next.js']
+                            },
+                            {
+                                id: 2,
+                                icon: 'fab fa-vuejs',
+                                title: 'Vue.js',
+                                description: 'Progressive framework for building user interfaces with reactive data binding.',
+                                tags: ['Vue 3', 'Vuex', 'Vue Router', 'Composition API']
+                            },
+                            {
+                                id: 3,
+                                icon: 'fab fa-angular',
+                                title: 'Angular',
+                                description: 'Platform for building mobile and desktop web applications with TypeScript.',
+                                tags: ['Angular 12+', 'RxJS', 'TypeScript', 'Material']
+                            },
+                            {
+                                id: 4,
+                                icon: 'fab fa-js-square',
+                                title: 'JavaScript/TypeScript',
+                                description: 'Modern JavaScript and TypeScript for scalable, maintainable codebases.',
+                                tags: ['ES6+', 'TypeScript', 'Node.js', 'NPM']
+                            }
+                        ]
+                    },
+                    {
+                        id: 'backend',
+                        title: 'Backend Technologies',
+                        technologies: [
+                            {
+                                id: 1,
+                                icon: 'fab fa-node-js',
+                                title: 'Node.js',
+                                description: 'JavaScript runtime for building fast, scalable network applications.',
+                                tags: ['Express.js', 'REST APIs', 'GraphQL', 'Socket.io']
+                            },
+                            {
+                                id: 2,
+                                icon: 'fas fa-database',
+                                title: 'Python/Django',
+                                description: 'High-level Python web framework for rapid development and clean design.',
+                                tags: ['Django', 'Flask', 'FastAPI', 'Python 3']
+                            },
+                            {
+                                id: 3,
+                                icon: 'fas fa-server',
+                                title: '.NET Core',
+                                description: 'Cross-platform framework for building modern, cloud-based applications.',
+                                tags: ['C#', 'ASP.NET', 'Entity Framework', 'Azure']
+                            },
+                            {
+                                id: 4,
+                                icon: 'fas fa-cloud',
+                                title: 'Cloud & DevOps',
+                                description: 'Cloud platforms and DevOps tools for scalable, reliable deployments.',
+                                tags: ['AWS', 'Azure', 'Docker', 'Kubernetes']
+                            }
+                        ]
+                    },
+                    {
+                        id: 'mobile',
+                        title: 'Mobile Development',
+                        technologies: [
+                            {
+                                id: 1,
+                                icon: 'fab fa-apple',
+                                title: 'iOS Development',
+                                description: 'Native iOS applications using Swift and modern Apple frameworks.',
+                                tags: ['Swift', 'UIKit', 'SwiftUI', 'Xcode']
+                            },
+                            {
+                                id: 2,
+                                icon: 'fab fa-android',
+                                title: 'Android Development',
+                                description: 'Native Android applications using Kotlin and Jetpack components.',
+                                tags: ['Kotlin', 'Jetpack', 'Android Studio', 'Material Design']
+                            },
+                            {
+                                id: 3,
+                                icon: 'fas fa-mobile-alt',
+                                title: 'React Native',
+                                description: 'Cross-platform mobile apps using React Native for iOS and Android.',
+                                tags: ['React Native', 'Expo', 'Native Modules', 'Mobile UI']
+                            },
+                            {
+                                id: 4,
+                                icon: 'fas fa-sync-alt',
+                                title: 'Flutter',
+                                description: 'Google\'s UI toolkit for building natively compiled applications.',
+                                tags: ['Dart', 'Flutter', 'Material Design', 'Cupertino']
+                            }
+                        ]
+                    },
+                    {
+                        id: 'data',
+                        title: 'Data & AI',
+                        technologies: [
+                            {
+                                id: 1,
+                                icon: 'fas fa-robot',
+                                title: 'Machine Learning',
+                                description: 'Building intelligent systems with machine learning and AI algorithms.',
+                                tags: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'MLOps']
+                            },
+                            {
+                                id: 2,
+                                icon: 'fas fa-database',
+                                title: 'Databases',
+                                description: 'Modern database technologies for structured and unstructured data.',
+                                tags: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL']
+                            },
+                            {
+                                id: 3,
+                                icon: 'fas fa-chart-line',
+                                title: 'Data Analytics',
+                                description: 'Data processing, visualization, and business intelligence solutions.',
+                                tags: ['Power BI', 'Tableau', 'Apache Spark', 'Data Warehousing']
+                            },
+                            {
+                                id: 4,
+                                icon: 'fas fa-cogs',
+                                title: 'RPA Tools',
+                                description: 'Robotic Process Automation platforms for business process automation.',
+                                tags: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Workflow Automation']
+                            }
+                        ]
+                    }
+                ],
+                activeTechTab: 'frontend',
+                testimonials: [
+                    {
+                        id: 1,
+                        name: 'Michael Rodriguez',
+                        position: 'CEO',
+                        company: 'TechFlow Solutions',
+                        text: 'Fervtech transformed our outdated systems with their RPA solutions. We\'ve seen a 40% increase in operational efficiency and saved countless hours of manual work. Their team was professional, knowledgeable, and delivered exactly what we needed.'
+                    },
+                    {
+                        id: 2,
+                        name: 'Sarah Chen',
+                        position: 'Marketing Director',
+                        company: 'Global Retail Group',
+                        text: 'The web development team at Fervtech created an exceptional e-commerce platform for us. The site is fast, user-friendly, and has significantly increased our online sales. Their attention to detail and understanding of our business needs was impressive.'
+                    },
+                    {
+                        id: 3,
+                        name: 'David Wilson',
+                        position: 'Operations Manager',
+                        company: 'HealthFirst Medical',
+                        text: 'Our mobile app developed by Fervtech has revolutionized how we interact with patients. The app is intuitive, secure, and has received excellent feedback from both patients and staff. Their post-launch support has been outstanding.'
+                    },
+                    {
+                        id: 4,
+                        name: 'Emily Parker',
+                        position: 'Creative Director',
+                        company: 'BrandVision Agency',
+                        text: 'Fervtech\'s graphic design team helped us rebrand our entire company. The new visual identity perfectly captures our values and has been well-received by our clients. Their creative approach and professionalism were exceptional.'
+                    }
+                ],
+                currentTestimonial: 0,
+                products: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-chart-line',
+                        name: 'Business Analytics Suite',
+                        tagline: 'Data-Driven Decision Making',
+                        description: 'Comprehensive analytics platform to track business performance and make data-driven decisions with real-time insights and predictive analytics.',
+                        features: [
+                            'Real-time dashboards',
+                            'Predictive analytics',
+                            'Custom reporting',
+                            'Data visualization tools',
+                            'Integration with major platforms'
+                        ],
+                        price: 'Starting at $499/month'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-cogs',
+                        name: 'Process Automator Pro',
+                        tagline: 'Intelligent Automation Platform',
+                        description: 'Advanced RPA tool to automate complex business processes across multiple systems with AI-powered decision making.',
+                        features: [
+                            'Drag-and-drop workflow builder',
+                            'AI-powered decision engine',
+                            'Multi-system integration',
+                            'Advanced scheduling',
+                            'Compliance reporting'
+                        ],
+                        price: 'Starting at $799/month'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-shopping-cart',
+                        name: 'E-Commerce Platform',
+                        tagline: 'Complete Online Store Solution',
+                        description: 'Full-featured online store solution with inventory management, payment processing, and customer relationship management.',
+                        features: [
+                            'Inventory management',
+                            'Payment gateway integration',
+                            'CRM tools',
+                            'Marketing automation',
+                            'Mobile-responsive design'
+                        ],
+                        price: 'Starting at $299/month'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-cloud',
+                        name: 'Cloud Management Suite',
+                        tagline: 'Simplified Cloud Operations',
+                        description: 'Centralized platform to manage multiple cloud services, optimize costs, and ensure security compliance across your cloud infrastructure.',
+                        features: [
+                            'Multi-cloud management',
+                            'Cost optimization',
+                            'Security compliance',
+                            'Automated backups',
+                            'Performance monitoring'
+                        ],
+                        price: 'Starting at $599/month'
+                    }
+                ]
+            }
+        },
+        mounted() {
+            // Auto-rotate testimonials every 5 seconds
+            setInterval(() => {
+                this.currentTestimonial = (this.currentTestimonial + 1) % this.testimonials.length;
+            }, 5000);
+        }
+    };
+
+    // Web Development Service Page Component
+    const WebDevelopmentPage = {
+        template: '#web-development-page',
+        data() {
+            return {
+                webFeatures: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-laptop-code',
+                        title: 'Custom Website Development',
+                        description: 'Tailored websites built with modern technologies for optimal performance and user experience.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-shopping-cart',
+                        title: 'E-commerce Solutions',
+                        description: 'Online stores with secure payment processing, inventory management, and customer portals.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-cogs',
+                        title: 'Content Management Systems',
+                        description: 'Easy-to-use CMS platforms like WordPress for seamless content updates.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-mobile-alt',
+                        title: 'Responsive Design',
+                        description: 'Websites that work perfectly on all devices from desktop to mobile.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-rocket',
+                        title: 'Web Applications',
+                        description: 'Complex web-based applications for business processes and operations.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-shield-alt',
+                        title: 'Security Implementation',
+                        description: 'SSL certificates, firewalls, and security measures to protect your website.'
+                    },
+                    {
+                        id: 7,
+                        icon: 'fas fa-bolt',
+                        title: 'Performance Optimization',
+                        description: 'Fast loading websites with optimized code and efficient resources.'
+                    },
+                    {
+                        id: 8,
+                        icon: 'fas fa-search',
+                        title: 'SEO Optimization',
+                        description: 'Built with best practices for search engine visibility and ranking.'
+                    },
+                    {
+                        id: 9,
+                        icon: 'fas fa-tools',
+                        title: 'Maintenance & Support',
+                        description: 'Ongoing updates, security patches, and technical support.'
+                    }
+                ],
+                webProcess: [
+                    {
+                        id: 1,
+                        step: '1',
+                        title: 'Discovery & Planning',
+                        description: 'We begin by understanding your business goals, target audience, and project requirements.'
+                    },
+                    {
+                        id: 2,
+                        step: '2',
+                        title: 'Design & Prototyping',
+                        description: 'Our designers create wireframes and prototypes to visualize the user experience.'
+                    },
+                    {
+                        id: 3,
+                        step: '3',
+                        title: 'Development',
+                        description: 'Our developers build your website using modern frameworks and technologies.'
+                    },
+                    {
+                        id: 4,
+                        step: '4',
+                        title: 'Testing & QA',
+                        description: 'Rigorous testing across different devices and browsers for optimal performance.'
+                    },
+                    {
+                        id: 5,
+                        step: '5',
+                        title: 'Deployment & Launch',
+                        description: 'We handle the deployment process and launch your website smoothly.'
+                    },
+                    {
+                        id: 6,
+                        step: '6',
+                        title: 'Maintenance & Support',
+                        description: 'We provide ongoing support to keep your website secure and up-to-date.'
+                    }
+                ],
+                webBenefits: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-check-circle',
+                        title: 'Responsive Design',
+                        description: 'Websites that work perfectly on all devices from desktop to mobile.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-bolt',
+                        title: 'Fast Performance',
+                        description: 'Optimized for speed and quick load times to reduce bounce rates.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-search',
+                        title: 'SEO Friendly',
+                        description: 'Built with best practices for search engine visibility and ranking.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-shield-alt',
+                        title: 'Secure',
+                        description: 'Implemented with the latest security measures to protect your data.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-expand',
+                        title: 'Scalable',
+                        description: 'Can grow with your business needs and handle increased traffic.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-user-friends',
+                        title: 'User-Friendly',
+                        description: 'Intuitive navigation and user experience for better engagement.'
+                    },
+                    {
+                        id: 7,
+                        icon: 'fas fa-cogs',
+                        title: 'Custom Solutions',
+                        description: 'Tailored to your specific business requirements and objectives.'
+                    },
+                    {
+                        id: 8,
+                        icon: 'fas fa-headset',
+                        title: 'Ongoing Support',
+                        description: 'Regular updates and maintenance to ensure long-term success.'
+                    }
+                ]
+            }
+        }
+    };
+
+    // App Development Service Page Component
+    const AppDevelopmentPage = {
+        template: '#app-development-page',
+        data() {
+            return {
+                appFeatures: [
+                    {
+                        id: 1,
+                        icon: 'fab fa-apple',
+                        title: 'iOS App Development',
+                        description: 'Native iOS applications built with Swift and Objective-C for optimal performance.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fab fa-android',
+                        title: 'Android App Development',
+                        description: 'Native Android applications using Kotlin and Java for seamless Android experience.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-mobile',
+                        title: 'Cross-Platform Apps',
+                        description: 'React Native and Flutter apps that work on both iOS and Android.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-paint-brush',
+                        title: 'UI/UX Design',
+                        description: 'Beautiful, intuitive interfaces designed for optimal user experience.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-vial',
+                        title: 'App Testing',
+                        description: 'Comprehensive testing including functional, usability, and performance testing.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-store',
+                        title: 'App Store Deployment',
+                        description: 'Submission and deployment to Apple App Store and Google Play Store.'
+                    },
+                    {
+                        id: 7,
+                        icon: 'fas fa-chart-line',
+                        title: 'App Analytics',
+                        description: 'Integration of analytics tools to track user behavior and app performance.'
+                    },
+                    {
+                        id: 8,
+                        icon: 'fas fa-sync-alt',
+                        title: 'Maintenance & Updates',
+                        description: 'Regular updates to keep your app current with OS changes and new features.'
+                    },
+                    {
+                        id: 9,
+                        icon: 'fas fa-server',
+                        title: 'Backend Development',
+                        description: 'Custom backend APIs and server infrastructure for your mobile app.'
+                    }
+                ],
+                appProcess: [
+                    {
+                        id: 1,
+                        step: '1',
+                        title: 'Concept & Strategy',
+                        description: 'We help refine your app idea and create a strategic development plan.'
+                    },
+                    {
+                        id: 2,
+                        step: '2',
+                        title: 'Design & Prototyping',
+                        description: 'Creating user flows, wireframes, and interactive prototypes.'
+                    },
+                    {
+                        id: 3,
+                        step: '3',
+                        title: 'Development',
+                        description: 'Building your app using appropriate technologies and clean architecture.'
+                    },
+                    {
+                        id: 4,
+                        step: '4',
+                        title: 'Testing & QA',
+                        description: 'Thorough testing including functional, usability, and security testing.'
+                    },
+                    {
+                        id: 5,
+                        step: '5',
+                        title: 'Deployment & Launch',
+                        description: 'App store submission and launch strategy for maximum visibility.'
+                    },
+                    {
+                        id: 6,
+                        step: '6',
+                        title: 'Post-Launch Support',
+                        description: 'Ongoing maintenance, updates, and feature enhancements.'
+                    }
+                ],
+                appBenefits: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-bolt',
+                        title: 'Native Performance',
+                        description: 'Smooth, fast apps optimized for each platform with native capabilities.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-money-bill-wave',
+                        title: 'Cost Efficiency',
+                        description: 'Save time and cost with cross-platform solutions using shared codebase.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-user-check',
+                        title: 'User-Centered Design',
+                        description: 'Intuitive interfaces that users love, designed with UX best practices.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-expand',
+                        title: 'Scalable Architecture',
+                        description: 'Apps that can grow with your user base and feature requirements.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-shield-alt',
+                        title: 'Security First',
+                        description: 'Implementation of best security practices and data protection.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-sync-alt',
+                        title: 'Regular Updates',
+                        description: 'Keep your app current with OS updates and new device capabilities.'
+                    },
+                    {
+                        id: 7,
+                        icon: 'fas fa-chart-bar',
+                        title: 'Analytics Integration',
+                        description: 'Track user behavior, engagement, and app performance metrics.'
+                    },
+                    {
+                        id: 8,
+                        icon: 'fas fa-dollar-sign',
+                        title: 'Monetization Strategies',
+                        description: 'Implement effective revenue models like subscriptions or in-app purchases.'
+                    }
+                ]
+            }
+        }
+    };
+
+    // RPA Solutions Service Page Component
+    const RPASolutionsPage = {
+        template: '#rpa-solutions-page',
+        data() {
+            return {
+                rpaFeatures: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-chart-bar',
+                        title: 'Process Analysis',
+                        description: 'Comprehensive analysis of business processes to identify automation opportunities.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-robot',
+                        title: 'RPA Bot Development',
+                        description: 'Custom RPA bots designed to automate your specific business processes.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-exchange-alt',
+                        title: 'Legacy System Integration',
+                        description: 'Connect RPA bots with existing legacy systems and databases.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-project-diagram',
+                        title: 'Workflow Automation',
+                        description: 'Automate complex workflows across multiple systems and departments.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-database',
+                        title: 'Data Extraction',
+                        description: 'Automated data extraction from documents, emails, and various sources.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-exclamation-triangle',
+                        title: 'Error Handling',
+                        description: 'Intelligent error detection and handling mechanisms.'
+                    },
+                    {
+                        id: 7,
+                        icon: 'fas fa-tachometer-alt',
+                        title: 'Performance Monitoring',
+                        description: 'Real-time monitoring and analytics of RPA bot performance.'
+                    },
+                    {
+                        id: 8,
+                        icon: 'fas fa-expand',
+                        title: 'Scalability Planning',
+                        description: 'Design RPA solutions that can scale with your business growth.'
+                    },
+                    {
+                        id: 9,
+                        icon: 'fas fa-graduation-cap',
+                        title: 'RPA Training',
+                        description: 'Comprehensive training for your team on RPA tools and maintenance.'
+                    }
+                ],
+                rpaProcess: [
+                    {
+                        id: 1,
+                        step: '1',
+                        title: 'Process Discovery',
+                        description: 'Analyze business processes to identify automation opportunities and calculate ROI.'
+                    },
+                    {
+                        id: 2,
+                        step: '2',
+                        title: 'Design & Planning',
+                        description: 'Design automation workflows and create detailed implementation plans.'
+                    },
+                    {
+                        id: 3,
+                        step: '3',
+                        title: 'Development',
+                        description: 'Build, test, and configure automation bots for your specific processes.'
+                    },
+                    {
+                        id: 4,
+                        step: '4',
+                        title: 'Testing & Validation',
+                        description: 'Rigorously test automation workflows to ensure accuracy and compliance.'
+                    },
+                    {
+                        id: 5,
+                        step: '5',
+                        title: 'Deployment',
+                        description: 'Deploy RPA bots into production environment with minimal disruption.'
+                    },
+                    {
+                        id: 6,
+                        step: '6',
+                        title: 'Monitoring & Optimization',
+                        description: 'Ongoing monitoring, maintenance, and optimization of RPA implementation.'
+                    }
+                ],
+                rpaBenefits: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-bolt',
+                        title: 'Increased Efficiency',
+                        description: 'Process tasks up to 10x faster than manual execution.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-money-bill-wave',
+                        title: 'Cost Reduction',
+                        description: 'Reduce operational costs by 30-70% through automation.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-check-double',
+                        title: 'Accuracy',
+                        description: 'Eliminate human errors in repetitive, rule-based tasks.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-expand',
+                        title: 'Scalability',
+                        description: 'Easily scale operations without additional staff.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-clock',
+                        title: '24/7 Operations',
+                        description: 'Bots work around the clock without breaks or downtime.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-clipboard-check',
+                        title: 'Compliance',
+                        description: 'Ensure consistent adherence to regulations and standards.'
+                    },
+                    {
+                        id: 7,
+                        icon: 'fas fa-smile',
+                        title: 'Employee Satisfaction',
+                        description: 'Free staff from mundane tasks for higher-value work.'
+                    },
+                    {
+                        id: 8,
+                        icon: 'fas fa-chart-line',
+                        title: 'Quick ROI',
+                        description: 'Typically achieve return on investment in 6-12 months.'
+                    }
+                ]
+            }
+        }
+    };
+
+    // Graphic Design Service Page Component
+    const GraphicDesignPage = {
+        template: '#graphic-design-page',
+        data() {
+            return {
+                designFeatures: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-palette',
+                        title: 'Logo Design',
+                        description: 'Unique, memorable logos that represent your brand identity.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-bullhorn',
+                        title: 'Marketing Collateral',
+                        description: 'Brochures, flyers, and promotional materials that convert.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-mobile-alt',
+                        title: 'UI/UX Design',
+                        description: 'User interfaces designed for optimal experience and engagement.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fab fa-instagram',
+                        title: 'Social Media Graphics',
+                        description: 'Eye-catching graphics for social media platforms and campaigns.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-presentation',
+                        title: 'Presentation Design',
+                        description: 'Professional PowerPoint and Keynote presentations.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-box',
+                        title: 'Packaging Design',
+                        description: 'Attractive packaging that stands out on shelves.'
+                    },
+                    {
+                        id: 7,
+                        icon: 'fas fa-print',
+                        title: 'Print Design',
+                        description: 'Business cards, letterheads, and other printed materials.'
+                    },
+                    {
+                        id: 8,
+                        icon: 'fas fa-book',
+                        title: 'Brand Style Guides',
+                        description: 'Comprehensive guidelines for consistent brand application.'
+                    },
+                    {
+                        id: 9,
+                        icon: 'fas fa-chart-pie',
+                        title: 'Infographic Design',
+                        description: 'Visual representations of data and information.'
+                    }
+                ],
+                designProcess: [
+                    {
+                        id: 1,
+                        step: '1',
+                        title: 'Discovery & Research',
+                        description: 'Learn about your brand, audience, competitors, and design requirements.'
+                    },
+                    {
+                        id: 2,
+                        step: '2',
+                        title: 'Concept Development',
+                        description: 'Create multiple design concepts and directions for your review.'
+                    },
+                    {
+                        id: 3,
+                        step: '3',
+                        title: 'Design Execution',
+                        description: 'Refine selected concept and execute across all required formats.'
+                    },
+                    {
+                        id: 4,
+                        step: '4',
+                        title: 'Review & Revision',
+                        description: 'Present designs for feedback and make revisions based on your input.'
+                    },
+                    {
+                        id: 5,
+                        step: '5',
+                        title: 'Finalization',
+                        description: 'Finalize all design elements and prepare files for various applications.'
+                    },
+                    {
+                        id: 6,
+                        step: '6',
+                        title: 'Delivery & Support',
+                        description: 'Deliver all design assets and provide implementation support.'
+                    }
+                ],
+                designBenefits: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-award',
+                        title: 'Professional Quality',
+                        description: 'Polished, professional designs that impress and engage.'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-brush',
+                        title: 'Brand Consistency',
+                        description: 'Cohesive visual identity across all brand touchpoints.'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-user-check',
+                        title: 'User-Centered',
+                        description: 'Designs that prioritize user experience and engagement.'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-lightbulb',
+                        title: 'Creative Innovation',
+                        description: 'Fresh, innovative concepts that stand out from competitors.'
+                    },
+                    {
+                        id: 5,
+                        icon: 'fas fa-chess',
+                        title: 'Strategic Approach',
+                        description: 'Design that supports business objectives and drives results.'
+                    },
+                    {
+                        id: 6,
+                        icon: 'fas fa-file-export',
+                        title: 'Technical Expertise',
+                        description: 'Proper file preparation for all applications and formats.'
+                    },
+                    {
+                        id: 7,
+                        icon: 'fas fa-clock',
+                        title: 'Quick Turnaround',
+                        description: 'Efficient processes without compromising on quality.'
+                    },
+                    {
+                        id: 8,
+                        icon: 'fas fa-headset',
+                        title: 'Ongoing Support',
+                        description: 'Design updates and extensions as your needs evolve.'
+                    }
+                ]
+            }
+        }
+    };
+
+    // Products Page Component
+    const ProductsPage = {
+        template: '#products-page',
+        data() {
+            return {
+                products: [
+                    {
+                        id: 1,
+                        icon: 'fas fa-chart-line',
+                        name: 'Business Analytics Suite',
+                        tagline: 'Data-Driven Decision Making',
+                        description: 'Comprehensive analytics platform to track business performance and make data-driven decisions with real-time insights and predictive analytics.',
+                        features: [
+                            'Real-time dashboards and reporting',
+                            'Predictive analytics with machine learning',
+                            'Custom report builder',
+                            'Advanced data visualization tools',
+                            'Integration with 50+ business platforms',
+                            'Role-based access control',
+                            'Automated data ingestion',
+                            'Mobile app for on-the-go insights'
+                        ],
+                        price: 'Starting at $499/month'
+                    },
+                    {
+                        id: 2,
+                        icon: 'fas fa-cogs',
+                        name: 'Process Automator Pro',
+                        tagline: 'Intelligent Automation Platform',
+                        description: 'Advanced RPA tool to automate complex business processes across multiple systems with AI-powered decision making and analytics.',
+                        features: [
+                            'Drag-and-drop workflow builder',
+                            'AI-powered decision engine',
+                            'Integration with ERP, CRM, and legacy systems',
+                            'Advanced scheduling and triggering',
+                            'Compliance and audit reporting',
+                            'Exception handling and alerts',
+                            'Scalable deployment options',
+                            '24/7 monitoring dashboard'
+                        ],
+                        price: 'Starting at $799/month'
+                    },
+                    {
+                        id: 3,
+                        icon: 'fas fa-shopping-cart',
+                        name: 'E-Commerce Platform',
+                        tagline: 'Complete Online Store Solution',
+                        description: 'Full-featured online store solution with inventory management, payment processing, and customer relationship management tools.',
+                        features: [
+                            'Advanced inventory management',
+                            'Integration with major payment gateways',
+                            'Built-in CRM with customer segmentation',
+                            'Email marketing automation',
+                            'Mobile-responsive design templates',
+                            'SEO optimization tools',
+                            'Abandoned cart recovery',
+                            'Multi-channel selling capabilities'
+                        ],
+                        price: 'Starting at $299/month'
+                    },
+                    {
+                        id: 4,
+                        icon: 'fas fa-cloud',
+                        name: 'Cloud Management Suite',
+                        tagline: 'Simplified Cloud Operations',
+                        description: 'Centralized platform to manage multiple cloud services, optimize costs, and ensure security compliance across your cloud infrastructure.',
+                        features: [
+                            'Unified multi-cloud management console',
+                            'Cost optimization recommendations',
+                            'Security compliance monitoring',
+                            'Automated backup and disaster recovery',
+                            'Performance monitoring and alerts',
+                            'Resource utilization analytics',
+                            'Automated provisioning',
+                            'Compliance reporting for regulations'
+                        ],
+                        price: 'Starting at $599/month'
+                    }
+                ]
+            }
+        }
+    };
+
+    // About Page Component
+    const AboutPage = {
+        template: '#about-page',
+        data() {
+            return {
+                team: [
+                    {
+                        id: 1,
+                        name: 'Sarah Johnson',
+                        position: 'CEO & Founder',
+                        description: 'With over 15 years in the tech industry, Sarah founded Fervtech with a vision to make advanced technology accessible to businesses of all sizes.'
+                    },
+                    {
+                        id: 2,
+                        name: 'Michael Chen',
+                        position: 'CTO',
+                        description: 'Michael leads our technical teams with expertise in software architecture, cloud computing, and emerging technologies.'
+                    },
+                    {
+                        id: 3,
+                        name: 'Elena Rodriguez',
+                        position: 'Head of Design',
+                        description: 'Elena brings creative vision to our projects, ensuring that every solution is not only functional but also visually compelling.'
+                    },
+                    {
+                        id: 4,
+                        name: 'David Park',
+                        position: 'Head of RPA Solutions',
+                        description: 'David specializes in automation technologies and helps businesses streamline operations through intelligent process automation.'
+                    }
+                ]
+            }
+        }
+    };
+
+    // Contact Page Component
+    const ContactPage = {
+        template: '#contact-page',
+        data() {
+            return {
+                formSubmitted: false,
+                formData: {
+                    name: '',
+                    email: '',
+                    subject: '',
+                    service: '',
+                    message: ''
+                }
+            }
+        },
+        methods: {
+            submitForm() {
+                console.log('Form submitted:', this.formData);
+
+                // Show success message
+                this.formSubmitted = true;
+
+                // Reset form
+                this.formData = {
+                    name: '',
+                    email: '',
+                    subject: '',
+                    service: '',
+                    message: ''
+                };
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    this.formSubmitted = false;
+                }, 5000);
+            }
+        }
+    };
+
+    // Router Configuration
+    const routes = [
+        { path: '/', component: HomePage },
+        { path: '/services/web-development', component: WebDevelopmentPage },
+        { path: '/services/app-development', component: AppDevelopmentPage },
+        { path: '/services/rpa-solutions', component: RPASolutionsPage },
+        { path: '/services/graphic-design', component: GraphicDesignPage },
+        { path: '/products', component: ProductsPage },
+        { path: '/about', component: AboutPage },
+        { path: '/contact', component: ContactPage }
+    ];
+
+    const router = createRouter({
+        history: createWebHashHistory(),
+        routes
+    });
+
+    // Create Vue App
+    const app = createApp({
+        data() {
+            return {
+                mobileMenuOpen: false,
+                servicesDropdownOpen: false,
+                showBackToTop: false,
+                newsletterEmail: ''
+
+
+            }
+        },
+        methods: {
+            toggleMobileMenu() {
+                this.mobileMenuOpen = !this.mobileMenuOpen;
+                this.servicesDropdownOpen = false;
+            },
+            closeMobileMenu() {
+                this.mobileMenuOpen = false;
+                this.servicesDropdownOpen = false;
+            },
+            toggleServicesDropdown() {
+                this.servicesDropdownOpen = !this.servicesDropdownOpen;
+            },
+            scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            },
+            handleScroll() {
+                this.showBackToTop = window.scrollY > 300;
+            },
+            subscribeNewsletter() {
+                if (this.newsletterEmail) {
+                    alert(`Thank you for subscribing with email: ${this.newsletterEmail}`);
+                    this.newsletterEmail = '';
+                } else {
+                    alert('Please enter your email address');
+                }
+            }
+        },
+        mounted() {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        beforeUnmount() {
+            window.removeEventListener('scroll', this.handleScroll);
+        }
+    });
+
+    app.use(router);
+    app.mount('#app');
+</script>
+</body>
+</html>
