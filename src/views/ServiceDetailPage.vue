@@ -25,7 +25,7 @@
           <h2>Our Process</h2>
           <p>A structured approach to delivering exceptional results</p>
         </div>
-        <WhyChooseGrid :features="serviceData.process" />
+        <ProcessGrid :steps="serviceData.process" />
       </div>
     </section>
 
@@ -66,9 +66,10 @@ import { initScrollAnimations } from '@/assets/js/scroll-animations.js';  // Add
 import HeroSection from '@/components/sections/HeroSection.vue';
 import ServicesGrid from '@/components/sections/ServicesGrid.vue';
 import WhyChooseGrid from '@/components/sections/WhyChooseGrid.vue';
+import ProcessGrid from '@/components/sections/ProcessGrid.vue';
 
 export default {
-  components: { HeroSection, ServicesGrid, WhyChooseGrid },
+  components: { HeroSection, ServicesGrid, WhyChooseGrid, ProcessGrid },
   props: ['serviceType'],
   data() {
     const services = {
@@ -150,10 +151,34 @@ export default {
           { id: 1, icon: 'fas fa-check-circle', title: 'Responsive Design', description: 'Websites that work perfectly on all devices from desktop to mobile.' },
           { id: 2, icon: 'fas fa-bolt', title: 'Fast Performance', description: 'Optimized for speed and quick load times to reduce bounce rates.' },
           { id: 3, icon: 'fas fa-search', title: 'SEO Friendly', description: 'Built with best practices for search engine visibility and ranking.' },
-          { id: 4, icon: 'fas fa-shield-alt', title: 'Secure', description: 'Implemented with the latest security measures to protect your data.' }
+          { id: 4, icon: 'fas fa-shield-alt', title: 'Secure', description: 'Implemented with the latest security measures to protect your data.' },
+          {
+            id: 5,
+            icon: 'fas fa-expand',
+            title: 'Scalable',
+            description: 'Can grow with your business needs and handle increased traffic.'
+          },
+          {
+            id: 6,
+            icon: 'fas fa-user-friends',
+            title: 'User-Friendly',
+            description: 'Intuitive navigation and user experience for better engagement.'
+          },
+          {
+            id: 7,
+            icon: 'fas fa-cogs',
+            title: 'Custom Solutions',
+            description: 'Tailored to your specific business requirements and objectives.'
+          },
+          {
+            id: 8,
+            icon: 'fas fa-headset',
+            title: 'Ongoing Support',
+            description: 'Regular updates and maintenance to ensure long-term success.'
+          }
         ]
       },
-      // ... (similar for 'app-development', 'rpa-solutions', 'graphic-design' from original data)
+
       'app-development': {
             title: 'App Development',
             fullDescription: 'Our mobile app development services cover both iOS and Android platforms. We build native and cross-platform applications that provide seamless user experiences and meet business objectives.',
@@ -237,7 +262,31 @@ export default {
               { id: 1, icon: 'fas fa-bolt', title: 'Native Performance', description: 'Smooth, fast apps optimized for each platform with native capabilities.' },
               { id: 2, icon: 'fas fa-money-bill-wave', title: 'Cost Efficiency', description: 'Save time and cost with cross-platform solutions using shared codebase.' },
               { id: 3, icon: 'fas fa-user-check', title: 'User-Centered Design', description: 'Intuitive interfaces that users love, designed with UX best practices.' },
-              { id: 4, icon: 'fas fa-expand', title: 'Scalable Architecture', description: 'Apps that can grow with your user base and feature requirements.' }
+              { id: 4, icon: 'fas fa-expand', title: 'Scalable Architecture', description: 'Apps that can grow with your user base and feature requirements.' },
+              {
+                id: 5,
+                icon: 'fas fa-shield-alt',
+                title: 'Security First',
+                description: 'Implementation of best security practices and data protection.'
+              },
+              {
+                id: 6,
+                icon: 'fas fa-sync-alt',
+                title: 'Regular Updates',
+                description: 'Keep your app current with OS updates and new device capabilities.'
+              },
+              {
+                id: 7,
+                icon: 'fas fa-chart-bar',
+                title: 'Analytics Integration',
+                description: 'Track user behavior, engagement, and app performance metrics.'
+              },
+              {
+                id: 8,
+                icon: 'fas fa-dollar-sign',
+                title: 'Monetization Strategies',
+                description: 'Implement effective revenue models like subscriptions or in-app purchases.'
+              }
             ]
           },
 
@@ -320,7 +369,31 @@ export default {
           { id: 1, icon: 'fas fa-bolt', title: 'Increased Efficiency', description: 'Process tasks up to 10x faster than manual execution.' },
           { id: 2, icon: 'fas fa-money-bill-wave', title: 'Cost Reduction', description: 'Reduce operational costs by 30-70% through automation.' },
           { id: 3, icon: 'fas fa-check-double', title: 'Accuracy', description: 'Eliminate human errors in repetitive, rule-based tasks.' },
-          { id: 4, icon: 'fas fa-expand', title: 'Scalability', description: 'Easily scale operations without additional staff.' }
+          { id: 4, icon: 'fas fa-expand', title: 'Scalability', description: 'Easily scale operations without additional staff.' },
+          {
+            id: 5,
+            icon: 'fas fa-clock',
+            title: '24/7 Operations',
+            description: 'Bots work around the clock without breaks or downtime.'
+          },
+          {
+            id: 6,
+            icon: 'fas fa-clipboard-check',
+            title: 'Compliance',
+            description: 'Ensure consistent adherence to regulations and standards.'
+          },
+          {
+            id: 7,
+            icon: 'fas fa-smile',
+            title: 'Employee Satisfaction',
+            description: 'Free staff from mundane tasks for higher-value work.'
+          },
+          {
+            id: 8,
+            icon: 'fas fa-chart-line',
+            title: 'Quick ROI',
+            description: 'Typically achieve return on investment in 6-12 months.'
+          }
         ]
       },
       'graphic-design': {
@@ -402,7 +475,31 @@ export default {
           { id: 1, icon: 'fas fa-award', title: 'Professional Quality', description: 'Polished, professional designs that impress and engage.' },
           { id: 2, icon: 'fas fa-brush', title: 'Brand Consistency', description: 'Cohesive visual identity across all brand touchpoints.' },
           { id: 3, icon: 'fas fa-user-check', title: 'User-Centered', description: 'Designs that prioritize user experience and engagement.' },
-          { id: 4, icon: 'fas fa-lightbulb', title: 'Creative Innovation', description: 'Fresh, innovative concepts that stand out from competitors.' }
+          { id: 4, icon: 'fas fa-lightbulb', title: 'Creative Innovation', description: 'Fresh, innovative concepts that stand out from competitors.' },
+          {
+            id: 5,
+            icon: 'fas fa-chess',
+            title: 'Strategic Approach',
+            description: 'Design that supports business objectives and drives results.'
+          },
+          {
+            id: 6,
+            icon: 'fas fa-file-export',
+            title: 'Technical Expertise',
+            description: 'Proper file preparation for all applications and formats.'
+          },
+          {
+            id: 7,
+            icon: 'fas fa-clock',
+            title: 'Quick Turnaround',
+            description: 'Efficient processes without compromising on quality.'
+          },
+          {
+            id: 8,
+            icon: 'fas fa-headset',
+            title: 'Ongoing Support',
+            description: 'Design updates and extensions as your needs evolve.'
+          }
         ]
       }
     };

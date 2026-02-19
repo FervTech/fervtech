@@ -29,6 +29,17 @@
     .nav-links.active {
         left: 0;
     }
+
+    .dropdown-content a::before {
+        height: 30%; /* small visible bar always */
+        opacity: 0.3;
+    }
+
+    .dropdown-content a:hover::before,
+    .dropdown-content a:active::before {
+        height: calc(100% - 24px);
+        opacity: 1;
+    }
     .mobile-menu-btn {
         display: flex;
     }
@@ -42,6 +53,23 @@
     .section {
         padding: var(--space-lg) 0;
     }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .process-card {
+        padding: 32px 24px;
+    }
+
+    .process-step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        line-height: 50px;
+    }
+
     .footer-content {
         gap: 40px;
     }
@@ -86,6 +114,10 @@
     .hero-buttons .cta-btn, .hero-buttons .btn-secondary {
         width: 100%;
         justify-content: center;
+    }
+
+    .process-card {
+        padding: 28px 20px;
     }
 }
 

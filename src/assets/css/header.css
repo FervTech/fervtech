@@ -41,6 +41,7 @@ nav {
     font-size: 32px;
 }
 
+/* Main nav links container */
 .nav-links {
     display: flex;
     list-style: none;
@@ -48,7 +49,9 @@ nav {
     align-items: center;
 }
 
-.nav-links a {
+/* Top-level nav links only */
+.nav-links > li > a,
+.nav-links > li > .dropdown > a {  /* Targets only direct children, not nested dropdown links */
     color: var(--light);
     text-decoration: none;
     font-weight: 500;
@@ -57,7 +60,9 @@ nav {
     padding: 8px 0;
 }
 
-.nav-links a::after {
+/* Underline only for top-level links */
+.nav-links > li > a::after,
+.nav-links > li > .dropdown > a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -68,18 +73,24 @@ nav {
     transition: width var(--transition-normal);
 }
 
-.nav-links a:hover::after, .nav-links a.router-link-active::after {
+.nav-links > li > a:hover::after,
+.nav-links > li > a.router-link-active::after,
+.nav-links > li > .dropdown > a:hover::after,
+.nav-links > li > .dropdown > a.router-link-active::after {
     width: 100%;
 }
 
-.nav-links a:hover {
+.nav-links > li > a:hover,
+.nav-links > li > .dropdown > a:hover {
     color: var(--primary-light);
 }
 
+/* Dropdown container (unchanged) */
 .dropdown {
     position: relative;
 }
 
+/* Dropdown content panel */
 .dropdown-content {
     position: absolute;
     top: 100%;
@@ -95,30 +106,57 @@ nav {
     transform: translateY(10px);
     transition: all var(--transition-normal);
     z-index: 100;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* Show on hover */
 .dropdown:hover .dropdown-content {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
+/* Individual link items */
 .dropdown-content a {
     display: block;
-    padding: 12px 24px;
+    position: relative;           /* Important for positioning the bar */
+    padding: 12px 24px 12px 32px; /* Extra left padding for the bar */
     color: var(--light);
     text-decoration: none;
     transition: all var(--transition-fast);
+    text-transform: capitalize;   /* Matches your example */
 }
 
+/* Hover effect on each link */
 .dropdown-content a:hover {
-    background: rgba(99, 102, 241, 0.1);
     color: var(--primary-light);
-    padding-left: 32px;
+    background: rgba(99, 102, 241, 0.08);
+    padding-left: 40px;           /* Shift text right on hover */
 }
+
+/* Vertical colored bar on left (appears on hover) */
+.dropdown-content a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--primary);   /* or #4644AA if you prefer exact match */
+    transform: translateY(-50%);
+    transition: height 0.4s ease; /* Slightly slower for smooth feel */
+    border-radius: 0 4px 4px 0;
+}
+
+/* Grow bar height on hover */
+.dropdown-content a:hover::before {
+    height: 60%;                  /* Adjust 60%–80% depending on how tall you want */
+}
+
+
 
 .cta-btn {
-    padding: 12px 28px;
+    padding: 12px 30px;
     background: var(--gradient-1);
     border: none;
     border-radius: 12px;

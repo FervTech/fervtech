@@ -6,18 +6,28 @@
       <div class="container">
         <div class="section-header reveal">
           <h2>Our Story</h2>
-          <p>From startup to industry leader - our commitment to excellence</p>
+          <P>Fervtech is a dynamic technology company with a passionate team of technology enthusiasts, developers, and creatives,
+            we are driven by the relentless pursuit of innovation. Our core belief is that technology should be a force for positive change,
+            empowering businesses to evolve and thrive in the dynamic digital landscape.</p>
+          <br>
+          <P> With a commitment to excellence and a focus on client success, we combine expertise, creativity,
+            and cutting-edge solutions to craft remarkable digital experiences that transcend expectations.
+            We help bloggers, companies, institutions, governments, agencies, startups to create a compelling online presence
+            and efficiently reach their digital goals.</P>
+          <br>
+          <p> Welcome to FervTech, where the possibilities of technology are boundless,
+            and every challenge is an opportunity to redefine what is possible.</P>
         </div>
         <div class="services-grid">
           <div class="service-card glass-card reveal">
             <div class="service-icon"><i class="fas fa-rocket"></i></div>
             <h3>Our Mission</h3>
-            <p>To empower businesses with cutting-edge technology solutions that drive growth, enhance efficiency, and create exceptional user experiences.</p>
+            <p>Our Mission is to equip businesses with innovative technology solutions that drive efficiency and elevate user experiences. Through dedication and collaboration, we envision a future where technology propels our clients to unparalleled success.</p>
           </div>
           <div class="service-card glass-card reveal">
             <div class="service-icon"><i class="fas fa-eye"></i></div>
             <h3>Our Vision</h3>
-            <p>To be the world's most trusted technology partner, transforming businesses through innovative digital solutions.</p>
+            <p>Our vision is to revolutionize the digital landscape by empowering businesses with cutting-edge technology solutions. We aspire to be the driving force behind their growth, helping them navigate the complexities of the modern world with confidence and innovation.</p>
           </div>
           <div class="service-card glass-card reveal">
             <div class="service-icon"><i class="fas fa-star"></i></div>
